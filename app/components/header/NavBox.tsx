@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navigation from './Navigation';
+import DropdownEins from './DropdownEins';
 
 export default function NavBox() {
   // const [navSize, setnavSize] = useState("7rem");
@@ -28,7 +29,7 @@ export default function NavBox() {
           transition: "all 1s"
         }}
       >
-<Navigation />
+<DropdownEins />
       </nav>
     </div>
   );
