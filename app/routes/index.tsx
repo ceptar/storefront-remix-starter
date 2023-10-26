@@ -16,7 +16,7 @@ export default function Index() {
   const headerImage = collections[0]?.featuredAsset?.preview;
   return (
     <>
-      <div className="relative">
+      <div className="absolut top-0 z-50">
         {/* Decorative image and overlay */}
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
           {headerImage && (
@@ -30,7 +30,7 @@ export default function Index() {
         </div>
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gray-900 opacity-50"
+          className="absoluteinset-0 bg-gray-900 opacity-50"
         />
         <div className="relative max-w-3xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-64 lg:px-0">
           <div className="relative bg-zinc-800 bg-opacity-0 rounded-lg p-0">

@@ -25,4 +25,12 @@
   .text-inherit {
     color: inherit;
   }
+  
+.navbar {
+  background-color: transparent;
+}
+
+.navbar.colorChange {
+  background-color: white;
+}
 }

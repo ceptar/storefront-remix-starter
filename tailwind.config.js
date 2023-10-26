@@ -16,8 +16,30 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: colors.sky,
-        secondary: colors.emerald,
+        primary: {
+          500: '#F100C6',
+        },
+        secondary: {
+          500: '#15FEE2',
+        },
+        discopink: {
+          500: '#F100C6',
+        },
+        discoteal: {
+          500: '#15FEE2',
+        },
+        discopurple: {
+          500: '#8002E4',
+        },
+        discoyellow: {
+          500: '#fede5c',
+        },
+        discored: {
+          500: '#b6103d',
+        },
+        discoblue: {
+          500: '#030082',
+        },
       },
       animation: {
         dropIn: 'dropIn 0.2s ease-out',
