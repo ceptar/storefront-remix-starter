@@ -1,7 +1,7 @@
 import { useRootLoader } from '~/utils/use-root-loader';
 import { classNames } from '~/utils/class-names';
 import { Link, useLoaderData } from '@remix-run/react';
-import { Menu } from '@headlessui/react'
+import { Menu } from '@headlessui/react';
 import bars3 from '~/../public/bars3.svg';
 import '~/styles/app.css';
 
@@ -13,13 +13,13 @@ export function DropdownEins() {
      {({ open }) => (
        <>
          <Menu.Button className="p-4 button-wrapper w-inline-block">
-         {bars3 && (
+         
             <img
               className="w-6 h-6"
               src={bars3}
               alt="icon bars 3"
             />
-          )}
+         
          </Menu.Button>
          {open && (
            <div>

@@ -22,13 +22,13 @@ export default function Index() {
       <div className="absolut top-0 z-50">
         {/* Decorative image and overlay */}
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
-          {hero1 && (
+          
             <img
               className="absolute inset-0 w-full"
-              src={hero1 + '?w=800'}
+              src={hero1}
               alt="header"
             />
-          )}
+     
           <div className="absolute " />
         </div>
         <div

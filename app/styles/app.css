@@ -1011,6 +1011,10 @@ button:disabled {
   height: 1.5rem;
 }
 
+#app .h-72 {
+  height: 18rem;
+}
+
 #app .h-full {
   height: 100%;
 }
@@ -1053,10 +1057,6 @@ button:disabled {
 
 #app .h-20 {
   height: 5rem;
-}
-
-#app .h-72 {
-  height: 18rem;
 }
 
 #app .min-h-\[220px\] {

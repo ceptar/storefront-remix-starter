@@ -3,14 +3,14 @@ import { SessionStorage } from '@remix-run/server-runtime/dist/sessions';
 import { ErrorResult } from '~/generated/graphql';
 
 function getCookieSessionStorageFactory() {
-  if (IS_CF_PAGES) {
-    return require('@remix-run/cloudflare').createCookieSessionStorage;
-  } else {
-    // This hack is to prevent the `node` package being bundled in the
-    // Cloudflare Pages context, which causes an error.
+  // if (IS_CF_PAGES) {
+  //   return require('@remix-run/cloudflare').createCookieSessionStorage;
+  // } else {
+  //   // This hack is to prevent the `node` package being bundled in the
+  //   // Cloudflare Pages context, which causes an error.
     let imp = ['@remix-run', 'node'];
     return require(imp.join('/')).createCookieSessionStorage;
-  }
+  
 }
 let sessionStorage: SessionStorage<
   { activeOrderError: ErrorResult } & Record<string, any>
