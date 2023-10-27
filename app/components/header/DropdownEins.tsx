@@ -2,6 +2,7 @@ import { useRootLoader } from '~/utils/use-root-loader';
 import { classNames } from '~/utils/class-names';
 import { Link, useLoaderData } from '@remix-run/react';
 import { Menu } from '@headlessui/react'
+import bars3 from '~/../public/bars3.svg';
 import '~/styles/app.css';
 
 
@@ -11,10 +12,15 @@ export function DropdownEins() {
    <Menu>
      {({ open }) => (
        <>
-         <Menu.Button className="p-4 button-wrapper w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-</svg>
-</Menu.Button>
+         <Menu.Button className="p-4 button-wrapper w-inline-block">
+         {bars3 && (
+            <img
+              className="w-6 h-6"
+              src={bars3}
+              alt="icon bars 3"
+            />
+          )}
+         </Menu.Button>
          {open && (
            <div>
              <Menu.Items static>

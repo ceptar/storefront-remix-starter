@@ -70,7 +70,7 @@ export default function Index() {
           </p>
         </div>
       </div>
-
+<div className="h-72"></div>
       <section
         aria-labelledby="category-heading"
         className="pt-24 sm:pt-32 xl:max-w-7xl xl:mx-auto xl:px-8"
