@@ -835,6 +835,11 @@ button:disabled {
   margin-bottom: -0.75rem;
 }
 
+#app .mx-12 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
 #app .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1667,6 +1672,11 @@ button:disabled {
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
+#app .bg-discoteal {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 254 226 / var(--tw-bg-opacity));
+}
+
 #app .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
 }
@@ -1745,6 +1755,10 @@ button:disabled {
 
 #app .p-10 {
   padding: 2.5rem;
+}
+
+#app .p-12 {
+  padding: 3rem;
 }
 
 #app .px-4 {
@@ -1840,6 +1854,16 @@ button:disabled {
 #app .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+#app .px-24 {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+#app .px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 #app .pt-1 {
@@ -2349,8 +2373,16 @@ button:disabled {
   background-color: hsl(311, 100%, 80%);
 }
 
+#app .bg-discoteal-500 {
+  background-color: hsl(173, 99%, 50%);
+}
+
 #app .bg-discoteal-200 {
   background-color: hsl(173, 99%, 80%);
+}
+
+#app .bg-discopurple-500 {
+  background-color: hsl(273, 98%, 50%);
 }
 
 #app .button-wrapper {
@@ -2764,6 +2796,10 @@ button:disabled {
 
   #app .md\:grid {
     display: grid;
+  }
+
+  #app .md\:flex-shrink {
+    flex-shrink: 1;
   }
 
   #app .md\:flex-grow {
