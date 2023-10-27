@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react";
-import Navigation from './Navigation';
-import DropdownEins from './DropdownEins';
 
-export default function NavBox() {
+import { useState, useEffect } from 'react';
+import { DropdownEins } from './DropdownEins';
+import '~/styles/app.css';
+
+
+
+export function NavBox() {
   // const [navSize, setnavSize] = useState("7rem");
   const [navColor, setnavColor] = useState("#transparent");
 
@@ -19,18 +22,29 @@ export default function NavBox() {
   }, []);
 
   return (
-    <div className="fixed bg-opacity-70 top-0 z-10 w-full">
-      <nav
+    <header className="fixed h-24 top-0 z-10 w-full">
+      <nav className="h-24 w-full justify-center"
         style={{
           backgroundColor: navColor,
+
+          // HIER WAR HÖHE DES HEADERS
+
           // HIER IST HÖHE DES HEADERS
-          height: "7rem",
-          // HIER IST HÖHE DES HEADERS
-          transition: "all 1s"
+          transition: "all 1s",
         }}
-      >
-<DropdownEins />
-      </nav>
-    </div>
+        >
+        
+        <div className="flex md:flex md:flex-grow flex-row justify-between space-x-1">
+          <div className="p-4 flex md:flex md:flex-grow flex-row justify-start space-x-1"></div>
+          <div className="p-4 flex md:flex md:flex-grow flex-row justify-center space-x-1"></div>
+          <div className="p-4 flex md:flex md:flex-grow flex-row justify-end space-x-1">  <DropdownEins /></div>
+
+</div>
+
+
+
+
+ </nav>
+</header>
   );
 }

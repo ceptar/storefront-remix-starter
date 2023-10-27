@@ -1,4 +1,5 @@
 import { Form } from '@remix-run/react';
+import '~/styles/app.css';
 
 export function SearchBar() {
   let initialQuery = '';
