@@ -7,48 +7,56 @@ import '~/styles/app.css';
 
 export function DropdownEins() {
   return (
-    <Menu>
-      {({ open }) => (
-        <>
-          <Menu.Button className="p-4 button-wrapper">
-            <img className="w-6 h-6" src={bars3} alt="icon bars 3" />
-          </Menu.Button>
-          {open && (
-            <div>
-              <Menu.Items static>
-                <Menu.Item className="block button-wrapper mt-4 px-12 py-4 bg-discoteal-500">
-                  {({ active }) => (
-                    <a
-                      className={`${
-                        active
-                          ? 'bg-discoteal-200 text-gray-900'
-                          : 'text-gray-700'
-                      }  block button-wrapper px-24`}
-                      href="/account-settings"
-                    >
-                      Account settings
-                    </a>
-                  )}
-                </Menu.Item>
-                <Menu.Item className="block button-wrapper mt-4 px-12 py-4 bg-discoteal-500">
-                  {({ active }) => (
-                    <a
-                      className={`${
-                        active
-                          ? 'bg-discoteal-200 text-gray-900'
-                          : 'text-gray-700'
-                      }  block button-wrapper px-24`}
-                      href="/documentation"
-                    >
-                      Documentation
-                    </a>
-                  )}
-                </Menu.Item>
-              </Menu.Items>
+    <div className="relative">
+      <Menu inline-flex items-center>
+        {({ open }) => (
+          <>
+            <div className="button-wrapper flex justify-center">
+              <Menu.Button>
+                <img
+                  className="min-w-[36px] max-w-[36px]"
+                  src={bars3}
+                  alt="icon bars 3"
+                />
+              </Menu.Button>
             </div>
-          )}
-        </>
-      )}
-    </Menu>
+            {open && (
+              <div className="absolute z-10 flex w-screen max-w-max translate-x-16 px-4">
+                <div className="text-2xl p-4 w-2/3 max-w-full flex-auto overflow-hidden font-thin">
+                  <Menu.Items static>
+                    <div className="button-wrapper">
+                      <Menu.Item text-left px-24 py-24>
+                        {({ active }) => (
+                          <a
+                            className={`${
+                              active ? 'text-gray-900' : 'text-gray-700'
+                            }  `}
+                            href="/account-settings"
+                          >
+                            Account settings
+                          </a>
+                        )}
+                      </Menu.Item>
+                    </div>
+                    <Menu.Item text-left h-16 button-wrapper px-24 py-24>
+                      {({ active }) => (
+                        <a
+                          className={`${
+                            active ? 'text-gray-900' : 'text-gray-700'
+                          }  `}
+                          href="/documentation"
+                        >
+                          Documentation
+                        </a>
+                      )}
+                    </Menu.Item>
+                  </Menu.Items>
+                </div>
+              </div>
+            )}
+          </>
+        )}
+      </Menu>
+    </div>
   );
 }

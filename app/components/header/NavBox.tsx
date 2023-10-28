@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
-import { DropdownEins } from './DropdownEins';
+
+import { DropdownZwei } from './DropdownZwei';
+import logo from '~/../public/logo.svg';
 import '~/styles/app.css';
 
 export function NavBox() {
@@ -18,9 +20,8 @@ export function NavBox() {
   }, []);
 
   return (
-    <header className="fixed h-24 top-0 z-10 w-full">
+    <header className="fixed top-0 z-10 w-full">
       <nav
-        className="h-24 w-full justify-center"
         style={{
           backgroundColor: navColor,
 
@@ -30,12 +31,17 @@ export function NavBox() {
           transition: 'all 1s',
         }}
       >
-        <div className="flex md:flex md:flex-grow flex-row justify-between space-x-1">
-          <div className="p-4 flex md:flex md:flex-grow flex-col justify-start space-x-1"></div>
-          <div className="p-4 flex md:flex md:flex-grow flex-col justify-center space-x-1"></div>
-          <div className="p-4 flex md:flex md:flex-shrink flex-col justify-end space-x-1">
-            {' '}
-            <DropdownEins />
+        <div className=" grid-cols-3 flex  justify-between">
+          <div className="flex-col justify-items-start"></div>
+          <div className="flex-col justify-items-center">
+            <img
+              className="min-w-[20rem] max-w-[20rem]"
+              src={logo}
+              alt="logo"
+            />
+          </div>
+          <div className="flex-col-reverse justify-items-end">
+            <DropdownZwei />
           </div>
         </div>
       </nav>

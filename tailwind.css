@@ -31,17 +31,19 @@
   }
   
   .button-wrapper {
-    padding: 13px 20px;
-    border-radius: 3px;
+    padding: 0.8rem 1rem;
+    border-radius: 2px;
     box-shadow: 0 0 0 0 #151515;
     -webkit-transition: box-shadow 200ms ease;
     transition: box-shadow 200ms ease;
     color: #fff;
-    font-weight: 500;
-    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-transition: background-color 200ms ease;
+    transition: background-color 200ms ease;
   }
   
   .button-wrapper:hover {
     box-shadow: 0 4px 15px -3px #151515a3;
+    background-color: rgba(255, 255, 255, 0.6);
   }
 }

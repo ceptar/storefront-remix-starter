@@ -1,10 +1,9 @@
-
 import { useLoaderData } from '@remix-run/react';
 import { getCollections } from '~/providers/collections/collections';
 import { CollectionCard } from '~/components/collections/CollectionCard';
 import { BookOpenIcon } from '@heroicons/react/24/solid';
 import { LoaderArgs } from '@remix-run/server-runtime';
-
+import '~/styles/app.css';
 import hero1 from '~/../public/hero1.webp';
 
 export async function loader({ request }: LoaderArgs) {
@@ -19,58 +18,63 @@ export default function Index() {
 
   return (
     <>
-      <div className="absolut top-0 z-50">
+      <div
+        className="top-0 z-10 w-full h-full min-h-[70vh] "
+        style={{
+          backgroundImage: 'url(/hero1.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         {/* Decorative image and overlay */}
-        <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
-          
-            <img
-              className="absolute inset-0 w-full"
-              src={hero1}
-              alt="header"
-            />
-     
-          <div className="absolute " />
-        </div>
-        <div
-          aria-hidden="true"
-          
-        />
-        <div className="relative max-w-3xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-64 lg:px-0">
-          <div className="">
-            <h1 className="text-6xl text-transparent bg-clip-text font-extrabold tracking-normal lg:text-6xl bg-gradient-to-r from-yellow-600 via-red-500 to-blue-600">
-              Vendure Remix Starter
-            </h1>
-          </div>
 
-          <p className="mt-4 text-2xl text-white">
-            A headless commerce storefront starter kit built with{' '}
-            <a
-              href="https://www.vendure.io"
-              className="text-blue-300 hover:text-blue-500"
-            >
-              Vendure
-            </a>{' '}
-            &{' '}
-            <a
-              href="~/routes/__cart/index"
-              className="text-red-300 hover:text-red-500"
-            >
-              Remix
-            </a>
-          </p>
-          <p className="mt-4 text-gray-300 space-x-1">
-            <BookOpenIcon className="w-5 h-5 inline" />
-            <span>Read more:</span>
-            <a
-              className="text-primary-200 hover:text-primary-400"
-              href="https://www.vendure.io/blog/2022/05/lightning-fast-headless-commerce-with-vendure-and-remix"
-            >
-              Lightning Fast Headless Commerce with Vendure and Remix
-            </a>
-          </p>
+        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            AAA
+          </div>
+          <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+              Before they sold out readymade gluten
+            </h1>
+            <p className="mb-8 leading-relaxed">
+              Copper mug try-hard pitchfork pour-over freegan heirloom neutra
+              air plant cold-pressed tacos poke beard tote bag. Heirloom echo
+              park mlkshk tote bag selvage hot chicken authentic tumeric
+              truffaut hexagon try-hard chambray.
+            </p>
+            <div className="flex justify-center">
+              <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                Button
+              </button>
+              <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
+                Button
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-<div className="h-72"></div>
+
+      <div className="w-full h-full md:h-full">
+        <h1 className="whitespace-nowrap text-2xl sm:text-5xl md:text-6xl font-thin text-white">
+          <span className="p-2 sm:p-3">Wearable Art.</span>
+          <p className="my-8 sm:my-12"></p>
+          <p>
+            <span className="bg-discoteal-500 p-2 sm:p-3 ">
+              Every Piece UNIQUE.
+            </span>
+          </p>
+          <p className="my-8 sm:my-12"></p>
+          <p>
+            <span className="bg-discoteal-500 p-2 sm:p-3 ">Like You.</span>
+            <span className="p-7 font-bold bg-discopink-500 m-2 text-white">
+              Get Yours.
+            </span>
+          </p>
+        </h1>
+      </div>
+
+      <div className="absolute h-72"></div>
+
       <section
         aria-labelledby="category-heading"
         className="pt-24 sm:pt-32 xl:max-w-7xl xl:mx-auto xl:px-8"
@@ -104,6 +108,13 @@ export default function Index() {
             Browse all categories
             <span aria-hidden="true"> &rarr;</span>
           </a>
+        </div>
+      </section>
+      <section>
+        <div className=" grid-cols-3 flex  justify-between">
+          <div className="flex-col justify-items-start">aaa</div>
+          <div className="flex-col justify-items-center">bbb</div>
+          <div className="flex-col justify-items-end">ccc</div>
         </div>
       </section>
     </>
