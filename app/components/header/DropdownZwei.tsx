@@ -28,17 +28,17 @@ export function DropdownZwei() {
   };
 
   return (
-    <div className="">
-      <Popover className="">
+    <div className="flex item-center">
+      <Popover className="relative inline-block text-left">
         {({ open }) => {
           return (
             <>
-              <div onMouseLeave={onMouseLeave.bind(null, open)}>
+              <div className="p-4" onMouseLeave={onMouseLeave.bind(null, open)}>
                 <Popover.Button
                   ref={buttonRef}
                   className={`
                   ${open ? '' : 'text-opacity-90'}
-                  text-white group bg-orange-700 px-3 py-2 rounded-md text-base font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
+                  relative inline-flex w-full justify-center bg-black/20 px-4 py-2 text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 `}
                   onMouseEnter={onMouseEnter.bind(null, open)}
                   onMouseLeave={onMouseLeave.bind(null, open)}
                 >
@@ -55,12 +55,12 @@ export function DropdownZwei() {
                 >
                   <Popover.Panel className="">
                     <div
-                      className=""
+                      className=" bg-black/30 opacity-70 absolute right-0 mt-2 h-[50vh] w-[50vw] origin-top-right"
                       onMouseEnter={onMouseEnter.bind(null, open)}
                       onMouseLeave={onMouseLeave.bind(null, open)}
                     >
-                      <div className=" ">
-                        <a className=" flex-wrap-reverse items-center transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50">
+                      <div className="">
+                        <a className=" divide-y divide-gray-100 bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
                           Menuitems hier!
                           <div className="flex items-center text-white"></div>
                           <div className="ml-4">

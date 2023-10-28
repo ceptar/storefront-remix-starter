@@ -31,16 +31,16 @@ export function NavBox() {
           transition: 'all 1s',
         }}
       >
-        <div className=" grid-cols-3 flex  justify-between">
+        <div className=" grid-cols-3 flex items-center justify-between">
           <div className="flex-col justify-items-start"></div>
           <div className="flex-col justify-items-center">
             <img
-              className="min-w-[20rem] max-w-[20rem]"
+              className="w-[80vw] max-w-[400px] min-w-[150px]"
               src={logo}
               alt="logo"
             />
           </div>
-          <div className="flex-col-reverse justify-items-end">
+          <div className="flex-col items-center justify-items-end">
             <DropdownZwei />
           </div>
         </div>
