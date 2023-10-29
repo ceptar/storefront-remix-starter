@@ -35,7 +35,7 @@ export function NavBox() {
           <div className="flex-col justify-items-start"></div>
           <div className="flex-col justify-items-center">
             <img
-              className="w-[80vw] max-w-[400px] min-w-[150px]"
+              className="w-[80vw] max-w-[350px] min-w-[150px]"
               src={logo}
               alt="logo"
             />

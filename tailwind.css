@@ -46,4 +46,60 @@
     box-shadow: 0 4px 15px -3px #151515a3;
     background-color: rgba(255, 255, 255, 0.6);
   }
+
+
+  /* LOGOSTYLING */
+ /* 
+  .logOh1 {
+    filter: 
+
+
+    drop-shadow(0 0 4px rgba(255, 255, 255, 0.8))
+    drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))
+
+    drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+
+
+      --svgCol: white;
+  }
+  
+ hier kommentar ausstellen für animation 
+  logOh1 {
+    animation: animate 10s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0))
+        drop-shadow(0 0 3px rgba(255, 255, 255, 0.8))
+        drop-shadow(0 0 5px rgba(255, 255, 255, 0.6))
+        drop-shadow(0 0 7px rgb(255, 255, 255, 0.2));
+    }
+    80% {
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0))
+        drop-shadow(0 0 3px rgba(255, 255, 255, 0.8))
+        drop-shadow(0 0 5px rgba(255, 255, 255, 0.6))
+        drop-shadow(0 0 7px rgb(255, 255, 255, 0.2));
+    }
+    80.5% {
+      filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0.896));
+    }
+    81% {
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0))
+        drop-shadow(0 0 3px rgba(255, 255, 255, 0.8))
+        drop-shadow(0 0 5px rgba(255, 255, 255, 0.6))
+        drop-shadow(0 0 7px rgb(255, 255, 255, 0.2));
+    }
+    81.2% {
+      filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0.896));
+    }
+    82% {
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0))
+        drop-shadow(0 0 3px rgba(255, 255, 255, 0.8))
+        drop-shadow(0 0 5px rgba(255, 255, 255, 0.6))
+        drop-shadow(0 0 7px rgb(255, 255, 255, 0.2));
+    }
+  }
+  */
+  
 }
