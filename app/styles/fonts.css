@@ -1,0 +1,10 @@
+  @font-face {
+    font-family: 'Metropolitano-Regular';
+    src: url(./font/Metropolitano-Regular.woff) format('woff');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Metropolitano-Medium';
+    src: url(./font/Metropolitano-Medium.woff2) format('woff2');
+    font-display: swap;
+  }

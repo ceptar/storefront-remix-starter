@@ -2,11 +2,11 @@ import { useLoaderData } from '@remix-run/react';
 import { getCollections } from '~/providers/collections/collections';
 import { CollectionCard } from '~/components/collections/CollectionCard';
 import { BookOpenIcon } from '@heroicons/react/24/solid';
-import { LoaderArgs } from '@remix-run/server-runtime';
+import { LoaderFunctionArgs } from '@remix-run/server-runtime';
 import '~/styles/app.css';
-import hero1 from '~/../public/hero1.webp';
+import hero122 from '~/../public/hero122.webp';
 
-export async function loader({ request }: LoaderArgs) {
+export async function loader({ request }: LoaderFunctionArgs) {
   const collections = await getCollections(request, { take: 20 });
   return {
     collections,
@@ -21,7 +21,7 @@ export default function Index() {
       <div
         className="top-0 z-10 w-full h-full min-h-[70vh] "
         style={{
-          backgroundImage: 'url(/hero1.webp)',
+          backgroundImage: 'url(/hero122.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -29,9 +29,6 @@ export default function Index() {
         {/* Decorative image and overlay */}
 
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-            AAA
-          </div>
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
               Before they sold out readymade gluten
@@ -50,6 +47,9 @@ export default function Index() {
                 Button
               </button>
             </div>
+          </div>
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            AAA
           </div>
         </div>
       </div>

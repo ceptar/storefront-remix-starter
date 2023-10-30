@@ -1,7 +1,27 @@
-import { Popover, Transition } from '@headlessui/react';
+import { useRootLoader } from '~/utils/use-root-loader';
+import { classNames } from '~/utils/class-names';
+import { Link, useLoaderData } from '@remix-run/react';
+import { useEffect, useState } from 'react';
+import { Menu, Popover, Transition } from '@headlessui/react';
 import { Fragment, useRef } from 'react';
+import React from 'react';
+import '~/styles/app.css';
 
 export function DropdownZwei() {
+  const [navTextcol, setnavTextcol] = useState('#ffffff');
+  const listenScrollEvent = () => {
+    window.scrollY > 10
+      ? setnavTextcol('rgb(55 65 81)')
+      : setnavTextcol('#ffffff');
+    // window.scrollY > 10 ? setnavSize("7rem") : setnavSize("7rem");
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', listenScrollEvent);
+    return () => {
+      window.removeEventListener('scroll', listenScrollEvent);
+    };
+  }, []);
+
   const buttonRef = useRef(null);
   const timeoutDuration = 200;
   let timeout;
@@ -28,7 +48,7 @@ export function DropdownZwei() {
   };
 
   return (
-    <div className="flex item-center">
+    <div className="flex item-center justify-end">
       <Popover className="relative inline-block text-left">
         {({ open }) => {
           return (
@@ -38,11 +58,22 @@ export function DropdownZwei() {
                   ref={buttonRef}
                   className={`
                   ${open ? '' : 'text-opacity-90'}
-                  relative inline-flex w-full justify-center button-wrapper`}
+                  focus:outline-none relative inline-flex w-full justify-center button-wrapper`}
                   onMouseEnter={onMouseEnter.bind(null, open)}
                   onMouseLeave={onMouseLeave.bind(null, open)}
                 >
-                  <span style={{ color: 'black' }}>Solutions</span>
+                  <span
+                    style={{
+                      color: navTextcol,
+
+                      // HIER WAR HÖHE DES HEADERS
+
+                      // HIER IST HÖHE DES HEADERS
+                      transition: 'all 1s',
+                    }}
+                  >
+                    MENU
+                  </span>
                 </Popover.Button>
                 <Transition
                   as={Fragment}
@@ -55,17 +86,18 @@ export function DropdownZwei() {
                 >
                   <Popover.Panel className="">
                     <div
-                      className=" bg-black/30 opacity-70 absolute right-0 mt-2 h-[50vh] w-[50vw] origin-top-right"
+                      className=" focus:outline-none bg-gray-700/80 text-white absolute right-0 mt-5 h-[50vh] w-[50vw] origin-top-right"
                       onMouseEnter={onMouseEnter.bind(null, open)}
                       onMouseLeave={onMouseLeave.bind(null, open)}
                     >
                       <div className="">
-                        <a className=" divide-y divide-gray-100 bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
-                          Menuitems hier!
-                          <div className="flex items-center text-white"></div>
-                          <div className="ml-4">
-                            <p className="text-sm font-medium text-gray-900"></p>
-                            <p className="text-sm text-gray-500"></p>
+                        <a className="">
+                          <div className="m-4">
+                            <p className="p-4 text-4xl font-thin ">MENU</p>
+                          </div>
+                          <div className="m-4">
+                            <p className="p-4 text-4xl font-thin ">ITEMS</p>
+                            <p className="p-4 text-4xl font-thin ">HIER</p>
                           </div>
                         </a>
                       </div>
