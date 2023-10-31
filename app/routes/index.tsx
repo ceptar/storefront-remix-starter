@@ -1,9 +1,9 @@
 import { useLoaderData } from '@remix-run/react';
 import { getCollections } from '~/providers/collections/collections';
 import { CollectionCard } from '~/components/collections/CollectionCard';
-import { BookOpenIcon } from '@heroicons/react/24/solid';
+
 import { LoaderFunctionArgs } from '@remix-run/server-runtime';
-import styles from './styles/app.css';
+import '~/styles/app.css';
 import hero122 from '~/../public/hero122.webp';
 
 export async function loader({ request }: LoaderFunctionArgs) {

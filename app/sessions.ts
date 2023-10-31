@@ -1,6 +1,14 @@
 import { SessionStorage } from '@remix-run/server-runtime/dist/sessions';
 import { ErrorResult } from '~/generated/graphql';
 
+function getCookieSessionStorageFactory() {
+  let imp = ['@remix-run', 'node'];
+  return require(imp.join('/')).createCookieSessionStorage;
+}
+let sessionStorage: SessionStorage<
+  { activeOrderError: ErrorResult } & Record<string, any>
+>;
+
 export function getSessionStorage() {
   if (sessionStorage) {
     return sessionStorage;

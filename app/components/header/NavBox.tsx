@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { DropdownZwei } from './DropdownZwei';
 import logo from '~/../public/logo.svg';
-import styles from './styles/app.css';
+import '~/styles/app.css';
 
 export function NavBox() {
   // const [navSize, setnavSize] = useState("7rem");
