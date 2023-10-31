@@ -3,7 +3,7 @@ import { getCollections } from '~/providers/collections/collections';
 import { CollectionCard } from '~/components/collections/CollectionCard';
 import { BookOpenIcon } from '@heroicons/react/24/solid';
 import { LoaderFunctionArgs } from '@remix-run/server-runtime';
-import '~/styles/app.css';
+import styles from './styles/app.css';
 import hero122 from '~/../public/hero122.webp';
 
 export async function loader({ request }: LoaderFunctionArgs) {
@@ -19,7 +19,7 @@ export default function Index() {
   return (
     <>
       <div
-        className="top-0 z-10 w-full h-full min-h-[70vh] "
+        className="top-0 z-10 w-full h-[70vh] min-h-[70vh] justify-center"
         style={{
           backgroundImage: 'url(/hero122.webp)',
           backgroundSize: 'cover',
@@ -28,49 +28,32 @@ export default function Index() {
       >
         {/* Decorative image and overlay */}
 
-        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-          <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-              Before they sold out readymade gluten
+        <div className="h-[10vw]"></div>
+        <div className="z-50 h-[60vw] items-center rlative sm:grid-cols-2 lg:grid-cols-4 grid gap-5 row-gap-5">
+          <div className="pt-0 pr-12 pb-0 pl-12 justify-center">
+            <h1 className="whitespace-nowrap text-3xl sm:text-4xl md:text-5xl font-thin text-white">
+              <span className="p-2 sm:p-3">Wearable Art.</span>
+              <p className="my-8 sm:my-12"></p>
+              <p>
+                <span className="bg-discoteal-500 p-2 sm:p-3 ">
+                  Every Piece UNIQUE.
+                </span>
+              </p>
+              <p className="my-8 sm:my-12"></p>
+              <p>
+                <span className="bg-discoteal-500 p-2 sm:p-3 ">Like You.</span>
+                <span className="p-7 font-bold bg-discopink-500 m-2 text-white">
+                  Get Yours.
+                </span>
+              </p>
             </h1>
-            <p className="mb-8 leading-relaxed">
-              Copper mug try-hard pitchfork pour-over freegan heirloom neutra
-              air plant cold-pressed tacos poke beard tote bag. Heirloom echo
-              park mlkshk tote bag selvage hot chicken authentic tumeric
-              truffaut hexagon try-hard chambray.
-            </p>
-            <div className="flex justify-center">
-              <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                Button
-              </button>
-              <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-                Button
-              </button>
-            </div>
           </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-            AAA
+          <div className="pt-0 pr-12 pb-0 pl-12 sm:px-0">
+            <div className="  "></div>
           </div>
+          <div className="pt-0 pr-12 pb-0 pl-12 text-center sm:px-0"></div>
+          <div className="pt-0 pr-12 pb-0 pl-12 text-center sm:px-0"></div>
         </div>
-      </div>
-
-      <div className="w-full h-full md:h-full">
-        <h1 className="whitespace-nowrap text-2xl sm:text-5xl md:text-6xl font-thin text-white">
-          <span className="p-2 sm:p-3">Wearable Art.</span>
-          <p className="my-8 sm:my-12"></p>
-          <p>
-            <span className="bg-discoteal-500 p-2 sm:p-3 ">
-              Every Piece UNIQUE.
-            </span>
-          </p>
-          <p className="my-8 sm:my-12"></p>
-          <p>
-            <span className="bg-discoteal-500 p-2 sm:p-3 ">Like You.</span>
-            <span className="p-7 font-bold bg-discopink-500 m-2 text-white">
-              Get Yours.
-            </span>
-          </p>
-        </h1>
       </div>
 
       <div className="absolute h-72"></div>

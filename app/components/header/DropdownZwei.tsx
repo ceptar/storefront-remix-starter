@@ -1,11 +1,19 @@
+import {
+  useActionData,
+  useLoaderData,
+  useNavigate,
+  useNavigation,
+  useSubmit,
+  Link,
+} from '@remix-run/react';
 import { useRootLoader } from '~/utils/use-root-loader';
 import { classNames } from '~/utils/class-names';
-import { Link, useLoaderData } from '@remix-run/react';
+import ReactDOM from 'react-dom/client';
 import { useEffect, useState } from 'react';
 import { Menu, Popover, Transition } from '@headlessui/react';
 import { Fragment, useRef } from 'react';
 import React from 'react';
-import '~/styles/app.css';
+import styles from './styles/app.css';
 
 export function DropdownZwei() {
   const [navTextcol, setnavTextcol] = useState('#ffffff');
@@ -46,6 +54,7 @@ export function DropdownZwei() {
     if (!open) return;
     timeout = setTimeout(() => closePopover(), timeoutDuration);
   };
+  const data = useRootLoader();
 
   return (
     <div className="flex item-center justify-end">
@@ -91,15 +100,27 @@ export function DropdownZwei() {
                       onMouseLeave={onMouseLeave.bind(null, open)}
                     >
                       <div className="">
-                        <a className="">
-                          <div className="m-4">
-                            <p className="p-4 text-4xl font-thin ">MENU</p>
-                          </div>
-                          <div className="m-4">
-                            <p className="p-4 text-4xl font-thin ">ITEMS</p>
-                            <p className="p-4 text-4xl font-thin ">HIER</p>
-                          </div>
-                        </a>
+                        <h1 className="whitespace-nowrap text-3xl sm:text-4xl md:text-5xl font-thin text-white">
+                          <a className="">
+                            <div className="m-4">
+                              {data.collections.map((collection) => (
+                                <Link
+                                  key={collection.id}
+                                  className="p-4 font-thin capitalize transition-colors duration-300 transform  hover:bg-gray-100"
+                                  to={`/collections/${collection.slug}`}
+                                >
+                                  {collection.name}
+                                </Link>
+                              ))}
+
+                              <p className="p-4 text-4xl font-thin ">MENU</p>
+                            </div>
+                            <div className="m-4">
+                              <p className="p-4 text-4xl font-thin ">ITEMS</p>
+                              <p className="p-4 text-4xl font-thin ">HIER</p>
+                            </div>
+                          </a>
+                        </h1>
                       </div>
                     </div>
                   </Popover.Panel>
