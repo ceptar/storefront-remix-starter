@@ -5,9 +5,15 @@ module.exports = {
   // theme: {
   //   extend: {},
   // },
+  content: {
+    relative: true,
+    files: ['./public/index.html'],
+  },
+
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/line-clamp'),
+    require('tailwind-shades-for-custom-colors'),
   ],
   mode: 'jit',
   content: ['./app/**/*.{ts,tsx}'],
@@ -15,9 +21,26 @@ module.exports = {
 
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Metropolitano-Regular', 'sans'],
+        header1: ['Metropolitano-Medium', 'sans'],
+      },
       colors: {
-        primary: colors.sky,
-        secondary: colors.emerald,
+        primary: '#F100C6',
+
+        secondary: '#15FEE2',
+
+        discopink: '#F100C6',
+
+        discoteal: '#15FEE2',
+
+        discopurple: '#8002E4',
+
+        discoyellow: '#fede5c',
+
+        discored: '#b6103d',
+
+        discoblue: '#030082',
       },
       animation: {
         dropIn: 'dropIn 0.2s ease-out',

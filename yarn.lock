@@ -8162,6 +8162,11 @@ swap-case@^2.0.2:
   dependencies:
     tslib "^2.0.3"
 
+tailwind-shades-for-custom-colors@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/tailwind-shades-for-custom-colors/-/tailwind-shades-for-custom-colors-1.0.2.tgz#aff5d62b193835b540b4b8f7d705f0cc9b8007c3"
+  integrity sha512-vZp/k+YORitsBya4MaApp7VG64dB5AeZYGZrxr9TLDzGiJodH+Qtp6xEdkis3Iw0hIlazxGysZPPcbR+cjxz7w==
+
 tailwindcss@^3.2.4:
   version "3.2.4"
   resolved "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.2.4.tgz"

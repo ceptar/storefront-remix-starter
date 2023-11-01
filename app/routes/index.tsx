@@ -16,22 +16,14 @@ export default function Index() {
   const headerImage = collections[0]?.featuredAsset?.preview;
   return (
     <>
-      <div className="relative">
-        {/* Decorative image and overlay */}
-        <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
-          {headerImage && (
-            <img
-              className="absolute inset-0 w-full"
-              src={headerImage + '?w=800'}
-              alt="header"
-            />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-br from-zinc-400 to-black mix-blend-darken" />
-        </div>
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-gray-900 opacity-50"
-        />
+      <div
+        className="top-0 z-10 w-full h-[70vh] min-h-[70vh] justify-center"
+        style={{
+          backgroundImage: 'url(/hero122.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="relative max-w-3xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-64 lg:px-0">
           <div className="relative bg-zinc-800 bg-opacity-0 rounded-lg p-0">
             <h1 className="text-6xl text-transparent bg-clip-text font-extrabold tracking-normal lg:text-6xl bg-gradient-to-r from-yellow-600 via-red-500 to-blue-600">

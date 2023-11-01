@@ -25,4 +25,96 @@
   .text-inherit {
     color: inherit;
   }
+  
+  .button-wrapper {
+    padding: 0.8rem 1rem;
+    border-radius: 2px;
+    box-shadow: 0 0 0 0 #151515;
+    -webkit-transition: box-shadow 200ms ease;
+    transition: box-shadow 200ms ease;
+ 
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-transition: background-color 200ms ease;
+    transition: background-color 200ms ease;
+  }
+  
+  .button-wrapper:hover {
+    box-shadow: 0 4px 15px -3px #151515a3;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  @font-face {
+    font-family: 'Metropolitano-Regular';
+    src: url(./font/Metropolitano-Regular.woff) format('woff');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Metropolitano-Medium';
+    src: url(./font/Metropolitano-Medium.woff2) format('woff2');
+    font-display: swap;
+  }
+
+  /* .logOh1 {
+    filter: drop-shadow(0px 0px 3px rgba(10, 8, 71, 0.683))
+      drop-shadow(0px 0px 0.4px var(--svgColglow))
+      drop-shadow(0px 0px 4px var(--svgColglow));
+    filter: mask-border-width (3px);
+    --svgCol: #00ffd5;
+    --svgColglow: #5dffdccb;
+  } */
+
+  /* LOGOSTYLING */
+ /* 
+  .logOh1 {
+    filter: 
+
+
+    drop-shadow(0 0 4px rgba(255, 255, 255, 0.8))
+    drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))
+
+    drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+
+
+      --svgCol: white;
+  }
+  
+ hier kommentar ausstellen für animation 
+  logOh1 {
+    animation: animate 10s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0))
+        drop-shadow(0 0 3px rgba(255, 255, 255, 0.8))
+        drop-shadow(0 0 5px rgba(255, 255, 255, 0.6))
+        drop-shadow(0 0 7px rgb(255, 255, 255, 0.2));
+    }
+    80% {
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0))
+        drop-shadow(0 0 3px rgba(255, 255, 255, 0.8))
+        drop-shadow(0 0 5px rgba(255, 255, 255, 0.6))
+        drop-shadow(0 0 7px rgb(255, 255, 255, 0.2));
+    }
+    80.5% {
+      filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0.896));
+    }
+    81% {
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0))
+        drop-shadow(0 0 3px rgba(255, 255, 255, 0.8))
+        drop-shadow(0 0 5px rgba(255, 255, 255, 0.6))
+        drop-shadow(0 0 7px rgb(255, 255, 255, 0.2));
+    }
+    81.2% {
+      filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0.896));
+    }
+    82% {
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0))
+        drop-shadow(0 0 3px rgba(255, 255, 255, 0.8))
+        drop-shadow(0 0 5px rgba(255, 255, 255, 0.6))
+        drop-shadow(0 0 7px rgb(255, 255, 255, 0.2));
+    }
+  }
+  */
+  
 }
