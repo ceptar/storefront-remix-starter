@@ -14,56 +14,51 @@ export async function loader({ request }: LoaderArgs) {
 export default function Index() {
   const { collections } = useLoaderData<typeof loader>();
   const headerImage = collections[0]?.featuredAsset?.preview;
+
   return (
     <>
       <div
-        className="top-0 z-10 w-full h-[70vh] min-h-[70vh] justify-center"
         style={{
           backgroundImage: 'url(/hero122.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          position: 'absolute',
+          top: '0',
+          height: '70vh',
+          width: '100vw',
+          zIndex: '10',
         }}
       >
-        <div className="relative max-w-3xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-64 lg:px-0">
-          <div className="relative bg-zinc-800 bg-opacity-0 rounded-lg p-0">
-            <h1 className="text-6xl text-transparent bg-clip-text font-extrabold tracking-normal lg:text-6xl bg-gradient-to-r from-yellow-600 via-red-500 to-blue-600">
-              Vendure Remix Starter
+        {/* Decorative image and overlay */}
+        <div className="mt-[12vh]"></div>
+        <div className="h-[58vh] items-center sm:grid-cols-2 lg:grid-cols-4 grid gap-5 row-gap-5">
+          <div className="pt-0 pr-12 pb-0 pl-12 justify-center">
+            <h1 className="whitespace-nowrap text-xl sm:text-2xl md:text-4xl font-thin text-white">
+              <span className="p-2 sm:p-3">Wearable Art.</span>
+              <p className="my-8 sm:my-12"></p>
+              <p>
+                <span className="bg-discoteal-500 p-2 sm:p-3">
+                  Every Piece UNIQUE.
+                </span>
+              </p>
+              <p className="my-8 sm:my-12"></p>
+              <p>
+                <span className="bg-discoteal-500 p-2 sm:p-3">Like You.</span>
+                <span className="p-7 font-bold bg-discopink-500 m-2 text-white">
+                  Get Yours.
+                </span>
+              </p>
             </h1>
           </div>
-
-          <p className="mt-4 text-2xl text-white">
-            A headless commerce storefront starter kit built with{' '}
-            <a
-              href="https://www.vendure.io"
-              className="text-blue-300 hover:text-blue-500"
-            >
-              Vendure
-            </a>{' '}
-            &{' '}
-            <a
-              href="~/routes/__cart/index"
-              className="text-red-300 hover:text-red-500"
-            >
-              Remix
-            </a>
-          </p>
-          <p className="mt-4 text-gray-300 space-x-1">
-            <BookOpenIcon className="w-5 h-5 inline" />
-            <span>Read more:</span>
-            <a
-              className="text-primary-200 hover:text-primary-400"
-              href="https://www.vendure.io/blog/2022/05/lightning-fast-headless-commerce-with-vendure-and-remix"
-            >
-              Lightning Fast Headless Commerce with Vendure and Remix
-            </a>
-          </p>
+          <div className="pt-0 pr-12 pb-0 pl-12 sm:px-0">
+            <div className="  "></div>
+          </div>
+          <div className="pt-0 pr-12 pb-0 pl-12 text-center sm:px-0"></div>
+          <div className="pt-0 pr-12 pb-0 pl-12 text-center sm:px-0"></div>
         </div>
       </div>
 
-      <section
-        aria-labelledby="category-heading"
-        className="pt-24 sm:pt-32 xl:max-w-7xl xl:mx-auto xl:px-8"
-      >
+      <section className="relative pt-24 sm:pt-32 xl:max-w-7xl xl:mx-auto xl:px-8" style={{ marginTop: '70vh' }}>
         <div className="px-4 sm:px-6 lg:px-8 xl:px-0">
           <h2
             id="category-heading"
@@ -73,9 +68,9 @@ export default function Index() {
           </h2>
         </div>
 
-        <div className="mt-4 flow-root">
+        <div className="mt-4">
           <div className="-my-2">
-            <div className="box-content py-2 px-2 relative overflow-x-auto xl:overflow-visible">
+            <div className="box-content py-2 px-2 overflow-x-auto xl:overflow-visible">
               <div className="grid justify-items-center grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-8 sm:px-6 lg:px-8 xl:relative xl:px-0 xl:space-x-0 xl:gap-x-8">
                 {collections.map((collection) => (
                   <CollectionCard key={collection.id} collection={collection} />

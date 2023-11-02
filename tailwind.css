@@ -27,11 +27,19 @@
   }
   
   .button-wrapper {
-    padding: 0.8rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     border-radius: 2px;
     box-shadow: 0 0 0 0 #151515;
     -webkit-transition: box-shadow 200ms ease;
     transition: box-shadow 200ms ease;
+    color: white;
+    stroke: white;
+    stroke-width: 5px;
+    stroke-linecap: round;
+     stroke-linejoin: round;
  
     background-color: rgba(255, 255, 255, 0.1);
     -webkit-transition: background-color 200ms ease;
@@ -41,6 +49,12 @@
   .button-wrapper:hover {
     box-shadow: 0 4px 15px -3px #151515a3;
     background-color: rgba(255, 255, 255, 0.6);
+    color: #F100C6;
+    stroke: #F100C6;
+  }
+
+  .buttoneins {
+  @apply  h-12 flex text-discopink-800 items-center justify-center uppercase font-semibold px-8 border border-black hover:bg-white hover:text-black hover:stroke-black transition duration-300 ease-in-out
   }
 
   @font-face {
