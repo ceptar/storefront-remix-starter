@@ -3,6 +3,7 @@ import { getCollections } from '~/providers/collections/collections';
 import { CollectionCard } from '~/components/collections/CollectionCard';
 import { BookOpenIcon } from '@heroicons/react/24/solid';
 import { LoaderArgs } from '@remix-run/server-runtime';
+import { CollectionTree } from '~/components/collections/CollectionTree';
 
 export async function loader({ request }: LoaderArgs) {
   const collections = await getCollections(request, { take: 20 });
@@ -23,6 +24,8 @@ export default function Index() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           position: 'absolute',
+          alignItems: 'center',
+          justifyContent: 'center',
           top: '0',
           height: '70vh',
           width: '100vw',
@@ -30,33 +33,47 @@ export default function Index() {
         }}
       >
         {/* Decorative image and overlay */}
-        <div className="mt-[12vh]"></div>
-        <div className="h-[58vh] items-center sm:grid-cols-2 lg:grid-cols-4 grid gap-5 row-gap-5">
-          <div className="pt-0 pr-12 pb-0 pl-12 justify-center">
-            <h1 className="whitespace-nowrap text-xl sm:text-2xl md:text-4xl font-thin text-white">
+
+        <div className="flex h-[62vh] items-center justify-center pr-4 pb-16 pl-4 mr-auto ml-auto  md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20
+    w-full">
+  <div className="sm:grid-cols-2 lg:grid-cols-4 grid gap-5 row-gap-5">
+    <div className="pt-0 pr-12 pb-0 pl-12 sm:px-0">
+    <h1 className="whitespace-nowrap text-2xl sm:text-4xl font-thin text-white">
               <span className="p-2 sm:p-3">Wearable Art.</span>
-              <p className="my-8 sm:my-12"></p>
+              <p className="my-6 sm:my-10"></p>
               <p>
                 <span className="bg-discoteal-500 p-2 sm:p-3">
                   Every Piece UNIQUE.
                 </span>
               </p>
-              <p className="my-8 sm:my-12"></p>
+              <p className="my-6 sm:my-10"></p>
               <p>
                 <span className="bg-discoteal-500 p-2 sm:p-3">Like You.</span>
-                <span className="p-7 font-bold bg-discopink-500 m-2 text-white">
+                <span className="p-7 font-bold bg-discopink-500 m-1 text-white">
                   Get Yours.
                 </span>
               </p>
             </h1>
-          </div>
-          <div className="pt-0 pr-12 pb-0 pl-12 sm:px-0">
-            <div className="  "></div>
-          </div>
-          <div className="pt-0 pr-12 pb-0 pl-12 text-center sm:px-0"></div>
-          <div className="pt-0 pr-12 pb-0 pl-12 text-center sm:px-0"></div>
-        </div>
+    </div>
+    <div className="pt-0 pr-12 pb-0 pl-12 text-center sm:px-0">
+     
+    </div>
+    <div className="pt-0 pr-12 pb-0 pl-12 text-center sm:px-0">
+   
+    </div>
+    <div className="pt-0 pr-12 pb-0 pl-12 text-center sm:px-0">
+   
+    </div>
+  </div>
+</div>
+
       </div>
+
+
+<CollectionTree />
+
+
+
 
       <section className="relative pt-24 sm:pt-32 xl:max-w-7xl xl:mx-auto xl:px-8" style={{ marginTop: '70vh' }}>
         <div className="px-4 sm:px-6 lg:px-8 xl:px-0">

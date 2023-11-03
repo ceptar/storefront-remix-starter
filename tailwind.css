@@ -6,6 +6,7 @@
   button:disabled {
     cursor: not-allowed;
   }
+
 }
 
 @layer utilities {
@@ -31,17 +32,16 @@
     justify-content: center;
     align-items: center;
 
-    border-radius: 2px;
     box-shadow: 0 0 0 0 #151515;
     -webkit-transition: box-shadow 200ms ease;
     transition: box-shadow 200ms ease;
-    color: white;
-    stroke: white;
+    color: hsl(311, 100%, 40%);
+    stroke: hsl(311, 100%, 40%);
     stroke-width: 5px;
     stroke-linecap: round;
-     stroke-linejoin: round;
+    stroke-linejoin: round;
  
-    background-color: rgba(255, 255, 255, 0.1);
+
     -webkit-transition: background-color 200ms ease;
     transition: background-color 200ms ease;
   }
@@ -49,8 +49,8 @@
   .button-wrapper:hover {
     box-shadow: 0 4px 15px -3px #151515a3;
     background-color: rgba(255, 255, 255, 0.6);
-    color: #F100C6;
-    stroke: #F100C6;
+    color: hsl(311, 100%, 20%);
+    stroke: hsl(311, 100%, 20%);
   }
 
   .buttoneins {
@@ -67,6 +67,17 @@
     src: url(./font/Metropolitano-Medium.woff2) format('woff2');
     font-display: swap;
   }
+
+ logOh1 {
+    --svgCol: #ffffffce;
+    --svgColglow: #ffffff;
+    --svgStrokewidth: "1px";
+  
+      filter: drop-shadow(0px 0px 3px rgba(10, 8, 71, 0.683))
+        drop-shadow(0px 0px 0.4px var(--svgColglow));
+        /* drop-shadow(0px 0px 4px var(--svgColglow)); */
+      filter: mask-border-width (3px);
+    }
 
   /* .logOh1 {
     filter: drop-shadow(0px 0px 3px rgba(10, 8, 71, 0.683))

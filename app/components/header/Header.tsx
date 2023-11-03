@@ -4,8 +4,11 @@ import { SearchBar } from '~/components/header/SearchBar';
 import { useRootLoader } from '~/utils/use-root-loader';
 import { UserIcon } from '@heroicons/react/24/solid';
 import { classNames } from '~/utils/class-names';
-import NavBarzwei from './NavBarzwei';
+import { useState } from "react";
+
 import '~/styles/app.css';
+
+import HeaderTest from './HeaderTest';
 
 export function Header({
   onCartIconClick,
@@ -16,11 +19,12 @@ export function Header({
 }) {
   const data = useRootLoader();
   const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
+  const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
     <header>
       
-      <NavBarzwei />
+      <HeaderTest navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
     
 
       <div>
@@ -28,6 +32,8 @@ export function Header({
         
       </div>
 </div>
+<div className="h-[8vh]"></div>
     </header>
+
   );
 }
