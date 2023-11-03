@@ -49,7 +49,8 @@ AAA
       {/* Logo */}
       <div className="text-white flex-grow z-50">
       <div className="w-[50vw] max-h-[12vh] max-w-[350px] min-w-[150px]">
-      <logOh1>
+      
+      <logoh1>
       <svg
 
           fill="var(--svgCol)"
@@ -139,7 +140,7 @@ AAA
           />
         </svg>
 
-        </logOh1>
+        </logoh1>
         </div>
       </div>
 

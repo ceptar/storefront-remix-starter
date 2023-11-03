@@ -13,7 +13,8 @@ export async function loader({ request }: LoaderArgs) {
 }
 
 export default function Index() {
-  const { collections } = useLoaderData<typeof loader>();
+
+  const { collections } = useLoaderData();
   const headerImage = collections[0]?.featuredAsset?.preview;
 
   return (
@@ -70,7 +71,7 @@ export default function Index() {
       </div>
 
 
-<CollectionTree />
+
 
 
 
@@ -106,6 +107,17 @@ export default function Index() {
             <span aria-hidden="true"> &rarr;</span>
           </a>
         </div>
+
+
+        <div className="text-black">
+      {/* Existing code */}
+      {collections.map((collection) => (
+        <div key={collection.id}>
+          <CollectionTree collection={collection} />
+        </div>
+      ))}
+      {/* Rest of the code */}
+    </div>
       </section>
     </>
   );

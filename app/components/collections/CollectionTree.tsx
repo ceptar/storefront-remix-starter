@@ -1,28 +1,25 @@
-import { useRootLoader } from '~/utils/use-root-loader';
-import { getCollections } from '~/providers/collections/collections';
-import { ArraytoTree, HasParent, TreeNode } from './ArraytoTree';
-import { LoaderArgs } from '@remix-run/server-runtime';
+import { Collection } from '~/types'; // Replace with the correct path to your types
 
-import '~/styles/app.css';
+type CollectionTreeProps = {
+  collection: Collection;
+};
 
-
-export function CollectionTree() {
-  const { data, loading, error } = useRootLoader();
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error : {error.message}</p>;
-  return <CollectionList collection={ArraytoTree(data.collections.items)} />;
-}
-
-function CollectionList(props: { collection: TreeNode<any> }) {
+export function CollectionTree({ collection }: CollectionTreeProps) {
   return (
     <ul>
-      {props.collection.children.map((child, i) => (
-        <li>
-          <a href={child.slug}>{child.name}</a>
-          <CollectionList collection={child} />
-        </li>
-      ))}
+      <li>
+        <a href={collection.slug}>{collection.name}</a>
+        {collection.children && collection.children.length > 0 && (
+          <ul>
+            {collection.children.map((child) => (
+              <li key={child.id}>
+                <a href={child.slug}>{child.name}</a>
+                <CollectionTree collection={child} />
+              </li>
+            ))}
+          </ul>
+        )}
+      </li>
     </ul>
   );
 }
