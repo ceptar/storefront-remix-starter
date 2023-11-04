@@ -53,8 +53,23 @@
     stroke: hsl(311, 100%, 20%);
   }
 
-  .buttoneins {
-  @apply  h-12 flex text-discopink-800 items-center justify-center uppercase font-semibold px-8 border border-black hover:bg-white hover:text-black hover:stroke-black transition duration-300 ease-in-out
+  .button-wrapperzwei {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 0 0 0 #151515;
+    -webkit-transition: box-shadow 300ms ease;
+    transition: box-shadow 300ms ease;
+    color: hsl(311, 100%, 40%);
+    stroke: hsl(311, 100%, 40%);
+    stroke-width: 5px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+ 
+
+    -webkit-transition: background-color 300ms ease;
+    transition: background-color 300ms ease;
   }
 
   @font-face {
@@ -81,35 +96,4 @@ logoh1 {
       drop-shadow(0px 0px 2px rgba(41, 41, 41, 0.584));
 
     }
-
-.buttonzwei{
-  position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 2px;
-            height: 2px ;
-            border-radius: 0%;
-            text-decoration: none;
-            font-size: 3rem;
-            color: #000;
-            transition: .8s cubic-bezier(.95, .32, .37, 1.31);
-}
-.buttonzwei:hover{
-  color: #000;
-}
-.buttonzwei:before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #000;
-  border-radius: 50%;
-  z-index: -1;
-  transform: scale(0);
-  transition: .5s;
-}
-.buttonzwei:hover:before{transform: scale(1);}
-}
+  }

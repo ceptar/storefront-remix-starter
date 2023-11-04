@@ -1,15 +1,6 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  // content: ["./app/**/*.{js,ts,jsx,tsx}"],
-  // theme: {
-  //   extend: {},
-  // },
-  content: {
-    relative: true,
-    files: ['./public/index.html'],
-  },
-
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/line-clamp'),

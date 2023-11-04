@@ -43,7 +43,7 @@ className="h-full w-full flex flexrow justify-between"
 
     <div className="pl-2 flex flex-col justify-center w-1/5">
 
-AAA
+<a className="">AAA</a>
 
 
       </div>
