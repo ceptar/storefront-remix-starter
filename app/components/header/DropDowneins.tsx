@@ -14,14 +14,19 @@ let timeout: NodeJS.Timeout
 
 
 const closePopover = () => {
-  return buttonRef.current?.dispatchEvent(
-    new KeyboardEvent("keydown", {
-      key: "Escape",
-      bubbles: true,
-      cancelable: true
-    })
-  )
+if (!buttonRef.current) {
+return;
 }
+
+buttonRef.current.dispatchEvent(
+new KeyboardEvent("keydown", {
+key: "Escape",
+bubbles: true,
+cancelable: true
+})
+)
+}
+
 
 
 const onMouseEnter = (open: boolean) => {
@@ -73,7 +78,7 @@ return buttonRef.current?.click()
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute z-10 right-0 mt-5 h-[50vh] w-[50vw] origin-top-right">
+                  <Popover.Panel className="absolute z-10 right-8 mt-8 h-[50vh] w-[50vw] sm:h-[30vh] sm:w-[30vw] lg:h-[20vh] lg:w-[20vw] origin-top-right">
                     <div
                       className="overflow-hidden w-full bg-gray-700/80 text-white "
                       onMouseEnter={onMouseEnter.bind(null, open)}

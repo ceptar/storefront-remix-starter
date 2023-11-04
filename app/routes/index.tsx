@@ -1,9 +1,9 @@
 import { useLoaderData } from '@remix-run/react';
 import { getCollections } from '~/providers/collections/collections';
 import { CollectionCard } from '~/components/collections/CollectionCard';
-import { BookOpenIcon } from '@heroicons/react/24/solid';
+
 import { LoaderArgs } from '@remix-run/server-runtime';
-import { CollectionTree } from '~/components/collections/CollectionTree';
+
 
 export async function loader({ request }: LoaderArgs) {
   const collections = await getCollections(request, { take: 20 });
@@ -108,16 +108,6 @@ export default function Index() {
           </a>
         </div>
 
-
-        <div className="text-black">
-      {/* Existing code */}
-      {collections.map((collection) => (
-        <div key={collection.id}>
-          <CollectionTree collection={collection} />
-        </div>
-      ))}
-      {/* Rest of the code */}
-    </div>
       </section>
     </>
   );

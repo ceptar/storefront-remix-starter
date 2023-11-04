@@ -68,15 +68,21 @@
     font-display: swap;
   }
 
- logoh1 {
-    --svgCol: hsla(311, 100%, 65%, 0.932);
-    --svgColglow: hsla(311, 100%, 50%, 0.806);
-    --svgColglowzwei: hsla(311, 100%, 50%, 0.459);
-    --svgStrokewidth: 0.8px;
+logoh1 {
+    --svgCol: #15fee3c3;
+    --svgColglow: hsl(311, 100%, 70%);
+    --svgColglowzwei: hsl(311, 100%, 60%);
+    --svgStrokewidth: 2px;
   
-      filter: drop-shadow(0px 0px 2px rgba(39, 69, 84, 0.772))
-        drop-shadow(0px 0px 0.4px var(--svgColglow))
-        drop-shadow(0px 0px 4px var(--svgColglow));
+      filter: 
+
+      drop-shadow(0px 0px 1px #00ffff)
+      drop-shadow(0px 0px 0px #3535359a)
+      drop-shadow(0px 0px 2px #00ffbb8d);
+
+
+      
+
 
     }
 

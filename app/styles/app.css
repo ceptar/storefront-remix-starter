@@ -744,6 +744,10 @@ button:disabled {
   bottom: 0.5rem;
 }
 
+#app .right-8 {
+  right: 2rem;
+}
+
 #app .left-0 {
   left: 0px;
 }
@@ -940,14 +944,6 @@ button:disabled {
   margin-top: 0.75rem;
 }
 
-#app .mt-5 {
-  margin-top: 1.25rem;
-}
-
-#app .mb-auto {
-  margin-bottom: auto;
-}
-
 #app .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -956,12 +952,20 @@ button:disabled {
   margin-top: 4rem;
 }
 
+#app .mb-auto {
+  margin-bottom: auto;
+}
+
 #app .-mb-px {
   margin-bottom: -1px;
 }
 
 #app .mb-10 {
   margin-bottom: 2.5rem;
+}
+
+#app .mt-5 {
+  margin-top: 1.25rem;
 }
 
 #app .mb-6 {
@@ -994,10 +998,6 @@ button:disabled {
 
 #app .inline-flex {
   display: inline-flex;
-}
-
-#app .table {
-  display: table;
 }
 
 #app .flow-root {
@@ -1157,6 +1157,10 @@ button:disabled {
   width: 50vw;
 }
 
+#app .w-1\/5 {
+  width: 20%;
+}
+
 #app .w-2\/5 {
   width: 40%;
 }
@@ -1171,6 +1175,18 @@ button:disabled {
 
 #app .w-20 {
   width: 5rem;
+}
+
+#app .w-\[40vw\] {
+  width: 40vw;
+}
+
+#app .w-auto {
+  width: auto;
+}
+
+#app .w-1\/3 {
+  width: 33.333333%;
 }
 
 #app .min-w-0 {
@@ -1235,6 +1251,10 @@ button:disabled {
 
 #app .max-w-\[12rem\] {
   max-width: 12rem;
+}
+
+#app .max-w-\[200px\] {
+  max-width: 200px;
 }
 
 #app .flex-1 {
@@ -1991,6 +2011,10 @@ button:disabled {
   padding-bottom: 3rem;
 }
 
+#app .pl-16 {
+  padding-left: 4rem;
+}
+
 #app .pt-4 {
   padding-top: 1rem;
 }
@@ -2005,10 +2029,6 @@ button:disabled {
 
 #app .pl-8 {
   padding-left: 2rem;
-}
-
-#app .pl-16 {
-  padding-left: 4rem;
 }
 
 #app .pt-2 {
@@ -2513,13 +2533,15 @@ button:disabled {
 }
 
 #app logoh1 {
-  --svgCol: hsla(311, 100%, 65%, 0.932);
-  --svgColglow: hsla(311, 100%, 50%, 0.806);
-  --svgColglowzwei: hsla(311, 100%, 50%, 0.459);
-  --svgStrokewidth: 0.8px;
-  filter: drop-shadow(0px 0px 2px rgba(39, 69, 84, 0.772))
-        drop-shadow(0px 0px 0.4px var(--svgColglow))
-        drop-shadow(0px 0px 4px var(--svgColglow));
+  --svgCol: #15fee3c3;
+  --svgColglow: hsl(311, 100%, 70%);
+  --svgColglowzwei: hsl(311, 100%, 60%);
+  --svgStrokewidth: 2px;
+  filter: 
+
+      drop-shadow(0px 0px 1px #00ffff)
+      drop-shadow(0px 0px 0px #3535359a)
+      drop-shadow(0px 0px 2px #00ffbb8d);
 }
 
 #app .first\:mt-2:first-child {
@@ -2769,6 +2791,10 @@ button:disabled {
     height: 48px;
   }
 
+  #app .sm\:h-\[30vh\] {
+    height: 30vh;
+  }
+
   #app .sm\:h-12 {
     height: 3rem;
   }
@@ -2779,6 +2805,10 @@ button:disabled {
 
   #app .sm\:w-\[48px\] {
     width: 48px;
+  }
+
+  #app .sm\:w-\[30vw\] {
+    width: 30vw;
   }
 
   #app .sm\:w-1\/3 {
@@ -3061,6 +3091,14 @@ button:disabled {
 
   #app .lg\:hidden {
     display: none;
+  }
+
+  #app .lg\:h-\[20vh\] {
+    height: 20vh;
+  }
+
+  #app .lg\:w-\[20vw\] {
+    width: 20vw;
   }
 
   #app .lg\:max-w-3xl {
