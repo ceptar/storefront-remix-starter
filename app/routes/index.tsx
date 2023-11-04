@@ -28,17 +28,17 @@ export default function Index() {
           alignItems: 'center',
           justifyContent: 'center',
           top: '0',
-          height: '70vh',
+          height: '60vh',
           width: '100vw',
           zIndex: '10',
         }}
       >
         {/* Decorative image and overlay */}
 
-        <div className="flex h-[62vh] items-center justify-center pr-4 pb-16 pl-4 mr-auto ml-auto  md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20
+        <div className="flex h-[60vh] items-center justify-center pr-4 pb-16 pl-4 mr-auto ml-auto  md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20
     w-full">
   <div className="sm:grid-cols-2 lg:grid-cols-4 grid gap-5 row-gap-5">
-    <div className="pt-0 pr-12 pb-0 pl-12 sm:px-0">
+    <div className="pt-16 pr-12 pb-0 pl-12 sm:px-0">
     <h1 className="whitespace-nowrap text-2xl sm:text-4xl font-thin text-white">
               <span className="p-2 sm:p-3">Wearable Art.</span>
               <p className="my-6 sm:my-10"></p>
@@ -76,7 +76,7 @@ export default function Index() {
 
 
 
-      <section className="relative pt-24 sm:pt-32 xl:max-w-7xl xl:mx-auto xl:px-8" style={{ marginTop: '70vh' }}>
+      <section className="relative xl:max-w-7xl xl:mx-auto xl:px-8" style={{ marginTop: '60vh' }}>
         <div className="px-4 sm:px-6 lg:px-8 xl:px-0">
           <h2
             id="category-heading"
@@ -98,15 +98,6 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="mt-6 px-4 sm:hidden">
-          <a
-            href="~/routes/__cart/index#"
-            className="block text-sm font-semibold text-primary-600 hover:text-primary-500"
-          >
-            Browse all categories
-            <span aria-hidden="true"> &rarr;</span>
-          </a>
-        </div>
 
       </section>
     </>

@@ -944,16 +944,16 @@ button:disabled {
   margin-top: 0.75rem;
 }
 
-#app .mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 #app .mt-16 {
   margin-top: 4rem;
 }
 
 #app .mb-auto {
   margin-bottom: auto;
+}
+
+#app .mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 #app .-mb-px {
@@ -1032,8 +1032,8 @@ button:disabled {
   height: 1.5rem;
 }
 
-#app .h-\[62vh\] {
-  height: 62vh;
+#app .h-\[52vh\] {
+  height: 52vh;
 }
 
 #app .h-full {
@@ -1100,6 +1100,10 @@ button:disabled {
   height: 5rem;
 }
 
+#app .h-\[60vh\] {
+  height: 60vh;
+}
+
 #app .max-h-\[12vh\] {
   max-height: 12vh;
 }
@@ -1161,6 +1165,10 @@ button:disabled {
   width: 20%;
 }
 
+#app .w-3\/5 {
+  width: 60%;
+}
+
 #app .w-2\/5 {
   width: 40%;
 }
@@ -1175,18 +1183,6 @@ button:disabled {
 
 #app .w-20 {
   width: 5rem;
-}
-
-#app .w-\[40vw\] {
-  width: 40vw;
-}
-
-#app .w-auto {
-  width: auto;
-}
-
-#app .w-1\/3 {
-  width: 33.333333%;
 }
 
 #app .min-w-0 {
@@ -1233,12 +1229,12 @@ button:disabled {
   max-width: 80rem;
 }
 
-#app .max-w-screen-2xl {
-  max-width: 1536px;
-}
-
 #app .max-w-\[350px\] {
   max-width: 350px;
+}
+
+#app .max-w-screen-2xl {
+  max-width: 1536px;
 }
 
 #app .max-w-xl {
@@ -1251,10 +1247,6 @@ button:disabled {
 
 #app .max-w-\[12rem\] {
   max-width: 12rem;
-}
-
-#app .max-w-\[200px\] {
-  max-width: 200px;
 }
 
 #app .flex-1 {
@@ -1995,10 +1987,6 @@ button:disabled {
   padding-left: 3rem;
 }
 
-#app .pt-24 {
-  padding-top: 6rem;
-}
-
 #app .pt-6 {
   padding-top: 1.5rem;
 }
@@ -2009,6 +1997,14 @@ button:disabled {
 
 #app .pb-12 {
   padding-bottom: 3rem;
+}
+
+#app .pl-2 {
+  padding-left: 0.5rem;
+}
+
+#app .pt-24 {
+  padding-top: 6rem;
 }
 
 #app .pl-16 {
@@ -2053,6 +2049,10 @@ button:disabled {
 
 #app .pt-12 {
   padding-top: 3rem;
+}
+
+#app .pt-16 {
+  padding-top: 4rem;
 }
 
 #app .text-left {
@@ -2500,13 +2500,13 @@ button:disabled {
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 0 0 #151515;
-  transition: box-shadow 200ms ease;
+  transition: box-shadow 300ms ease;
   color: hsl(311, 100%, 40%);
   stroke: hsl(311, 100%, 40%);
   stroke-width: 5px;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transition: background-color 200ms ease;
+  transition: background-color 300ms ease;
 }
 
 #app .button-wrapper:hover {
@@ -2533,15 +2533,15 @@ button:disabled {
 }
 
 #app logoh1 {
-  --svgCol: #15fee3c3;
+  --svgCol: rgb(228, 228, 228);
   --svgColglow: hsl(311, 100%, 70%);
   --svgColglowzwei: hsl(311, 100%, 60%);
-  --svgStrokewidth: 2px;
+  --svgStrokewidth: 1px;
   filter: 
+      drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.692))
+      drop-shadow(-3px 2px 3px #272727a4)
 
-      drop-shadow(0px 0px 1px #00ffff)
-      drop-shadow(0px 0px 0px #3535359a)
-      drop-shadow(0px 0px 2px #00ffbb8d);
+      drop-shadow(0px 0px 2px rgba(41, 41, 41, 0.584));
 }
 
 #app .first\:mt-2:first-child {
@@ -2906,8 +2906,8 @@ button:disabled {
     padding-bottom: 4rem;
   }
 
-  #app .sm\:pt-32 {
-    padding-top: 8rem;
+  #app .sm\:pt-16 {
+    padding-top: 4rem;
   }
 
   #app .sm\:text-5xl {

@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import '~/styles/app.css';
 import DropDowneins from './DropDowneins';
-import logo from '~/public/logo.svg';
 
 
 
@@ -29,28 +28,29 @@ const HeaderTest = ({ navbarOpen, setNavbarOpen }) => {
 
 
   return (
-    <nav className="w-full fixed left-0 h-[8vh] top-0  flex items-between z-50"
+    <div className="w-full p-4 fixed left-0 h-[8vh] top-0 flex-row items-center justify-items-center z-50"
+    
     
     style={{
-      backgroundColor: navColor,
+    backgroundColor: navColor,
       color: navTextCol,
       transition: 'background-color 0.5s',
     }}>
-  <div className="flex-row items-center justify-between flex w-full h-full max-w-screen-2xl md:flex-row px-4">
-    <div className="flex-col justify-between w-1/5">
-      <div className="flex-row  justify-start items-center mt-2 mb-2 md:m-0 hidden md:flex">
+<nav   
+className="h-full w-full flex flexrow justify-between"
+      
+>
+
+    <div className="pl-2 flex flex-col justify-center w-1/5">
+
 AAA
 
+
       </div>
-      </div>
-      <div className="flex-col w-1/3">
-      <div className="flex-row flex h-full items-center justify-center order-first md:order-none">
-     
+      <div className="flex flex-col items-center justify-center w-3/5">
       {/* Logo */}
-      <div className="text-white flex-grow z-50">
-      <div className="w-full">
-      
-<logoh1>
+
+  <logoh1>
       <svg
           className="w-full min-w-[150px] max-w-[350px]"
           fill="var(--svgCol)"
@@ -142,36 +142,18 @@ AAA
         </svg>
         </logoh1>
 
-        </div>
       </div>
+      <div className="flex flex-col items-end justify-center w-1/5">
 
-      </div>
-      </div>
-      <div className="flex-col items-center w-1/5">
-      <div className="flex-row-reverse items-center justify-start flex">
       {/* Hamburger Icon */}
       
       <DropDowneins />
-      
-      
-      
-      
-      
-      {/* <button className="button-wrapper h-[36px] w-[36px] sm:h-[48px] sm:w-[48px] p-2"
-
-        onClick={() => setNavbarOpen(!navbarOpen)}
-      >
-<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5.42969 8H42.5726" />
-<path d="M5.42969 24H42.5726" />
-<path d="M5.42969 40H42.5726" />
-</svg>
-
-      </button> */}
       </div>
-      </div>
-  </div>
+
 </nav>
+</div>
+
+
   );
 }
 export default HeaderTest;

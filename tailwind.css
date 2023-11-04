@@ -33,8 +33,8 @@
     align-items: center;
 
     box-shadow: 0 0 0 0 #151515;
-    -webkit-transition: box-shadow 200ms ease;
-    transition: box-shadow 200ms ease;
+    -webkit-transition: box-shadow 300ms ease;
+    transition: box-shadow 300ms ease;
     color: hsl(311, 100%, 40%);
     stroke: hsl(311, 100%, 40%);
     stroke-width: 5px;
@@ -42,8 +42,8 @@
     stroke-linejoin: round;
  
 
-    -webkit-transition: background-color 200ms ease;
-    transition: background-color 200ms ease;
+    -webkit-transition: background-color 300ms ease;
+    transition: background-color 300ms ease;
   }
   
   .button-wrapper:hover {
@@ -69,21 +69,47 @@
   }
 
 logoh1 {
-    --svgCol: #15fee3c3;
+    --svgCol: rgb(228, 228, 228);
     --svgColglow: hsl(311, 100%, 70%);
     --svgColglowzwei: hsl(311, 100%, 60%);
-    --svgStrokewidth: 2px;
+    --svgStrokewidth: 1px;
   
       filter: 
+      drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.692))
+      drop-shadow(-3px 2px 3px #272727a4)
 
-      drop-shadow(0px 0px 1px #00ffff)
-      drop-shadow(0px 0px 0px #3535359a)
-      drop-shadow(0px 0px 2px #00ffbb8d);
-
-
-      
-
+      drop-shadow(0px 0px 2px rgba(41, 41, 41, 0.584));
 
     }
 
+.buttonzwei{
+  position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2px;
+            height: 2px ;
+            border-radius: 0%;
+            text-decoration: none;
+            font-size: 3rem;
+            color: #000;
+            transition: .8s cubic-bezier(.95, .32, .37, 1.31);
+}
+.buttonzwei:hover{
+  color: #000;
+}
+.buttonzwei:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+  transition: .5s;
+}
+.buttonzwei:hover:before{transform: scale(1);}
 }
