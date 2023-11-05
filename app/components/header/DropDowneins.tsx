@@ -1,7 +1,7 @@
 import { Link } from '@remix-run/react';
 import { useRootLoader } from '~/utils/use-root-loader';
 import { Popover, Transition } from '@headlessui/react';
-import { Fragment, useRef, useState, useEffect } from "react";
+import { Fragment, useRef, useState, useEffect } from 'react';
 import { classNames } from '~/utils/class-names';
 import { useLoaderData } from '@remix-run/react';
 import { getCollections } from '~/providers/collections/collections';
@@ -76,15 +76,15 @@ return (
             ref={buttonRef}
                   className={`
                   ${open ? "" : "text-opacity-90"}
-                    focus:rounded-full focus:outline-offset-[3px]`}
+                  z-10 buttoneins rounded-full " onClick={() => handleClick(open)}`}
                   onMouseEnter={() => onHover(open, "onMouseEnter")}
                   onMouseLeave={() => onHover(open, "onMouseLeave")}
   >
 
 
-                 <div className="z-10 focus:outline-none buttoneins rounded-full h-[36px] w-[36px] sm:h-[48px] sm:w-[48px]" onClick={() => handleClick(open)}
+                 <div
 >
-<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg className="h-[16px] w-[16px] sm:h-[24px] sm:w-[24px]" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.42969 8H42.5726" />
 <path d="M5.42969 24H42.5726" />
 <path d="M5.42969 40H42.5726" />

@@ -1091,8 +1091,8 @@ button:disabled {
   height: 24rem;
 }
 
-#app :is(.h-\[36px\]) {
-  height: 36px;
+#app :is(.h-\[16px\]) {
+  height: 16px;
 }
 
 #app :is(.h-\[50vh\]) {
@@ -1163,8 +1163,8 @@ button:disabled {
   width: 2rem;
 }
 
-#app :is(.w-\[36px\]) {
-  width: 36px;
+#app :is(.w-\[16px\]) {
+  width: 16px;
 }
 
 #app :is(.w-\[50vw\]) {
@@ -2449,10 +2449,8 @@ button:disabled {
   justify-content: center;
   --tw-bg-opacity: 0.8;
   stroke: #F100C6;
-  stroke-width: 3px;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  stroke-width: 5px;
+  padding: 0.5rem;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
@@ -2461,11 +2459,6 @@ button:disabled {
 }
 
 #app  :is(.buttoneins):hover {
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  --tw-shadow-color: #d1d5db;
-  --tw-shadow: var(--tw-shadow-colored);
   background-color: hsl(173, 99%, 90%);
 }
 
@@ -2591,10 +2584,6 @@ button:disabled {
   z-index: 10;
 }
 
-#app :is(.focus\:rounded-full:focus) {
-  border-radius: 9999px;
-}
-
 #app :is(.focus\:border-rose-500:focus) {
   --tw-border-opacity: 1;
   border-color: rgb(244 63 94 / var(--tw-border-opacity));
@@ -2618,10 +2607,6 @@ button:disabled {
 #app :is(.focus\:outline-none:focus) {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-#app :is(.focus\:outline-offset-\[3px\]:focus) {
-  outline-offset: 3px;
 }
 
 #app :is(.focus\:ring-1:focus) {
@@ -2767,12 +2752,12 @@ button:disabled {
     height: 3rem;
   }
 
-  #app :is(.sm\:h-\[30vh\]) {
-    height: 30vh;
+  #app :is(.sm\:h-\[24px\]) {
+    height: 24px;
   }
 
-  #app :is(.sm\:h-\[48px\]) {
-    height: 48px;
+  #app :is(.sm\:h-\[30vh\]) {
+    height: 30vh;
   }
 
   #app :is(.sm\:w-1\/4) {
@@ -2783,12 +2768,12 @@ button:disabled {
     width: 3rem;
   }
 
-  #app :is(.sm\:w-\[30vw\]) {
-    width: 30vw;
+  #app :is(.sm\:w-\[24px\]) {
+    width: 24px;
   }
 
-  #app :is(.sm\:w-\[48px\]) {
-    width: 48px;
+  #app :is(.sm\:w-\[30vw\]) {
+    width: 30vw;
   }
 
   #app :is(.sm\:w-full) {

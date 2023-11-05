@@ -28,7 +28,7 @@
   }
 
   .buttoneins {
-  @apply  flex justify-center items-center bg-opacity-80 stroke-[3px] stroke-discopink shadow-none  transition duration-300 ease-in-out transform hover:shadow-sm hover:shadow-gray-300 hover:bg-discoteal-100
+  @apply  p-2 flex justify-center items-center bg-opacity-80 stroke-[5px] stroke-discopink transition duration-300 ease-in-out transform hover:bg-discoteal-100
   }
   
   .button-wrapper {
