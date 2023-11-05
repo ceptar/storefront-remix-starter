@@ -1,8 +1,9 @@
+
 import { useLoaderData } from '@remix-run/react';
 import { getCollections } from '~/providers/collections/collections';
 import { CollectionCard } from '~/components/collections/CollectionCard';
-
 import { LoaderArgs } from '@remix-run/server-runtime';
+import MultiCarousel from '~/utils/MultiCarousel';
 
 
 export async function loader({ request }: LoaderArgs) {
@@ -72,10 +73,6 @@ export default function Index() {
 
 
 
-
-
-
-
       <section className="relative xl:max-w-7xl xl:mx-auto xl:px-8" style={{ marginTop: '60vh' }}>
         <div className="px-4 sm:px-6 lg:px-8 xl:px-0">
           <h2
@@ -98,6 +95,9 @@ export default function Index() {
           </div>
         </div>
 
+        <div className="pt-16"><MultiCarousel /></div>
+
+        <div className="pt-16"></div>
 
       </section>
     </>

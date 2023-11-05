@@ -776,6 +776,10 @@ button:disabled {
   top: 0px;
 }
 
+#app :is(.right-4) {
+  right: 1rem;
+}
+
 #app :is(.z-10) {
   z-index: 10;
 }
@@ -1000,8 +1004,16 @@ button:disabled {
   margin-top: 2rem;
 }
 
+#app :is(.mt-\[9vh\]) {
+  margin-top: 9vh;
+}
+
 #app :is(.mt-auto) {
   margin-top: auto;
+}
+
+#app :is(.mt-\[8vh\]) {
+  margin-top: 8vh;
 }
 
 #app :is(.box-content) {
@@ -1758,10 +1770,6 @@ button:disabled {
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
-#app :is(.bg-gray-700\/80) {
-  background-color: rgb(55 65 81 / 0.8);
-}
-
 #app :is(.bg-gray-800) {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
@@ -1827,6 +1835,10 @@ button:disabled {
 
 #app :is(.bg-opacity-75) {
   --tw-bg-opacity: 0.75;
+}
+
+#app :is(.bg-opacity-90) {
+  --tw-bg-opacity: 0.9;
 }
 
 #app :is(.bg-gradient-to-t) {
@@ -2032,6 +2044,10 @@ button:disabled {
 
 #app :is(.pr-4) {
   padding-right: 1rem;
+}
+
+#app :is(.pr-6) {
+  padding-right: 1.5rem;
 }
 
 #app :is(.pr-8) {
@@ -2518,10 +2534,38 @@ button:disabled {
   background-color: hsl(173, 99%, 50%);
 }
 
+#app  :is(.buttoneins) {
+  display: flex;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  align-items: center;
+  justify-content: center;
+  --tw-bg-opacity: 0.8;
+  stroke: #F100C6;
+  stroke-width: 3px;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#app  :is(.buttoneins):hover {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: #d1d5db;
+  --tw-shadow: var(--tw-shadow-colored);
+  background-color: hsl(173, 99%, 90%);
+}
+
 #app :is(.button-wrapper) {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 8px;
   box-shadow: 0 0 0 0 #151515;
   transition: box-shadow 300ms ease;
   color: hsl(311, 100%, 40%);
@@ -2533,8 +2577,8 @@ button:disabled {
 }
 
 #app :is(.button-wrapper:hover) {
-  box-shadow: 0 4px 15px -3px #151515a3;
-  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 10px -3px #151515a3;
+  background-color: rgba(255, 255, 255, 0.8);
   color: hsl(311, 100%, 20%);
   stroke: hsl(311, 100%, 20%);
 }
@@ -2556,15 +2600,16 @@ button:disabled {
 }
 
 #app :is(logoh1) {
-  --svgCol: rgb(228, 228, 228);
+  --svgCol: hsl(311, 100%, 70%);
   --svgColglow: hsl(311, 100%, 70%);
   --svgColglowzwei: hsl(311, 100%, 60%);
-  --svgStrokewidth: 1px;
+  --svgStrokewidth: 0.8px;
   filter: 
-      drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.692))
-      drop-shadow(-3px 2px 3px #272727a4)
+      drop-shadow(0px 0px 0.5px hsla(311, 100%, 60%, 0.333))
+      drop-shadow(0px 0px 0.5px rgba(156, 0, 153, 0.34))
 
-      drop-shadow(0px 0px 2px rgba(41, 41, 41, 0.584));
+
+      drop-shadow(-3px 2px 3px  #ac65b7b1);
 }
 
 #app :is(.first\:mt-2:first-child) {
@@ -2642,6 +2687,10 @@ button:disabled {
   z-index: 10;
 }
 
+#app :is(.focus\:rounded-full:focus) {
+  border-radius: 9999px;
+}
+
 #app :is(.focus\:border-rose-500:focus) {
   --tw-border-opacity: 1;
   border-color: rgb(244 63 94 / var(--tw-border-opacity));
@@ -2665,6 +2714,10 @@ button:disabled {
 #app :is(.focus\:outline-none:focus) {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+#app :is(.focus\:outline-offset-\[3px\]:focus) {
+  outline-offset: 3px;
 }
 
 #app :is(.focus\:ring-1:focus) {

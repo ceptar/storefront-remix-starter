@@ -28,7 +28,7 @@ const HeaderTest = ({ navbarOpen, setNavbarOpen }) => {
 
 
   return (
-    <div className="w-full p-4 fixed left-0 h-[8vh] top-0 flex-row items-center justify-items-center z-50"
+    <div className="w-full p-4 fixed h-[8vh] top-0 flex flex-col  pl-8 pr-6 xl:px-8 items-center justify-items-center z-50"
     
     
     style={{
@@ -37,13 +37,13 @@ const HeaderTest = ({ navbarOpen, setNavbarOpen }) => {
       transition: 'background-color 0.5s',
     }}>
 <nav   
-className="h-full w-full flex flexrow justify-between"
+className="xl:max-w-7xl h-full w-full flex flex-row justify-between"
       
 >
 
     <div className="pl-2 flex flex-col justify-center w-1/5">
 
-<a className="">AAA</a>
+<a className=""></a>
 
 
       </div>

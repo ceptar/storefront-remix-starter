@@ -26,12 +26,16 @@
   .text-inherit {
     color: inherit;
   }
+
+  .buttoneins {
+  @apply  flex justify-center items-center bg-opacity-80 stroke-[3px] stroke-discopink shadow-none  transition duration-300 ease-in-out transform hover:shadow-sm hover:shadow-gray-300 hover:bg-discoteal-100
+  }
   
   .button-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding: 8px;
     box-shadow: 0 0 0 0 #151515;
     -webkit-transition: box-shadow 300ms ease;
     transition: box-shadow 300ms ease;
@@ -47,29 +51,10 @@
   }
   
   .button-wrapper:hover {
-    box-shadow: 0 4px 15px -3px #151515a3;
-    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 10px -3px #151515a3;
+    background-color: rgba(255, 255, 255, 0.8);
     color: hsl(311, 100%, 20%);
     stroke: hsl(311, 100%, 20%);
-  }
-
-  .button-wrapperzwei {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    box-shadow: 0 0 0 0 #151515;
-    -webkit-transition: box-shadow 300ms ease;
-    transition: box-shadow 300ms ease;
-    color: hsl(311, 100%, 40%);
-    stroke: hsl(311, 100%, 40%);
-    stroke-width: 5px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
- 
-
-    -webkit-transition: background-color 300ms ease;
-    transition: background-color 300ms ease;
   }
 
   @font-face {
@@ -84,16 +69,18 @@
   }
 
 logoh1 {
-    --svgCol: rgb(228, 228, 228);
+    --svgCol: hsl(311, 100%, 70%);
     --svgColglow: hsl(311, 100%, 70%);
     --svgColglowzwei: hsl(311, 100%, 60%);
-    --svgStrokewidth: 1px;
+    --svgStrokewidth: 0.8px;
   
       filter: 
-      drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.692))
-      drop-shadow(-3px 2px 3px #272727a4)
+      drop-shadow(0px 0px 0.5px hsla(311, 100%, 60%, 0.333))
+      drop-shadow(0px 0px 0.5px rgba(156, 0, 153, 0.34))
 
-      drop-shadow(0px 0px 2px rgba(41, 41, 41, 0.584));
 
+      drop-shadow(-3px 2px 3px  #ac65b7b1);
     }
+
+
   }
