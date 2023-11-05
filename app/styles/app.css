@@ -768,16 +768,12 @@ button:disabled {
   right: 0px;
 }
 
-#app :is(.right-8) {
-  right: 2rem;
+#app :is(.right-4) {
+  right: 1rem;
 }
 
 #app :is(.top-0) {
   top: 0px;
-}
-
-#app :is(.right-4) {
-  right: 1rem;
 }
 
 #app :is(.z-10) {
@@ -1004,16 +1000,12 @@ button:disabled {
   margin-top: 2rem;
 }
 
-#app :is(.mt-\[9vh\]) {
-  margin-top: 9vh;
+#app :is(.mt-\[8vh\]) {
+  margin-top: 8vh;
 }
 
 #app :is(.mt-auto) {
   margin-top: auto;
-}
-
-#app :is(.mt-\[8vh\]) {
-  margin-top: 8vh;
 }
 
 #app :is(.box-content) {
@@ -1037,6 +1029,10 @@ button:disabled {
 
 #app :is(.inline-flex) {
   display: inline-flex;
+}
+
+#app :is(.table) {
+  display: table;
 }
 
 #app :is(.flow-root) {

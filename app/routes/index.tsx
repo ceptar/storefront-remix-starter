@@ -4,9 +4,10 @@ import { getCollections } from '~/providers/collections/collections';
 import { CollectionCard } from '~/components/collections/CollectionCard';
 import { LoaderArgs } from '@remix-run/server-runtime';
 import MultiCarousel from '~/utils/MultiCarousel';
+import CollectionsTreeMenu from '~/components/CollectionsTreeMenu';
 
 
-export async function loader({ request }: LoaderArgs) {
+export async function loader({ request }: LoaderArgs<null>) {
   const collections = await getCollections(request, { take: 20 });
   return {
     collections,
@@ -15,8 +16,8 @@ export async function loader({ request }: LoaderArgs) {
 
 export default function Index() {
 
-  const { collections } = useLoaderData();
-  const headerImage = collections[0]?.featuredAsset?.preview;
+  const { collections } = useLoaderData<typeof loader>();
+  const headerImage = collections[0]?.featuredAsset?.preview; 
 
   return (
     <>
@@ -87,9 +88,9 @@ export default function Index() {
           <div className="-my-2">
             <div className="box-content py-2 px-2 overflow-x-auto xl:overflow-visible">
               <div className="grid justify-items-center grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-8 sm:px-6 lg:px-8 xl:relative xl:px-0 xl:space-x-0 xl:gap-x-8">
-                {collections.map((collection) => (
-                  <CollectionCard key={collection.id} collection={collection} />
-                ))}
+              {collections.map(collection => (
+  <CollectionCard collection={collection} key={collection.id} />
+))}
               </div>
             </div>
           </div>
@@ -97,7 +98,9 @@ export default function Index() {
 
         <div className="pt-16"><MultiCarousel /></div>
 
-        <div className="pt-16"></div>
+        <div className="pt-16">    <CollectionsTreeMenu 
+      collectionsData={{ collections }} 
+    /></div>
 
       </section>
     </>
