@@ -3180,10 +3180,6 @@ button:disabled {
     width: auto;
   }
 
-  #app :is(.xl\:max-w-7xl) {
-    max-width: 80rem;
-  }
-
   #app :is(.xl\:grid-cols-3) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
