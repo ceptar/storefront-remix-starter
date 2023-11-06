@@ -11,9 +11,10 @@ export function ProductCard({
   currencyCode,
 }: ProductCardProps) {
   return (
-    <Link className="flex flex-col" prefetch="intent" to={`/products/${slug}`}>
+    <Link className="flex flex-col bg-gray-100 shadow-md p-4" prefetch="intent" to={`/products/${slug}`}>
+      
       <img
-        className="rounded-xl flex-grow object-cover aspect-[7/8]"
+        className="flex-grow border-1 border-gray-300 object-cover aspect-[7/8]"
         alt=""
         src={productAsset?.preview + '?w=300&h=400'}
       />

@@ -77,22 +77,35 @@ export default function CollectionSlug() {
   );
   const submit = useSubmit();
   return (
-    <div className="max-w-6xl mx-auto px-4">
-      <div className="flex justify-between items-center">
-        <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-gray-900 my-8">
+    <div className="w-full">
+<div className="w-full flex flex-col items-center bg-discopink-100">
+<div className=" flex mr-auto ml-auto px-8 max-w-6xl mx-auto w-full justify-between ">
+<h2 className="text-xl sm:text-2xl font-bold tracking-wider my-4">
           {collection.name}
         </h2>
+</div>
+</div>
 
+<div className="px-8 max-w-6xl mx-auto">
+<div className="flex flex-row">
+<div className="my-2 w-full max-w-6xl flex flex-col justify-between ">
+      <Breadcrumbs items={collection.breadcrumbs}></Breadcrumbs>
+
+      </div>
+    
+      
+
+      <div className="flex flex-col">
         <FiltersButton
           filterCount={facetValueIds.length}
           onClick={() => setMobileFiltersOpen(true)}
         />
       </div>
+      </div>
 
-      <Breadcrumbs items={collection.breadcrumbs}></Breadcrumbs>
       {collection.children?.length ? (
-        <div className="max-w-2xl mx-auto py-16 sm:py-16 lg:max-w-none border-b mb-16">
-          <h2 className="text-2xl font-light text-gray-900">Collections</h2>
+        <div className="max-w-2xl mx-auto py-16 sm:py-16 lg:max-w-none flex flex-col items-center  justify-between border-b mb-16">
+          <h2 className="flex flex-row w-full text-xl font-semibold text-gray-900">Collections</h2>
           <div className="mt-6 grid max-w-xs sm:max-w-none mx-auto sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
             {collection.children.map((child) => (
               <CollectionCard
@@ -119,6 +132,7 @@ export default function CollectionSlug() {
         />
       </ValidatedForm>
     </div>
+       </div>
   );
 }
 
@@ -144,5 +158,6 @@ export function CatchBoundary() {
         </div>
       </div>
     </div>
+
   );
 }

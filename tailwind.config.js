@@ -27,7 +27,7 @@ module.exports = {
 
         discopurple: '#8002E4',
 
-        discoyellow: '#fede5c',
+        discoyellow: '#fef3c7',
 
         discored: '#b6103d',
 

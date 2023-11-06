@@ -23,15 +23,11 @@ export function Header({
 
   return (
     <header>
-      
+            
       <HeaderTest navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
     
 
-      <div>
-      <div>
-        
-      </div>
-</div>
+
 <div className="h-[8vh]"></div>
     </header>
 

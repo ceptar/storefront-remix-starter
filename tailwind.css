@@ -28,7 +28,7 @@
   }
 
   .buttoneins {
-  @apply  p-2 flex justify-center items-center bg-opacity-80 stroke-[5px] stroke-discopink transition duration-300 ease-in-out transform hover:bg-discoteal-100
+  @apply    p-3 flex text-discopink justify-center items-center bg-opacity-80 stroke-[5px] stroke-discopink transition duration-300 ease-in-out transform hover:bg-discopink-100
   }
   
   .button-wrapper {
@@ -69,17 +69,17 @@
   }
 
 logoh1 {
-    --svgCol: hsl(311, 100%, 70%);
+    --svgCol: hsl(311, 100%, 60%);
     --svgColglow: hsl(311, 100%, 70%);
     --svgColglowzwei: hsl(311, 100%, 60%);
     --svgStrokewidth: 0.8px;
   
       filter: 
-      drop-shadow(0px 0px 0.5px hsla(311, 100%, 60%, 0.333))
-      drop-shadow(0px 0px 0.5px rgba(156, 0, 153, 0.34))
+      
+      drop-shadow(0px 0px 1px hsla(311, 100%, 50%, 0.639))
+      drop-shadow(3px -2px 4px hsla(235, 21%, 23%, 0.475))
 
-
-      drop-shadow(-3px 2px 3px  #ac65b7b1);
+;
     }
 
 

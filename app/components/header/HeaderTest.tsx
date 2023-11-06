@@ -7,11 +7,11 @@ import DropDowneins from './DropDowneins';
 const HeaderTest = ({ navbarOpen, setNavbarOpen }) => {
 
   const [navColor, setNavColor] = useState('transparent');
-  const [navTextCol, setNavTextCol] = useState('#ffffff');
+  const [navTextCol, setNavTextCol] = useState('rgba(255, 255, 255, 0.95)');
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
-      setNavColor('#ffffff');
+      setNavColor('hsla(235, 21%, 23%, 0.8)');
       setNavTextCol('rgb(55 65 81)');
     } else {
       setNavColor('transparent');
@@ -28,16 +28,16 @@ const HeaderTest = ({ navbarOpen, setNavbarOpen }) => {
 
 
   return (
-    <div className="w-full p-4 fixed h-[8vh] top-0 flex flex-col  pl-8 pr-6 xl:px-8 items-center justify-items-center z-50"
+    <div className="w-full p-4 fixed h-[8vh] top-0 flex flex-col pl-8 pr-6 xl:px-8 items-center justify-items-center z-50 shadow-md mix-blend-hardlight"
     
     
     style={{
     backgroundColor: navColor,
       color: navTextCol,
-      transition: 'background-color 0.5s',
+      transition: 'background-color 0.3s',
     }}>
 <nav   
-className="xl:max-w-7xl h-full w-full flex flex-row justify-between"
+className="max-w-7xl h-full w-full flex flex-row justify-between"
       
 >
 

@@ -76,7 +76,7 @@ return (
             ref={buttonRef}
                   className={`
                   ${open ? "" : "text-opacity-90"}
-                  z-10 buttoneins rounded-full " onClick={() => handleClick(open)}`}
+                  z-10 buttoneins rounded-full focus:outline-discopink" onClick={() => handleClick(open)}`}
                   onMouseEnter={() => onHover(open, "onMouseEnter")}
                   onMouseLeave={() => onHover(open, "onMouseLeave")}
   >
@@ -97,14 +97,14 @@ return (
                 <Transition
                   show={open}
                   as={Fragment}
-                  enter="transition ease-out duration-200"
+                  enter="transition ease-out duration-150"
                   enterFrom="opacity-0 translate-y-1"
                   enterTo="opacity-100 translate-y-0"
-                  leave="transition ease-in duration-150"
+                  leave="transition ease-in duration-500"
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                 <Popover.Panel className="bg-gray-800 bg-opacity-90 text-white absolute z-10 right-4 mt-[8vh] h-[50vh] w-[50vw] sm:h-[30vh] sm:w-[30vw] lg:h-[20vh] lg:w-[20vw] origin-top-right"
+                 <Popover.Panel className="bg-gray-800 bg-opacity-90 text-white absolute z-10 right-10 mt-[8vh] w-[50vw] sm:w-[30vw] lg:w-[20vw] origin-top-right"
                                    onMouseEnter={() => onHover(open, "onMouseEnter")}
                                    onMouseLeave={() => onHover(open, "onMouseLeave")}>
                     <div
@@ -114,7 +114,7 @@ return (
 
   <div key={collection.id}>
 
-  <Link to={`/collections/${collection.slug}`}
+  <Link to={`/collections/${collection.slug}`} onClick={() => setOpenState(false)}
 >                      
 <div className="p-4 font-thin capitalize transition-colors duration-300 transform  hover:text-gray-700 hover:bg-gray-100"
 >
@@ -125,6 +125,7 @@ return (
 </div>
                             ))}
                     </div>
+                    
                   </Popover.Panel>
                 </Transition>
               </div>
