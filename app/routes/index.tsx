@@ -31,14 +31,14 @@ export default function Index() {
           alignItems: 'center',
           justifyContent: 'center',
           top: '0',
-          height: '60vh',
+          height: '50vh',
           width: '100vw',
           zIndex: '10',
         }}
       >
         {/* Decorative image and overlay */}
 
-        <div className="flex h-[60vh] items-center justify-center pb-16 mr-auto ml-auto md:max-w-full lg:max-w-screen-xl px-24 w-full">
+        <div className="flex h-[50vh] items-center justify-center pb-16 mr-auto ml-auto md:max-w-full lg:max-w-screen-xl px-24 w-full">
           <div className="sm:grid-cols-2 lg:grid-cols-4 grid gap-5 row-gap-5">
             <div className="pt-16 pr-12 pb-0 pl-12 sm:px-0">
               <h1 className="whitespace-nowrap text-2xl sm:text-4xl font-thin text-white">
@@ -75,11 +75,11 @@ export default function Index() {
 
 
       <section className="w-full h-full">
-      <div className="relative  mr-auto ml-auto  md:max-w-full lg:max-w-screen-xl px-8" style={{ marginTop: '52vh' }}>
-        <div className="px-16 h-[8vh] flex items-center">
+      <div className="relative  mr-auto ml-auto  md:max-w-full lg:max-w-screen-xl px-8" style={{ marginTop: '42vh' }}>
+        <div className="h-[6vh] flex whitespace-nowrap items-end jutifify-start">
           <h2
             id="category-heading"
-            className="pt-4 px-2 text-2xl font-light tracking-tight text-gray-900"
+            className="text-2xl font-light tracking-tight text-gray-900"
           >
             Shop by Category
           </h2>
@@ -88,22 +88,22 @@ export default function Index() {
         <div className=""><MultiCarousel CollectionsData={{ collections }} /></div>
         </div>
        
-<div className="h-[4vh]"></div>
+<div className="h-[2vh]"></div>
 
-     <div className="h-[60vh] w-full  bg-discoyellow">
-<div className="w-full flex flex-col items-center  ">
-<div className="flex flex-row sm:grid-cols-2 lg:grid-cols-4 gap-5 row-gap-5 mr-auto ml-auto max-w-6xl md:max-w-full lg:max-w-screen-xl px-8 w-full justify-between ">
+     <div className=" w-full flex bg-discoyellow">
+<div className="w-full flex items-center  ">
+<div className="h-[40vh] flex flex-row sm:grid-cols-2 lg:grid-cols-4 gap-5 row-gap-5 mr-auto ml-auto max-w-6xl md:max-w-full lg:max-w-screen-xl px-8 w-full justify-between ">
 
-            <div className="flex flex-col pt-16 pr-12 pb-0 pl-12 sm:px-0">
+            <div className="flex flex-col pt-16  pb-0 ">
               
             </div>
-            <div className="flex flex-col pt-0 pr-12 pb-0 pl-12 text-center sm:px-0">
-
+            <div className="flex flex-col pt-0  text-center ">
+            <img className="max-w-[400px] max-h-full object-cover" src={heropic1} alt="heropic1"/>
             </div>
-            <div className="flex flex-col pt-0 pr-12 pb-0 pl-12 text-center sm:px-0">
-            <img className="h-[58vh] object-fit" src={heropic1} alt="heropic1"/>
+            <div className="flex flex-col pt-0  text-center ">
+            
             </div>
-            <div className="flex flex-col pt-0 pr-12 pb-0 pl-12 text-center sm:px-0">
+            <div className="flex flex-col pt-0 text-center ">
 
             </div>
           </div>

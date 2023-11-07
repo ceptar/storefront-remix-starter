@@ -776,6 +776,10 @@ button:disabled {
   top: 0px;
 }
 
+#app :is(.top-\[60vh\]) {
+  top: 60vh;
+}
+
 #app :is(.z-10) {
   z-index: 10;
 }
@@ -862,6 +866,11 @@ button:disabled {
 #app :is(.my-8) {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+#app :is(.mx-2) {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 #app :is(.-mb-px) {
@@ -1087,10 +1096,6 @@ button:disabled {
   height: 2rem;
 }
 
-#app :is(.h-80) {
-  height: 20rem;
-}
-
 #app :is(.h-96) {
   height: 24rem;
 }
@@ -1103,10 +1108,6 @@ button:disabled {
   height: 4vh;
 }
 
-#app :is(.h-\[58vh\]) {
-  height: 58vh;
-}
-
 #app :is(.h-\[60vh\]) {
   height: 60vh;
 }
@@ -1115,8 +1116,48 @@ button:disabled {
   height: 8vh;
 }
 
+#app :is(.h-auto) {
+  height: auto;
+}
+
 #app :is(.h-full) {
   height: 100%;
+}
+
+#app :is(.h-\[50vh\]) {
+  height: 50vh;
+}
+
+#app :is(.h-\[5vh\]) {
+  height: 5vh;
+}
+
+#app :is(.h-\[40vh\]) {
+  height: 40vh;
+}
+
+#app :is(.h-\[6vh\]) {
+  height: 6vh;
+}
+
+#app :is(.h-\[2vh\]) {
+  height: 2vh;
+}
+
+#app :is(.h-\[2vw\]) {
+  height: 2vw;
+}
+
+#app :is(.h-\[6vw\]) {
+  height: 6vw;
+}
+
+#app :is(.h-\[12vw\]) {
+  height: 12vw;
+}
+
+#app :is(.max-h-full) {
+  max-height: 100%;
 }
 
 #app :is(.min-h-\[220px\]) {
@@ -1131,20 +1172,12 @@ button:disabled {
   min-height: 100vh;
 }
 
-#app :is(.w-1\/12) {
-  width: 8.333333%;
-}
-
 #app :is(.w-1\/5) {
   width: 20%;
 }
 
 #app :is(.w-10) {
   width: 2.5rem;
-}
-
-#app :is(.w-10\/12) {
-  width: 83.333333%;
 }
 
 #app :is(.w-20) {
@@ -1200,6 +1233,10 @@ button:disabled {
   width: 100vw;
 }
 
+#app :is(.w-2\/5) {
+  width: 40%;
+}
+
 #app :is(.min-w-0) {
   min-width: 0px;
 }
@@ -1234,6 +1271,10 @@ button:disabled {
 
 #app :is(.max-w-\[350px\]) {
   max-width: 350px;
+}
+
+#app :is(.max-w-\[400px\]) {
+  max-width: 400px;
 }
 
 #app :is(.max-w-full) {
@@ -1386,10 +1427,6 @@ button:disabled {
 
 #app :is(.flex-col) {
   flex-direction: column;
-}
-
-#app :is(.flex-wrap) {
-  flex-wrap: wrap;
 }
 
 #app :is(.flex-nowrap) {
@@ -1798,6 +1835,11 @@ button:disabled {
   fill: #fff;
 }
 
+#app :is(.object-contain) {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 #app :is(.object-cover) {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1830,6 +1872,10 @@ button:disabled {
 
 #app :is(.p-7) {
   padding: 1.75rem;
+}
+
+#app :is(.p-8) {
+  padding: 2rem;
 }
 
 #app :is(.px-16) {
@@ -2025,6 +2071,10 @@ button:disabled {
 
 #app :is(.pt-8) {
   padding-top: 2rem;
+}
+
+#app :is(.pr-4) {
+  padding-right: 1rem;
 }
 
 #app :is(.text-left) {
@@ -2485,7 +2535,10 @@ button:disabled {
   --tw-bg-opacity: 0.8;
   stroke: #F100C6;
   stroke-width: 5px;
-  padding: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   --tw-text-opacity: 1;
   color: rgb(241 0 198 / var(--tw-text-opacity));
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
@@ -2872,6 +2925,11 @@ button:disabled {
   #app :is(.sm\:py-32) {
     padding-top: 8rem;
     padding-bottom: 8rem;
+  }
+
+  #app :is(.sm\:px-24) {
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 
   #app :is(.sm\:text-2xl) {

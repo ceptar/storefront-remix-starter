@@ -28,7 +28,7 @@ const HeaderTest = ({ navbarOpen, setNavbarOpen }) => {
 
 
   return (
-    <div className="w-full p-4 fixed h-[8vh] top-0 flex flex-col pl-8 pr-6 xl:px-8 items-center justify-items-center z-50 shadow-md mix-blend-hardlight"
+    <div className="w-full fixed h-[6vh] top-0 z-50 shadow-md mix-blend-hardlight"
     
     
     style={{
@@ -37,20 +37,13 @@ const HeaderTest = ({ navbarOpen, setNavbarOpen }) => {
       transition: 'background-color 0.3s',
     }}>
 <nav   
-className="max-w-7xl h-full w-full flex flex-row justify-between"
+className="px-2 md:max-w-full lg:max-w-screen-xl h-full w-full flex flex-row justify-between"
       
 >
 
-    <div className="pl-2 flex flex-col justify-center w-1/5">
+    <div className="py-2 pl-2 pr-4 flex flex-col items-start justify-center h-max-[80%]] min-w-3/5">
 
-<a className=""></a>
-
-
-      </div>
-      <div className="flex flex-col items-center justify-center w-3/5">
-      {/* Logo */}
-
-  <logoh1>
+    <logoh1>
       <svg
           className="w-full min-w-[150px] max-w-[350px]"
           fill="var(--svgCol)"
@@ -142,8 +135,10 @@ className="max-w-7xl h-full w-full flex flex-row justify-between"
         </svg>
         </logoh1>
 
+
       </div>
-      <div className="flex flex-col items-end justify-center w-1/5">
+      
+      <div className="flex flex-col items-end justify-center max-w-2/5">
 
       {/* Hamburger Icon */}
       

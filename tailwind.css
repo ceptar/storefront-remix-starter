@@ -28,7 +28,7 @@
   }
 
   .buttoneins {
-  @apply    p-3 flex text-discopink justify-center items-center bg-opacity-80 stroke-[5px] stroke-discopink transition duration-300 ease-in-out transform hover:bg-discopink-100
+  @apply    py-2 px-2 flex text-discopink justify-center items-center bg-opacity-80 stroke-[5px] stroke-discopink transition duration-300 ease-in-out transform hover:bg-discopink-100
   }
   
   .button-wrapper {

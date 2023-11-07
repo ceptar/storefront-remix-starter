@@ -29,7 +29,9 @@ export default function MultiCarousel() {
 
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 400) {
+        setVisibleSlides(1);
+      } else if (window.innerWidth < 768) {
         setVisibleSlides(2);
       } else if (window.innerWidth < 1024) {
         setVisibleSlides(3);
@@ -55,20 +57,17 @@ export default function MultiCarousel() {
       naturalSlideHeight={500}
       isIntrinsicHeight
     >
-      <div className="h-80 flex items-center justify-center mt-0 mr-auto mb-0 ml-auto flex-wrap container">
-        <div className="p-4 h-full flex flex-col items-center justify-center overflow-hidden w-1/12">
-          <ButtonBack className="buttoneins rounded-full">{'<'}</ButtonBack>
-          <ButtonFirst className="buttoneins rounded-full">{'<<'}</ButtonFirst>
-        </div>
+      <div className="h-auto flex items-center justify-center mt-0 mb-0 container">
+      
 
-        <div className="p-4 h-full flex items-center justify-center overflow-hidden w-10/12">
+        <div className="p-4 h-full flex items-center justify-center overflow-hidden ">
           <Slider className="py-2 flex flex-row">
             
             {collections.map(collection => (
               
               <Slide className="flex flex-col  p-2 pb-4"  index={collection.id} key={collection.id}>
                 <CollectionCard collection={collection} />
-                <div className="flex flex-col w-4 p-4"></div>
+
               </Slide>
               
            
@@ -76,10 +75,13 @@ export default function MultiCarousel() {
           </Slider>
         </div>
 
-        <div className="p-4 h-full flex flex-col items-center justify-center overflow-hidden w-1/12">
-          <ButtonNext className="buttoneins rounded-full">{'>'}</ButtonNext>
-          <ButtonLast className="buttoneins rounded-full">{'>>'}</ButtonLast>
-        </div>
+       
+      </div>
+      <div className="flex flex-row justify-center items-center">
+        <ButtonFirst className="buttoneins rounded-full mx-2 px-2">{'<<'}</ButtonFirst>
+        <ButtonBack className="buttoneins rounded-full  mx-2 px-2">{'<'}</ButtonBack>
+        <ButtonNext className="buttoneins rounded-full mx-2 px-2">{'>'}</ButtonNext>
+        <ButtonLast className="buttoneins rounded-full mx-2 px-2">{'>>'}</ButtonLast>
       </div>
     </CarouselProvider>
   );
