@@ -32,6 +32,8 @@ module.exports = {
         discored: '#b6103d',
 
         discoblue: '#030082',
+
+        discogray: '#2e3047',
       },
       animation: {
         dropIn: 'dropIn 0.2s ease-out',

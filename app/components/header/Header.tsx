@@ -11,25 +11,20 @@ import '~/styles/app.css';
 import HeaderTest from './HeaderTest';
 
 export function Header({
-  onCartIconClick,
-  cartQuantity,
+onCartIconClick,
+cartQuantity,
 }: {
-  onCartIconClick: () => void;
-  cartQuantity: number;
+onCartIconClick: () => void;
+cartQuantity: number;
 }) {
-  const data = useRootLoader();
-  const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
-  const [navbarOpen, setNavbarOpen] = useState(false);
+const data = useRootLoader();
+const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
+const [navbarOpen, setNavbarOpen] = useState(false);
 
-  return (
-    <header>
-            
-      <HeaderTest navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
-    
+return (
+  
+<HeaderTest navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
 
-
-<div className="h-[8vh]"></div>
-    </header>
-
-  );
+);
 }
+

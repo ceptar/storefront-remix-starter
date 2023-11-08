@@ -61,7 +61,11 @@ export default function MultiCarousel() {
       
 
         <div className="p-4 h-full flex items-center justify-center overflow-hidden ">
-          <Slider className="py-2 flex flex-row">
+          <Slider
+            transitionMode={scroll}
+            transitionDuration={2000}
+            className="py-2 flex flex-row"
+          >
             
             {collections.map(collection => (
               

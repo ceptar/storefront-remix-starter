@@ -76,7 +76,7 @@ return (
             ref={buttonRef}
                   className={`
                   ${open ? "" : "text-opacity-90"}
-                  z-10 buttoneins rounded-full focus:outline-discopink" onClick={() => handleClick(open)}`}
+                  z-10 buttoneins rounded-full onClick={() => handleClick(open)}`}
                   onMouseEnter={() => onHover(open, "onMouseEnter")}
                   onMouseLeave={() => onHover(open, "onMouseLeave")}
   >
@@ -104,7 +104,7 @@ return (
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                 <Popover.Panel className="bg-gray-800 bg-opacity-90 text-white absolute z-10 right-10 mt-[8vh] w-[50vw] sm:w-[30vw] lg:w-[20vw] origin-top-right"
+                 <Popover.Panel className="bg-gray-800 bg-opacity-95  text-white absolute z-10 left-0 mt-[8vh] w-[50vw] sm:w-[30vw] lg:w-[20vw] origin-top-right h-[92vh]"
                                    onMouseEnter={() => onHover(open, "onMouseEnter")}
                                    onMouseLeave={() => onHover(open, "onMouseLeave")}>
                     <div

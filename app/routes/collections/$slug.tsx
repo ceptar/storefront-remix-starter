@@ -78,12 +78,29 @@ export default function CollectionSlug() {
   const submit = useSubmit();
   return (
     <div className="w-full">
-<div className="w-full flex flex-col items-center bg-discopink-100">
-<div className=" flex mr-auto ml-auto px-8 max-w-6xl mx-auto w-full justify-between ">
-<h2 className="text-xl sm:text-2xl font-bold tracking-wider my-4">
+
+<div className="mix-blend-multiply w-full flex flex-col items-center bg-discopink-100 mb-[20vh]"
+style={{
+  backgroundImage: 'url(/banner12.jpg)',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  position: 'absolute',
+  alignItems: 'center',
+  justifyContent: 'center',
+  top: '0',
+  height: '16vh',
+  width: '100vw',
+  zIndex: '10',
+  objectFit: 'cover',
+}}
+></div>
+<div className="relative mt-[16vh] h-[8vh] bg-discogray-800 flex items-center justify-center w-full">
+<div className="flex mr-auto ml-auto px-8 max-w-6xl mx-auto w-full justify-between ">
+<h2 className="text-xl text-white sm:text-2xl font-bold my-4">
           {collection.name}
         </h2>
 </div>
+
 </div>
 
 <div className="px-8 max-w-6xl mx-auto">

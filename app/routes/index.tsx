@@ -31,16 +31,17 @@ export default function Index() {
           alignItems: 'center',
           justifyContent: 'center',
           top: '0',
-          height: '50vh',
+          height: '70vh',
           width: '100vw',
           zIndex: '10',
+          objectFit: 'cover',
         }}
       >
         {/* Decorative image and overlay */}
 
         <div className="flex h-[50vh] items-center justify-center pb-16 mr-auto ml-auto md:max-w-full lg:max-w-screen-xl px-24 w-full">
           <div className="sm:grid-cols-2 lg:grid-cols-4 grid gap-5 row-gap-5">
-            <div className="pt-16 pr-12 pb-0 pl-12 sm:px-0">
+            <div className="pt-[25vh] pr-12 pb-0 pl-12 sm:px-0">
               <h1 className="whitespace-nowrap text-2xl sm:text-4xl font-thin text-white">
                 <span className="p-2 sm:p-3">Wearable Art.</span>
                 <p className="my-6 sm:my-10"></p>
@@ -75,8 +76,8 @@ export default function Index() {
 
 
       <section className="w-full h-full">
-      <div className="relative  mr-auto ml-auto  md:max-w-full lg:max-w-screen-xl px-8" style={{ marginTop: '42vh' }}>
-        <div className="h-[6vh] flex whitespace-nowrap items-end jutifify-start">
+      <div className="z-20 relative  mr-auto ml-auto  md:max-w-full lg:max-w-screen-xl px-8" style={{ marginTop: '70vh' }}>
+        <div className="h-[8vh] flex whitespace-nowrap items-end jutifify-start">
           <h2
             id="category-heading"
             className="text-2xl font-light tracking-tight text-gray-900"
@@ -88,7 +89,7 @@ export default function Index() {
         <div className=""><MultiCarousel CollectionsData={{ collections }} /></div>
         </div>
        
-<div className="h-[2vh]"></div>
+<div className="h-[12vh]"></div>
 
      <div className=" w-full flex bg-discoyellow">
 <div className="w-full flex items-center  ">
