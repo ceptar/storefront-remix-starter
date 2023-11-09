@@ -54,7 +54,7 @@ export default function MultiCarousel() {
       totalSlides={collections.length}
       step={1}
       naturalSlideWidth={0.5}
-      naturalSlideHeight={500}
+      naturalSlideHeight={800}
       isIntrinsicHeight
     >
       <div className="h-auto flex items-center justify-center mt-0 mb-0 container">
@@ -62,7 +62,7 @@ export default function MultiCarousel() {
 
         <div className="p-4 h-full flex items-center justify-center overflow-hidden ">
           <Slider
-            transitionMode={scroll}
+            transitionMode={"scroll"}
             transitionDuration={2000}
             className="py-2 flex flex-row"
           >

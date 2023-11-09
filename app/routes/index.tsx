@@ -89,7 +89,7 @@ export default function Index() {
         <div className=""><MultiCarousel CollectionsData={{ collections }} /></div>
         </div>
        
-<div className="h-[12vh]"></div>
+<div className="h-[8vh]"></div>
 
      <div className=" w-full flex bg-discoyellow">
 <div className="w-full flex items-center  ">
@@ -111,9 +111,9 @@ export default function Index() {
           </div>
           </div>
 
-          <div>    <CollectionsTreeMenu
+          {/* <div>    <CollectionsTreeMenu
                       collectionsData={{ collections }}
-                    /></div>
+                    /></div> */}
 
           </section>
 
