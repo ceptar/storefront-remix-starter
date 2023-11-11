@@ -12,15 +12,15 @@ import {
   Slider,
 } from 'pure-react-carousel';
 
-import '~/styles/app.css';
+import '~/styles/app.css'; 
 
 interface Collection {
   id: string;
-  name: string; 
+  name: string;  
 }
 
 interface LoaderData {
-  collections: Collection[];
+  collections: Collection[]; 
 }
 
 export default function MultiCarousel() {
@@ -31,13 +31,17 @@ export default function MultiCarousel() {
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth < 640) {
-        setVisibleSlides(1), setSlideWidth(1);
+        setVisibleSlides(1); 
+        setSlideWidth(0.9);
       } else if (window.innerWidth < 768) {
-        setVisibleSlides(2), setSlideWidth(0.5);
+        setVisibleSlides(2);
+        setSlideWidth(0.45);  
       } else if (window.innerWidth < 1024) {
-        setVisibleSlides(3), setSlideWidth(0.33);
+        setVisibleSlides(3);
+        setSlideWidth(0.3);
       } else {
-        setVisibleSlides(4), setSlideWidth(0.25);
+        setVisibleSlides(4);
+        setSlideWidth(0.23);
       }
     }
 
@@ -47,39 +51,27 @@ export default function MultiCarousel() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [collections]);
 
   return (
-    <CarouselProvider 
-    visibleSlides={visibleSlides}
+    <CarouselProvider
+      visibleSlides={visibleSlides}
       totalSlides={collections.length}
       step={1}
-      naturalSlideWidth={setSlideWidth}
+      naturalSlideWidth={slideWidth}
       naturalSlideHeight={800}
-      isIntrinsicHeight
+      isIntrinsicHeight={true}
     >
-      <div className="h-auto flex items-center justify-center mt-0 mb-0 container">
-      
-
-        <div className="h-full flex items-center justify-center overflow-hidden ">
-          <Slider
-
-          >
-            
-            {collections.map(collection => (
-              
-              <Slide className="flex flex-col pb-4"  index={collection.id} key={collection.id}>
-                <CollectionCard collection={collection} />
-
-              </Slide>
-              
-           
-            ))}
-          </Slider>
-        </div>
-
-       
+      <div>
+        <Slider>   
+          {collections.map(collection => (
+            <Slide index={collection.id} key={collection.id}>
+              <CollectionCard collection={collection} />
+            </Slide>
+          ))}
+        </Slider>
       </div>
+
       <div className="mt-4 font-bold flex flex-row justify-center items-center">
         <ButtonFirst className="buttoneins rounded-full w-9 h-9 mx-2 px-4">{'<<'}</ButtonFirst>
         <ButtonBack className="buttoneins rounded-full w-9 h-9 mx-2 px-4">{'<'}</ButtonBack>

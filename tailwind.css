@@ -31,7 +31,7 @@
   @apply py-2 px-2 flex text-discopink focus:outline-gray-200 focus:outline-1 justify-center items-center bg-opacity-80 stroke-[5px] stroke-discopink transition duration-300 ease-in-out transform hover:bg-discopink-100
   }
   
-  .button-wrapper {
+  /* .button-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +55,7 @@
     background-color: rgba(255, 255, 255, 0.8);
     color: hsl(311, 100%, 20%);
     stroke: hsl(311, 100%, 20%);
-  }
+  } */
 
   @font-face {
     font-family: 'Metropolitano-Regular';
@@ -68,7 +68,7 @@
     font-display: swap;
   }
 
-logoh1 {
+/* logoh1 {
     --svgCol: hsl(311, 100%, 60%);
     --svgColglow: hsl(311, 100%, 70%);
     --svgColglowzwei: hsl(311, 100%, 60%);
@@ -80,7 +80,7 @@ logoh1 {
       drop-shadow(3px -2px 4px hsla(235, 21%, 23%, 0.475))
 
 ;
-    }
+    } */
 
 
   }

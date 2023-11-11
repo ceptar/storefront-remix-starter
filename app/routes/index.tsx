@@ -39,10 +39,15 @@ export default function Index() {
       >
         {/* Decorative image and overlay */}
 
-        <div className="flex h-[50vh] items-center justify-center pb-16 mr-auto ml-auto md:max-w-full lg:max-w-screen-xl px-24 w-full">
-          <div className="sm:grid-cols-2 lg:grid-cols-4 grid gap-5 row-gap-5">
-            <div className="pt-[25vh] pr-12 pb-0 pl-12 sm:px-0">
-              <h1 className="whitespace-nowrap text-2xl sm:text-4xl font-thin text-white">
+        <div className="flex h-[50vh] items-end justify-items-end pb-16 mr-auto ml-auto md:max-w-full lg:max-w-screen-xl px-24 w-full">
+          <div className="sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 row-gap-5 ml-auto">
+           
+            <div className="pt-0  pb-0 text-start sm:px-0 justify-between">
+
+            </div>
+            <div className="pt-[10vh] min-w-[1/2] ml-auto pr-2 pb-0 sm:px-0 ">
+
+            <h1 className="whitespace-nowrap text-2xl sm:text-4xl font-thin text-white test-start">
                 <span className="p-2 sm:p-3">Wearable Art.</span>
                 <p className="my-6 sm:my-10"></p>
                 <p>
@@ -58,16 +63,9 @@ export default function Index() {
                   </span>
                 </p>
               </h1>
-            </div>
-            <div className="pt-0 pr-12 pb-0 pl-12 text-center sm:px-0">
 
             </div>
-            <div className="pt-0 pr-12 pb-0 pl-12 text-center sm:px-0">
-
-            </div>
-            <div className="pt-0 pr-12 pb-0 pl-12 text-center sm:px-0">
-
-            </div>
+            
           </div>
         </div>
 
@@ -75,25 +73,25 @@ export default function Index() {
 
 
 
-      <section className="w-full h-full">
-      <div className="z-20 relative  mr-auto ml-auto  md:max-w-full lg:max-w-screen-xl px-8" style={{ marginTop: '70vh' }}>
-        <div className="h-[8vh] flex whitespace-nowrap items-center jutifify-start">
+      <section className="w-full h-full flex flex-col justify-center">
+      <div className="mx-auto z-20 relative flex flex-col justify-center md:max-w-full lg:max-w-screen-xl px-4" style={{ marginTop: '70vh' }}>
+        <div className="h-[8vh] flex flex-col justify-center whitespace-nowrap">
           <h2
             id="category-heading"
-            className="text-xl font-light tracking-tight text-gray-900"
+            className="items-center justify-start flex text-3xl font-light tracking-tight text-gray-900"
           >
             Shop by Category
           </h2>
         </div>
 
-        <div className=""><MultiCarousel CollectionsData={{ collections }} /></div>
+        <div className="flex items-start justify-center"><MultiCarousel CollectionsData={{ collections }} /></div>
         </div>
        
 <div className="h-[4vh]"></div>
 
-     <div className=" w-full flex bg-discoyellow">
-<div className="w-full flex items-center  ">
-<div className="h-[50vh] flex flex-row sm:grid-cols-2 lg:grid-cols-4 gap-5 row-gap-5 mr-auto ml-auto max-w-6xl md:max-w-full lg:max-w-screen-xl px-8 w-full justify-between ">
+     <div className="  bg-discoyellow">
+<div className="w-full flex items-center">
+<div className="h-[50vh] justify-center flex flex-row sm:grid-cols-2 lg:grid-cols-4 gap-5 row-gap-5 mr-auto ml-auto max-w-6xl md:max-w-full lg:max-w-screen-xl px-8">
 
             <div className="flex flex-col pt-16  pb-0 ">
               
