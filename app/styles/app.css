@@ -756,10 +756,6 @@ button:disabled {
   bottom: 0px;
 }
 
-#app :is(.bottom-\[2vh\]) {
-  bottom: 2vh;
-}
-
 #app :is(.left-0) {
   left: 0px;
 }
@@ -770,14 +766,6 @@ button:disabled {
 
 #app :is(.top-0) {
   top: 0px;
-}
-
-#app :is(.top-\[vh16\]) {
-  top: vh16;
-}
-
-#app :is(.top-\[16vh\]) {
-  top: 16vh;
 }
 
 #app :is(.z-10) {
@@ -989,6 +977,10 @@ button:disabled {
   margin-top: 0.75rem;
 }
 
+#app :is(.mt-32) {
+  margin-top: 8rem;
+}
+
 #app :is(.mt-4) {
   margin-top: 1rem;
 }
@@ -1011,18 +1003,6 @@ button:disabled {
 
 #app :is(.mt-\[8vh\]) {
   margin-top: 8vh;
-}
-
-#app :is(.mt-auto) {
-  margin-top: auto;
-}
-
-#app :is(.mt-16) {
-  margin-top: 4rem;
-}
-
-#app :is(.mt-32) {
-  margin-top: 8rem;
 }
 
 #app :is(.line-clamp-3) {
@@ -1068,6 +1048,10 @@ button:disabled {
   height: 2.5rem;
 }
 
+#app :is(.h-12) {
+  height: 3rem;
+}
+
 #app :is(.h-2) {
   height: 0.5rem;
 }
@@ -1082,10 +1066,6 @@ button:disabled {
 
 #app :is(.h-4) {
   height: 1rem;
-}
-
-#app :is(.h-4\/5) {
-  height: 80%;
 }
 
 #app :is(.h-48) {
@@ -1112,12 +1092,12 @@ button:disabled {
   height: 2rem;
 }
 
-#app :is(.h-96) {
-  height: 24rem;
+#app :is(.h-9) {
+  height: 2.25rem;
 }
 
-#app :is(.h-\[12vh\]) {
-  height: 12vh;
+#app :is(.h-96) {
+  height: 24rem;
 }
 
 #app :is(.h-\[16px\]) {
@@ -1148,12 +1128,8 @@ button:disabled {
   height: 100%;
 }
 
-#app :is(.h-\[vh16\]) {
-  height: vh16;
-}
-
-#app :is(.h-\[16vh\]) {
-  height: 16vh;
+#app :is(.h-\[4vh\]) {
+  height: 4vh;
 }
 
 #app :is(.max-h-full) {
@@ -1200,6 +1176,10 @@ button:disabled {
   width: 2rem;
 }
 
+#app :is(.w-9) {
+  width: 2.25rem;
+}
+
 #app :is(.w-\[16px\]) {
   width: 16px;
 }
@@ -1229,8 +1209,8 @@ button:disabled {
   min-width: 15px;
 }
 
-#app :is(.min-w-\[180px\]) {
-  min-width: 180px;
+#app :is(.min-w-\[200px\]) {
+  min-width: 200px;
 }
 
 #app :is(.max-w-2xl) {
@@ -1259,10 +1239,6 @@ button:disabled {
 
 #app :is(.max-w-\[300px\]) {
   max-width: 300px;
-}
-
-#app :is(.max-w-\[350px\]) {
-  max-width: 350px;
 }
 
 #app :is(.max-w-\[400px\]) {
@@ -2176,9 +2152,9 @@ button:disabled {
   color: rgb(30 64 175 / var(--tw-text-opacity));
 }
 
-#app :is(.text-discopurple) {
+#app :is(.text-discopink) {
   --tw-text-opacity: 1;
-  color: rgb(128 2 228 / var(--tw-text-opacity));
+  color: rgb(241 0 198 / var(--tw-text-opacity));
 }
 
 #app :is(.text-gray-200) {
@@ -2350,11 +2326,6 @@ button:disabled {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-#app :is(.shadow-white) {
-  --tw-shadow-color: #fff;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
 #app :is(.outline) {
   outline-style: solid;
 }
@@ -2375,11 +2346,6 @@ button:disabled {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-#app :is(.drop-shadow-lg) {
-  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 #app :is(.filter) {
@@ -2530,6 +2496,11 @@ button:disabled {
 
 #app  :is(.buttoneins):hover {
   background-color: hsl(311, 100%, 90%);
+}
+
+#app  :is(.buttoneins):focus {
+  outline-width: 1px;
+  outline-color: #e5e7eb;
 }
 
 @font-face {

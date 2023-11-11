@@ -77,10 +77,10 @@ export default function Index() {
 
       <section className="w-full h-full">
       <div className="z-20 relative  mr-auto ml-auto  md:max-w-full lg:max-w-screen-xl px-8" style={{ marginTop: '70vh' }}>
-        <div className="h-[8vh] flex whitespace-nowrap items-end jutifify-start">
+        <div className="h-[8vh] flex whitespace-nowrap items-center jutifify-start">
           <h2
             id="category-heading"
-            className="text-2xl font-light tracking-tight text-gray-900"
+            className="text-xl font-light tracking-tight text-gray-900"
           >
             Shop by Category
           </h2>
@@ -89,11 +89,11 @@ export default function Index() {
         <div className=""><MultiCarousel CollectionsData={{ collections }} /></div>
         </div>
        
-<div className="h-[8vh]"></div>
+<div className="h-[4vh]"></div>
 
      <div className=" w-full flex bg-discoyellow">
 <div className="w-full flex items-center  ">
-<div className="h-[40vh] flex flex-row sm:grid-cols-2 lg:grid-cols-4 gap-5 row-gap-5 mr-auto ml-auto max-w-6xl md:max-w-full lg:max-w-screen-xl px-8 w-full justify-between ">
+<div className="h-[50vh] flex flex-row sm:grid-cols-2 lg:grid-cols-4 gap-5 row-gap-5 mr-auto ml-auto max-w-6xl md:max-w-full lg:max-w-screen-xl px-8 w-full justify-between ">
 
             <div className="flex flex-col pt-16  pb-0 ">
               

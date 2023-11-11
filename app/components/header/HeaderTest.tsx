@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import '~/styles/app.css';
 import DropDowneins from './DropDowneins';
-import logo4 from '~/../public/logo4.svg'
+import logo from '~/../public/logo.svg'
 
 
 const HeaderTest = ({  }) => {
 
   const [navColor, setNavColor] = useState('transparent');
-  const [navTextCol, setNavTextCol] = useState('rgba(255, 255, 255, 0.95)');
+  const [navTextCol, setNavTextCol] = useState('rgb(55 65 81)');
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
@@ -15,7 +15,7 @@ const HeaderTest = ({  }) => {
       setNavTextCol('rgb(55 65 81)');
     } else {
       setNavColor('transparent');
-      setNavTextCol('#ffffff');
+      setNavTextCol('rgb(55 65 81)');
     }
   };
 
@@ -44,7 +44,7 @@ className="px-2 md:max-w-full lg:max-w-screen-xl h-full flex flex-grow justify-c
   </div>
     <div className="py-2 pl-2 pr-4 flex flex-grow  items-center justify-center h-max-[90%]] min-w-3/5">
 
-<img src={logo4} className="min-w-[180px] max-w-[350px] drop-shadow-lg shadow-white "></img>
+<img src={logo} className="min-w-[200px] max-w-[400px]"></img>
 
       </div>
       

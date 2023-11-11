@@ -20,7 +20,7 @@ export function getSessionStorage() {
       httpOnly: true,
       path: '/',
       sameSite: 'lax',
-      secrets: ['5ip5wpwwzj'],
+      secrets: ['vcj7lvb5opc'],
     },
   });
   return sessionStorage;
