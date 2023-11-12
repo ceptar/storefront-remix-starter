@@ -18,7 +18,7 @@ export async function loader({ request }: LoaderArgs<null>) {
 export default function Index() {
 
   const { collections } = useLoaderData<typeof loader>();
-  const headerImage = collections[0]?.featuredAsset?.preview;
+  
 
   return (
     <>
@@ -31,7 +31,7 @@ export default function Index() {
           alignItems: 'center',
           justifyContent: 'center',
           top: '0',
-          height: '70vh',
+          height: '50vh',
           width: '100vw',
           zIndex: '10',
           objectFit: 'cover',
@@ -39,15 +39,11 @@ export default function Index() {
       >
         {/* Decorative image and overlay */}
 
-        <div className="flex h-[50vh] items-end justify-items-end pb-16 mr-auto ml-auto md:max-w-full lg:max-w-screen-xl px-24 w-full">
+        <div className="flex h-[45vh] justify-items-end items-center mr-auto ml-auto md:max-w-full lg:max-w-screen-xl px-24 w-full">
           <div className="sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 row-gap-5 ml-auto">
            
             <div className="pt-0  pb-0 text-start sm:px-0 justify-between">
-
-            </div>
-            <div className="pt-[10vh] min-w-[1/2] ml-auto pr-2 pb-0 sm:px-0 ">
-
-            <h1 className="whitespace-nowrap text-2xl sm:text-4xl font-thin text-white test-start">
+<h1 className="whitespace-nowrap text-2xl sm:text-4xl font-thin text-white test-start">
                 <span className="p-2 sm:p-3">Wearable Art.</span>
                 <p className="my-6 sm:my-10"></p>
                 <p>
@@ -63,6 +59,10 @@ export default function Index() {
                   </span>
                 </p>
               </h1>
+            </div>
+            <div className=" min-w-[1/4] ml-auto pr-2 pb-0 sm:px-0 ">
+
+            
 
             </div>
             
@@ -71,20 +71,19 @@ export default function Index() {
 
       </div>
 
-
-
-      <section className="w-full h-full flex flex-col justify-center">
-      <div className="mx-auto z-20 relative flex flex-col justify-center md:max-w-full lg:max-w-screen-xl px-4" style={{ marginTop: '70vh' }}>
+<div>
+      <section className="w-full h-full flex flex-col justify-center items-center">
+      <div className="mx-auto z-20 relative flex flex-col justify-center md:max-w-full lg:max-w-screen-xl" style={{ marginTop: '50vh' }}>
         <div className="h-[8vh] flex flex-col justify-center whitespace-nowrap">
           <h2
             id="category-heading"
-            className="items-center justify-start flex text-3xl font-light tracking-tight text-gray-900"
+            className="px-4 items-center justify-start flex text-3xl font-light tracking-tight text-gray-900"
           >
             Shop by Category
           </h2>
         </div>
 
-        <div className="flex items-start justify-center"><MultiCarousel CollectionsData={{ collections }} /></div>
+        <div className="flex items-start justify-center overflow-hidden"><MultiCarousel CollectionsData={{ collections }} /></div>
         </div>
        
 <div className="h-[4vh]"></div>
@@ -115,8 +114,8 @@ export default function Index() {
 
           </section>
 
-
-    </>
+          </div>
+          </>
   );
 }
 

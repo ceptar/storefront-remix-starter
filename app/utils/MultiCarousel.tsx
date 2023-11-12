@@ -30,18 +30,18 @@ export default function MultiCarousel() {
 
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth < 640) {
+      if (window.innerWidth < 500) {
         setVisibleSlides(1); 
-        setSlideWidth(0.9);
+        
       } else if (window.innerWidth < 768) {
         setVisibleSlides(2);
-        setSlideWidth(0.45);  
+        
       } else if (window.innerWidth < 1024) {
         setVisibleSlides(3);
-        setSlideWidth(0.3);
+        
       } else {
         setVisibleSlides(4);
-        setSlideWidth(0.23);
+       
       }
     }
 
@@ -58,9 +58,9 @@ export default function MultiCarousel() {
       visibleSlides={visibleSlides}
       totalSlides={collections.length}
       step={1}
-      naturalSlideWidth={slideWidth}
+      naturalSlideWidth={300}
       naturalSlideHeight={800}
-      isIntrinsicHeight={true}
+      isIntrinsicHeight
     >
       <div>
         <Slider>   
