@@ -22,7 +22,7 @@ export default function Index() {
 
   return (
     <>
-      <div className="mix-blend-multiply"
+      <div
         style={{
           backgroundImage: 'url(/hero122.webp)',
           backgroundSize: 'cover',
@@ -85,7 +85,7 @@ export default function Index() {
 
         <div className="flex items-start justify-center overflow-hidden"><MultiCarousel CollectionsData={{ collections }} /></div>
         </div>
-       
+        </section>
 <div className="h-[4vh]"></div>
 
      <div className="  bg-discoyellow">
@@ -108,11 +108,6 @@ export default function Index() {
           </div>
           </div>
 
-          {/* <div>    <CollectionsTreeMenu
-                      collectionsData={{ collections }}
-                    /></div> */}
-
-          </section>
 
           </div>
           </>

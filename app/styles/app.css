@@ -901,10 +901,6 @@ button:disabled {
   margin-bottom: 2rem;
 }
 
-#app :is(.mb-\[20vh\]) {
-  margin-bottom: 20vh;
-}
-
 #app :is(.ml-2) {
   margin-left: 0.5rem;
 }
@@ -995,10 +991,6 @@ button:disabled {
 
 #app :is(.mt-8) {
   margin-top: 2rem;
-}
-
-#app :is(.mt-\[16vh\]) {
-  margin-top: 16vh;
 }
 
 #app :is(.mt-\[8vh\]) {
@@ -1104,6 +1096,10 @@ button:disabled {
   height: 16px;
 }
 
+#app :is(.h-\[16vh\]) {
+  height: 16vh;
+}
+
 #app :is(.h-\[45vh\]) {
   height: 45vh;
 }
@@ -1206,26 +1202,6 @@ button:disabled {
   min-width: 0px;
 }
 
-#app :is(.min-w-\[1\/2\]) {
-  min-width: 1/2;
-}
-
-#app :is(.min-w-\[120px\]) {
-  min-width: 120px;
-}
-
-#app :is(.min-w-\[15px\]) {
-  min-width: 15px;
-}
-
-#app :is(.min-w-\[36px\]) {
-  min-width: 36px;
-}
-
-#app :is(.min-w-\[100px\]) {
-  min-width: 100px;
-}
-
 #app :is(.min-w-\[1\/4\]) {
   min-width: 1/4;
 }
@@ -1250,14 +1226,6 @@ button:disabled {
   max-width: 12rem;
 }
 
-#app :is(.max-w-\[15px\]) {
-  max-width: 15px;
-}
-
-#app :is(.max-w-\[36px\]) {
-  max-width: 36px;
-}
-
 #app :is(.max-w-\[400px\]) {
   max-width: 400px;
 }
@@ -1279,6 +1247,10 @@ button:disabled {
   max-width: 28rem;
 }
 
+#app :is(.max-w-screen-xl) {
+  max-width: 1280px;
+}
+
 #app :is(.max-w-sm) {
   max-width: 24rem;
 }
@@ -1291,16 +1263,8 @@ button:disabled {
   max-width: 20rem;
 }
 
-#app :is(.max-w-screen-xl) {
-  max-width: 1280px;
-}
-
 #app :is(.flex-1) {
   flex: 1 1 0%;
-}
-
-#app :is(.flex-none) {
-  flex: none;
 }
 
 #app :is(.flex-shrink-0) {
@@ -1308,10 +1272,6 @@ button:disabled {
 }
 
 #app :is(.flex-grow) {
-  flex-grow: 1;
-}
-
-#app :is(.grow) {
   flex-grow: 1;
 }
 
@@ -1473,10 +1433,6 @@ button:disabled {
 
 #app :is(.justify-items-end) {
   justify-items: end;
-}
-
-#app :is(.justify-items-center) {
-  justify-items: center;
 }
 
 #app :is(.gap-0) {
@@ -1900,11 +1856,6 @@ button:disabled {
   padding-right: 1rem;
 }
 
-#app :is(.px-5) {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
 #app :is(.px-6) {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1950,11 +1901,6 @@ button:disabled {
   padding-bottom: 0.5rem;
 }
 
-#app :is(.py-24) {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
 #app :is(.py-3) {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1975,11 +1921,6 @@ button:disabled {
   padding-bottom: 2rem;
 }
 
-#app :is(.px-48) {
-  padding-left: 12rem;
-  padding-right: 12rem;
-}
-
 #app :is(.pb-0) {
   padding-bottom: 0px;
 }
@@ -1990,10 +1931,6 @@ button:disabled {
 
 #app :is(.pb-12) {
   padding-bottom: 3rem;
-}
-
-#app :is(.pb-16) {
-  padding-bottom: 4rem;
 }
 
 #app :is(.pb-24) {
@@ -2012,10 +1949,6 @@ button:disabled {
   padding-left: 2.5rem;
 }
 
-#app :is(.pl-2) {
-  padding-left: 0.5rem;
-}
-
 #app :is(.pl-3) {
   padding-left: 0.75rem;
 }
@@ -2030,10 +1963,6 @@ button:disabled {
 
 #app :is(.pr-2) {
   padding-right: 0.5rem;
-}
-
-#app :is(.pr-4) {
-  padding-right: 1rem;
 }
 
 #app :is(.pt-0) {
@@ -2066,10 +1995,6 @@ button:disabled {
 
 #app :is(.pt-8) {
   padding-top: 2rem;
-}
-
-#app :is(.pt-\[4vh\]) {
-  padding-top: 4vh;
 }
 
 #app :is(.text-left) {
@@ -2516,10 +2441,6 @@ button:disabled {
 
 #app :is(.bg-discopink-500) {
   background-color: hsl(311, 100%, 50%);
-}
-
-#app :is(.bg-discopink-100) {
-  background-color: hsl(311, 100%, 90%);
 }
 
 #app :is(.bg-discoteal-500) {

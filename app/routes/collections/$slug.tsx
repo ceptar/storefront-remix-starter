@@ -12,6 +12,8 @@ import { ValidatedForm } from 'remix-validated-form';
 import { withZod } from '@remix-validated-form/with-zod';
 import { FilterableProductGrid } from '~/components/products/FilterableProductGrid';
 
+import hero21 from '~/../public/hero21.webp';
+
 export const meta: V2_MetaFunction = ({ data }) => {
   return [
     {
@@ -79,22 +81,9 @@ export default function CollectionSlug() {
   return (
     <div className="w-full">
 
-<div className="mix-blend-multiply w-full flex flex-col items-center bg-discopink-100 mb-[20vh]"
-style={{
-  backgroundImage: 'url(/banner12.jpg)',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  position: 'absolute',
-  alignItems: 'center',
-  justifyContent: 'center',
-  top: '0',
-  height: '16vh',
-  width: '100vw',
-  zIndex: '10',
-  objectFit: 'cover',
-}}
-></div>
-<div className="relative mt-[16vh] h-[8vh] bg-discogray-800 flex items-center justify-center w-full">
+<img src={hero21} className="absolut h-[16vh] overflow-hidden top-0 mix-blend-multiply object-cover w-full flex flex-col items-center z-10"
+/>
+<div className="relative h-[8vh] bg-discogray-800 flex items-center justify-center w-full">
 <div className="flex mr-auto ml-auto px-8 max-w-6xl mx-auto w-full justify-between ">
 <h2 className="text-xl text-white sm:text-2xl font-bold my-4">
           {collection.name}
