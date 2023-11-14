@@ -4,7 +4,7 @@ import { getCollections } from '~/providers/collections/collections';
 import { CollectionCard } from '~/components/collections/CollectionCard';
 import { LoaderArgs } from '@remix-run/server-runtime';
 import MultiCarousel from '~/utils/MultiCarousel';
-import CollectionsTreeMenu from '~/components/CollectionsTreeMenu';
+// import CollectionsTreeMenu from '~/components/CollectionsTreeMenu';
 
 import heropic1 from '~/../public/heropic1.jpg';
 
@@ -107,7 +107,9 @@ export default function Index() {
           </div>
           </div>
           </div>
-
+          {/* <div>    <CollectionsTreeMenu
+                      collectionsData={{ collections }}
+                    /></div> */}
 
           </div>
           </>
