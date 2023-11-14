@@ -43,7 +43,7 @@ export default function Index() {
           <div className="sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 row-gap-5 ml-auto">
            
             <div className="pt-0  pb-0 text-start sm:px-0 justify-between">
-<h1 className="whitespace-nowrap text-2xl sm:text-4xl font-thin text-white test-start">
+<h1 className="whitespace-nowrap text-2xl md:text-4xl lg:6xl font-bold text-white text-start">
                 <span className="p-2 sm:p-3">Wearable Art.</span>
                 <p className="my-6 sm:my-10"></p>
                 <p>

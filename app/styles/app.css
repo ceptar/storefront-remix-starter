@@ -1785,6 +1785,10 @@ button:disabled {
   --tw-bg-opacity: 0.25;
 }
 
+#app :is(.bg-opacity-50) {
+  --tw-bg-opacity: 0.5;
+}
+
 #app :is(.bg-opacity-75) {
   --tw-bg-opacity: 0.75;
 }
@@ -2978,9 +2982,19 @@ button:disabled {
     overflow-x: hidden;
   }
 
+  #app :is(.md\:text-6xl) {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
   #app :is(.md\:text-sm) {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  #app :is(.md\:text-4xl) {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   #app :is(.md\:line-clamp-2) {
