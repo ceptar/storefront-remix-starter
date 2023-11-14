@@ -28,7 +28,7 @@
   }
 
   .buttoneins {
-  @apply py-2 px-2 flex text-discopink focus:outline-gray-200 focus:outline-1 justify-center items-center bg-opacity-80 stroke-[5px] stroke-discopink transition duration-300 ease-in-out transform hover:bg-discopink-100
+  @apply py-4 px-4 flex text-discopink bg-discopink-100 focus:outline-gray-200 focus:outline-1 justify-center items-center bg-opacity-80 stroke-[5px] stroke-discopink transition duration-300 ease-in-out transform hover:bg-discoyellow
   }
   
   /* .button-wrapper {

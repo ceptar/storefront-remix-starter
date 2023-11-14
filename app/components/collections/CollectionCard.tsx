@@ -16,7 +16,7 @@ export function CollectionCard({
       <div className=" h-fit flex flex-col justify-center shadow-md ">
 
         <div className="w-full h-fit flex object-cover p-4 pb-12  ">
-          <img src={collection.featuredAsset?.preview + '?w=300&h=400'} />
+          <img src={collection.featuredAsset?.preview + '?w=1200&h=1200'} />
         </div>
 
       <span

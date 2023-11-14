@@ -16,7 +16,7 @@ export function ProductCard({
       <img
         className="flex-grow border-1 border-gray-300 object-cover aspect-[7/8]"
         alt=""
-        src={productAsset?.preview + '?w=300&h=400'}
+        src={productAsset?.preview + '?w=1200&h=1200'}
       />
       <div className="h-2" />
       <div className="text-sm text-gray-700">{productName}</div>

@@ -109,7 +109,7 @@ export default function ProductSlug() {
                 <img
                   src={
                     (featuredAsset?.preview || product.featuredAsset?.preview) +
-                    '?w=800'
+                    '?w=1200'
                   }
                   alt={product.name}
                   className="w-full h-full object-center object-cover rounded-lg"
@@ -209,8 +209,8 @@ export default function ProductSlug() {
                       activeOrderFetcher.state !== 'idle'
                         ? 'bg-gray-400'
                         : qtyInCart === 0
-                        ? 'bg-primary-600 hover:bg-primary-700'
-                        : 'bg-green-600 active:bg-green-700 hover:bg-green-700'
+                        ? 'bg-primary-500 hover:bg-primary-400'
+                        : 'bg-discoteal-600 active:bg-discoteal-700 hover:bg-discoteal-500'
                     }
                                      transition-colors border border-transparent rounded-md py-3 px-8 flex items-center
                                       justify-center text-base font-medium text-white focus:outline-none
