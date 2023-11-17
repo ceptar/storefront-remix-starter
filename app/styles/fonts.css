@@ -1,41 +1,4 @@
-@font-face {
-  font-family: 'Metropolis-Regular';
-  src: url(./font/Metropolis-Regular.woff2) format('woff2');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'NotoSerifGeorgian-VariableFont';
-  src: url(./font/NotoSerifGeorgian-VariableFont.woff2) format('woff2');
-  font-display: swap;
-}
 
-@font-face {
-  font-family: 'Raleway-VariableFont_wght';
-  src: url(./font/raleway-1.woff2) format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-    font-family: 'neon-light';
-    src: url(./font/neon-light.woff) format('woff');
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'JosefinSans-Regular';
-    src: url(./font/JosefinSans-Light.woff2) format('woff2');
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'SourceSansPro-Bold';
-    src: url(./font/SourceSansPro-Bold.woff2) format('woff2');
-  }
-
-  @font-face {
-    font-family: 'SourceSansPro-Light';
-    src: url(./font/SourceSansPro-Light.woff2) format('woff2');
-  }
   @font-face {
     font-family: 'Metropolitano-Regular';
     src: url(./font/Metropolitano-Regular.woff) format('woff');
@@ -44,5 +7,20 @@
   @font-face {
     font-family: 'Metropolitano-Medium';
     src: url(./font/Metropolitano-Medium.woff2) format('woff2');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'FacetUltra-Regular';
+    src: url(./font/FacetUltra-Regular.woff2) format('woff2');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'RG-StandardBold';
+    src: url(./font/RG-StandardBold.woff2) format('woff2');
+    font-display: swap;
+    
+  }  @font-face {
+    font-family: 'Nohemi-Black';
+    src: url(./font/Nohemi-Black.woff2) format('woff2');
     font-display: swap;
   }

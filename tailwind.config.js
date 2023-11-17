@@ -14,7 +14,11 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Metropolitano-Regular', 'sans'],
-        header1: ['Metropolitano-Medium', 'sans'],
+        header1: ['Nohemi-Black', 'sans'],
+        facet1: ['FacetUltra-Regular', 'sans'],
+        nohemiblack1: ['Nohemi-Black', 'sans'],
+        rgstandardbold1: ['RG-StandardBold', 'sans'],
+        metromed1: ['Metropolitano-Medium', 'sans'],
       },
       colors: {
         primary: '#F100C6',

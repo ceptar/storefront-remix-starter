@@ -109,7 +109,7 @@ export default function ProductSlug() {
                 <img
                   src={
                     (featuredAsset?.preview || product.featuredAsset?.preview) +
-                    '?w=1200'
+                    '?w=1000'
                   }
                   alt={product.name}
                   className="w-full h-full object-center object-cover rounded-lg"

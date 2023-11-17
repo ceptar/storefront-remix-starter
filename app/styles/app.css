@@ -1100,8 +1100,8 @@ button:disabled {
   height: 16vh;
 }
 
-#app :is(.h-\[4vh\]) {
-  height: 4vh;
+#app :is(.h-\[2vh\]) {
+  height: 2vh;
 }
 
 #app :is(.h-\[50vh\]) {
@@ -1127,10 +1127,6 @@ button:disabled {
 
 #app :is(.h-full) {
   height: 100%;
-}
-
-#app :is(.h-\[2vh\]) {
-  height: 2vh;
 }
 
 #app :is(.max-h-full) {
@@ -2029,6 +2025,10 @@ button:disabled {
   vertical-align: middle;
 }
 
+#app :is(.font-header1) {
+  font-family: Nohemi-Black, sans;
+}
+
 #app :is(.\!text-sm) {
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
@@ -2147,9 +2147,9 @@ button:disabled {
   color: rgb(241 0 198 / var(--tw-text-opacity));
 }
 
-#app :is(.text-discoyellow) {
+#app :is(.text-discoteal) {
   --tw-text-opacity: 1;
-  color: rgb(254 243 199 / var(--tw-text-opacity));
+  color: rgb(21 254 226 / var(--tw-text-opacity));
 }
 
 #app :is(.text-gray-200) {
@@ -2462,10 +2462,6 @@ button:disabled {
   background-color: hsl(173, 99%, 40%);
 }
 
-#app :is(.text-discoyellow-100) {
-  color: hsl(48, 96%, 90%);
-}
-
 #app :is(.bg-discogray-800) {
   background-color: hsl(235, 21%, 20%);
 }
@@ -2502,32 +2498,6 @@ button:disabled {
   outline-color: #e5e7eb;
 }
 
-/* .button-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    box-shadow: 0 0 0 0 #151515;
-    -webkit-transition: box-shadow 300ms ease;
-    transition: box-shadow 300ms ease;
-    color: hsl(311, 100%, 40%);
-    stroke: hsl(311, 100%, 40%);
-    stroke-width: 5px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
- 
-
-    -webkit-transition: background-color 300ms ease;
-    transition: background-color 300ms ease;
-  }
-  
-  .button-wrapper:hover {
-    box-shadow: 0 4px 10px -3px #151515a3;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: hsl(311, 100%, 20%);
-    stroke: hsl(311, 100%, 20%);
-  } */
-
 @font-face {
   font-family: 'Metropolitano-Regular';
 
@@ -2544,19 +2514,29 @@ button:disabled {
   font-display: swap;
 }
 
-/* logoh1 {
-    --svgCol: hsl(311, 100%, 60%);
-    --svgColglow: hsl(311, 100%, 70%);
-    --svgColglowzwei: hsl(311, 100%, 60%);
-    --svgStrokewidth: 0.8px;
-  
-      filter: 
-      
-      drop-shadow(0px 0px 1px hsla(311, 100%, 50%, 0.639))
-      drop-shadow(3px -2px 4px hsla(235, 21%, 23%, 0.475))
+@font-face {
+  font-family: 'FacetUltra-Regular';
 
-;
-    } */
+  src: url(./font/FacetUltra-Regular.woff2) format('woff2');
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RG-StandardBold';
+
+  src: url(./font/RG-StandardBold.woff2) format('woff2');
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nohemi-Black';
+
+  src: url(./font/Nohemi-Black.woff2) format('woff2');
+
+  font-display: swap;
+}
 
 #app :is(.first\:mt-2:first-child) {
   margin-top: 0.5rem;
