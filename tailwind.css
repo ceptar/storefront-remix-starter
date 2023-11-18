@@ -42,6 +42,26 @@
     font-display: swap;
   }
   @font-face {
+    font-family: 'Metropolitano-Black';
+    src: url(./font/Metropolitano-Black.woff2) format('woff2');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Metropolitano-Bold';
+    src: url(./font/Metropolitano-Bold.woff2) format('woff2');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Metropolitano-Light';
+    src: url(./font/Metropolitano-Light.woff2) format('woff2');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Metropolitano-Thin';
+    src: url(./font/Metropolitano-Thin.woff2) format('woff2');
+    font-display: swap;
+  }
+  @font-face {
     font-family: 'FacetUltra-Regular';
     src: url(./font/FacetUltra-Regular.woff2) format('woff2');
     font-display: swap;

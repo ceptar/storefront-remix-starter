@@ -27,7 +27,7 @@ const HeaderTest = () => {
   // }, []);
 
   return (
-    <div className="fixed h-[8vh] top-0 z-50 w-full bg-white/50 backdrop-blur-sm">
+    <div className="fixed h-[8vh] top-0 z-50 w-full bg-discogray/70 backdrop-blur-sm ">
       <nav
         className=" w-full h-full flex items-center justify-center"
         // style={{

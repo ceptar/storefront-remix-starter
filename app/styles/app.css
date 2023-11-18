@@ -808,12 +808,12 @@ button:disabled {
   margin: -0.5rem;
 }
 
-#app :is(.m-auto) {
-  margin: auto;
-}
-
 #app :is(.m-1) {
   margin: 0.25rem;
+}
+
+#app :is(.m-auto) {
+  margin: auto;
 }
 
 #app :is(.-mx-2) {
@@ -851,6 +851,11 @@ button:disabled {
   margin-bottom: 0.5rem;
 }
 
+#app :is(.my-3) {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 #app :is(.my-4) {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -859,11 +864,6 @@ button:disabled {
 #app :is(.my-8) {
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-
-#app :is(.my-3) {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
 }
 
 #app :is(.-mb-px) {
@@ -1109,6 +1109,10 @@ button:disabled {
   height: 50vh;
 }
 
+#app :is(.h-\[60vh\]) {
+  height: 60vh;
+}
+
 #app :is(.h-\[70vh\]) {
   height: 70vh;
 }
@@ -1128,18 +1132,6 @@ button:disabled {
 
 #app :is(.h-full) {
   height: 100%;
-}
-
-#app :is(.h-\[60vh\]) {
-  height: 60vh;
-}
-
-#app :is(.h-\[40vh\]) {
-  height: 40vh;
-}
-
-#app :is(.h-\[0vh\]) {
-  height: 0vh;
 }
 
 #app :is(.max-h-full) {
@@ -1219,12 +1211,12 @@ button:disabled {
   min-width: 0px;
 }
 
-#app :is(.min-w-\[150px\]) {
-  min-width: 150px;
-}
-
 #app :is(.min-w-\[1\/4\]) {
   min-width: 1/4;
+}
+
+#app :is(.min-w-\[150px\]) {
+  min-width: 150px;
 }
 
 #app :is(.max-w-2xl) {
@@ -1726,6 +1718,10 @@ button:disabled {
   background-color: rgb(239 246 255 / var(--tw-bg-opacity));
 }
 
+#app :is(.bg-discogray\/70) {
+  background-color: rgb(46 48 71 / 0.7);
+}
+
 #app :is(.bg-discoyellow) {
   --tw-bg-opacity: 1;
   background-color: rgb(254 243 199 / var(--tw-bg-opacity));
@@ -1759,6 +1755,10 @@ button:disabled {
 #app :is(.bg-gray-800) {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+#app :is(.bg-gray-800\/5) {
+  background-color: rgb(31 41 55 / 0.05);
 }
 
 #app :is(.bg-green-100) {
@@ -1804,18 +1804,6 @@ button:disabled {
 #app :is(.bg-yellow-50) {
   --tw-bg-opacity: 1;
   background-color: rgb(254 252 232 / var(--tw-bg-opacity));
-}
-
-#app :is(.bg-gray-800\/5) {
-  background-color: rgb(31 41 55 / 0.05);
-}
-
-#app :is(.bg-white\/50) {
-  background-color: rgb(255 255 255 / 0.5);
-}
-
-#app :is(.bg-white\/70) {
-  background-color: rgb(255 255 255 / 0.7);
 }
 
 #app :is(.bg-opacity-25) {
@@ -1872,6 +1860,11 @@ button:disabled {
 #app :is(.px-2\.5) {
   padding-left: 0.625rem;
   padding-right: 0.625rem;
+}
+
+#app :is(.px-24) {
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 #app :is(.px-3) {
@@ -1949,11 +1942,6 @@ button:disabled {
   padding-bottom: 2rem;
 }
 
-#app :is(.px-24) {
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
-
 #app :is(.pb-0) {
   padding-bottom: 0px;
 }
@@ -1994,6 +1982,14 @@ button:disabled {
   padding-right: 2.5rem;
 }
 
+#app :is(.pr-2) {
+  padding-right: 0.5rem;
+}
+
+#app :is(.ps-2) {
+  padding-inline-start: 0.5rem;
+}
+
 #app :is(.pt-0) {
   padding-top: 0px;
 }
@@ -2026,14 +2022,6 @@ button:disabled {
   padding-top: 2rem;
 }
 
-#app :is(.pr-2) {
-  padding-right: 0.5rem;
-}
-
-#app :is(.ps-2) {
-  padding-inline-start: 0.5rem;
-}
-
 #app :is(.text-left) {
   text-align: left;
 }
@@ -2059,7 +2047,7 @@ button:disabled {
 }
 
 #app :is(.font-header1) {
-  font-family: Nohemi-Black, sans;
+  font-family: Metropolitano-Bold, sans;
 }
 
 #app :is(.\!text-sm) {
@@ -2177,7 +2165,12 @@ button:disabled {
 
 #app :is(.text-discopink) {
   --tw-text-opacity: 1;
-  color: rgb(241 0 198 / var(--tw-text-opacity));
+  color: rgb(248 21 145 / var(--tw-text-opacity));
+}
+
+#app :is(.text-discoteal) {
+  --tw-text-opacity: 1;
+  color: rgb(0 227 211 / var(--tw-text-opacity));
 }
 
 #app :is(.text-gray-200) {
@@ -2285,11 +2278,6 @@ button:disabled {
   color: rgb(133 77 14 / var(--tw-text-opacity));
 }
 
-#app :is(.text-discoteal) {
-  --tw-text-opacity: 1;
-  color: rgb(21 254 226 / var(--tw-text-opacity));
-}
-
 #app :is(.text-opacity-90) {
   --tw-text-opacity: 0.9;
 }
@@ -2336,6 +2324,12 @@ button:disabled {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+#app :is(.shadow-\[rgba\(50\2c 50\2c 93\2c 0\.25\)_0px_6px_12px_-2px\2c _rgba\(0\2c 0\2c 0\2c 0\.3\)_0px_3px_7px_-3px\]) {
+  --tw-shadow: rgba(50,50,93,0.25) 0px 6px 12px -2px, rgba(0,0,0,0.3) 0px 3px 7px -3px;
+  --tw-shadow-colored: 0px 6px 12px -2px var(--tw-shadow-color), 0px 3px 7px -3px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 #app :is(.shadow-md) {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -2354,12 +2348,6 @@ button:disabled {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-#app :is(.shadow-\[rgba\(50\2c 50\2c 93\2c 0\.25\)_0px_6px_12px_-2px\2c _rgba\(0\2c 0\2c 0\2c 0\.3\)_0px_3px_7px_-3px\]) {
-  --tw-shadow: rgba(50,50,93,0.25) 0px 6px 12px -2px, rgba(0,0,0,0.3) 0px 3px 7px -3px;
-  --tw-shadow-colored: 0px 6px 12px -2px var(--tw-shadow-color), 0px 3px 7px -3px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 #app :is(.outline) {
   outline-style: solid;
 }
@@ -2373,7 +2361,7 @@ button:disabled {
 }
 
 #app :is(.outline-primary) {
-  outline-color: #F100C6;
+  outline-color: #00E3D3;
 }
 
 #app :is(.ring-2) {
@@ -2386,20 +2374,8 @@ button:disabled {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-#app :is(.backdrop-blur-md) {
-  --tw-backdrop-blur: blur(12px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-
 #app :is(.backdrop-blur-sm) {
   --tw-backdrop-blur: blur(4px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-
-#app :is(.backdrop-blur-lg) {
-  --tw-backdrop-blur: blur(16px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
@@ -2480,31 +2456,31 @@ button:disabled {
 }
 
 #app :is(.text-primary-800) {
-  color: hsl(311, 100%, 20%);
+  color: hsl(176, 100%, 20%);
 }
 
 #app :is(.text-primary-600) {
-  color: hsl(311, 100%, 40%);
+  color: hsl(176, 100%, 40%);
 }
 
 #app :is(.bg-primary-600) {
-  background-color: hsl(311, 100%, 40%);
+  background-color: hsl(176, 100%, 40%);
 }
 
 #app :is(.text-primary-500) {
-  color: hsl(311, 100%, 50%);
+  color: hsl(176, 100%, 50%);
 }
 
 #app :is(.bg-primary-500) {
-  background-color: hsl(311, 100%, 50%);
+  background-color: hsl(176, 100%, 50%);
 }
 
 #app :is(.bg-primary-200) {
-  background-color: hsl(311, 100%, 80%);
+  background-color: hsl(176, 100%, 80%);
 }
 
 #app :is(.bg-discoteal-600) {
-  background-color: hsl(173, 99%, 40%);
+  background-color: hsl(176, 100%, 40%);
 }
 
 #app :is(.bg-discogray-800) {
@@ -2517,20 +2493,20 @@ button:disabled {
   align-items: center;
   justify-content: center;
   --tw-bg-opacity: 0.8;
-  stroke: #F100C6;
+  stroke: #F81591;
   stroke-width: 5px;
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
   --tw-text-opacity: 1;
-  color: rgb(241 0 198 / var(--tw-text-opacity));
+  color: rgb(248 21 145 / var(--tw-text-opacity));
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: hsl(311, 100%, 90%);
+  background-color: hsl(327, 94%, 90%);
 }
 
 #app  :is(.buttoneins):hover {
@@ -2555,6 +2531,38 @@ button:disabled {
   font-family: 'Metropolitano-Medium';
 
   src: url(./font/Metropolitano-Medium.woff2) format('woff2');
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Metropolitano-Black';
+
+  src: url(./font/Metropolitano-Black.woff2) format('woff2');
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Metropolitano-Bold';
+
+  src: url(./font/Metropolitano-Bold.woff2) format('woff2');
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Metropolitano-Light';
+
+  src: url(./font/Metropolitano-Light.woff2) format('woff2');
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Metropolitano-Thin';
+
+  src: url(./font/Metropolitano-Thin.woff2) format('woff2');
 
   font-display: swap;
 }
@@ -2630,27 +2638,27 @@ button:disabled {
 }
 
 #app :is(.hover\:text-primary-800:hover) {
-  color: hsl(311, 100%, 20%);
+  color: hsl(176, 100%, 20%);
 }
 
 #app :is(.hover\:bg-primary-700:hover) {
-  background-color: hsl(311, 100%, 30%);
+  background-color: hsl(176, 100%, 30%);
 }
 
 #app :is(.hover\:bg-primary-600:hover) {
-  background-color: hsl(311, 100%, 40%);
+  background-color: hsl(176, 100%, 40%);
 }
 
 #app :is(.hover\:text-primary-500:hover) {
-  color: hsl(311, 100%, 50%);
+  color: hsl(176, 100%, 50%);
 }
 
 #app :is(.hover\:bg-primary-400:hover) {
-  background-color: hsl(311, 100%, 60%);
+  background-color: hsl(176, 100%, 60%);
 }
 
 #app :is(.hover\:bg-discoteal-500:hover) {
-  background-color: hsl(173, 99%, 50%);
+  background-color: hsl(176, 100%, 50%);
 }
 
 #app :is(.focus\:z-10:focus) {
@@ -2726,7 +2734,7 @@ button:disabled {
 }
 
 #app :is(.active\:bg-discoteal-700:active) {
-  background-color: hsl(173, 99%, 30%);
+  background-color: hsl(176, 100%, 30%);
 }
 
 #app :is(.disabled\:cursor-not-allowed:disabled) {
@@ -2860,16 +2868,16 @@ button:disabled {
     flex-shrink: 0;
   }
 
+  #app :is(.sm\:grid-cols-1) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
   #app :is(.sm\:grid-cols-2) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   #app :is(.sm\:grid-cols-5) {
     grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
-  #app :is(.sm\:grid-cols-1) {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   #app :is(.sm\:flex-row) {
@@ -2893,12 +2901,12 @@ button:disabled {
     border-radius: 0.5rem;
   }
 
-  #app :is(.sm\:p-4) {
-    padding: 1rem;
-  }
-
   #app :is(.sm\:p-3) {
     padding: 0.75rem;
+  }
+
+  #app :is(.sm\:p-4) {
+    padding: 1rem;
   }
 
   #app :is(.sm\:px-0) {
@@ -3026,19 +3034,14 @@ button:disabled {
     overflow-x: hidden;
   }
 
-  #app :is(.md\:text-sm) {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-
-  #app :is(.md\:text-4xl) {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
   #app :is(.md\:text-3xl) {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  #app :is(.md\:text-sm) {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   #app :is(.md\:line-clamp-2) {
@@ -3206,11 +3209,6 @@ button:disabled {
 
   #app :is(.lg\:pl-0) {
     padding-left: 0px;
-  }
-
-  #app :is(.lg\:text-6xl) {
-    font-size: 3.75rem;
-    line-height: 1;
   }
 
   #app :is(.lg\:text-4xl) {
