@@ -15,7 +15,7 @@ export function CollectionCard({
     >
       <div className="">
 
-        <div className="h-[20vh] px-4 pt-4 mb-12 object-cover overflow-hidden ">
+        <div className="h-[500px] px-4 pt-4 mb-12 object-cover overflow-hidden ">
           <img src={collection.featuredAsset?.preview + '?w=1200&h=1200' } className=" object-cover min-w-full min-h-full"/>
         </div>
 

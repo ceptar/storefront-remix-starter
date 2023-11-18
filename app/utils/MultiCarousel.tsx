@@ -58,11 +58,11 @@ export default function MultiCarousel() {
       visibleSlides={visibleSlides}
       totalSlides={collections.length}
       step={1}
-      naturalSlideWidth={300}
-      naturalSlideHeight={800}
+      naturalSlideWidth={200}
+      naturalSlideHeight={300}
       isIntrinsicHeight
     >
-      <div>
+      <div className="w-5/6">
         <Slider>   
           {collections.map(collection => (
             <Slide index={collection.id} key={collection.id}>

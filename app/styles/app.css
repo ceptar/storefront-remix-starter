@@ -1168,6 +1168,10 @@ button:disabled {
   height: 20vh;
 }
 
+#app :is(.h-\[500px\]) {
+  height: 500px;
+}
+
 #app :is(.max-h-full) {
   max-height: 100%;
 }
@@ -1270,6 +1274,10 @@ button:disabled {
   width: 83.333333%;
 }
 
+#app :is(.w-\[300px\]) {
+  width: 300px;
+}
+
 #app :is(.min-w-0) {
   min-width: 0px;
 }
@@ -1284,6 +1292,10 @@ button:disabled {
 
 #app :is(.min-w-full) {
   min-width: 100%;
+}
+
+#app :is(.min-w-\[100px\]) {
+  min-width: 100px;
 }
 
 #app :is(.max-w-2xl) {

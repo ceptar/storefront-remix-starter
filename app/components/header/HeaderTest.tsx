@@ -44,7 +44,7 @@ const HeaderTest = () => {
           <div className="flex-grow flex justify-center items-center">
            
 
-          <img className="max-w-[350px] min-w-[150px]" src={logo} alt="logo" />
+          <img className="max-w-[350px] min-w-[100px]" src={logo} alt="logo" />
 
 
           </div>
