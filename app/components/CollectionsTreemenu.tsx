@@ -11,7 +11,7 @@ interface CollectionsData {
   collections: Collection[];
 }
 
-export default function CollectionsTreeMenu({ collectionsData }: { collectionsData: CollectionsData }) {
+export default function CollectionsTreemenu({ collectionsData }: { collectionsData: CollectionsData }) {
   // Helper function to normalize the parent information
   const normalizeParent = (collection: Collection) => {
     if (collection.parent) {

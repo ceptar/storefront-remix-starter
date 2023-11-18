@@ -1,10 +1,9 @@
-
 import { useLoaderData } from '@remix-run/react';
 import { getCollections } from '~/providers/collections/collections';
 import { CollectionCard } from '~/components/collections/CollectionCard';
 import { LoaderArgs } from '@remix-run/server-runtime';
 import MultiCarousel from '~/utils/MultiCarousel';
-import CollectionsTreeMenu from '~/components/CollectionsTreeMenu';
+import CollectionsTreemenu from '~/components/CollectionsTreemenu';
 
 import heropic1 from '~/../public/heropic1.jpg';
 
@@ -39,10 +38,10 @@ export default function Index() {
       >
         {/* Decorative image and overlay */}
 
-        <div className="flex h-[60vh] justify-items-end items-center mr-auto ml-auto md:max-w-full lg:max-w-screen-xl px-24 w-full">
-          <div className="sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 row-gap-5 ml-auto">
+        <div className="flex h-[70vh] justify-items-end items-center mr-auto ml-auto md:max-w-full lg:max-w-screen-xl px-24 w-full">
+          <div className="sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 row-gap-5 mr-auto">
            
-            <div className="text-3xl md:text-4xl lg:text-6xl xl:text-6xl font-header1
+            <div className="text-3xl md:text-3xl lg:text-4xl xl:text-6xl font-header1
             text-discoteal pt-0  pb-0 text-start sm:px-0 justify-between">
 <div className="whitespace-nowrap p-4  backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] bg-gray-800/5">
                 <span className="p-2 sm:p-3">Wearable Art.</span>
@@ -73,8 +72,8 @@ export default function Index() {
       </div>
 
 <div>
-      <section className="w-full h-full flex flex-col justify-center items-center">
-      <div className="mx-auto z-20 relative flex flex-col justify-center md:max-w-full lg:max-w-screen-xl" style={{ marginTop: '50vh' }}>
+      <section className="relative w-full h-[60vh] flex flex-col justify-center items-center" style={{ marginTop: '70vh' }}>
+      <div className="mx-auto z-20 relative flex flex-col justify-center md:max-w-full lg:max-w-screen-xl">
         <div className="h-[8vh] flex flex-col justify-center whitespace-nowrap">
           <h2
             id="category-heading"
@@ -108,7 +107,7 @@ export default function Index() {
           </div>
           </div>
           </div>
-          <div>    <CollectionsTreeMenu
+          <div>    <CollectionsTreemenu
                       collectionsData={{ collections }}
                     /></div>
 
@@ -116,5 +115,3 @@ export default function Index() {
           </>
   );
 }
-
-

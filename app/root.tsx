@@ -16,6 +16,7 @@ import styles from './styles/app.css';
 import { Header } from './components/header/Header';
 import { DataFunctionArgs, json } from '@remix-run/server-runtime';
 import { getCollections } from '~/providers/collections/collections';
+
 import { activeChannel } from '~/providers/channel/channel';
 import { APP_META_DESCRIPTION, APP_META_TITLE } from '~/constants';
 import { useEffect, useState } from 'react';
@@ -61,6 +62,7 @@ export type RootLoaderData = {
   activeCustomer: Awaited<ReturnType<typeof getActiveCustomer>>;
   activeChannel: Awaited<ReturnType<typeof activeChannel>>;
   collections: Awaited<ReturnType<typeof getCollections>>;
+
 };
 
 export async function loader({ request, params, context }: DataFunctionArgs) {

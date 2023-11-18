@@ -6,6 +6,7 @@ import { UserIcon } from '@heroicons/react/24/solid';
 import { classNames } from '~/utils/class-names';
 import { useState } from "react";
 
+
 import '~/styles/app.css';
 
 import HeaderTest from './HeaderTest';
@@ -22,7 +23,7 @@ const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
 const [navbarOpen, setNavbarOpen] = useState(false);
 
 return (
-  
+
 <HeaderTest navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
 
 );

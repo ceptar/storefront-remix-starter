@@ -1,7 +1,9 @@
 // import { useEffect, useState } from 'react';
 import '~/styles/app.css';
 import DropDowneins from './DropDowneins';
-// import logo from '~/../public/logo.svg';
+
+import logo from '~/../public/logo.svg';
+
 
 const HeaderTest = () => {
 //   const [navColor, setNavColor] = useState('transparent');
@@ -25,9 +27,9 @@ const HeaderTest = () => {
   // }, []);
 
   return (
-    <div className="fixed h-[8vh] top-0 z-50 w-full">
+    <div className="fixed h-[8vh] top-0 z-50 w-full bg-white/50 backdrop-blur-sm">
       <nav
-        className="w-full h-full flex items-center justify-center"
+        className=" w-full h-full flex items-center justify-center"
         // style={{
         //   backgroundColor: navColor,
         //   color: navTextCol,
@@ -37,11 +39,12 @@ const HeaderTest = () => {
         <div className="flex w-full justify-between items-center max-w-screen-xl mx-auto p-4">
           <div className="flex">
             <DropDowneins />
+            
           </div>
           <div className="flex-grow flex justify-center items-center">
            
 
-          
+          <img className="max-w-[350px] min-w-[150px]" src={logo} alt="logo" />
 
 
           </div>

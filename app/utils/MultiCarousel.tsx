@@ -72,11 +72,11 @@ export default function MultiCarousel() {
         </Slider>
       </div>
 
-      <div className="mt-4 font-bold flex flex-row justify-center items-center">
-        <ButtonFirst className="buttoneins rounded-full w-9 h-9 mx-2 p-4">{'<<'}</ButtonFirst>
-        <ButtonBack className="buttoneins rounded-full w-9 h-9 mx-2 p-4">{'<'}</ButtonBack>
-        <ButtonNext className="buttoneins rounded-full w-9 h-9 mx-2 p-4">{'>'}</ButtonNext>
-        <ButtonLast className="buttoneins rounded-full w-9 h-9 mx-2 p-4">{'>>'}</ButtonLast>
+      <div className="mt-12 font-bold flex flex-row justify-center items-center">
+        <ButtonFirst className="buttoneins rounded-full w-12 h-12 mx-4 p-4">{'<<'}</ButtonFirst>
+        <ButtonBack className="buttoneins rounded-full w-12 h-12 mx-4 p-4">{'<'}</ButtonBack>
+        <ButtonNext className="buttoneins rounded-full w-12 h-12 mx-4 p-4">{'>'}</ButtonNext>
+        <ButtonLast className="buttoneins rounded-full w-12 h-12 mx-4 p-4">{'>>'}</ButtonLast>
       </div>
     </CarouselProvider>
   );
