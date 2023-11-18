@@ -13,10 +13,10 @@ export function CollectionCard({
       key={collection.id}
       className="mx-2 shadow-md bg-gray-100 max-w-fit relative flex overflow-hidden  hover:opacity-75 xl:w-auto"
     >
-      <div className=" h-fit flex flex-col justify-center shadow-md ">
+      <div className="">
 
-        <div className="w-full h-fit flex object-cover p-4 pb-12  ">
-          <img src={collection.featuredAsset?.preview + '?w=1200&h=1200'} />
+        <div className="h-[20vh] px-4 pt-4 mb-12 object-cover overflow-hidden ">
+          <img src={collection.featuredAsset?.preview + '?w=1200&h=1200' } className=" object-cover min-w-full min-h-full"/>
         </div>
 
       <span
