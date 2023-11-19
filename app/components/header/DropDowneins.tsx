@@ -84,7 +84,7 @@ return (
 
                  <div
 >
-<svg className="h-[16px] w-[16px] sm:h-[24px] sm:w-[24px]" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg className="h-[12px] w-[12px] sm:h-[16px] sm:w-[16px]" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.42969 8H42.5726" />
 <path d="M5.42969 24H42.5726" />
 <path d="M5.42969 40H42.5726" />

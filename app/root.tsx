@@ -26,6 +26,8 @@ import Footer from '~/components/footer/Footer';
 import { useActiveOrder } from '~/utils/use-active-order';
 import { setApiUrl } from '~/graphqlWrapper';
 
+import CollectionsTreemenu from '~/components/CollectionsTreemenu';
+
 export const meta: MetaFunction = () => {
   return [{ title: APP_META_TITLE }, { description: APP_META_DESCRIPTION }];
 };
@@ -112,9 +114,11 @@ export default function App() {
         <Links />
       </head>
       <body>
+
         <Header
           onCartIconClick={() => setOpen(!open)}
           cartQuantity={activeOrder?.totalQuantity ?? 0}
+
         />
         <main className="">
           <Outlet

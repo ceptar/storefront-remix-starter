@@ -1,8 +1,8 @@
 // import { useEffect, useState } from 'react';
 import '~/styles/app.css';
 import DropDowneins from './DropDowneins';
+import Logo from '~/components/svgs/Logo';
 
-import logo from '~/../public/logo.svg';
 
 
 const HeaderTest = () => {
@@ -27,7 +27,7 @@ const HeaderTest = () => {
   // }, []);
 
   return (
-    <div className="fixed h-[8vh] top-0 z-50 w-full bg-discogray/70 backdrop-blur-sm ">
+    <div className="fixed h-[8vh] top-0 z-50 w-full bg-discogray/70 backdrop-blur-sm justify-items-end items-center mr-auto ml-auto w-full">
       <nav
         className=" w-full h-full flex items-center justify-center"
         // style={{
@@ -44,8 +44,7 @@ const HeaderTest = () => {
           <div className="flex-grow flex justify-center items-center">
            
 
-          <img className="max-w-[350px] min-w-[100px]" src={logo} alt="logo" />
-
+          <Logo className="max-w-[350px] min-w-[100px]" />
 
           </div>
           <div className="flex w-9"></div>
