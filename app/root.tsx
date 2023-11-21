@@ -1,3 +1,10 @@
+import React from 'react';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  HttpLink,
+} from '@apollo/client';
 import {
   isRouteErrorResponse,
   Link,
@@ -13,7 +20,7 @@ import {
   MetaFunction,
 } from '@remix-run/react';
 import styles from './styles/app.css';
-import { Header } from './components/header/Header';
+import Header from '~/components/header/Header';
 import { DataFunctionArgs, json } from '@remix-run/server-runtime';
 import { getCollections } from '~/providers/collections/collections';
 
@@ -26,7 +33,12 @@ import Footer from '~/components/footer/Footer';
 import { useActiveOrder } from '~/utils/use-active-order';
 import { setApiUrl } from '~/graphqlWrapper';
 
-import CollectionsTreemenu from '~/components/CollectionsTreemenu';
+const client = new ApolloClient({
+  link: new HttpLink({
+    uri: 'https://current--discobabes123.apollographos.net/graphql', // Update with your GraphQL endpoint
+  }),
+  cache: new InMemoryCache(),
+});
 
 export const meta: MetaFunction = () => {
   return [{ title: APP_META_TITLE }, { description: APP_META_DESCRIPTION }];
@@ -105,6 +117,7 @@ export default function App() {
   }, [loaderData]);
 
   return (
+    <ApolloProvider client={client}>
     <html lang="en" id="app">
       <head>
         <meta charSet="utf-8" />
@@ -129,6 +142,7 @@ export default function App() {
               removeItem,
             }}
           />
+
         </main>
         <CartTray
           open={open}
@@ -143,7 +157,8 @@ export default function App() {
 
         {devMode && <LiveReload />}
       </body>
-    </html>
+      </html>
+    </ApolloProvider>
   );
 }
 

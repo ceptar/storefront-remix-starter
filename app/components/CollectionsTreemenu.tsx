@@ -34,9 +34,13 @@ export default function CollectionsTreemenu({ collectionsData }: { collectionsDa
       if (collection.parentId === parentId) {
         result.push(
           <li key={collection.id}>
-            <Link to={`/collections/${collection.id}`}>
-              {collection.name}
-            </Link>
+            <Link 
+  to={`/collections/${collection.slug}`}
+  className={collection.parentId ? 'child' : 'parent'}
+>
+  {collection.name} 
+</Link>
+
 
             {/* Recursively build children for the current collection */}
             {buildTree(collections, collection.id)}
@@ -45,7 +49,7 @@ export default function CollectionsTreemenu({ collectionsData }: { collectionsDa
       }
     }
 
-    return result.length > 0 ? <ul>{result}</ul> : null;
+    return result.length > 0 ? <ul className="font-nohemiblack1" >{result}</ul> : null;
   };
 
   return (

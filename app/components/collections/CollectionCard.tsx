@@ -11,12 +11,12 @@ export function CollectionCard({
       to={'/collections/' + collection.slug}
       prefetch="intent"
       key={collection.id}
-      className="mx-2 shadow-md bg-gray-100 max-w-fit relative flex overflow-hidden  hover:opacity-75 w-auto"
+      className="mx-2 shadow-md bg-gray-100 max-w-fit relative flex overflow-hidden  hover:opacity-75 xl:w-auto"
     >
       <div className="">
 
-        <div className="h-[500px] px-4 pt-4 mb-12 object-cover overflow-hidden ">
-          <img src={collection.featuredAsset?.preview + '?w=1200&h=1200' } className=" object-cover max-w-full min-h-full"/>
+        <div className="h-[200px] px-4 pt-4 mb-12 object-cover overflow-hidden ">
+          <img src={collection.featuredAsset?.preview + '?w=1200&h=1200' } className=" object-cover min-w-full min-h-full"/>
         </div>
 
       <span

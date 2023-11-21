@@ -28,8 +28,17 @@
   }
 
   .buttoneins {
-  @apply py-4 px-4 flex text-discopink bg-discopink-100 focus:outline-gray-200 focus:outline-1 justify-center items-center bg-opacity-80 stroke-[5px] stroke-discopink transition duration-300 ease-in-out transform hover:bg-discoyellow
+  @apply py-4 px-4 flex rounded-md font-metromed1 text-discogray-100 shadow-[rgba(50,50,93,0.25)_0px_3px_6px_-2px,_rgba(0,0,0,0.3)_0px_2px_4px_-3px] bg-discogray bg-opacity-80 focus:outline-gray-200 focus:outline-1 justify-center items-center stroke-[5px] stroke-discogray transition duration-300 ease-in-out transform hover:bg-opacity-100 hover:text-white hover:shadow-white
   }
+
+  /* Links TreeMenu */
+  .parent {
+ @apply text-3xl font-metrolight1
+  }  
+  .child {
+ @apply text-xl font-metrobold1 pl-4
+  }
+
   
   @font-face {
     font-family: 'Metropolitano-Regular';

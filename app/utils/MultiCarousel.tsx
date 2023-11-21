@@ -31,16 +31,16 @@ export default function MultiCarousel() {
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth < 500) {
-        setVisibleSlides(2); 
-        
+        setVisibleSlides(1); 
+
       } else if (window.innerWidth < 768) {
-        setVisibleSlides(3);
+        setVisibleSlides(2);
         
       } else if (window.innerWidth < 1024) {
-        setVisibleSlides(4);
+        setVisibleSlides(3);
         
       } else {
-        setVisibleSlides(5);
+        setVisibleSlides(4);
        
       }
     }
@@ -62,7 +62,7 @@ export default function MultiCarousel() {
       naturalSlideHeight={400}
       isIntrinsicHeight={true}
     >
-      <div className="w-full flex justify-center px-8 overflow-hidden ">
+      <div className="flex justify-center px-8 overflow-hidden ">
         <Slider className="overflow-hidden mx-auto">   
           {collections.map(collection => (
             <Slide index={collection.id} key={collection.id} className="max-w-full flex">

@@ -25,13 +25,13 @@ module.exports = {
         metrothin1: ['Metropolitano-Thin', 'sans'],
       },
       colors: {
-        primary: '#00E3D3',
+        primary: '#15FEE2',
 
         secondary: '#8002E4',
 
-        discopink: '#F81591',
+        discopink: '#FF00E5',
 
-        discoteal: '#00E3D3',
+        discoteal: '#15FEE2',
 
         discopurple: '#8002E4',
 
