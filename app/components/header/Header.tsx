@@ -8,7 +8,7 @@ import { UserIcon } from '@heroicons/react/24/solid';
 import { classNames } from '~/utils/class-names';
 import '~/styles/app.css';
 import Logo from '~/components/svgs/Logo';
-import Sliderex from '~/components/header/Sliderex';
+
 
 
 const Header = ({ 
@@ -66,7 +66,7 @@ className="px-2 md:max-w-full lg:max-w-screen-xl h-full flex flex-grow justify-c
       
       <div className="flex flex-col items-end justify-center ml-auto">
 
-     <Sliderex />
+     <HeaderDrei />
       
 
       </div>
