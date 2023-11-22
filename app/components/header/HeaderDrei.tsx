@@ -30,7 +30,7 @@ export default function HeaderDrei() {
   const collections = data?.collections?.items || [];
 
     return (
-      <div className="absolute z-50 top-4 right-4 flex flex-row-reverse justify-center items-center origin-top-right">
+      <div className="absolute z-40 top-4 right-4 flex flex-row-reverse justify-center items-center origin-top-right">
         <Popover className="flex flex-col">
           {({ open }) => (
             <>

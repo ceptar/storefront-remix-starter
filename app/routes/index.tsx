@@ -40,11 +40,11 @@ export default function Index() {
         {/* Decorative image and overlay */}
 
         <div className="flex h-[70vh] justify-items-end items-center mr-auto ml-auto md:max-w-full lg:max-w-screen-xl w-full">
-          <div className="mx-auto z-20 relative flex flex-col justify-center md:max-w-full lg:max-w-screen-xl w-full">
-           
-            <div className=" text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-header1
+          <div className="mt-16 mx-auto z-20 relative flex flex-col justify-center md:max-w-full lg:max-w-screen-xl w-full">
+           <div className="flex flexcol w-1/6"></div>
+            <div className="flex flex-col w-5/6 text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-header1
             text-discogray pt-0  pb-0 text-start sm:px-0 justify-between">
-<div className=" whitespace-nowrap ml-auto px-8">
+<div className=" whitespace-nowrap ml-auto  w-5/6 ">
                 <span className="text-white ">Wearable</span> <span className="shadow-white bg-discoteal bg-opacity-60 whitespace-nowrap p-2  backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] ">ART.</span>
                 <p className="my-12 "></p>
                

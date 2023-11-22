@@ -10,36 +10,6 @@
 }
 
 @layer utilities {
-  .flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .shadow-divider {
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 9px -10px inset;
-  }
-
-  .mirror-x {
-    --tw-scale-x: -1;
-  }
-
-  .text-inherit {
-    color: inherit;
-  }
-
-  .buttoneins {
-  @apply py-4 px-4 flex rounded-md font-metromed1 text-discogray-100 shadow-[rgba(50,50,93,0.25)_0px_3px_6px_-2px,_rgba(0,0,0,0.3)_0px_2px_4px_-3px] bg-discogray bg-opacity-80 focus:outline-gray-200 focus:outline-1 justify-center items-center stroke-[5px] stroke-discogray transition duration-300 ease-in-out transform hover:bg-opacity-100 hover:text-white hover:shadow-white
-  }
-
-  /* Links TreeMenu */
-  .parent {
- @apply text-3xl font-metrolight1
-  }  
-  .child {
- @apply text-xl font-metrobold1 pl-4
-  }
-
-  
   @font-face {
     font-family: 'Metropolitano-Regular';
     src: url(./font/Metropolitano-Regular.woff) format('woff');
@@ -85,6 +55,73 @@
     src: url(./font/Nohemi-Black.woff2) format('woff2');
     font-display: swap;
   }
+  
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .shadow-divider {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 9px -10px inset;
+  }
 
+  .mirror-x {
+    --tw-scale-x: -1;
+  }
+
+  .text-inherit {
+    color: inherit;
+  }
+
+  .buttoneins {
+  @apply py-4 px-4 flex rounded-md font-metromed1 text-discogray-100 shadow-[rgba(50,50,93,0.25)_0px_3px_6px_-2px,_rgba(0,0,0,0.3)_0px_2px_4px_-3px] bg-discogray bg-opacity-80 focus:outline-gray-200 focus:outline-1 justify-center items-center stroke-[5px] stroke-discogray transition duration-300 ease-in-out transform hover:bg-opacity-100 hover:text-white hover:shadow-white
+  }
+
+  /* Links TreeMenu */
+  .parent {
+ @apply text-3xl font-metrolight1
+  }  
+  .child {
+ @apply text-xl font-metrobold1
+  }
+
+  /* Popover Menu */
+  .Popover {
+    z-index: 50;
+    background-color: white;
+    color: #2E3047;
+    margin-top: 8vh;
+  width:30vw;
+
+    right: 0; /* Set right to 0 to hug the right side */
+
+    height: 92vh;
+    max-width: calc(100vw - 10px);
+  }
+  
+.tronfilter {
+
+  -webkit-filter: 
+
+  drop-shadow( -.75px 0px 0.4px #000000 );
+  filter: 
+
+  drop-shadow( -.75px 0px 0.4px #000000 ); 
+
+}
+
+
+  /* .tronfilter {
+
+  -webkit-filter: 
+  drop-shadow( 0px 0px 0.2px #000000 )
+  drop-shadow( -.75px 0px 2px #00000098 );
+  filter: 
+  drop-shadow( 0px 0px 0.2px #000000 )
+  drop-shadow( -.75px 0px 2px #00000098 ); 
+  stroke:#ffffff;
+  stroke-width: 0;
+  fill: #fff;
+} */
 
   }

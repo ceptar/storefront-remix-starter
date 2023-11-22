@@ -8,7 +8,7 @@ import { UserIcon } from '@heroicons/react/24/solid';
 import { classNames } from '~/utils/class-names';
 import '~/styles/app.css';
 import Logo from '~/components/svgs/Logo';
-
+import Sliderex from './Sliderex';
 
 
 const Header = ({ 
@@ -20,13 +20,13 @@ cartQuantity: number;
 
  }) => {
 
-/*   const [navColor, setNavColor] = useState('transparent');
+  const [navColor, setNavColor] = useState('transparent');
   const [navTextCol, setNavTextCol] = useState('rgba(255, 255, 255, 0.95)');
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
-      setNavColor('hsla(235, 21%, 23%, 0.9)');
-      setNavTextCol('rgb(55 65 81)');
+      setNavColor('rgb(46 48 71)');
+      setNavTextCol('rgb(46 48 71)');
     } else {
       setNavColor('transparent');
       setNavTextCol('#ffffff');
@@ -38,35 +38,35 @@ cartQuantity: number;
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []); */
+  }, []);
 
 
   return (
-    <nav className="bg-discoyellow w-full fixed h-[8vh] flex justify-center top-0 z-50 shadow-md mix-blend-hardlight "
+    <nav className="bg-discogray w-full fixed h-[8vh] flex justify-center top-0 z-40 shadow-md"
        
-/*     style={{
+    style={{
     backgroundColor: navColor,
       color: navTextCol,
       transition: 'background-color 0.3s',
-    }} */
+    }}
 
     >
 <div   
-className="px-2 md:max-w-full lg:max-w-screen-xl h-full flex flex-grow justify-center "      
+className="w-full px-2 md:max-w-full lg:max-w-screen-xl h-full flex justify-between "      
 >
-<div className="py-2 pl-2 pr-4 flex flex-col items-start justify-center min-w-[15px] max-w-[15px]">
+<div className="w-1/6 flex flex-col items-start justify-center min-w-[1/6] max-w-[1/6]">
 
   </div>
-    <div className="py-2 pl-2 pr-4 flex flex-grow  items-center justify-center">
+    <div className="py-2 pl-2 pr-4 flex flex-col items-center justify-center w-4/6">
 
-    <Logo className="max-w-[450px] min-w-[100px]"/>
+    <Logo className="min-w-[100px] max-w-[400px] tronfilter"/>
 
 
       </div>
       
-      <div className="flex flex-col items-end justify-center ml-auto">
+      <div className="flex flex-col items-end justify-center w-1/6 min-w-[1/6] max-w-[1/6]">
 
-     <HeaderDrei />
+     <Sliderex />
       
 
       </div>
