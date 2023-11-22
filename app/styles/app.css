@@ -764,16 +764,8 @@ button:disabled {
   right: 0px;
 }
 
-#app :is(.right-4) {
-  right: 1rem;
-}
-
 #app :is(.top-0) {
   top: 0px;
-}
-
-#app :is(.top-4) {
-  top: 1rem;
 }
 
 #app :is(.z-10) {
@@ -1017,10 +1009,6 @@ button:disabled {
   display: block;
 }
 
-#app :is(.inline-block) {
-  display: inline-block;
-}
-
 #app :is(.flex) {
   display: flex;
 }
@@ -1113,6 +1101,10 @@ button:disabled {
   height: 200px;
 }
 
+#app :is(.h-\[2vh\]) {
+  height: 2vh;
+}
+
 #app :is(.h-\[50vh\]) {
   height: 50vh;
 }
@@ -1193,6 +1185,10 @@ button:disabled {
   width: 2rem;
 }
 
+#app :is(.w-\[75vw\]) {
+  width: 75vw;
+}
+
 #app :is(.w-fit) {
   width: -moz-fit-content;
   width: fit-content;
@@ -1246,10 +1242,6 @@ button:disabled {
   max-width: 12rem;
 }
 
-#app :is(.max-w-\[33\.33vw\]) {
-  max-width: 33.33vw;
-}
-
 #app :is(.max-w-\[400px\]) {
   max-width: 400px;
 }
@@ -1291,20 +1283,12 @@ button:disabled {
   flex-shrink: 0;
 }
 
-#app :is(.shrink-0) {
-  flex-shrink: 0;
-}
-
 #app :is(.flex-grow) {
   flex-grow: 1;
 }
 
 #app :is(.basis-1\/3) {
   flex-basis: 33.333333%;
-}
-
-#app :is(.origin-top-right) {
-  transform-origin: top right;
 }
 
 #app :is(.-translate-x-full) {
@@ -1319,16 +1303,6 @@ button:disabled {
 
 #app :is(.translate-x-full) {
   --tw-translate-x: 100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-#app :is(.translate-y-0) {
-  --tw-translate-y: 0px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-#app :is(.translate-y-1) {
-  --tw-translate-y: 0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1416,16 +1390,8 @@ button:disabled {
   flex-direction: row;
 }
 
-#app :is(.flex-row-reverse) {
-  flex-direction: row-reverse;
-}
-
 #app :is(.flex-col) {
   flex-direction: column;
-}
-
-#app :is(.flex-col-reverse) {
-  flex-direction: column-reverse;
 }
 
 #app :is(.flex-nowrap) {
@@ -2063,10 +2029,6 @@ button:disabled {
   font-family: Metropolitano-Bold, sans;
 }
 
-#app :is(.font-nohemiblack1) {
-  font-family: Nohemi-Black, sans;
-}
-
 #app :is(.\!text-sm) {
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
@@ -2277,10 +2239,6 @@ button:disabled {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-#app :is(.text-white\/90) {
-  color: rgb(255 255 255 / 0.9);
-}
-
 #app :is(.text-yellow-400) {
   --tw-text-opacity: 1;
   color: rgb(250 204 21 / var(--tw-text-opacity));
@@ -2339,12 +2297,6 @@ button:disabled {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-#app :is(.shadow-lg) {
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 #app :is(.shadow-md) {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -2361,6 +2313,11 @@ button:disabled {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+#app :is(.shadow-discogray) {
+  --tw-shadow-color: #2E3047;
+  --tw-shadow: var(--tw-shadow-colored);
 }
 
 #app :is(.shadow-white) {
@@ -2384,20 +2341,10 @@ button:disabled {
   outline-color: #15FEE2;
 }
 
-#app :is(.ring-1) {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
 #app :is(.ring-2) {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-#app :is(.ring-black\/5) {
-  --tw-ring-color: rgb(0 0 0 / 0.05);
 }
 
 #app :is(.filter) {
@@ -2444,10 +2391,6 @@ button:disabled {
 
 #app :is(.duration-100) {
   transition-duration: 100ms;
-}
-
-#app :is(.duration-150) {
-  transition-duration: 150ms;
 }
 
 #app :is(.duration-200) {
@@ -2505,8 +2448,8 @@ button:disabled {
   background-color: hsl(173, 99%, 80%);
 }
 
-#app :is(.bg-discoteal-600) {
-  background-color: hsl(173, 99%, 40%);
+#app :is(.bg-discoteal-700) {
+  background-color: hsl(173, 99%, 30%);
 }
 
 #app :is(.bg-discogray-800) {
@@ -2585,63 +2528,91 @@ button:disabled {
   font-display: swap;
 }
 
-#app  :is(.buttoneins) {
-  display: flex;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.375rem;
-  background-color: rgb(46 48 71 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.8;
-  stroke: #2E3047;
-  stroke-width: 5px;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-family: Metropolitano-Medium, sans;
-  --tw-shadow: rgba(50,50,93,0.25) 0px 3px 6px -2px, rgba(0,0,0,0.3) 0px 2px 4px -3px;
-  --tw-shadow-colored: 0px 3px 6px -2px var(--tw-shadow-color), 0px 2px 4px -3px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+/*VOR LINKEINS EIN "GROUP" EINFÜGEN; LINKS in <a> und zweites in <span> */
+
+#app  :is(.linkeins) {
+  transition-property: all;
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  color: hsl(235, 21%, 90%);
+}
+
+#app  :is(.linkeinszwo) {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #15FEE2 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(21 254 226 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #FF00E5 var(--tw-gradient-to-position);
+  background-size: 0% 2px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+#app :is(.group:hover  :is(.linkeinszwo)) {
+  background-size: 100% 2px;
+}
+
+#app  :is(.buttoneins) {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #15FEE2 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(21 254 226 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #FF00E5 var(--tw-gradient-to-position);
+  background-size: 0% 4px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-family: Metropolitano-Bold, sans;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 #app  :is(.buttoneins):hover {
-  --tw-bg-opacity: 1;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  --tw-shadow-color: #fff;
-  --tw-shadow: var(--tw-shadow-colored);
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-#app  :is(.buttoneins):focus {
-  outline-width: 1px;
-  outline-color: #e5e7eb;
+#app :is(.group:hover  :is(.buttoneins)) {
+  background-size: 100% 4px;
 }
 
 /* Links TreeMenu */
 
 #app  :is(.\!parent) {
   font-family: Metropolitano-Light, sans;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(46 48 71 / var(--tw-text-opacity));
 }
 
 #app  :is(.parent) {
   font-family: Metropolitano-Light, sans;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(46 48 71 / var(--tw-text-opacity));
 }
 
 #app  :is(.child) {
-  font-family: Metropolitano-Bold, sans;
+  font-family: Metropolitano-Light, sans;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  color: hsl(235, 21%, 60%);
 }
 
 /* Popover Menu */
@@ -2649,13 +2620,14 @@ button:disabled {
 #app :is(.Popover) {
   z-index: 50;
   background-color: white;
+  border: #2E3047;
+  border-width: 1px;
   color: #2E3047;
   margin-top: 8vh;
-  width:30vw;
   right: 0;
   /* Set right to 0 to hug the right side */
-  height: 92vh;
   max-width: calc(100vw - 10px);
+  box-shadow: -5px 1px 20px 0px rgba(46, 48, 71, 0.333);
 }
 
 #app :is(.tronfilter) {
@@ -2715,11 +2687,6 @@ button:disabled {
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
-#app :is(.hover\:text-white:hover) {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 #app :is(.hover\:opacity-50:hover) {
   opacity: 0.5;
 }
@@ -2742,10 +2709,6 @@ button:disabled {
 
 #app :is(.hover\:text-primary-500:hover) {
   color: hsl(173, 99%, 50%);
-}
-
-#app :is(.hover\:bg-primary-400:hover) {
-  background-color: hsl(173, 99%, 60%);
 }
 
 #app :is(.hover\:bg-discoteal-500:hover) {
@@ -2822,26 +2785,6 @@ button:disabled {
 
 #app :is(.focus\:ring-offset-gray-800:focus) {
   --tw-ring-offset-color: #1f2937;
-}
-
-#app :is(.focus-visible\:ring:focus-visible) {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-#app :is(.focus-visible\:ring-2:focus-visible) {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-#app :is(.focus-visible\:ring-orange-500\/50:focus-visible) {
-  --tw-ring-color: rgb(249 115 22 / 0.5);
-}
-
-#app :is(.focus-visible\:ring-white\/75:focus-visible) {
-  --tw-ring-color: rgb(255 255 255 / 0.75);
 }
 
 #app :is(.active\:bg-discoteal-700:active) {
@@ -2953,6 +2896,10 @@ button:disabled {
 
   #app :is(.sm\:w-full) {
     width: 100%;
+  }
+
+  #app :is(.sm\:w-\[50vw\]) {
+    width: 50vw;
   }
 
   #app :is(.sm\:max-w-md) {
@@ -3081,6 +3028,10 @@ button:disabled {
 
   #app :is(.md\:grid) {
     display: grid;
+  }
+
+  #app :is(.md\:w-\[50vw\]) {
+    width: 50vw;
   }
 
   #app :is(.md\:max-w-full) {
@@ -3297,11 +3248,6 @@ button:disabled {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
-
-  #app :is(.lg\:text-lg) {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
 }
 
 @media (min-width: 1280px) {
@@ -3336,6 +3282,10 @@ button:disabled {
 
   #app :is(.xl\:grid) {
     display: grid;
+  }
+
+  #app :is(.xl\:w-\[25vw\]) {
+    width: 25vw;
   }
 
   #app :is(.xl\:w-auto) {

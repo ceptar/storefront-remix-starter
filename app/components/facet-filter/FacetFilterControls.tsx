@@ -48,7 +48,7 @@ export default function FacetFilterControls({
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full"
             >
-              <Dialog.Panel className="mr-auto relative max-w-xs w-full h-full bg-white shadow-xl py-4 pb-12 flex flex-col overflow-y-auto">
+              <Dialog.Panel className="mr-auto relative max-w-xs w-full h-full bg-white shadow-xl shadow-discogray py-4 pb-12 flex flex-col overflow-y-auto">
                 <div className="px-4 flex items-center justify-between">
                   <h2 className="text-lg font-medium text-gray-900">Filters</h2>
                   <button

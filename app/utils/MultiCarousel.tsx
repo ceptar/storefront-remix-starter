@@ -74,7 +74,7 @@ export default function MultiCarousel() {
        
       </div>
 
-      <div className="mt-12 font-bold flex flex-row justify-center items-center">
+      <div className="mt-12 font-bold flex flex-row justify-center h-[2vh]] items-center">
         <ButtonFirst className="buttoneins rounded-full w-12 h-12 mr-4 p-2">{'<<'}</ButtonFirst>
         <ButtonBack className="buttoneins rounded-full w-12 h-12 mx-4 p-2">{'<'}</ButtonBack>
         <ButtonNext className="buttoneins rounded-full w-12 h-12 mx-4 p-2">{'>'}</ButtonNext>

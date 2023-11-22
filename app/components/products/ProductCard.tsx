@@ -19,7 +19,7 @@ export function ProductCard({
         src={productAsset?.preview + '?w=1200&h=1200'}
       />
       <div className="h-2" />
-      <div className="text-sm text-gray-700">{productName}</div>
+      <div className="text-sm text-gray-700 whitespace-nowrap overflow-hidden">{productName}</div>
       <div className="text-sm font-medium text-gray-900">
         <Price priceWithTax={priceWithTax} currencyCode={currencyCode} />
       </div>

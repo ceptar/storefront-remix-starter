@@ -33,28 +33,28 @@ export default function CollectionsTreemenu({ collectionsData }: { collectionsDa
     for (const collection of collections) {
       if (collection.parentId === parentId) {
         result.push(
-          <li key={collection.id}>
+          <div className="" key={collection.id}>
             <Link 
   to={`/collections/${collection.slug}`}
-  className={collection.parentId ? 'child' : 'parent'}
+  className={`${collection.parentId ? 'child' : 'parent'} group linkeins`}
 >
-  {collection.name} 
+  <div className="px-4 py-2 linkeinszwo">{collection.name} </div>
 </Link>
 
 
             {/* Recursively build children for the current collection */}
             {buildTree(collections, collection.id)}
-          </li>
+          </div>
         );
       }
     }
 
-    return result.length > 0 ? <ul className="font-nohemiblack1" >{result}</ul> : null;
+    return result.length > 0 ? <div className="" >{result}</div> : null;
   };
 
   return (
-    <ul>
+    <div className="">
       {buildTree(collectionsData.collections)}
-    </ul>
+    </div>
   );
 }

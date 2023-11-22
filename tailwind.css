@@ -73,30 +73,42 @@
     color: inherit;
   }
 
-  .buttoneins {
-  @apply py-4 px-4 flex rounded-md font-metromed1 text-discogray-100 shadow-[rgba(50,50,93,0.25)_0px_3px_6px_-2px,_rgba(0,0,0,0.3)_0px_2px_4px_-3px] bg-discogray bg-opacity-80 focus:outline-gray-200 focus:outline-1 justify-center items-center stroke-[5px] stroke-discogray transition duration-300 ease-in-out transform hover:bg-opacity-100 hover:text-white hover:shadow-white
+  
+  /*VOR LINKEINS EIN "GROUP" EINFÜGEN; LINKS in <a> und zweites in <span> */
+  .linkeins {
+  @apply transition-all duration-300 ease-in-out
   }
+  .linkeinszwo {
+@apply bg-left-bottom bg-gradient-to-r from-discoteal to-discopink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-300 ease-out
+  }
+  .buttoneins {
+    @apply  font-header1 py-3 px-3 shadow-md bg-left-bottom bg-gradient-to-r from-discoteal to-discopink bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] hover:shadow-none transition-all duration-300 ease-out
+    }
+
 
   /* Links TreeMenu */
   .parent {
- @apply text-3xl font-metrolight1
+ @apply text-xl font-metrolight1 text-discogray uppercase
   }  
   .child {
- @apply text-xl font-metrobold1
+ @apply text-xl font-metrolight1 text-discogray-400
   }
 
   /* Popover Menu */
   .Popover {
     z-index: 50;
     background-color: white;
+    border: #2E3047;
+    border-width: 1px;
     color: #2E3047;
     margin-top: 8vh;
-  width:30vw;
+    
 
     right: 0; /* Set right to 0 to hug the right side */
 
-    height: 92vh;
+    
     max-width: calc(100vw - 10px);
+    box-shadow: -5px 1px 20px 0px rgba(46, 48, 71, 0.333);
   }
   
 .tronfilter {

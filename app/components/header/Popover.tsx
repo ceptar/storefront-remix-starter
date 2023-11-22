@@ -26,7 +26,7 @@ interface PopoverOptions {
 
 export function usePopover({
   initialOpen = false,
-  placement = "right",
+  placement = "left",
   modal,
   open: controlledOpen,
   onOpenChange: setControlledOpen
@@ -46,7 +46,7 @@ export function usePopover({
     onOpenChange: setOpen,
     whileElementsMounted: autoUpdate,
     middleware: [
-      offset(-50),
+      offset(-40),
       flip({
         crossAxis: placement.includes("-"),
         fallbackAxisSideDirection: "end",

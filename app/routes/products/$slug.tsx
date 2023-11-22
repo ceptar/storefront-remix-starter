@@ -103,8 +103,8 @@ export default function ProductSlug() {
         ></Breadcrumbs>
         <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start mt-4 md:mt-12">
           {/* Image gallery */}
-          <div className="w-full max-w-2xl mx-auto sm:block lg:max-w-none">
-            <span className="rounded-md overflow-hidden">
+          <div className="px-4 pt-4 pb-12 mb-12 shadow-md bg-gray-100 w-full max-w-2xl mx-auto sm:block lg:max-w-none">
+            <span className="  overflow-hidden">
               <div className="w-full h-full object-center object-cover rounded-lg">
                 <img
                   src={
@@ -112,7 +112,7 @@ export default function ProductSlug() {
                     '?w=1000'
                   }
                   alt={product.name}
-                  className="w-full h-full object-center object-cover rounded-lg"
+                  className="w-full h-full object-center object-cover"
                 />
               </div>
             </span>
@@ -132,7 +132,7 @@ export default function ProductSlug() {
                   >
                     <img
                       draggable="false"
-                      className="rounded-lg select-none h-24 w-full object-cover"
+                      className="select-none h-24 w-full object-cover"
                       src={
                         asset.preview +
                         '?preset=full' /* not ideal, but technically prevents loading 2 seperate images */
@@ -167,7 +167,7 @@ export default function ProductSlug() {
                     Select option
                   </label>
                   <select
-                    className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm rounded-md"
+                    className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
                     id="productVariant"
                     value={selectedVariantId}
                     name="variantId"
@@ -209,8 +209,8 @@ export default function ProductSlug() {
                       activeOrderFetcher.state !== 'idle'
                         ? 'bg-gray-400'
                         : qtyInCart === 0
-                        ? 'bg-primary-500 hover:bg-primary-400'
-                        : 'bg-discoteal-600 active:bg-discoteal-700 hover:bg-discoteal-500'
+                        ? 'bg-primary-500 hover:bg-primary-600'
+                        : 'bg-discoteal-700 active:bg-discoteal-700 hover:bg-discoteal-500'
                     }
                                      transition-colors border border-transparent rounded-md py-3 px-8 flex items-center
                                       justify-center text-base font-medium text-white focus:outline-none

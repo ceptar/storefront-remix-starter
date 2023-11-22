@@ -21,15 +21,15 @@ cartQuantity: number;
  }) => {
 
   const [navColor, setNavColor] = useState('transparent');
-  const [navTextCol, setNavTextCol] = useState('rgba(255, 255, 255, 0.95)');
+  const [navTextCol, setNavTextCol] = useState('rgb(46 48 71)');
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
       setNavColor('rgb(46 48 71)');
-      setNavTextCol('rgb(46 48 71)');
+      setNavTextCol('#ffffff');
     } else {
       setNavColor('transparent');
-      setNavTextCol('#ffffff');
+      setNavTextCol('rgb(46 48 71)');
     }
   };
 
@@ -42,7 +42,7 @@ cartQuantity: number;
 
 
   return (
-    <nav className="bg-discogray w-full fixed h-[8vh] flex justify-center top-0 z-40 shadow-md"
+    <nav className="bg-discogray w-full fixed h-[8vh] flex justify-center top-0 z-40"
        
     style={{
     backgroundColor: navColor,
