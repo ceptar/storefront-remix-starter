@@ -3,6 +3,7 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
+  createHttpLink,
   HttpLink,
 } from '@apollo/client';
 import {
@@ -33,10 +34,13 @@ import Footer from '~/components/footer/Footer';
 import { useActiveOrder } from '~/utils/use-active-order';
 import { setApiUrl } from '~/graphqlWrapper';
 
+const httpLink = createHttpLink({
+  uri: 'https://current--discobabes123.apollographos.net/graphql',
+  credentials: 'include', // or 'same-origin' depending on your server's CORS configuration
+});
+
 const client = new ApolloClient({
-  link: new HttpLink({
-    uri: 'https://current--discobabes123.apollographos.net/graphql', // Update with your GraphQL endpoint
-  }),
+  link: httpLink,
   cache: new InMemoryCache(),
 });
 
