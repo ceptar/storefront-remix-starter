@@ -81,11 +81,11 @@ export default function Index() {
       <div className="mx-auto z-20 relative h-full flex justify-center md:max-w-full lg:max-w-screen-xl w-full">
         
 
-        <div className=" h-full ml-auto mr-auto flex items-center justify-center overflow-hidden">
+        <div className="ml-auto mr-auto flex items-center justify-center overflow-hidden">
           <MultiCarousel CollectionsData={{ collections }} /></div>
         </div>
         </div>
-<div className="h-[6vh]"></div>
+
 
      <div className="  bg-discoyellow">
 <div className="flex items-center justify-center">

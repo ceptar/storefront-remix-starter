@@ -11,11 +11,11 @@ export function CollectionCard({
       to={'/collections/' + collection.slug}
       prefetch="intent"
       key={collection.id}
-      className="mx-2 shadow-md bg-gray-100 max-w-fit relative flex overflow-hidden  hover:opacity-75 xl:w-auto"
+      className="mx-2 shadow-md bg-gray-100 flex-grow relative flex overflow-hidden hover:opacity-75"
     >
       <div className="">
 
-        <div className="h-[200px] px-4 pt-4 mb-12 object-cover overflow-hidden ">
+        <div className="max-w-full h-fit md:max-w-1/2 lg:max-w-1/3 xl:max-w-1/4 aspect-[7/10] px-4 pt-4 mb-12 overflow-hidden ">
           <img src={collection.featuredAsset?.preview + '?w=1200&h=1200' } className=" object-cover min-w-full min-h-full"/>
         </div>
 

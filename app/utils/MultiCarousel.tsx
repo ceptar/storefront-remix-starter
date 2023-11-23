@@ -59,14 +59,14 @@ export default function MultiCarousel() {
       totalSlides={collections.length}
       step={1}
       naturalSlideWidth={100}
-      naturalSlideHeight={400}
+      naturalSlideHeight={200}
       isIntrinsicHeight={true}
     >
-      <div className="flex justify-center px-8 overflow-hidden ">
-        <Slider className="overflow-hidden mx-auto">   
+      <div>
+        <Slider >   
           {collections.map(collection => (
-            <Slide index={collection.id} key={collection.id} className="max-w-full flex">
-              <CollectionCard collection={collection} className=""/>
+            <Slide index={collection.id} key={collection.id} >
+              <CollectionCard collection={collection}/>
             </Slide>
           ))}
         </Slider>
@@ -74,7 +74,7 @@ export default function MultiCarousel() {
        
       </div>
 
-      <div className="mt-12 font-bold flex flex-row justify-center h-[2vh]] items-center">
+      <div className="my-12 font-bold flex flex-row justify-center h-fit items-center">
         <ButtonFirst className="buttoneins rounded-full w-12 h-12 mr-4 p-2">{'<<'}</ButtonFirst>
         <ButtonBack className="buttoneins rounded-full w-12 h-12 mx-4 p-2">{'<'}</ButtonBack>
         <ButtonNext className="buttoneins rounded-full w-12 h-12 mx-4 p-2">{'>'}</ButtonNext>

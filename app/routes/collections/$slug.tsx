@@ -82,7 +82,7 @@ export default function CollectionSlug() {
   return (
     <div className="w-full">
 
-<img src={hero21} className="absolut h-[16vh] overflow-hidden top-0 mix-blend-multiply object-cover w-full flex flex-col items-center z-10"
+<img src={hero21} className="absolut h-[8vh] overflow-hidden top-0 mix-blend-multiply object-cover w-full flex flex-col items-center z-10"
 />
 <div className="relative h-[8vh] bg-discogray-800 flex items-center justify-center w-full">
 <div className="flex mr-auto ml-auto px-8 max-w-6xl mx-auto w-full justify-between ">
