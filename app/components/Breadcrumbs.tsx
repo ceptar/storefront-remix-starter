@@ -33,7 +33,7 @@ export function Breadcrumbs({
                 </svg>
                 <Link
                   to={'/collections/' + item.slug}
-                  className="ml-2 md:ml-4 text-md text-discogray hover:text-gray-700 linkeinszwo "
+                  className="ml-2 md:ml-4 text-sm text-md text-discogray hover:text-gray-700 linkeinszwo "
                 >
                   {item.name}
                 </Link>

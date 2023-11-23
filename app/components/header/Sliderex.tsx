@@ -13,6 +13,7 @@ import {
 } from "./Popover";
 import { Button } from '../Button';
 import { XMarkIcon } from '@heroicons/react/24/outline';
+import { isContext } from 'vm';
 
 
 const COLLECTIONS_QUERY = gql`
@@ -35,11 +36,40 @@ const COLLECTIONS_QUERY = gql`
   function Uncontrolled() {
     const { loading, error, data } = useQuery(COLLECTIONS_QUERY);
   const collections = data?.collections?.items || [];
+  const [open, setOpen] = useState(false);
+
+
     return (
       <div>
         <h1></h1>
         <Popover>
-          <PopoverTrigger ><a className="group linkeins"><span className="buttoneins">MENU</span></a></PopoverTrigger>
+          <PopoverTrigger >
+          
+           
+            <button
+      className="justify-center items-center "
+      onClick={() => setOpen(!open)}
+    >
+      <div className="flex flex-col justify-between w-[24px] h-[24px] top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+        <span
+          className={`h-1 w-[32] text-white bg-gradient-to-r from-discoteal to-discopink  transform transition duration-500 ease-in-out ${
+            open ? "rotate-[42deg] translate-y-[10px]" : ""
+          }`}
+        ></span>
+        <span
+          className={`h-1 w-[32] text-white bg-gradient-to-r from-discoteal to-discopink transform transition duration-500 ease-in-out ${
+            open ? "opacity-0" : ""
+          }`}
+        ></span>
+        <span
+          className={`h-1 w-[32] text-white bg-gradient-to-r from-discoteal to-discopink transform transition duration-500 ease-in-out ${
+            open ? "-rotate-[42deg] -translate-y-[10px]" : ""
+          }`}
+        ></span>
+      </div>
+    </button>
+         
+            </PopoverTrigger>
           <PopoverContent className="Popover pt-6 w-[75vw] sm:w-[50vw] xl:w-[25vw]">
             <PopoverHeading></PopoverHeading>
             <PopoverClose className="px-4 flex items-center justify-between w-full">
