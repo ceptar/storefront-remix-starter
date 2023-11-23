@@ -11,7 +11,6 @@ import {
   PopoverHeading,
   PopoverClose
 } from "./Popover";
-import { Button } from '../Button';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { isContext } from 'vm';
 
@@ -43,13 +42,11 @@ const COLLECTIONS_QUERY = gql`
       <div>
         <h1></h1>
         <Popover>
-          <PopoverTrigger >
+          <PopoverTrigger className="justify-center items-center "
+      onClick={() => setOpen(!open)}>
           
            
-            <button
-      className="justify-center items-center "
-      onClick={() => setOpen(!open)}
-    >
+        
       <div className="flex flex-col justify-between w-[24px] h-[24px] top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
         <span
           className={`h-1 w-[32] text-white bg-gradient-to-r from-discoteal to-discopink  transform transition duration-500 ease-in-out ${
@@ -67,7 +64,6 @@ const COLLECTIONS_QUERY = gql`
           }`}
         ></span>
       </div>
-    </button>
          
             </PopoverTrigger>
           <PopoverContent className="Popover pt-6 w-[75vw] sm:w-[50vw] xl:w-[25vw]">
@@ -102,13 +98,11 @@ const COLLECTIONS_QUERY = gql`
 
         <Popover open={open} onOpenChange={setOpen}>
           <PopoverTrigger onClick={() => setOpen((v) => !v)}>
-            <span className="buttoneins">MENU</span>
-          </PopoverTrigger>
-          <PopoverContent className="Popover">
+        </PopoverTrigger>
+          <PopoverContent>
             <PopoverHeading></PopoverHeading>
-            <PopoverDescription><div>
-        <CollectionsTreemenu collectionsData={{ collections }} />
-        </div></PopoverDescription>
+            <PopoverDescription>
+            </PopoverDescription>
             <PopoverClose>Close</PopoverClose>
           </PopoverContent>
         </Popover>
