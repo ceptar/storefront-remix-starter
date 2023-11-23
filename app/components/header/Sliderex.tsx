@@ -112,7 +112,8 @@ export default function Sliderex() {
       <div>
         <h1></h1>
         <Popover>
-          <PopoverTrigger >
+          <PopoverTrigger className="justify-center items-center "
+      onClick={() => setOpen(!open)}>
           
            
          
@@ -150,13 +151,11 @@ export default function Sliderex() {
 
         <Popover open={open} onOpenChange={setOpen}>
           <PopoverTrigger onClick={() => setOpen((v) => !v)}>
-            <span className="buttoneins">MENU</span>
-          </PopoverTrigger>
-          <PopoverContent className="Popover">
+        </PopoverTrigger>
+          <PopoverContent>
             <PopoverHeading></PopoverHeading>
-            <PopoverDescription><div>
-        <CollectionsTreemenu collectionsData={{ collections }} />
-        </div></PopoverDescription>
+            <PopoverDescription>
+            </PopoverDescription>
             <PopoverClose>Close</PopoverClose>
           </PopoverContent>
         </Popover>
