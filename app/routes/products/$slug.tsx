@@ -91,7 +91,7 @@ export default function ProductSlug() {
 
   return (
     <div>
-      <div className="mt-32 max-w-6xl mx-auto px-4">
+      <div className="mt-32 mx-auto px-4">
         <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-gray-900 my-8">
           {product.name}
         </h2>
@@ -103,7 +103,7 @@ export default function ProductSlug() {
         ></Breadcrumbs>
         <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start mt-4 md:mt-12">
           {/* Image gallery */}
-          <div className="px-4 pt-4 pb-12 mb-12 shadow-md bg-gray-100 w-full max-w-2xl mx-auto sm:block lg:max-w-none">
+          <div className="px-4 pt-4 pb-12 mb-12 shadow-md bg-gray-100 w-full mx-auto sm:block ">
             <span className="  overflow-hidden">
               <div className="w-full h-full object-center object-cover rounded-lg">
                 <img

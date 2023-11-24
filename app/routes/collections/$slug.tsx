@@ -85,7 +85,7 @@ export default function CollectionSlug() {
 <img src={hero21} className="absolut h-[8vh] overflow-hidden top-0 mix-blend-multiply object-cover w-full flex flex-col items-center z-10"
 />
 <div className="relative h-[8vh] bg-discogray-800 flex items-center justify-center w-full">
-<div className="flex mr-auto ml-auto px-8 max-w-6xl mx-auto w-full justify-between ">
+<div className="flex mr-auto ml-auto px-8 mx-auto w-full justify-between ">
 <h2 className="text-xl text-white sm:text-2xl font-bold my-4">
           {collection.name}
         </h2>
@@ -93,9 +93,9 @@ export default function CollectionSlug() {
 
 </div>
 
-<div className="px-8 max-w-6xl mx-auto">
+<div className="px-8 mx-auto">
 <div className="flex flex-row">
-<div className="my-2 w-full max-w-6xl flex flex-col justify-between ">
+<div className="my-2 w-full flex flex-col justify-between ">
       <Breadcrumbs items={collection.breadcrumbs}></Breadcrumbs>
 
       </div>
@@ -111,9 +111,10 @@ export default function CollectionSlug() {
       </div>
 
       {collection.children?.length ? (
-        <div className="max-w-2xl mx-auto py-16 sm:py-16 lg:max-w-none flex flex-col items-center  justify-between border-b mb-16">
-          <h2 className="flex flex-row w-full text-xl font-semibold text-gray-900">Collections</h2>
-          <div className="mt-6 grid max-w-xs sm:max-w-none mx-auto sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
+        <div className="pt-4 pb-8 flex flex-col border-b mb-8">
+          <h2 className="flex flex-row w-full text-xl font-semibold text-discogray">
+            Category</h2>
+          <div className="mt-6 grid mr-auto sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
             {collection.children.map((child) => (
               <CollectionCard
                 key={child.id}

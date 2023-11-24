@@ -39,10 +39,10 @@ export default function Index() {
       >
         {/* Decorative image and overlay */}
 
-        <div className="flex h-[70vh] justify-items-end items-center mr-auto ml-auto md:max-w-full lg:max-w-screen-xl w-full">
-          <div className="mt-16 mx-auto z-20 relative flex flex-col justify-center md:max-w-full lg:max-w-screen-xl w-full">
+        <div className="flex h-[70vh] justify-items-end items-center mr-auto ml-auto w-full">
+          <div className="mt-16 mx-auto z-20 relative flex flex-col justify-center w-full">
            <div className="flex flexcol w-1/6"></div>
-            <div className="flex flex-col w-5/6 text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-header1
+            <div className="flex flex-col w-5/6 text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-header1
             text-discogray pt-0  pb-0 text-start sm:px-0 justify-between">
 <div className=" whitespace-nowrap ml-auto  w-5/6 ">
                 <span className="text-white ">Wearable</span> <span className="shadow-white bg-discoteal bg-opacity-60 whitespace-nowrap p-2  backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] ">ART.</span>
@@ -66,8 +66,8 @@ export default function Index() {
 
       </div>
 
-<div>
-<div className="h-[10vh] z-20 flex justify-items-end items-center mr-auto ml-auto md:max-w-full lg:max-w-screen-xl w-full" style={{ marginTop: '70vh' }}>
+
+<div className="h-[10vh] z-20 flex justify-items-end items-center mr-auto ml-auto w-full" style={{ marginTop: '70vh' }}>
           <h2
             id="category-heading"
             className="px-10 items-center justify-start flex text-2xl font-header1 text-discopink"
@@ -77,19 +77,19 @@ export default function Index() {
             </h2>
         </div>
 
-      <div className="relative w-full  flex justify-center items-center" >
-      <div className="mx-auto z-20 relative h-full flex justify-center md:max-w-full lg:max-w-screen-xl w-full">
+
+      <div className="mx-auto px-8 relative flex flex-row justify-center items-center w-full">
         
 
-        <div className="ml-auto mr-auto flex items-center justify-center overflow-hidden">
+        <div className="max-w-[5/6] ml-auto mr-auto flex flex-row items-center justify-center overflow-hidden">
           <MultiCarousel CollectionsData={{ collections }} /></div>
         </div>
-        </div>
+       
 
 
      <div className="  bg-discoyellow">
 <div className="flex items-center justify-center">
-<div className="h-[50vh] justify-center flex flex-row md:max-w-full lg:max-w-screen-xl w-full">
+<div className="h-[50vh] justify-center flex flex-row w-full">
 
             
             <div className="flex flex-col pt-0 justify-center items-center w-full">
@@ -104,7 +104,7 @@ export default function Index() {
 
 
 </div>
-          </div>
+
           </>
   );
 }

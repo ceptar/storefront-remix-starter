@@ -1,66 +1,55 @@
-import { useEffect, useState } from 'react';
-import HeaderDrei from './HeaderDrei';
-import { Link } from '@remix-run/react';
-import { ShoppingBagIcon } from '@heroicons/react/24/outline';
+
+import { Link, useLoaderData } from '@remix-run/react';
+import Cart from '~/components/svgs/Cart';
 import { SearchBar } from '~/components/header/SearchBar';
 import { useRootLoader } from '~/utils/use-root-loader';
 import { UserIcon } from '@heroicons/react/24/solid';
-import { classNames } from '~/utils/class-names';
+
 import '~/styles/app.css';
 import Logo from '~/components/svgs/Logo';
 import Sliderex from './Sliderex';
 
-
-const Header = ({ 
-    onCartIconClick,
-cartQuantity,
+export function Header({
+  onCartIconClick,
+  cartQuantity,
 }: {
-onCartIconClick: () => void;
-cartQuantity: number;
-
- }) => {
-
-  const [navColor, setNavColor] = useState('transparent');
-  const [navTextCol, setNavTextCol] = useState('rgb(46 48 71)');
-
-  const handleScroll = () => {
-    if (window.scrollY > 10) {
-      setNavColor('rgb(46 48 71)');
-      setNavTextCol('#ffffff');
-    } else {
-      setNavColor('transparent');
-      setNavTextCol('rgb(46 48 71)');
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
+  onCartIconClick: () => void;
+  cartQuantity: number;
+}) {
+  const data = useRootLoader();
+  const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
 
   return (
-    <nav className="bg-discogray w-full fixed h-[8vh] flex justify-center top-0 z-40"
-       
-    style={{
-    backgroundColor: navColor,
-      color: navTextCol,
-      transition: 'background-color 0.3s',
-    }}
-
+    <div
+      className="bg-discogray text-white w-full fixed h-[8vh] flex justify-center top-0 z-40"
     >
+
 <div   
-className="w-full px-2 md:max-w-full lg:max-w-screen-xl h-full flex justify-between "      
+className="w-full px-8 h-full flex justify-between "      
 >
 <div className="w-1/6 flex flex-col items-start justify-center min-w-[1/6] max-w-[1/6]">
-
+<div><button
+        className="button flex flex-row"
+        onClick={onCartIconClick}
+        aria-label="Open cart tray"
+      >
+            <div className="flex flex-col items-start justify-center w-16 h-16">
+        <Cart
+          
+        />
+</div>
+        {cartQuantity ? (
+          <div className="top-4 -right-6 font-metroblack1 w-4 h-4">{cartQuantity}</div>
+        ) : (
+          ''
+        )}
+      </button>
+      </div>
   </div>
-    <div className="py-2 pl-2 pr-4 flex flex-col items-center justify-center w-4/6">
-
-    <Logo className="min-w-[100px] max-w-[400px] tronfilter"/>
-
+    <div className="py-2 pt-2 inline-flex justify-center w-4/6">
+  <Link to="/">
+    <Logo className="h-full min-w-[100px] max-w-[450px] tronfilter"/>
+    </Link>
 
       </div>
       
@@ -72,7 +61,7 @@ className="w-full px-2 md:max-w-full lg:max-w-screen-xl h-full flex justify-betw
       </div>
 </div>
 
-</nav>
+</div>
 
 
 

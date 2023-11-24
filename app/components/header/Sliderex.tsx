@@ -36,12 +36,12 @@ export default function Sliderex() {
     <div className="flex items-center justify-end">
       <div
         onClick={toggleSlideover}
-        className="bg-white shadow-md shadow-discogray cursor-pointer justify-center items-center p-2 sm:p-4 text-sm border text-gray-500 transition-all duration-300 ease-out hover:bg-gray-100 hover:shadow-none rounded-full border-gray-300"
+        className="bg-white bg-opacity-90 shadow-md shadow-gray-500 cursor-pointer justify-center rounded-full items-center p-2 sm:p-4 text-sm border text-gray-500 transition-all duration-300 ease-out hover:bg-gray-100 hover:opacity-70 hover:shadow-none "
       >
          <button
   className="flex flex-row justify-center items-center"
 >
-  <div className="flex flex-col items-center justify-between w-6 h-4 sm:h-6 ">
+  <div className="flex flex-col items-center justify-between w-6 h-6 sm:h-6 ">
     <span
       className="px-2 sm:px-4 h-1 w-6  text-white bg-gradient-to-r from-discoteal to-discopink  transform transition duration-500 ease-in-out group-focus:rotate-[42deg] group-focus:translate-y-[10px]"
 

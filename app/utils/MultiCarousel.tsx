@@ -39,8 +39,11 @@ export default function MultiCarousel() {
       } else if (window.innerWidth < 1024) {
         setVisibleSlides(3);
         
-      } else {
+      } else if (window.innerWidth < 1300) {
         setVisibleSlides(4);
+
+      } else {
+        setVisibleSlides(5);
        
       }
     }
