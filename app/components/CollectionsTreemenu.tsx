@@ -4,10 +4,12 @@ interface Collection {
   id: string;
   name: string;
   parentId?: string;
+  
   children?: Collection[];
 }
 
 interface CollectionsData {
+
   collections: Collection[];
 }
 

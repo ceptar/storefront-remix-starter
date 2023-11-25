@@ -2,8 +2,9 @@ import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 import CollectionsTreemenu from '~/components/CollectionsTreemenu';
 import '~/styles/app.css';
-import { Link } from 'remix';
+
 import React, { useState } from 'react';
+import Hamburger from '~/components/svgs/Hamburger';
 
 const COLLECTIONS_QUERY = gql`
   query Collections {
@@ -36,25 +37,10 @@ export default function Sliderex() {
     <div className="flex items-center justify-end">
       <div
         onClick={toggleSlideover}
-        className="bg-white bg-opacity-90 shadow-md shadow-gray-500 cursor-pointer justify-center rounded-full items-center p-2 sm:p-4 text-sm border text-gray-500 transition-all duration-300 ease-out hover:bg-gray-100 hover:opacity-70 hover:shadow-none "
-      >
-         <button
-  className="flex flex-row justify-center items-center"
->
-  <div className="flex flex-col items-center justify-between w-6 h-6 sm:h-6 ">
-    <span
-      className="px-2 sm:px-4 h-1 w-6  text-white bg-gradient-to-r from-discoteal to-discopink  transform transition duration-500 ease-in-out group-focus:rotate-[42deg] group-focus:translate-y-[10px]"
-
-    ></span>
-    <span
-    className="px-2 sm:px-4 h-1 w-6  text-white bg-gradient-to-r from-discoteal to-discopink transform transition duration-500 ease-in-out group-focus:opacity-0"
-
-    ></span>
-    <span
-    className="px-2 sm:px-4 h-1 w-6  text-white bg-gradient-to-r from-discoteal to-discopink transform transition duration-500 ease-in-out group-focus:-rotate-[42deg] group-focus:-translate-y-[10px]"
-    ></span>
-  </div>
-</button>
+        className="flex flex-col items-start justify-center w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16">
+      <button>      
+       <Hamburger />
+       </button>
       </div>
       <div
         id="slideover-container"
