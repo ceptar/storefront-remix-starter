@@ -129,7 +129,6 @@ const Hamburger = (props: SVGProps<SVGSVGElement>) => (
             strokeDasharray: "none",
             strokeDashoffset: 0,
             strokeOpacity: 1,
-            InkscapeStroke: "none",
             filter: "url(#filter569)",
             stopColor: "#000",
             stopOpacity: 1,

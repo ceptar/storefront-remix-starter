@@ -727,7 +727,7 @@ const Logo = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) =>
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur
           result="effect1_foregroundBlur_520_257"
-          stdDeviation={12}
+          stdDeviation={9}
         />
       </filter>
       <filter
@@ -743,7 +743,7 @@ const Logo = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) =>
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur
           result="effect1_foregroundBlur_520_257"
-          stdDeviation={7}
+          stdDeviation={4}
         />
       </filter>
       <filter
@@ -759,7 +759,7 @@ const Logo = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) =>
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur
           result="effect1_foregroundBlur_520_257"
-          stdDeviation={8}
+          stdDeviation={5}
         />
       </filter>
       <filter
@@ -775,7 +775,7 @@ const Logo = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) =>
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur
           result="effect1_foregroundBlur_520_257"
-          stdDeviation={6}
+          stdDeviation={4}
         />
       </filter>
     </defs>

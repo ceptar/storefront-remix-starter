@@ -34,13 +34,13 @@ export default function Sliderex() {
   };
 
   return (
-    <div className="flex items-center justify-end">
+    <div className="flex items-center justify-center">
       <div
         onClick={toggleSlideover}
-        className="flex flex-col items-start justify-center w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16">
-      <button>      
-       <Hamburger />
-       </button>
+        className="flex flex-col bg-white bg-opacity-90 shadow-md shadow-gray-500 cursor-pointer justify-center rounded-full items-center p-2 sm:p-4 text-sm border text-gray-500 transition-all duration-300 ease-out hover:bg-gray-100 hover:opacity-70 hover:shadow-none "
+      ><button> <Hamburger /></button>
+      
+      
       </div>
       <div
         id="slideover-container"

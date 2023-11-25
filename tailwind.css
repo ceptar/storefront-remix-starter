@@ -115,10 +115,11 @@
 
   -webkit-filter: 
 
-  drop-shadow( -.75px 0px 0.2px #000000c3 );
+  drop-shadow( -1px 0px 0.5px #000000 );
+  
   filter: 
 
-  drop-shadow( -.75px 0px 0.2px #000000c3 ); 
+  drop-shadow( -1px 0px 0.5px #000000 ); 
 
 }
 

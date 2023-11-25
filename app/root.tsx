@@ -34,9 +34,14 @@ import Footer from '~/components/footer/Footer';
 import { useActiveOrder } from '~/utils/use-active-order';
 import { setApiUrl } from '~/graphqlWrapper';
 
+
+
 const httpLink = createHttpLink({
-  uri: 'https://current--discobabes123.apollographos.net/graphql',
+  uri: 'https://nonotheresnolimit.xyz/shop-api',
   credentials: 'include', // or 'same-origin' depending on your server's CORS configuration
+  headers:{
+    authorization: 'COOKIE_SECRET=vcj7lvb5opc',
+  },
 });
 
 const client = new ApolloClient({
