@@ -46,18 +46,19 @@ export default function Header({
 
     <div className="z-40 bg-discogray top-0 items-center fixed justify-between h-[8vh] w-full min-w-full">
     <div className="z-40 relative px-8 flex flex-row items-center justify-between h-[8vh] w-full ">
-      <div className="z-40 relative bg-white-A700 flex flex-col  items-start justify-start w-1/6">
+      <div className="z-40 relative  flex flex-col  items-start justify-start w-1/6">
 
       <button
-            className="w-[4vh] h-[4vh] flex flex-col items-center"
+            className="flex flex-col bg-white bg-opacity-90 shadow-md shadow-gray-500 cursor-pointer justify-center rounded-full items-center p-2 text-sm border text-gray-500 transition-all duration-300 ease-out hover:bg-gray-100 hover:opacity-70 hover:shadow-none "
+            
             onClick={onCartIconClick}
             aria-label="Open cart tray"
           >
-            <Cart className=""/>
+            <Cart className="w-10 h-10 z-40"/>
             {cartQuantity ? (
-              <div className="z-40 relative rounded-full -top-2 -right-2 bg-primary-600 w-6 h-6">
-                {cartQuantity}
-              </div>
+             <div className="z-20 absolute top-1.5 left-[20px] rounded-full font-metrobold1 bg-primary-600 w-6 h-6">
+             {cartQuantity}
+           </div>
             ) : (
               ''
             )}
@@ -71,8 +72,8 @@ export default function Header({
       
         
       </div>
-      <div className="z-40 bg-white-A700 flex flex-col items-center justify-center w-1/6">
-      <Sliderex className="items-center justify-center"/>
+      <div className="z-40 flex flex-col items-end justify-center w-1/6">
+      <Sliderex/>
       </div>
       </div>
     </div>

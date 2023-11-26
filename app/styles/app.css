@@ -756,14 +756,6 @@ button:disabled {
   bottom: 0px;
 }
 
-#app :is(.-right-2) {
-  right: -0.5rem;
-}
-
-#app :is(.-top-2) {
-  top: -0.5rem;
-}
-
 #app :is(.bottom-0) {
   bottom: 0px;
 }
@@ -772,12 +764,24 @@ button:disabled {
   left: 0px;
 }
 
+#app :is(.left-\[20px\]) {
+  left: 20px;
+}
+
 #app :is(.right-0) {
   right: 0px;
 }
 
 #app :is(.top-0) {
   top: 0px;
+}
+
+#app :is(.top-1) {
+  top: 0.25rem;
+}
+
+#app :is(.top-1\.5) {
+  top: 0.375rem;
 }
 
 #app :is(.top-\[8vh\]) {
@@ -1105,16 +1109,16 @@ button:disabled {
   height: 2rem;
 }
 
+#app :is(.h-9) {
+  height: 2.25rem;
+}
+
 #app :is(.h-96) {
   height: 24rem;
 }
 
 #app :is(.h-\[10vh\]) {
   height: 10vh;
-}
-
-#app :is(.h-\[4vh\]) {
-  height: 4vh;
 }
 
 #app :is(.h-\[50vh\]) {
@@ -1206,8 +1210,8 @@ button:disabled {
   width: 2rem;
 }
 
-#app :is(.w-\[4vh\]) {
-  width: 4vh;
+#app :is(.w-9) {
+  width: 2.25rem;
 }
 
 #app :is(.w-\[5\/6\]) {
@@ -1728,6 +1732,11 @@ button:disabled {
   background-color: rgb(239 246 255 / var(--tw-bg-opacity));
 }
 
+#app :is(.bg-discogray) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(46 48 71 / var(--tw-bg-opacity));
+}
+
 #app :is(.bg-discoteal) {
   --tw-bg-opacity: 1;
   background-color: rgb(21 254 226 / var(--tw-bg-opacity));
@@ -1813,11 +1822,6 @@ button:disabled {
   background-color: rgb(254 252 232 / var(--tw-bg-opacity));
 }
 
-#app :is(.bg-discogray) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(46 48 71 / var(--tw-bg-opacity));
-}
-
 #app :is(.bg-opacity-25) {
   --tw-bg-opacity: 0.25;
 }
@@ -1854,6 +1858,10 @@ button:disabled {
 
 #app :is(.p-2) {
   padding: 0.5rem;
+}
+
+#app :is(.p-3) {
+  padding: 0.75rem;
 }
 
 #app :is(.p-4) {
@@ -2060,6 +2068,10 @@ button:disabled {
 
 #app :is(.font-metroblack1) {
   font-family: Metropolitano-Black, sans;
+}
+
+#app :is(.font-metrobold1) {
+  font-family: Metropolitano-Bold, sans;
 }
 
 #app :is(.\!text-sm) {
@@ -2385,11 +2397,6 @@ button:disabled {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-#app :is(.blur) {
-  --tw-blur: blur(8px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 #app :is(.filter) {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -2575,7 +2582,9 @@ button:disabled {
   font-display: swap;
 }
 
-/*VOR LINKEINS EIN "GROUP" EINFÜGEN; LINKS in <a> und zweites in <span> */
+/*COPY PASTE STYLESAMMLUNGEN, @apply NOT COMPLIANT!!!*/
+
+/*Hover, gradient underline*/
 
 #app  :is(.linkeins) {
   transition-property: all;
@@ -2602,63 +2611,34 @@ button:disabled {
   background-size: 100% 2px;
 }
 
-#app  :is(.buttoneins) {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #15FEE2 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(21 254 226 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #FF00E5 var(--tw-gradient-to-position);
-  background-size: 0% 4px;
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  font-family: Metropolitano-Bold, sans;
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
+/* ROUND BUTTONS Hover, Zusatzstyle zu Svgs, die bereits gradient haben */
 
-#app  :is(.buttoneins):hover {
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
+/* CASING - div, button etc. bei Inhalt selbst dann noch "w-full h-full"*/
 
-#app :is(.group:hover  :is(.buttoneins)) {
-  background-size: 100% 4px;
-}
+/* className="w-12 h-12 items-center justify-center flex flex-col p-2 mx-4 rounded-full bg-white shadow-md hover:shadow-none transition-all duration-300 ease-in-out" */
 
 /* Links TreeMenu */
 
-#app  :is(.\!parent) {
-  font-family: Metropolitano-Light, sans;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  text-transform: uppercase;
-  --tw-text-opacity: 1;
-  color: rgb(46 48 71 / var(--tw-text-opacity));
+#app :is(.\!parent) {
+  font-size: 20px !important;
+  line-height: 28px !important;
+  font-family: Metropolitano-Light, sans !important;
+  color: rgb(46 48 71) !important;
+  text-transform: uppercase !important;
 }
 
-#app  :is(.parent) {
+#app :is(.parent) {
+  font-size: 20px;
+  line-height: 28px;
   font-family: Metropolitano-Light, sans;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  color: rgb(46 48 71);
   text-transform: uppercase;
-  --tw-text-opacity: 1;
-  color: rgb(46 48 71 / var(--tw-text-opacity));
 }
 
-#app  :is(.child) {
+#app :is(.child) {
+  font-size: 20px;
+  line-height: 28px;
   font-family: Metropolitano-Light, sans;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
   color: hsl(235, 21%, 60%);
 }
 
@@ -2962,10 +2942,6 @@ button:disabled {
 
   #app :is(.sm\:w-\[50vw\]) {
     width: 50vw;
-  }
-
-  #app :is(.sm\:w-auto) {
-    width: auto;
   }
 
   #app :is(.sm\:w-full) {

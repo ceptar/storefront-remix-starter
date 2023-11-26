@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useLoaderData } from '@remix-run/react';
 import { CollectionCard } from '~/components/collections/CollectionCard';
+import Right from '~/components/svgs/Right';
+import RightRight from '~/components/svgs/RightRight';
+import Left from '~/components/svgs/Left';
+import LeftLeft from '~/components/svgs/LeftLeft';
 
 import {
   ButtonBack,
@@ -26,25 +30,27 @@ interface LoaderData {
 export default function MultiCarousel() {
   const { collections } = useLoaderData<LoaderData>();
   const [visibleSlides, setVisibleSlides] = useState(2);
-  const [slideWidth, setSlideWidth] = useState(2);
+  const [slideWidth, setSlideWidth] = useState(100);
 
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth < 500) {
-        setVisibleSlides(1); 
-
-      } else if (window.innerWidth < 768) {
+      const windowWidth = window.innerWidth;
+  
+      if (windowWidth < 500) {
+        setVisibleSlides(1);
+        setSlideWidth(90); // Full width for small screens
+      } else if (windowWidth < 768) {
         setVisibleSlides(2);
-        
-      } else if (window.innerWidth < 1024) {
+        setSlideWidth(45); // 50% width for medium screens
+      } else if (windowWidth < 1024) {
         setVisibleSlides(3);
-        
-      } else if (window.innerWidth < 1300) {
+        setSlideWidth(30); // 33.33% width for larger screens
+      } else if (windowWidth < 1300) {
         setVisibleSlides(4);
-
+        setSlideWidth(22); // 25% width for even larger screens
       } else {
         setVisibleSlides(5);
-       
+        setSlideWidth(18); // 20% width for extra-large screens
       }
     }
 
@@ -58,15 +64,15 @@ export default function MultiCarousel() {
 
   return (
     <CarouselProvider
-      visibleSlides={visibleSlides}
-      totalSlides={collections.length}
-      step={1}
-      naturalSlideWidth={100}
-      naturalSlideHeight={200}
-      isIntrinsicHeight={true}
+    visibleSlides={visibleSlides}
+    totalSlides={collections.length}
+    step={1}
+    naturalSlideWidth={slideWidth}
+    naturalSlideHeight={200}
+    isIntrinsicHeight={true}
     >
       <div>
-        <Slider >   
+        <Slider>   
           {collections.map(collection => (
             <Slide index={collection.id} key={collection.id} >
               <CollectionCard collection={collection}/>
@@ -78,10 +84,10 @@ export default function MultiCarousel() {
       </div>
 
       <div className="my-12 font-bold flex flex-row justify-center h-fit items-center">
-        <ButtonFirst className="buttoneins rounded-full w-12 h-12 mr-4 p-2">{'<<'}</ButtonFirst>
-        <ButtonBack className="buttoneins rounded-full w-12 h-12 mx-4 p-2">{'<'}</ButtonBack>
-        <ButtonNext className="buttoneins rounded-full w-12 h-12 mx-4 p-2">{'>'}</ButtonNext>
-        <ButtonLast className="buttoneins rounded-full w-12 h-12 ml-4 p-2">{'>>'}</ButtonLast>
+        <ButtonFirst className="w-12 h-12 items-center justify-center flex flex-col p-3 mx-4 rounded-full bg-white shadow-md hover:shadow-none transition-all duration-300 ease-in-out"><Left className="w-full h-full"/></ButtonFirst>
+        <ButtonBack className="w-12 h-12 items-center justify-center flex flex-col p-3 mx-4 rounded-full bg-white shadow-md hover:shadow-none transition-all duration-300 ease-in-out"><Left className="w-full h-full"/></ButtonBack>
+        <ButtonNext  className="w-12 h-12 items-center justify-center flex flex-col p-3 mx-4 rounded-full bg-white shadow-md hover:shadow-none transition-all duration-300 ease-in-out"><Right className="w-full h-full"/></ButtonNext>
+        <ButtonLast  className="w-12 h-12 items-center justify-center flex flex-col p-3 mx-4 rounded-full bg-white shadow-md hover:shadow-none transition-all duration-300 ease-in-out"><RightRight className="w-full h-full"/></ButtonLast>
       </div>
 
     </CarouselProvider>

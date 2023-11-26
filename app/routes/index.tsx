@@ -67,7 +67,7 @@ export default function Index() {
       </div>
 
 
-<div className="h-[10vh] z-20 flex justify-items-end items-center mr-auto ml-auto w-full" style={{ marginTop: '70vh' }}>
+<div className="h-[10vh] z-20 flex justify-center items-center mr-auto ml-auto w-full" style={{ marginTop: '70vh' }}>
           <h2
             id="category-heading"
             className="px-10 items-center justify-start flex text-2xl font-header1 text-discopink"
@@ -78,11 +78,12 @@ export default function Index() {
         </div>
 
 
-      <div className="mx-auto px-8 relative flex flex-row justify-center items-center w-full">
+      <div className="relative flex flex-row justify-center items-center">
         
 
-        <div className="max-w-[5/6] ml-auto mr-auto flex flex-row items-center justify-center overflow-hidden">
-          <MultiCarousel CollectionsData={{ collections }} /></div>
+        <div className="h-full flex flex-row items-center justify-center overflow-hidden">
+          <MultiCarousel CollectionsData={{ collections }} />
+          </div>
         </div>
        
 
