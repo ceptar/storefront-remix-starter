@@ -45,8 +45,8 @@ export default function Header({
       </header>
 
     <div className="z-40 bg-discogray top-0 items-center fixed justify-between h-[8vh] w-full min-w-full">
-    <div className="z-40 relative px-8 flex flex-row items-center justify-between h-[8vh] w-full ">
-      <div className="z-40 relative  flex flex-col  items-start justify-start w-1/6">
+    <div className="relative px-8 flex flex-row items-center justify-between h-[8vh] w-full ">
+      <div className="relative  flex flex-col  items-start justify-start w-1/6">
 
       <button
             className="flex flex-col bg-white bg-opacity-90 shadow-md shadow-gray-500 cursor-pointer justify-center rounded-full items-center p-2 text-sm border text-gray-500 transition-all duration-300 ease-out hover:bg-gray-100 hover:opacity-70 hover:shadow-none "

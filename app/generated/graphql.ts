@@ -3296,6 +3296,11 @@ export type Zone = Node & {
   updatedAt: Scalars['DateTime'];
 };
 
+export type CollectionsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type CollectionsQuery = { __typename?: 'Query', collections: { __typename?: 'CollectionList', items: Array<{ __typename?: 'Collection', id: string, name: string, slug: string, parent?: { __typename?: 'Collection', id: string, name: string, slug: string } | null }> } };
+
 export type LoginMutationVariables = Exact<{
   email: Scalars['String'];
   password: Scalars['String'];
@@ -3424,13 +3429,6 @@ export type GenerateBraintreeClientTokenQueryVariables = Exact<{ [key: string]: 
 
 
 export type GenerateBraintreeClientTokenQuery = { __typename?: 'Query', generateBraintreeClientToken?: string | null };
-
-export type CollectionsQueryVariables = Exact<{
-  options?: InputMaybe<CollectionListOptions>;
-}>;
-
-
-export type CollectionsQuery = { __typename?: 'Query', collections: { __typename?: 'CollectionList', items: Array<{ __typename?: 'Collection', id: string, name: string, slug: string, parent?: { __typename?: 'Collection', name: string } | null, featuredAsset?: { __typename?: 'Asset', id: string, preview: string } | null }> } };
 
 export type CollectionQueryVariables = Exact<{
   slug?: InputMaybe<Scalars['String']>;
@@ -3685,6 +3683,7 @@ export const ListedProductFragmentDoc = gql`
   }
 }
     `;
+
 export const LoginDocument = gql`
     mutation login($email: String!, $password: String!, $rememberMe: Boolean) {
   login(username: $email, password: $password, rememberMe: $rememberMe) {
@@ -4159,6 +4158,9 @@ export const SearchFacetValuesDocument = gql`
 export type Requester<C = {}, E = unknown> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R> | AsyncIterable<R>
 export function getSdk<C, E>(requester: Requester<C, E>) {
   return {
+    Collections(variables?: CollectionsQueryVariables, options?: C): Promise<CollectionsQuery> {
+      return requester<CollectionsQuery, CollectionsQueryVariables>(CollectionsDocument, variables, options) as Promise<CollectionsQuery>;
+    },
     login(variables: LoginMutationVariables, options?: C): Promise<LoginMutation> {
       return requester<LoginMutation, LoginMutationVariables>(LoginDocument, variables, options) as Promise<LoginMutation>;
     },
