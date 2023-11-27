@@ -23,19 +23,7 @@ export default function Index() {
   return (
     <>
       <div
-        style={{
-          backgroundImage: 'url(/hero1.webp)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          position: 'absolute',
-          alignItems: 'center',
-          justifyContent: 'center',
-          top: '0',
-          height: '70vh',
-          width: '100%',
-          zIndex: '10',
-          objectFit: 'cover',
-        }}
+        className="bg-hero"
       >
         {/* Decorative image and overlay */}
 

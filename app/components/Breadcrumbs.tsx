@@ -21,7 +21,7 @@ export function Breadcrumbs({
           .filter((item) => item.name !== '__root_collection__')
           .map((item, index) => (
             <li key={item.name}>
-              <div className="flex items-center group linkeins">
+              <div className="flex items-center group transition-all duration-300 ease-in-out">
                 <svg
                   className="flex-shrink-0 h-5 w-5 text-gray-300"
                   xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ export function Breadcrumbs({
                 </svg>
                 <Link
                   to={'/collections/' + item.slug}
-                  className="ml-2 md:ml-4 text-sm text-md text-discogray hover:text-gray-700 linkeinszwo "
+                  className="ml-2 md:ml-4 text-sm text-md text-discogray hover:text-gray-700 bg-left-bottom bg-gradient-to-r from-discoteal to-discopink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-300 ease-out "
                 >
                   {item.name}
                 </Link>

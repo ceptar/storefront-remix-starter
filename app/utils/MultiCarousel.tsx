@@ -26,6 +26,8 @@ interface Collection {
 interface LoaderData {
   collections: Collection[]; 
 }
+// Use this flag to conditionally render the CarouselProvider
+  const shouldRenderCarousel = typeof window !== 'undefined';
 
 export default function MultiCarousel() {
   const { collections } = useLoaderData<LoaderData>();

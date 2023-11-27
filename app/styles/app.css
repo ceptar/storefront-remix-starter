@@ -1838,6 +1838,32 @@ button:disabled {
   --tw-bg-opacity: 0.9;
 }
 
+#app :is(.bg-gradient-to-r) {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+#app :is(.from-discoteal) {
+  --tw-gradient-from: #15FEE2 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(21 254 226 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+#app :is(.to-discopink) {
+  --tw-gradient-to: #FF00E5 var(--tw-gradient-to-position);
+}
+
+#app :is(.bg-\[length\:0\%_2px\]) {
+  background-size: 0% 2px;
+}
+
+#app :is(.bg-left-bottom) {
+  background-position: left bottom;
+}
+
+#app :is(.bg-no-repeat) {
+  background-repeat: no-repeat;
+}
+
 #app :is(.fill-white) {
   fill: #fff;
 }
@@ -2582,34 +2608,28 @@ button:disabled {
   font-display: swap;
 }
 
+#app :is(.bg-hero) {
+  background-image: url("~/../public/hero1.webp");
+  background-size: cover;
+  background-position: center center;
+  height: 70vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
 /*COPY PASTE STYLESAMMLUNGEN, @apply NOT COMPLIANT!!!*/
 
 /*Hover, gradient underline*/
 
-#app  :is(.linkeins) {
-  transition-property: all;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* .linkeins {
+  @apply transition-all duration-300 ease-in-out
+  } */
 
-#app  :is(.linkeinszwo) {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #15FEE2 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(21 254 226 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #FF00E5 var(--tw-gradient-to-position);
-  background-size: 0% 2px;
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-#app :is(.group:hover  :is(.linkeinszwo)) {
-  background-size: 100% 2px;
-}
+/* .linkeinszwo {
+  @apply bg-left-bottom bg-gradient-to-r from-discoteal to-discopink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-300 ease-out
+  }  */
 
 /* ROUND BUTTONS Hover, Zusatzstyle zu Svgs, die bereits gradient haben */
 
@@ -2858,6 +2878,10 @@ button:disabled {
 
 #app :is(.disabled\:hover\:opacity-30:hover:disabled) {
   opacity: 0.3;
+}
+
+#app :is(.group:hover .group-hover\:bg-\[length\:100\%_2px\]) {
+  background-size: 100% 2px;
 }
 
 #app :is(.group:hover .group-hover\:text-gray-500) {
