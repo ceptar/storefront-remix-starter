@@ -764,8 +764,8 @@ button:disabled {
   left: 0px;
 }
 
-#app :is(.left-\[20px\]) {
-  left: 20px;
+#app :is(.left-\[17px\]) {
+  left: 17px;
 }
 
 #app :is(.right-0) {
@@ -776,20 +776,12 @@ button:disabled {
   top: 0px;
 }
 
-#app :is(.top-1) {
-  top: 0.25rem;
-}
-
-#app :is(.top-1\.5) {
-  top: 0.375rem;
+#app :is(.top-\[1\.5px\]) {
+  top: 1.5px;
 }
 
 #app :is(.top-\[8vh\]) {
   top: 8vh;
-}
-
-#app :is(.top-0\.5) {
-  top: 0.125rem;
 }
 
 #app :is(.z-10) {
@@ -1113,10 +1105,6 @@ button:disabled {
   height: 2rem;
 }
 
-#app :is(.h-9) {
-  height: 2.25rem;
-}
-
 #app :is(.h-96) {
   height: 24rem;
 }
@@ -1202,20 +1190,12 @@ button:disabled {
   width: 1.25rem;
 }
 
-#app :is(.w-5\/6) {
-  width: 83.333333%;
-}
-
 #app :is(.w-6) {
   width: 1.5rem;
 }
 
 #app :is(.w-8) {
   width: 2rem;
-}
-
-#app :is(.w-9) {
-  width: 2.25rem;
 }
 
 #app :is(.w-\[5\/6\]) {
@@ -1792,6 +1772,11 @@ button:disabled {
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
+#app :is(.bg-primary) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 254 226 / var(--tw-bg-opacity));
+}
+
 #app :is(.bg-red-100) {
   --tw-bg-opacity: 1;
   background-color: rgb(254 226 226 / var(--tw-bg-opacity));
@@ -1820,11 +1805,6 @@ button:disabled {
 #app :is(.bg-yellow-50) {
   --tw-bg-opacity: 1;
   background-color: rgb(254 252 232 / var(--tw-bg-opacity));
-}
-
-#app :is(.bg-primary) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(21 254 226 / var(--tw-bg-opacity));
 }
 
 #app :is(.bg-opacity-25) {
@@ -2899,6 +2879,14 @@ button:disabled {
 }
 
 @media (min-width: 640px) {
+  #app :is(.sm\:left-\[20px\]) {
+    left: 20px;
+  }
+
+  #app :is(.sm\:top-\[4px\]) {
+    top: 4px;
+  }
+
   #app :is(.sm\:col-span-2) {
     grid-column: span 2 / span 2;
   }
@@ -2940,12 +2928,12 @@ button:disabled {
     display: flex;
   }
 
-  #app :is(.sm\:h-12) {
-    height: 3rem;
-  }
-
   #app :is(.sm\:h-10) {
     height: 2.5rem;
+  }
+
+  #app :is(.sm\:h-12) {
+    height: 3rem;
   }
 
   #app :is(.sm\:h-6) {
@@ -2956,8 +2944,16 @@ button:disabled {
     width: 25%;
   }
 
+  #app :is(.sm\:w-10) {
+    width: 2.5rem;
+  }
+
   #app :is(.sm\:w-12) {
     width: 3rem;
+  }
+
+  #app :is(.sm\:w-6) {
+    width: 1.5rem;
   }
 
   #app :is(.sm\:w-80) {
@@ -2966,14 +2962,6 @@ button:disabled {
 
   #app :is(.sm\:w-full) {
     width: 100%;
-  }
-
-  #app :is(.sm\:w-10) {
-    width: 2.5rem;
-  }
-
-  #app :is(.sm\:w-6) {
-    width: 1.5rem;
   }
 
   #app :is(.sm\:min-w-full) {
@@ -3031,6 +3019,11 @@ button:disabled {
     padding-right: 2.5rem;
   }
 
+  #app :is(.sm\:px-16) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   #app :is(.sm\:px-6) {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -3044,21 +3037,6 @@ button:disabled {
   #app :is(.sm\:py-32) {
     padding-top: 8rem;
     padding-bottom: 8rem;
-  }
-
-  #app :is(.sm\:px-4) {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  #app :is(.sm\:px-8) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  #app :is(.sm\:px-16) {
-    padding-left: 4rem;
-    padding-right: 4rem;
   }
 
   #app :is(.sm\:text-2xl) {

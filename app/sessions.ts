@@ -17,10 +17,11 @@ export function getSessionStorage() {
   sessionStorage = factory({
     cookie: {
       name: 'vendure_remix_session',
-      httpOnly: true,
+      httpOnly: false,
       path: '/',
-      sameSite: 'lax',
-      secrets: ['vcj7lvb5opc'],
+      sameSite: 'none',
+      secure: true,
+      secrets: ['zsg8fmuy9co'],
     },
   });
   return sessionStorage;
