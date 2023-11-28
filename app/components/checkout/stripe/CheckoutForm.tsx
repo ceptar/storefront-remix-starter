@@ -1,10 +1,6 @@
-import {
-  useStripe,
-  useElements,
-  PaymentElement,
-} from '@stripe/react-stripe-js';
+// CheckoutForm.tsx
+import { useStripe, useElements, PaymentElement } from '@stripe/react-stripe-js';
 import { FormEvent } from 'react';
-import { CreditCardIcon } from '@heroicons/react/24/solid';
 
 export const CheckoutForm = ({ orderCode }: { orderCode: string }) => {
   const stripe = useStripe();
@@ -42,13 +38,7 @@ export const CheckoutForm = ({ orderCode }: { orderCode: string }) => {
   return (
     <form onSubmit={handleSubmit}>
       <PaymentElement />
-      <button
-        disabled={!stripe}
-        className="flex w-full px-6 bg-primary-600 hover:bg-primary-700 items-center justify-center space-x-2 py-3 my-4 border border-transparent text-base font-medium rounded-md shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
-      >
-        <CreditCardIcon className="w-5 h-5"></CreditCardIcon>
-        <span>Pay with Stripe</span>
-      </button>
+      <button disabled={!stripe}>Submit</button>
     </form>
   );
 };

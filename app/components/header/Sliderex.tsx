@@ -1,12 +1,9 @@
-import { useQuery } from '@apollo/client';
-import gql from 'graphql-tag';
+import React, { useState, useEffect } from 'react';
+import Hamburger from '~/components/svgs/Hamburger';
 import CollectionsTreemenu from '~/components/CollectionsTreemenu';
 import '~/styles/app.css';
 
-import React, { useState } from 'react';
-import Hamburger from '~/components/svgs/Hamburger';
-
-const COLLECTIONS_QUERY = gql`
+const COLLECTIONS_QUERY = `
   query Collections {
     collections {
       items {
@@ -23,24 +20,46 @@ const COLLECTIONS_QUERY = gql`
   }
 `;
 
-
 export default function Sliderex() {
-  const { loading, error, data } = useQuery(COLLECTIONS_QUERY);
-  const collections = data?.collections?.items || [];
+  const [collections, setCollections] = useState([]);
   const [isSlideoverVisible, setSlideoverVisible] = useState(false);
 
   const toggleSlideover = () => {
     setSlideoverVisible(!isSlideoverVisible);
   };
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://nonotheresnolimit.xyz/shop-api', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            query: COLLECTIONS_QUERY,
+          }),
+        });
+
+        const result = await response.json();
+        setCollections(result.data.collections.items);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []); // empty dependency array to fetch data once on component mount
+
   return (
     <div className="flex items-center justify-center">
       <div
         onClick={toggleSlideover}
         className="flex flex-col bg-white bg-opacity-90 shadow-md shadow-gray-500 cursor-pointer justify-center rounded-full items-center p-2  text-sm border text-gray-500 transition-all duration-300 ease-out hover:bg-gray-100 hover:opacity-70 hover:shadow-none "
-      ><button> <Hamburger className="w-9 h-9" /></button>
-      
-      
+      >
+        <button>
+          <Hamburger className="w-8 h-8 sm:w-10 sm:h-10" />
+        </button>
       </div>
       <div
         id="slideover-container"
@@ -73,7 +92,7 @@ export default function Sliderex() {
           </div>
           <div className="mt-16 absolute transform w-full">
             <div className="py-4 border-t border-gray-200 w-full">
-              <CollectionsTreemenu collectionsData={{ collections }} />
+            <CollectionsTreemenu collectionsData={{ collections }} />
             </div>
           </div>
         </div>
@@ -82,75 +101,3 @@ export default function Sliderex() {
   );
 }
 
-
-
-
-
-
-
- /*  function Uncontrolled() {
-    const { loading, error, data } = useQuery(COLLECTIONS_QUERY);
-  const collections = data?.collections?.items || [];
-  const [open, setOpen] = useState(false);
-
-
-    return (
-      <div>
-        <h1></h1>
-        <Popover>
-          <PopoverTrigger className="justify-center items-center "
-      onClick={() => setOpen(!open)}>
-          
-           
-         
-         
-            </PopoverTrigger>
-          <PopoverContent className="Popover pt-6 w-[75vw] sm:w-[50vw] xl:w-[25vw]">
-            <PopoverHeading></PopoverHeading>
-            <PopoverClose className="px-4 flex items-center justify-between w-full">
-            <div className="flex items-center w-full justify-between">
-                  <h2 className="text-lg font-medium text-gray-900">MAIN MENU</h2>
-                  <button
-                    type="button"
-                    className="-mr-2 w-10 h-10  p-2 rounded-md flex items-start justify-start text-gray-400"
-                  >
-                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                  </button>
-                </div>
-              </PopoverClose>
-            <PopoverDescription><div className="py-4 mt-4 border-t border-gray-200">
-        <CollectionsTreemenu collectionsData={{ collections }} />
-        </div></PopoverDescription>
-            
-          </PopoverContent>
-        </Popover>
-      </div>
-    );
-  }
-  
-  function Controlled() {
-    const { loading, error, data } = useQuery(COLLECTIONS_QUERY);
-  const collections = data?.collections?.items || [];
-    const [open, setOpen] = useState(false);
-    return (
-      <div>
-
-        <Popover open={open} onOpenChange={setOpen}>
-          <PopoverTrigger onClick={() => setOpen((v) => !v)}>
-        </PopoverTrigger>
-          <PopoverContent>
-            <PopoverHeading></PopoverHeading>
-            <PopoverDescription>
-            </PopoverDescription>
-            <PopoverClose>Close</PopoverClose>
-          </PopoverContent>
-        </Popover>
-      </div>
-    );
-  }
-
-
-  export default function Sliderex() {
-    return <Uncontrolled />;
-  }
- */

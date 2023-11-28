@@ -788,6 +788,10 @@ button:disabled {
   top: 8vh;
 }
 
+#app :is(.top-0\.5) {
+  top: 0.125rem;
+}
+
 #app :is(.z-10) {
   z-index: 10;
 }
@@ -1216,10 +1220,6 @@ button:disabled {
 
 #app :is(.w-\[5\/6\]) {
   width: 5/6;
-}
-
-#app :is(.w-\[75vw\]) {
-  width: 75vw;
 }
 
 #app :is(.w-fit) {
@@ -1820,6 +1820,11 @@ button:disabled {
 #app :is(.bg-yellow-50) {
   --tw-bg-opacity: 1;
   background-color: rgb(254 252 232 / var(--tw-bg-opacity));
+}
+
+#app :is(.bg-primary) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 254 226 / var(--tw-bg-opacity));
 }
 
 #app :is(.bg-opacity-25) {
@@ -2664,19 +2669,6 @@ button:disabled {
 
 /* Popover Menu */
 
-#app :is(.Popover) {
-  z-index: 50;
-  background-color: white;
-  border: #2E3047;
-  border-width: 1px;
-  color: #2E3047;
-  margin-top: 8vh;
-  right: 0;
-  /* Set right to 0 to hug the right side */
-  max-width: calc(100vw - 10px);
-  box-shadow: -5px 1px 20px 0px rgba(46, 48, 71, 0.333);
-}
-
 #app :is(.tronfilter) {
   filter: 
 
@@ -2952,6 +2944,14 @@ button:disabled {
     height: 3rem;
   }
 
+  #app :is(.sm\:h-10) {
+    height: 2.5rem;
+  }
+
+  #app :is(.sm\:h-6) {
+    height: 1.5rem;
+  }
+
   #app :is(.sm\:w-1\/4) {
     width: 25%;
   }
@@ -2964,12 +2964,16 @@ button:disabled {
     width: 20rem;
   }
 
-  #app :is(.sm\:w-\[50vw\]) {
-    width: 50vw;
-  }
-
   #app :is(.sm\:w-full) {
     width: 100%;
+  }
+
+  #app :is(.sm\:w-10) {
+    width: 2.5rem;
+  }
+
+  #app :is(.sm\:w-6) {
+    width: 1.5rem;
   }
 
   #app :is(.sm\:min-w-full) {
@@ -3040,6 +3044,21 @@ button:disabled {
   #app :is(.sm\:py-32) {
     padding-top: 8rem;
     padding-bottom: 8rem;
+  }
+
+  #app :is(.sm\:px-4) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #app :is(.sm\:px-8) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #app :is(.sm\:px-16) {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   #app :is(.sm\:text-2xl) {
@@ -3348,10 +3367,6 @@ button:disabled {
 
   #app :is(.xl\:grid) {
     display: grid;
-  }
-
-  #app :is(.xl\:w-\[25vw\]) {
-    width: 25vw;
   }
 
   #app :is(.xl\:grid-cols-3) {

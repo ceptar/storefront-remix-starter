@@ -29,10 +29,10 @@ export default function Index() {
 
         <div className="flex h-[70vh] justify-items-end items-center mr-auto ml-auto w-full">
           <div className="mt-16 mx-auto z-20 relative flex flex-col justify-center w-full">
-           <div className="flex flexcol w-1/6"></div>
-            <div className="flex flex-col w-5/6 text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-header1
-            text-discogray pt-0  pb-0 text-start sm:px-0 justify-between">
-<div className=" whitespace-nowrap ml-auto  w-5/6 ">
+
+            <div className="px-8 sm:px-16 flex flex-col text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-header1
+            text-discogray pt-0  pb-0 text-start justify-between">
+<div className=" whitespace-nowrap mr-auto  ">
                 <span className="text-white ">Wearable</span> <span className="shadow-white bg-discoteal bg-opacity-60 whitespace-nowrap p-2  backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] ">ART.</span>
                 <p className="my-12 "></p>
                
@@ -53,6 +53,16 @@ export default function Index() {
         </div>
 
       </div>
+
+      <div className="hidden">
+          <a
+            href="~/routes/__cart/index#"
+            className="block text-sm font-semibold text-primary-600 hover:text-primary-500"
+          >
+            Browse all categories
+            <span aria-hidden="true"> &rarr;</span>
+          </a>
+        </div>
 
 
 <div className="h-[10vh] z-20 flex justify-center items-center mr-auto ml-auto w-full" style={{ marginTop: '70vh' }}>

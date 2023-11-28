@@ -17,7 +17,7 @@ export async function loader({ request }: LoaderArgs<null>) {
   };
 }
 
-export default function Header({
+export function Header({
   onCartIconClick,
   cartQuantity,
 }: {
@@ -54,9 +54,9 @@ export default function Header({
             onClick={onCartIconClick}
             aria-label="Open cart tray"
           >
-            <Cart className="w-10 h-10 z-40"/>
+            <Cart className="w.8 h-8 sm:w-10 sm:h-10 z-40"/>
             {cartQuantity ? (
-             <div className="z-20 absolute top-1.5 left-[20px] rounded-full font-metrobold1 bg-primary-600 w-6 h-6">
+             <div className="z-20 absolute items-center justify-center top-1 left-[20px] rounded-full text-md font-metrobold1 bg-primary w-5 h-5 sm:w-6 sm:h-6">
              {cartQuantity}
            </div>
             ) : (

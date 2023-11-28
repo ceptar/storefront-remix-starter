@@ -1,11 +1,3 @@
-import React from 'react';
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-  HttpLink,
-} from '@apollo/client';
 import {
   isRouteErrorResponse,
   Link,
@@ -21,10 +13,9 @@ import {
   MetaFunction,
 } from '@remix-run/react';
 import styles from './styles/app.css';
-import Header from '~/components/header/Header';
+import { Header } from './components/header/Header';
 import { DataFunctionArgs, json } from '@remix-run/server-runtime';
 import { getCollections } from '~/providers/collections/collections';
-
 import { activeChannel } from '~/providers/channel/channel';
 import { APP_META_DESCRIPTION, APP_META_TITLE } from '~/constants';
 import { useEffect, useState } from 'react';
@@ -33,21 +24,6 @@ import { getActiveCustomer } from '~/providers/customer/customer';
 import Footer from '~/components/footer/Footer';
 import { useActiveOrder } from '~/utils/use-active-order';
 import { setApiUrl } from '~/graphqlWrapper';
-
-
-
-const httpLink = createHttpLink({
-  uri: 'https://nonotheresnolimit.xyz/shop-api',
-  credentials: 'include', // or 'same-origin' depending on your server's CORS configuration
-  headers:{
-    authorization: 'COOKIE_SECRET=vcj7lvb5opc',
-  },
-});
-
-const client = new ApolloClient({
-  link: httpLink,
-  cache: new InMemoryCache(),
-});
 
 export const meta: MetaFunction = () => {
   return [{ title: APP_META_TITLE }, { description: APP_META_DESCRIPTION }];
@@ -85,7 +61,6 @@ export type RootLoaderData = {
   activeCustomer: Awaited<ReturnType<typeof getActiveCustomer>>;
   activeChannel: Awaited<ReturnType<typeof activeChannel>>;
   collections: Awaited<ReturnType<typeof getCollections>>;
-
 };
 
 export async function loader({ request, params, context }: DataFunctionArgs) {
@@ -126,7 +101,6 @@ export default function App() {
   }, [loaderData]);
 
   return (
-    <ApolloProvider client={client}>
     <html lang="en" id="app">
       <head>
         <meta charSet="utf-8" />
@@ -136,11 +110,9 @@ export default function App() {
         <Links />
       </head>
       <body>
-
         <Header
           onCartIconClick={() => setOpen(!open)}
           cartQuantity={activeOrder?.totalQuantity ?? 0}
-
         />
         <main className="">
           <Outlet
@@ -151,7 +123,6 @@ export default function App() {
               removeItem,
             }}
           />
-
         </main>
         <CartTray
           open={open}
@@ -166,8 +137,7 @@ export default function App() {
 
         {devMode && <LiveReload />}
       </body>
-      </html>
-    </ApolloProvider>
+    </html>
   );
 }
 
