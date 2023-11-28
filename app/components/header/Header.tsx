@@ -56,7 +56,7 @@ export function Header({
           >
             <Cart className="w.8 h-8 sm:w-10 sm:h-10 z-40"/>
             {cartQuantity ? (
-             <div className="z-20 absolute items-center justify-center top-1 left-[20px] rounded-full text-md font-metrobold1 bg-primary w-5 h-5 sm:w-6 sm:h-6">
+             <div className="z-20 absolute items-center justify-center top-1.5 left-[20px] rounded-full text-md font-metrobold1 bg-primary w-5 h-5 sm:w-6 sm:h-6">
              {cartQuantity}
            </div>
             ) : (
