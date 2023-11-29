@@ -49,12 +49,12 @@ export function Header({
       <div className="relative  flex flex-col  items-start justify-start w-1/6">
 
       <button
-            className="flex flex-col bg-white bg-opacity-90 shadow-md shadow-gray-500 cursor-pointer justify-center rounded-full items-center p-2 text-sm text-gray-500 transition-all duration-300 ease-out hover:bg-gray-100 hover:opacity-70 hover:shadow-none "
+            className="flex flex-col  bg-opacity-90 shadow-md shadow-gray-500 cursor-pointer justify-center rounded-full items-center p-2 text-sm text-gray-500 transition-all duration-300 ease-out hover:opacity-70 hover:shadow-none "
             
             onClick={onCartIconClick}
             aria-label="Open cart tray"
           >
-            <Cart className="w-8 h-8 sm:w-10 sm:h-10 z-40"/>
+            <Cart className="tronfilter w-8 h-8 sm:w-10 sm:h-10 z-40"/>
             {cartQuantity ? (
              <div className="top-[1.5px] left-[17px] sm:top-[4px] sm:left-[20px] w-5 h-5 sm:w-6 sm:h-6 z-20 absolute items-center justify-center rounded-full text-md font-metrobold1 bg-primary  ">
              {cartQuantity}

@@ -2386,6 +2386,11 @@ button:disabled {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+#app :is(.shadow-gray-300) {
+  --tw-shadow-color: #d1d5db;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 #app :is(.outline) {
   outline-style: solid;
 }
@@ -2687,6 +2692,10 @@ button:disabled {
   background-color: rgb(21 128 61 / var(--tw-bg-opacity));
 }
 
+#app :is(.hover\:bg-opacity-70:hover) {
+  --tw-bg-opacity: 0.7;
+}
+
 #app :is(.hover\:text-black\/50:hover) {
   color: rgb(0 0 0 / 0.5);
 }
@@ -2940,6 +2949,10 @@ button:disabled {
     height: 1.5rem;
   }
 
+  #app :is(.sm\:h-9) {
+    height: 2.25rem;
+  }
+
   #app :is(.sm\:w-1\/4) {
     width: 25%;
   }
@@ -2962,6 +2975,10 @@ button:disabled {
 
   #app :is(.sm\:w-full) {
     width: 100%;
+  }
+
+  #app :is(.sm\:w-9) {
+    width: 2.25rem;
   }
 
   #app :is(.sm\:min-w-full) {
