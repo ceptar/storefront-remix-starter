@@ -49,7 +49,7 @@ export function Header({
       <div className="relative  flex flex-col  items-start justify-start w-1/6">
 
       <button
-            className="flex flex-col  bg-opacity-90 shadow-md shadow-gray-500 cursor-pointer justify-center rounded-full items-center p-2 text-sm text-gray-500 transition-all duration-300 ease-out hover:opacity-70 hover:shadow-none "
+            className="flex flex-col  bg-opacity-90 shadow-none cursor-pointer justify-center rounded-full items-center p-2 text-sm text-gray-500 transition-all duration-300 ease-out hover:opacity-70"
             
             onClick={onCartIconClick}
             aria-label="Open cart tray"

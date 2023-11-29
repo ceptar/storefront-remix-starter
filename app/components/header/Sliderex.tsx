@@ -55,7 +55,7 @@ export default function Sliderex() {
     <div className="flex items-center justify-center">
       <div
         onClick={toggleSlideover}
-        className="flex flex-col bg-opacity-90 shadow-md shadow-gray-500 cursor-pointer justify-center rounded-full items-center p-2  text-sm text-gray-500 transition-all duration-300 ease-out hover:opacity-70 hover:shadow-none "
+        className="flex flex-col bg-opacity-90 cursor-pointer justify-center rounded-full items-center p-2  text-sm text-gray-500 transition-all duration-300 ease-out hover:opacity-70"
       >
         <button>
           <Hamburger className="tronfilter w-8 h-8 sm:w-10 sm:h-10" />
