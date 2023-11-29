@@ -874,6 +874,11 @@ button:disabled {
   margin-bottom: 2rem;
 }
 
+#app :is(.my-7) {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
 #app :is(.-mb-px) {
   margin-bottom: -1px;
 }
@@ -1251,12 +1256,12 @@ button:disabled {
   max-width: 12rem;
 }
 
-#app :is(.max-w-\[400px\]) {
-  max-width: 400px;
+#app :is(.max-w-\[350px\]) {
+  max-width: 350px;
 }
 
-#app :is(.max-w-\[450px\]) {
-  max-width: 450px;
+#app :is(.max-w-\[400px\]) {
+  max-width: 400px;
 }
 
 #app :is(.max-w-\[5\/6\]) {
@@ -1887,6 +1892,10 @@ button:disabled {
   padding: 1.5rem;
 }
 
+#app :is(.p-8) {
+  padding: 2rem;
+}
+
 #app :is(.px-10) {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -2085,6 +2094,14 @@ button:disabled {
   font-family: Metropolitano-Bold, sans;
 }
 
+#app :is(.font-sans) {
+  font-family: Metropolitano-Regular, sans;
+}
+
+#app :is(.font-metromed1) {
+  font-family: Metropolitano-Medium, sans;
+}
+
 #app :is(.\!text-sm) {
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
@@ -2156,6 +2173,34 @@ button:disabled {
 
 #app :is(.leading-5) {
   line-height: 1.25rem;
+}
+
+#app :is(.leading-\[140\.00\%\]) {
+  line-height: 140.00%;
+}
+
+#app :is(.leading-snug) {
+  line-height: 1.375;
+}
+
+#app :is(.leading-tight) {
+  line-height: 1.25;
+}
+
+#app :is(.leading-normal) {
+  line-height: 1.5;
+}
+
+#app :is(.leading-6) {
+  line-height: 1.5rem;
+}
+
+#app :is(.leading-8) {
+  line-height: 2rem;
+}
+
+#app :is(.leading-10) {
+  line-height: 2.5rem;
 }
 
 #app :is(.tracking-tight) {
@@ -2335,6 +2380,14 @@ button:disabled {
 
 #app :is(.opacity-100) {
   opacity: 1;
+}
+
+#app :is(.opacity-80) {
+  opacity: 0.8;
+}
+
+#app :is(.opacity-50) {
+  opacity: 0.5;
 }
 
 #app :is(.mix-blend-multiply) {
@@ -2522,6 +2575,10 @@ button:disabled {
   background-color: hsl(235, 21%, 20%);
 }
 
+#app :is(.text-discogray-500) {
+  color: hsl(235, 21%, 50%);
+}
+
 @font-face {
   font-family: 'Metropolitano-Regular';
 
@@ -2653,7 +2710,8 @@ button:disabled {
 #app :is(.tronfilter) {
   filter: 
 
-  drop-shadow( -1px 0px 0.5px #000000 );
+  drop-shadow( -1px -1px 1px #0a0a0ae0)
+;
 }
 
 /* .tronfilter {
@@ -2905,6 +2963,11 @@ button:disabled {
     margin-right: auto;
   }
 
+  #app :is(.sm\:my-10) {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
   #app :is(.sm\:ml-3) {
     margin-left: 0.75rem;
   }
@@ -3055,6 +3118,10 @@ button:disabled {
     line-height: 1;
   }
 
+  #app :is(.sm\:text-\[32px\]) {
+    font-size: 32px;
+  }
+
   #app :is(.sm\:text-sm) {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -3135,9 +3202,8 @@ button:disabled {
     overflow-x: hidden;
   }
 
-  #app :is(.md\:text-3xl) {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+  #app :is(.md\:text-\[34px\]) {
+    font-size: 34px;
   }
 
   #app :is(.md\:text-base) {
@@ -3307,11 +3373,6 @@ button:disabled {
   #app :is(.lg\:pl-0) {
     padding-left: 0px;
   }
-
-  #app :is(.lg\:text-4xl) {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
 }
 
 @media (min-width: 1280px) {
@@ -3338,6 +3399,11 @@ button:disabled {
   #app :is(.xl\:mx-auto) {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  #app :is(.xl\:my-12) {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 
   #app :is(.xl\:mt-0) {
@@ -3370,8 +3436,8 @@ button:disabled {
          column-gap: 2rem;
   }
 
-  #app :is(.xl\:text-5xl) {
-    font-size: 3rem;
+  #app :is(.xl\:text-6xl) {
+    font-size: 3.75rem;
     line-height: 1;
   }
 }

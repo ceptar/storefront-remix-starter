@@ -55,7 +55,7 @@ export default function Sliderex() {
     <div className="flex items-center justify-center">
       <div
         onClick={toggleSlideover}
-        className="flex flex-col bg-opacity-90 cursor-pointer justify-center rounded-full items-center p-2  text-sm text-gray-500 transition-all duration-300 ease-out hover:opacity-70"
+        className="flex flex-col bg-opacity-90 cursor-pointer justify-center rounded-full items-center p-2  text-sm text-discogray-500 transition-all duration-300 ease-out hover:opacity-70"
       >
         <button>
           <Hamburger className="tronfilter w-8 h-8 sm:w-10 sm:h-10" />
@@ -70,7 +70,7 @@ export default function Sliderex() {
         <div
           onClick={toggleSlideover}
           id="slideover-bg"
-          className="w-full h-full duration-500 ease-out transition-all inset-0 absolute bg-gray-900 opacity-0"
+          className="w-full h-full duration-500 ease-out transition-all inset-0 absolute bg-discogray opacity-0"
         ></div>
         <div
           onClick={toggleSlideover}
@@ -78,8 +78,8 @@ export default function Sliderex() {
           className={`shadow-xl shadow-discogray w-full sm:w-80 bg-white h-full absolute right-0 duration-300 ease-out transition-all ${
             isSlideoverVisible ? '' : 'translate-x-full'
           }`}
-        ><div className="flex absolute text-gray-600 top-0 mt-5 ml-4 text-xl font-metroblack1 justify-center">MAIN MENU</div>
-          <div className="absolute cursor-pointer text-gray-600 top-0 w-8 h-8 flex items-center justify-center right-0 mt-4 mr-5">
+        ><div className="flex absolute top-0 mt-5 ml-4 text-discogray  text-3xl font-header1 leading-10 justify-center">MAIN MENU</div>
+          <div className="absolute cursor-pointer text-discogray top-0 w-8 h-8 flex items-center justify-center right-0 mt-4 mr-5">
             <svg
               className="w-6 h-6"
               fill="none"

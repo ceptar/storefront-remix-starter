@@ -1,9 +1,7 @@
 import { useLoaderData } from '@remix-run/react';
 import { getCollections } from '~/providers/collections/collections';
-import { CollectionCard } from '~/components/collections/CollectionCard';
 import { LoaderArgs } from '@remix-run/server-runtime';
 import MultiCarousel from '~/utils/MultiCarousel';
-import CollectionsTreemenu from '~/components/CollectionsTreemenu';
 import styles from './styles/app.css';
 
 import heropic1 from '~/../public/heropic1.jpg';
@@ -22,28 +20,34 @@ export default function Index() {
 
   return (
     <>
-      <div
-        className="bg-hero"
-      >
+      <div className="bg-hero">
         {/* Decorative image and overlay */}
 
         <div className="flex h-[70vh] justify-items-end items-center mr-auto ml-auto w-full">
           <div className="mt-16 mx-auto z-20 relative flex flex-col justify-center w-full">
 
-            <div className="px-8 sm:px-16 flex flex-col text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-header1
-            text-discogray pt-0  pb-0 text-start justify-between">
-<div className=" whitespace-nowrap mr-auto  ">
-                <span className="text-white ">Wearable</span> <span className="shadow-white bg-discoteal bg-opacity-60 whitespace-nowrap p-2  backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] ">ART.</span>
-                <p className="my-12 "></p>
+            <div className="px-8 sm:px-16 flex flex-col text-3xl font-header1 text-discogray pt-0  pb-0 text-start justify-between">
+              <div className="mr-auto leading-10">
+
+                <span className="text-white">It`s the </span><span className="shadow-white bg-discoteal bg-opacity-60 whitespace-nowrap p-2 backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]">little things</span><span className="text-white "> in life, that count</span>
+                <p className="my-7"></p>
                
-                <span className="text-white ">Every Piece</span> <span className="shadow-white bg-discoteal bg-opacity-60 whitespace-nowrap p-2  backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] ">UNIQUE.</span>
-                <p className="my-12 "></p>
+                <span className="text-white">and we </span><span className="shadow-white bg-discoteal bg-opacity-60 whitespace-nowrap p-2 backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]">looove</span><span className="text-white "> little things!</span>
+                <p className="my-7"></p>
                 
-                <span className="text-white ">Like</span> <span className="shadow-white bg-discoteal bg-opacity-60 whitespace-nowrap p-2  backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] ">YOU.</span>
-                <p className="my-12 "></p>
+                <div className="bg-white opacity-80 font-metromed1 text-xl leading-normal text-discogray p-8">
+                <span className="">In fact, we have </span><span className=" bg-discoteal bg-opacity-60 whitespace-nowrap p-2 backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]">many</span><span className=" "> of them right here.</span>
+                <p className=""></p>
+
+                <span className="">In </span><span className=" bg-discoteal bg-opacity-60 whitespace-nowrap p-2 backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]">all kinds</span><span className=" "> of colors, shapes and purposes.</span>
+                <p className=""></p>
+
+                <span className="">So hopefully you find your </span><span className=" bg-discoteal bg-opacity-60 whitespace-nowrap p-2 backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]">special</span><span className=""> little thing!</span>
+                <p className=""></p>
              
-                <span className="text-white ">Get</span> <span className="shadow-white bg-discoteal bg-opacity-60 whitespace-nowrap p-2  backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] text-discopink">YOURS.</span>
-                <p className="my-12 "></p>
+                <span className=""></span>
+                <p className=""></p>
+                </div>
               
               </div>
             </div>
@@ -59,18 +63,20 @@ export default function Index() {
             href="~/routes/__cart/index#"
             className="block text-sm font-semibold text-primary-600 hover:text-primary-500"
           >
-            Browse all categories
+            
             <span aria-hidden="true"> &rarr;</span>
           </a>
         </div>
+
+        
 
 
 <div className="h-[10vh] z-20 flex justify-center items-center mr-auto ml-auto w-full" style={{ marginTop: '70vh' }}>
           <h2
             id="category-heading"
-            className="px-10 items-center justify-start flex text-2xl font-header1 text-discopink"
+            className="px-10 items-center justify-start flex text-discogray  text-3xl font-header1 leading-10"
           ><span className="">
-            Shop by Category
+            Categories
           </span>
             </h2>
         </div>

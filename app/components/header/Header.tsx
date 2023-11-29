@@ -49,7 +49,7 @@ export function Header({
       <div className="relative  flex flex-col  items-start justify-start w-1/6">
 
       <button
-            className="flex flex-col  bg-opacity-90 shadow-none cursor-pointer justify-center rounded-full items-center p-2 text-sm text-gray-500 transition-all duration-300 ease-out hover:opacity-70"
+            className="flex flex-col  bg-opacity-90 shadow-none cursor-pointer justify-center rounded-full items-center p-2 text-sm text-discogray-500 transition-all duration-300 ease-out hover:opacity-70"
             
             onClick={onCartIconClick}
             aria-label="Open cart tray"
@@ -64,7 +64,7 @@ export function Header({
             )}
           </button>
       </div>
-      <div className="tronfilter z-40 h-auto min-w-[100px] max-w-[450px] flex flex-col w-full ">
+      <div className="tronfilter z-40 h-auto min-w-[100px] max-w-[350px] flex flex-col w-full ">
       <Link to="/">
     <Logo/>
     </Link>
