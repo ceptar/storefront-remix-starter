@@ -2539,6 +2539,10 @@ button:disabled {
   background-color: hsl(173, 99%, 80%);
 }
 
+#app :is(.bg-discoteal-100) {
+  background-color: hsl(173, 99%, 90%);
+}
+
 #app :is(.text-discogray-500) {
   color: hsl(235, 21%, 50%);
 }

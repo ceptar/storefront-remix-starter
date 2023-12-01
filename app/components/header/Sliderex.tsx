@@ -93,7 +93,7 @@ export default function Sliderex() {
               <path d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </div>
-          <div className="p-8 mt-8 absolute transform w-full">
+          <div className="mx-4 mt-8 absolute transform w-full">
             <div className="border-t border-gray-200 w-full">
               <CollectionsTreemenu collectionsData={{ collections }} />
             </div>
