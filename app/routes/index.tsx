@@ -42,7 +42,7 @@ export default function Index() {
                 <div className="px-16 my-[15vh]"></div>
                 <div className="sm:w-1/2 leading-[140%] font-sans bg-white text-md text-discogray p-4">
                   <span className="my-4">
-                    Get your piece or unique and handmade {' '}
+                    Get your piece of unique and handmade {' '}
                   </span>
                   <span className="h-6 bg-left-bottom bg-gradient-to-r from-discoteal to-discopink bg-[length:100%_6px] bg-no-repeat">
                     Art!{' '}
@@ -51,15 +51,15 @@ export default function Index() {
 
                   <span className=""></span>
                   <span className="h-6 bg-left-bottom bg-gradient-to-r from-discoteal to-discopink bg-[length:100%_6px] bg-no-repeat">
-                    all kinds{' '}
+                    {' '}
                   </span>
-                  <span className=" "> of colors, shapes and purposes. </span>
+                  <span className=" "></span>
 
-                  <span className="">So hopefully you find your </span>
+                  <span className=""></span>
                   <span className="h-6 bg-left-bottom bg-gradient-to-r from-discoteal to-discopink bg-[length:100%_6px] bg-no-repeat">
-                    special
+                    
                   </span>
-                  <span className=""> little thing!</span>
+                  <span className=""></span>
                 </div>
               </div>
             </div>

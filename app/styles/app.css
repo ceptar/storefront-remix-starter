@@ -960,6 +960,10 @@ button:disabled {
   margin-right: 1.25rem;
 }
 
+#app :is(.mr-8) {
+  margin-right: 2rem;
+}
+
 #app :is(.mr-auto) {
   margin-right: auto;
 }
@@ -982,6 +986,10 @@ button:disabled {
 
 #app :is(.mt-12) {
   margin-top: 3rem;
+}
+
+#app :is(.mt-16) {
+  margin-top: 4rem;
 }
 
 #app :is(.mt-2) {
@@ -1115,10 +1123,6 @@ button:disabled {
   height: 10vh;
 }
 
-#app :is(.h-\[4vh\]) {
-  height: 4vh;
-}
-
 #app :is(.h-\[50vh\]) {
   height: 50vh;
 }
@@ -1144,12 +1148,20 @@ button:disabled {
   height: 100%;
 }
 
-#app :is(.max-h-\[200px\]) {
-  max-height: 200px;
+#app :is(.h-\[4vh\]) {
+  height: 4vh;
+}
+
+#app :is(.max-h-\[300px\]) {
+  max-height: 300px;
 }
 
 #app :is(.max-h-full) {
   max-height: 100%;
+}
+
+#app :is(.max-h-\[200px\]) {
+  max-height: 200px;
 }
 
 #app :is(.min-h-\[220px\]) {
@@ -1204,6 +1216,10 @@ button:disabled {
   width: 2rem;
 }
 
+#app :is(.w-\[5\/6\]) {
+  width: 5/6;
+}
+
 #app :is(.w-fit) {
   width: -moz-fit-content;
   width: fit-content;
@@ -1223,6 +1239,10 @@ button:disabled {
 
 #app :is(.min-w-\[100px\]) {
   min-width: 100px;
+}
+
+#app :is(.min-w-\[5\/6\]) {
+  min-width: 5/6;
 }
 
 #app :is(.min-w-full) {
@@ -1860,10 +1880,6 @@ button:disabled {
      object-position: center;
 }
 
-#app :is(.p-1) {
-  padding: 0.25rem;
-}
-
 #app :is(.p-10) {
   padding: 2.5rem;
 }
@@ -1892,14 +1908,13 @@ button:disabled {
   padding: 2rem;
 }
 
+#app :is(.p-1) {
+  padding: 0.25rem;
+}
+
 #app :is(.px-10) {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-}
-
-#app :is(.px-16) {
-  padding-left: 4rem;
-  padding-right: 4rem;
 }
 
 #app :is(.px-2) {
@@ -1985,6 +2000,11 @@ button:disabled {
 #app :is(.py-8) {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+#app :is(.px-16) {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 #app :is(.pb-0) {
@@ -2091,6 +2111,10 @@ button:disabled {
   font-family: Metropolitano-Bold, sans;
 }
 
+#app :is(.font-metromed1) {
+  font-family: Metropolitano-Medium, sans;
+}
+
 #app :is(.font-metrolight1) {
   font-family: Metropolitano-Light, sans;
 }
@@ -2176,6 +2200,10 @@ button:disabled {
   line-height: 1.25rem;
 }
 
+#app :is(.leading-normal) {
+  line-height: 1.5;
+}
+
 #app :is(.leading-\[140\%\]) {
   line-height: 140%;
 }
@@ -2215,6 +2243,11 @@ button:disabled {
 #app :is(.text-discogray) {
   --tw-text-opacity: 1;
   color: rgb(46 48 71 / var(--tw-text-opacity));
+}
+
+#app :is(.text-discopink) {
+  --tw-text-opacity: 1;
+  color: rgb(255 0 229 / var(--tw-text-opacity));
 }
 
 #app :is(.text-gray-200) {
@@ -2352,6 +2385,10 @@ button:disabled {
 
 #app :is(.opacity-100) {
   opacity: 1;
+}
+
+#app :is(.opacity-80) {
+  opacity: 0.8;
 }
 
 #app :is(.mix-blend-multiply) {
@@ -2543,6 +2580,10 @@ button:disabled {
   background-color: hsl(173, 99%, 90%);
 }
 
+#app :is(.bg-discogray-800) {
+  background-color: hsl(235, 21%, 20%);
+}
+
 #app :is(.text-discogray-500) {
   color: hsl(235, 21%, 50%);
 }
@@ -2620,7 +2661,7 @@ button:disabled {
 }
 
 #app :is(.bg-hero) {
-  background-image: url('~/../public/hero1.webp');
+  background-image: url("~/../public/hero1.webp");
   background-size: cover;
   background-position: center center;
   height: 70vh;
@@ -2651,32 +2692,35 @@ button:disabled {
 /* Links TreeMenu */
 
 #app :is(.\!parent) {
-  font-size: 24px !important;
-  line-height: 140% !important;
-  font-family: Metropolitano-Regular, sans !important;
-  color: #ffffff !important;
+  font-size: 20px !important;
+  line-height: 28px !important;
+  font-family: Metropolitano-Light, sans !important;
+  color: rgb(46 48 71) !important;
+  text-transform: uppercase !important;
 }
 
 #app :is(.parent) {
-  font-size: 24px;
-  line-height: 140%;
-  font-family: Metropolitano-Regular, sans;
-  color: #ffffff;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: Metropolitano-Light, sans;
+  color: rgb(46 48 71);
+  text-transform: uppercase;
 }
 
 #app :is(.child) {
-  font-size: 18px;
-  line-height: 100%;
+  font-size: 20px;
+  line-height: 28px;
   font-family: Metropolitano-Light, sans;
-  color: #ffffff;
+  color: hsl(235, 21%, 60%);
 }
 
 /* Popover Menu */
 
 #app :is(.tronfilter) {
-  stroke: #0a0a0ae0;
-  stroke-width: 0.5px;
-  filter: drop-shadow(-1px -1px 1px #0a0a0ae0);
+  filter: 
+
+  drop-shadow( -1px -1px 1px #0a0a0ae0)
+;
 }
 
 /* .tronfilter {
@@ -2964,10 +3008,6 @@ button:disabled {
     height: 1.5rem;
   }
 
-  #app :is(.sm\:w-1\/2) {
-    width: 50%;
-  }
-
   #app :is(.sm\:w-1\/4) {
     width: 25%;
   }
@@ -2990,6 +3030,14 @@ button:disabled {
 
   #app :is(.sm\:w-full) {
     width: 100%;
+  }
+
+  #app :is(.sm\:w-1\/2) {
+    width: 50%;
+  }
+
+  #app :is(.sm\:min-w-full) {
+    min-width: 100%;
   }
 
   #app :is(.sm\:max-w-md) {
@@ -3068,11 +3116,6 @@ button:disabled {
     line-height: 2rem;
   }
 
-  #app :is(.sm\:text-3xl) {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
   #app :is(.sm\:text-4xl) {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -3086,6 +3129,11 @@ button:disabled {
   #app :is(.sm\:text-sm) {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  #app :is(.sm\:text-3xl) {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   #app :is(.sm\:duration-300) {
