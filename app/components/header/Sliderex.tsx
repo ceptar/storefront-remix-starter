@@ -75,11 +75,14 @@ export default function Sliderex() {
         <div
           onClick={toggleSlideover}
           id="slideover"
-          className={`shadow-xl shadow-discogray w-full sm:w-80 bg-white h-full absolute right-0 duration-300 ease-out transition-all ${
+          className={`shadow-xl shadow-discogray bg-discogray top-[8vh] w-full sm:w-80  h-full absolute right-0 duration-300 ease-out transition-all ${
             isSlideoverVisible ? '' : 'translate-x-full'
           }`}
-        ><div className="flex absolute top-0 mt-5 ml-4 text-discogray  text-3xl font-header1 leading-10 justify-center">MAIN MENU</div>
-          <div className="absolute cursor-pointer text-discogray top-0 w-8 h-8 flex items-center justify-center right-0 mt-4 mr-5">
+        >
+          <div className="px-8 flex absolute top-0 pt-4 ml-4 text-white text-lg font-sans justify-center">
+            Main Menu
+          </div>
+          <div className="absolute cursor-pointer text-white top-0 w-8 h-8 flex items-center justify-center right-0 mt-4 mr-5">
             <svg
               className="w-6 h-6"
               fill="none"
@@ -90,9 +93,9 @@ export default function Sliderex() {
               <path d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </div>
-          <div className="mt-16 absolute transform w-full">
-            <div className="py-4 border-t border-gray-200 w-full">
-            <CollectionsTreemenu collectionsData={{ collections }} />
+          <div className="p-8 mt-8 absolute transform w-full">
+            <div className="border-t border-gray-200 w-full">
+              <CollectionsTreemenu collectionsData={{ collections }} />
             </div>
           </div>
         </div>
@@ -100,4 +103,3 @@ export default function Sliderex() {
     </div>
   );
 }
-

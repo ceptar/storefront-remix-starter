@@ -869,14 +869,19 @@ button:disabled {
   margin-bottom: 1rem;
 }
 
+#app :is(.my-7) {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
 #app :is(.my-8) {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-#app :is(.my-7) {
-  margin-top: 1.75rem;
-  margin-bottom: 1.75rem;
+#app :is(.my-\[15vh\]) {
+  margin-top: 15vh;
+  margin-bottom: 15vh;
 }
 
 #app :is(.-mb-px) {
@@ -955,10 +960,6 @@ button:disabled {
   margin-right: 1.25rem;
 }
 
-#app :is(.mr-8) {
-  margin-right: 2rem;
-}
-
 #app :is(.mr-auto) {
   margin-right: auto;
 }
@@ -981,10 +982,6 @@ button:disabled {
 
 #app :is(.mt-12) {
   margin-top: 3rem;
-}
-
-#app :is(.mt-16) {
-  margin-top: 4rem;
 }
 
 #app :is(.mt-2) {
@@ -1118,6 +1115,10 @@ button:disabled {
   height: 10vh;
 }
 
+#app :is(.h-\[4vh\]) {
+  height: 4vh;
+}
+
 #app :is(.h-\[50vh\]) {
   height: 50vh;
 }
@@ -1143,8 +1144,8 @@ button:disabled {
   height: 100%;
 }
 
-#app :is(.max-h-\[300px\]) {
-  max-height: 300px;
+#app :is(.max-h-\[200px\]) {
+  max-height: 200px;
 }
 
 #app :is(.max-h-full) {
@@ -1203,10 +1204,6 @@ button:disabled {
   width: 2rem;
 }
 
-#app :is(.w-\[5\/6\]) {
-  width: 5/6;
-}
-
 #app :is(.w-fit) {
   width: -moz-fit-content;
   width: fit-content;
@@ -1226,10 +1223,6 @@ button:disabled {
 
 #app :is(.min-w-\[100px\]) {
   min-width: 100px;
-}
-
-#app :is(.min-w-\[5\/6\]) {
-  min-width: 5/6;
 }
 
 #app :is(.min-w-full) {
@@ -1757,11 +1750,6 @@ button:disabled {
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
-#app :is(.bg-gray-900) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-
 #app :is(.bg-green-100) {
   --tw-bg-opacity: 1;
   background-color: rgb(220 252 231 / var(--tw-bg-opacity));
@@ -1846,6 +1834,10 @@ button:disabled {
   background-size: 0% 2px;
 }
 
+#app :is(.bg-\[length\:100\%_6px\]) {
+  background-size: 100% 6px;
+}
+
 #app :is(.bg-left-bottom) {
   background-position: left bottom;
 }
@@ -1866,6 +1858,10 @@ button:disabled {
 #app :is(.object-center) {
   -o-object-position: center;
      object-position: center;
+}
+
+#app :is(.p-1) {
+  padding: 0.25rem;
 }
 
 #app :is(.p-10) {
@@ -1899,6 +1895,11 @@ button:disabled {
 #app :is(.px-10) {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+#app :is(.px-16) {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 #app :is(.px-2) {
@@ -2086,20 +2087,16 @@ button:disabled {
   font-family: Metropolitano-Bold, sans;
 }
 
-#app :is(.font-metroblack1) {
-  font-family: Metropolitano-Black, sans;
-}
-
 #app :is(.font-metrobold1) {
   font-family: Metropolitano-Bold, sans;
 }
 
-#app :is(.font-sans) {
-  font-family: Metropolitano-Regular, sans;
+#app :is(.font-metrolight1) {
+  font-family: Metropolitano-Light, sans;
 }
 
-#app :is(.font-metromed1) {
-  font-family: Metropolitano-Medium, sans;
+#app :is(.font-sans) {
+  font-family: Metropolitano-Regular, sans;
 }
 
 #app :is(.\!text-sm) {
@@ -2171,36 +2168,16 @@ button:disabled {
   font-style: italic;
 }
 
+#app :is(.leading-10) {
+  line-height: 2.5rem;
+}
+
 #app :is(.leading-5) {
   line-height: 1.25rem;
 }
 
-#app :is(.leading-\[140\.00\%\]) {
-  line-height: 140.00%;
-}
-
-#app :is(.leading-snug) {
-  line-height: 1.375;
-}
-
-#app :is(.leading-tight) {
-  line-height: 1.25;
-}
-
-#app :is(.leading-normal) {
-  line-height: 1.5;
-}
-
-#app :is(.leading-6) {
-  line-height: 1.5rem;
-}
-
-#app :is(.leading-8) {
-  line-height: 2rem;
-}
-
-#app :is(.leading-10) {
-  line-height: 2.5rem;
+#app :is(.leading-\[140\%\]) {
+  line-height: 140%;
 }
 
 #app :is(.tracking-tight) {
@@ -2238,11 +2215,6 @@ button:disabled {
 #app :is(.text-discogray) {
   --tw-text-opacity: 1;
   color: rgb(46 48 71 / var(--tw-text-opacity));
-}
-
-#app :is(.text-discopink) {
-  --tw-text-opacity: 1;
-  color: rgb(255 0 229 / var(--tw-text-opacity));
 }
 
 #app :is(.text-gray-200) {
@@ -2380,14 +2352,6 @@ button:disabled {
 
 #app :is(.opacity-100) {
   opacity: 1;
-}
-
-#app :is(.opacity-80) {
-  opacity: 0.8;
-}
-
-#app :is(.opacity-50) {
-  opacity: 0.5;
 }
 
 #app :is(.mix-blend-multiply) {
@@ -2571,8 +2535,8 @@ button:disabled {
   background-color: hsl(173, 99%, 30%);
 }
 
-#app :is(.bg-discogray-800) {
-  background-color: hsl(235, 21%, 20%);
+#app :is(.bg-discoteal-200) {
+  background-color: hsl(173, 99%, 80%);
 }
 
 #app :is(.text-discogray-500) {
@@ -2652,7 +2616,7 @@ button:disabled {
 }
 
 #app :is(.bg-hero) {
-  background-image: url("~/../public/hero1.webp");
+  background-image: url('~/../public/hero1.webp');
   background-size: cover;
   background-position: center center;
   height: 70vh;
@@ -2683,35 +2647,32 @@ button:disabled {
 /* Links TreeMenu */
 
 #app :is(.\!parent) {
-  font-size: 20px !important;
-  line-height: 28px !important;
-  font-family: Metropolitano-Light, sans !important;
-  color: rgb(46 48 71) !important;
-  text-transform: uppercase !important;
+  font-size: 24px !important;
+  line-height: 140% !important;
+  font-family: Metropolitano-Regular, sans !important;
+  color: #ffffff !important;
 }
 
 #app :is(.parent) {
-  font-size: 20px;
-  line-height: 28px;
-  font-family: Metropolitano-Light, sans;
-  color: rgb(46 48 71);
-  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 140%;
+  font-family: Metropolitano-Regular, sans;
+  color: #ffffff;
 }
 
 #app :is(.child) {
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 18px;
+  line-height: 100%;
   font-family: Metropolitano-Light, sans;
-  color: hsl(235, 21%, 60%);
+  color: #ffffff;
 }
 
 /* Popover Menu */
 
 #app :is(.tronfilter) {
-  filter: 
-
-  drop-shadow( -1px -1px 1px #0a0a0ae0)
-;
+  stroke: #0a0a0ae0;
+  stroke-width: 0.5px;
+  filter: drop-shadow(-1px -1px 1px #0a0a0ae0);
 }
 
 /* .tronfilter {
@@ -2963,11 +2924,6 @@ button:disabled {
     margin-right: auto;
   }
 
-  #app :is(.sm\:my-10) {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-  }
-
   #app :is(.sm\:ml-3) {
     margin-left: 0.75rem;
   }
@@ -3004,6 +2960,10 @@ button:disabled {
     height: 1.5rem;
   }
 
+  #app :is(.sm\:w-1\/2) {
+    width: 50%;
+  }
+
   #app :is(.sm\:w-1\/4) {
     width: 25%;
   }
@@ -3026,10 +2986,6 @@ button:disabled {
 
   #app :is(.sm\:w-full) {
     width: 100%;
-  }
-
-  #app :is(.sm\:min-w-full) {
-    min-width: 100%;
   }
 
   #app :is(.sm\:max-w-md) {
@@ -3108,6 +3064,11 @@ button:disabled {
     line-height: 2rem;
   }
 
+  #app :is(.sm\:text-3xl) {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   #app :is(.sm\:text-4xl) {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -3116,10 +3077,6 @@ button:disabled {
   #app :is(.sm\:text-5xl) {
     font-size: 3rem;
     line-height: 1;
-  }
-
-  #app :is(.sm\:text-\[32px\]) {
-    font-size: 32px;
   }
 
   #app :is(.sm\:text-sm) {
@@ -3200,10 +3157,6 @@ button:disabled {
 
   #app :is(.md\:overflow-x-hidden) {
     overflow-x: hidden;
-  }
-
-  #app :is(.md\:text-\[34px\]) {
-    font-size: 34px;
   }
 
   #app :is(.md\:text-base) {
@@ -3401,11 +3354,6 @@ button:disabled {
     margin-right: auto;
   }
 
-  #app :is(.xl\:my-12) {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-  }
-
   #app :is(.xl\:mt-0) {
     margin-top: 0px;
   }
@@ -3434,11 +3382,6 @@ button:disabled {
   #app :is(.xl\:gap-x-8) {
     -moz-column-gap: 2rem;
          column-gap: 2rem;
-  }
-
-  #app :is(.xl\:text-6xl) {
-    font-size: 3.75rem;
-    line-height: 1;
   }
 }
 

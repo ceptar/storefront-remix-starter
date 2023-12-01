@@ -1,5 +1,9 @@
 // CheckoutForm.tsx
-import { useStripe, useElements, PaymentElement } from '@stripe/react-stripe-js';
+import {
+  useStripe,
+  useElements,
+  PaymentElement,
+} from '@stripe/react-stripe-js';
 import { FormEvent } from 'react';
 
 export const CheckoutForm = ({ orderCode }: { orderCode: string }) => {

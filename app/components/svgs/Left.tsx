@@ -1,9 +1,9 @@
-import * as React from "react"
-import { SVGProps } from "react"
+import * as React from 'react';
+import { SVGProps } from 'react';
 const Left = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 64 64"  // Set the viewBox attribute for responsive scaling
+    viewBox="0 0 64 64" // Set the viewBox attribute for responsive scaling
     fill="none"
     {...props}
   >
@@ -25,5 +25,5 @@ const Left = (props: SVGProps<SVGSVGElement>) => (
       </linearGradient>
     </defs>
   </svg>
-)
-export default Left
+);
+export default Left;

@@ -16,18 +16,18 @@ import {
   Slider,
 } from 'pure-react-carousel';
 
-import '~/styles/app.css'; 
+import '~/styles/app.css';
 
 interface Collection {
   id: string;
-  name: string;  
+  name: string;
 }
 
 interface LoaderData {
-  collections: Collection[]; 
+  collections: Collection[];
 }
 // Use this flag to conditionally render the CarouselProvider
-  const shouldRenderCarousel = typeof window !== 'undefined';
+const shouldRenderCarousel = typeof window !== 'undefined';
 
 export default function MultiCarousel() {
   const { collections } = useLoaderData<LoaderData>();
@@ -37,7 +37,7 @@ export default function MultiCarousel() {
   useEffect(() => {
     function handleResize() {
       const windowWidth = window.innerWidth;
-  
+
       if (windowWidth < 500) {
         setVisibleSlides(1);
         setSlideWidth(90); // Full width for small screens
@@ -66,32 +66,37 @@ export default function MultiCarousel() {
 
   return (
     <CarouselProvider
-    visibleSlides={visibleSlides}
-    totalSlides={collections.length}
-    step={1}
-    naturalSlideWidth={slideWidth}
-    naturalSlideHeight={200}
-    isIntrinsicHeight={true}
+      visibleSlides={visibleSlides}
+      totalSlides={collections.length}
+      step={1}
+      naturalSlideWidth={slideWidth}
+      naturalSlideHeight={200}
+      isIntrinsicHeight={true}
     >
       <div>
-        <Slider>   
-          {collections.map(collection => (
-            <Slide index={collection.id} key={collection.id} >
-              <CollectionCard collection={collection}/>
+        <Slider>
+          {collections.map((collection) => (
+            <Slide index={collection.id} key={collection.id}>
+              <CollectionCard collection={collection} />
             </Slide>
           ))}
         </Slider>
-      
-       
       </div>
 
       <div className="my-12 font-bold flex flex-row justify-center h-fit items-center">
-        <ButtonFirst className="w-12 h-12 items-center justify-center flex flex-col p-3 mx-4 rounded-full bg-white shadow-md hover:shadow-none transition-all duration-300 ease-in-out"><Left className="w-full h-full"/></ButtonFirst>
-        <ButtonBack className="w-12 h-12 items-center justify-center flex flex-col p-3 mx-4 rounded-full bg-white shadow-md hover:shadow-none transition-all duration-300 ease-in-out"><Left className="w-full h-full"/></ButtonBack>
-        <ButtonNext  className="w-12 h-12 items-center justify-center flex flex-col p-3 mx-4 rounded-full bg-white shadow-md hover:shadow-none transition-all duration-300 ease-in-out"><Right className="w-full h-full"/></ButtonNext>
-        <ButtonLast  className="w-12 h-12 items-center justify-center flex flex-col p-3 mx-4 rounded-full bg-white shadow-md hover:shadow-none transition-all duration-300 ease-in-out"><RightRight className="w-full h-full"/></ButtonLast>
+        <ButtonFirst className="w-12 h-12 items-center justify-center flex flex-col p-3 mx-4 rounded-full bg-white shadow-md hover:shadow-none transition-all duration-300 ease-in-out">
+          <Left className="w-full h-full" />
+        </ButtonFirst>
+        <ButtonBack className="w-12 h-12 items-center justify-center flex flex-col p-3 mx-4 rounded-full bg-white shadow-md hover:shadow-none transition-all duration-300 ease-in-out">
+          <Left className="w-full h-full" />
+        </ButtonBack>
+        <ButtonNext className="w-12 h-12 items-center justify-center flex flex-col p-3 mx-4 rounded-full bg-white shadow-md hover:shadow-none transition-all duration-300 ease-in-out">
+          <Right className="w-full h-full" />
+        </ButtonNext>
+        <ButtonLast className="w-12 h-12 items-center justify-center flex flex-col p-3 mx-4 rounded-full bg-white shadow-md hover:shadow-none transition-all duration-300 ease-in-out">
+          <RightRight className="w-full h-full" />
+        </ButtonLast>
       </div>
-
     </CarouselProvider>
   );
 }

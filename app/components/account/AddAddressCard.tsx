@@ -10,8 +10,8 @@ export default function AddAddressCard() {
         to="/account/addresses/new"
       >
         <span className="text-base-semi">New address</span>
-        <PlusIcon className='w-6 h-6'></PlusIcon>
+        <PlusIcon className="w-6 h-6"></PlusIcon>
       </Link>
     </>
   );
-};
+}

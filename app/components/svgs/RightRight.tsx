@@ -1,5 +1,5 @@
-import * as React from "react"
-import { SVGProps } from "react"
+import * as React from 'react';
+import { SVGProps } from 'react';
 const RightRight = (props: SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 64 64"
@@ -45,5 +45,5 @@ const RightRight = (props: SVGProps<SVGSVGElement>) => (
       </clipPath>
     </defs>
   </svg>
-)
-export default RightRight
+);
+export default RightRight;

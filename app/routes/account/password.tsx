@@ -133,7 +133,10 @@ export default function AccountPassword() {
         )}
         {editing ? (
           <div className="flex gap-3">
-            <HighlightedButton type="submit" isSubmitting={state === 'submitting'}>
+            <HighlightedButton
+              type="submit"
+              isSubmitting={state === 'submitting'}
+            >
               Save Password
             </HighlightedButton>
             <Button type="reset" onClick={() => setEditing(false)}>

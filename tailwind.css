@@ -6,7 +6,6 @@
   button:disabled {
     cursor: not-allowed;
   }
-
 }
 
 @layer utilities {
@@ -49,13 +48,13 @@
     font-family: 'RG-StandardBold';
     src: url(./font/RG-StandardBold.woff2) format('woff2');
     font-display: swap;
-    
-  }  @font-face {
+  }
+  @font-face {
     font-family: 'Nohemi-Black';
     src: url(./font/Nohemi-Black.woff2) format('woff2');
     font-display: swap;
   }
-  
+
   .flex-center {
     display: flex;
     justify-content: center;
@@ -74,7 +73,7 @@
   }
 
   .bg-hero {
-    background-image: url("~/../public/hero1.webp");
+    background-image: url('~/../public/hero1.webp');
     background-size: cover;
     background-position: center center;
     height: 70vh;
@@ -83,10 +82,10 @@
     width: 100%;
     z-index: 10;
   }
-  
+
   /*COPY PASTE STYLESAMMLUNGEN, @apply NOT COMPLIANT!!!*/
 
-    /*Hover, gradient underline*/
+  /*Hover, gradient underline*/
   /* .linkeins {
   @apply transition-all duration-300 ease-in-out
   } */
@@ -98,54 +97,45 @@
   /* CASING - div, button etc. bei Inhalt selbst dann noch "w-full h-full"*/
   /* className="w-12 h-12 items-center justify-center flex flex-col p-2 mx-4 rounded-full bg-white shadow-md hover:shadow-none transition-all duration-300 ease-in-out" */
 
-
-
   /* Links TreeMenu */
   .parent {
-    font-size: 20px;
-    line-height: 28px;
-    font-family: Metropolitano-Light, sans;
-    color: rgb(46 48 71);
-    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 140%;
+    font-family: Metropolitano-Regular, sans;
+    color: #ffffff;
   }
 
   .child {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 18px;
+    line-height: 100%;
     font-family: Metropolitano-Light, sans;
-    color: hsl(235, 21%, 60%);
+    color: #ffffff;
+
   }
 
   /* Popover Menu */
   .Popover {
     z-index: 50;
     background-color: white;
-    border: #2E3047;
+    border: #2e3047;
     border-width: 1px;
-    color: #2E3047;
+    color: #2e3047;
     margin-top: 8vh;
-    
 
     right: 0; /* Set right to 0 to hug the right side */
 
-    
     max-width: calc(100vw - 10px);
     box-shadow: -5px 1px 20px 0px rgba(0, 0, 0, 0.333);
   }
-  
-.tronfilter {
 
-  -webkit-filter: 
+  .tronfilter {
+    stroke: #0a0a0ae0;
+    stroke-width: 0.5px;
 
-  drop-shadow( 1px 0px 0.7px #0a0a0ae0);
-  
+    -webkit-filter: drop-shadow(1px 0px 0.7px #0a0a0ae0);
 
-  filter: 
-
-  drop-shadow( -1px -1px 1px #0a0a0ae0)
-;
-}
-
+    filter: drop-shadow(-1px -1px 1px #0a0a0ae0);
+  }
 
   /* .tronfilter {
 
@@ -159,5 +149,4 @@
   stroke-width: 0;
   fill: #fff;
 } */
-
-  }
+}

@@ -20,7 +20,7 @@ export function FiltersButton({
       ) : (
         ''
       )}
-     
+
       <FunnelIcon className="flex-shrink-0 h-5 w-5" aria-hidden="true" />
     </button>
   );

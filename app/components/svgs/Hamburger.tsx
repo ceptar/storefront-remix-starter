@@ -1,5 +1,5 @@
-import * as React from "react"
-import { SVGProps } from "react"
+import * as React from 'react';
+import { SVGProps } from 'react';
 const Hamburger = (props: SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 64 64"
@@ -55,5 +55,5 @@ const Hamburger = (props: SVGProps<SVGSVGElement>) => (
       </linearGradient>
     </defs>
   </svg>
-)
-export default Hamburger
+);
+export default Hamburger;

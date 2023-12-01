@@ -24,7 +24,6 @@ export const meta: MetaFunction = ({ data }: { data: any }) => {
   ];
 };
 
-
 const paginationLimitMinimumDefault = 25;
 const allowedPaginationLimits = new Set<number>([
   paginationLimitMinimumDefault,
@@ -81,66 +80,66 @@ export default function CollectionSlug() {
   const submit = useSubmit();
   return (
     <div className="w-full">
-
-<img src={hero21} className="absolut h-[8vh] overflow-hidden top-0 mix-blend-multiply object-cover w-full flex flex-col items-center z-10"
-/>
-<div className="relative h-[8vh] bg-discogray-800 flex items-center justify-center w-full">
-<div className="flex mr-auto ml-auto px-8 mx-auto w-full justify-between ">
-<h2 className="text-xl text-white sm:text-2xl font-bold my-4">
-          {collection.name}
-        </h2>
-</div>
-
-</div>
-
-<div className="px-8 mx-auto">
-<div className="flex flex-row">
-<div className="my-2 w-full flex flex-col justify-between ">
-      <Breadcrumbs items={collection.breadcrumbs}></Breadcrumbs>
-
-      </div>
-    
-      
-
-      <div className="flex flex-col">
-        <FiltersButton
-          filterCount={facetValueIds.length}
-          onClick={() => setMobileFiltersOpen(true)}
-        />
-      </div>
+      <img
+        src={hero21}
+        className="absolut h-[8vh] overflow-hidden top-0 mix-blend-multiply object-cover w-full flex flex-col items-center z-10"
+      />
+      <div className="relative h-[4vh] bg-discogray bg-opacity-90 flex items-center justify-center w-full">
+        <div className="flex mr-auto ml-auto px-8 mx-auto w-full justify-between ">
+          <h2 className="text-xl text-white sm:text-3xl font-metrolight1 my-4">
+            {collection.name}
+          </h2>
+        </div>
       </div>
 
-      {collection.children?.length ? (
-        <div className="pt-4 pb-8 flex flex-col border-b mb-8">
-          <h2 className="flex flex-row w-full text-xl font-semibold text-discogray">
-            Category</h2>
-          <div className="mt-6 grid mr-auto sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
-            {collection.children.map((child) => (
-              <CollectionCard
-                key={child.id}
-                collection={child}
-              ></CollectionCard>
-            ))}
+      <div className="px-8 mx-auto">
+        <div className="flex flex-row">
+          <div className="my-2 w-full flex flex-col justify-between ">
+            <Breadcrumbs items={collection.breadcrumbs}></Breadcrumbs>
+          </div>
+
+          <div className="flex flex-col">
+            <FiltersButton
+              filterCount={facetValueIds.length}
+              onClick={() => setMobileFiltersOpen(true)}
+            />
           </div>
         </div>
-      ) : (
-        ''
-      )}
 
-      <ValidatedForm
-        validator={withZod(validator)}
-        method="get"
-        onChange={(e) => submit(e.currentTarget, { preventScrollReset: true })}
-      >
-        <FilterableProductGrid
-          allowedPaginationLimits={allowedPaginationLimits}
-          mobileFiltersOpen={mobileFiltersOpen}
-          setMobileFiltersOpen={setMobileFiltersOpen}
-          {...loaderData}
-        />
-      </ValidatedForm>
+        {collection.children?.length ? (
+          <div className="pt-4 pb-8 flex flex-col border-b mb-8">
+            <h2 className="flex flex-row w-full text-xl font-semibold text-discogray">
+              Category
+            </h2>
+            <div className="mt-6 grid mr-auto sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
+              {collection.children.map((child) => (
+                <CollectionCard
+                  key={child.id}
+                  collection={child}
+                ></CollectionCard>
+              ))}
+            </div>
+          </div>
+        ) : (
+          ''
+        )}
+
+        <ValidatedForm
+          validator={withZod(validator)}
+          method="get"
+          onChange={(e) =>
+            submit(e.currentTarget, { preventScrollReset: true })
+          }
+        >
+          <FilterableProductGrid
+            allowedPaginationLimits={allowedPaginationLimits}
+            mobileFiltersOpen={mobileFiltersOpen}
+            setMobileFiltersOpen={setMobileFiltersOpen}
+            {...loaderData}
+          />
+        </ValidatedForm>
+      </div>
     </div>
-       </div>
   );
 }
 
@@ -166,6 +165,5 @@ export function CatchBoundary() {
         </div>
       </div>
     </div>
-
   );
 }

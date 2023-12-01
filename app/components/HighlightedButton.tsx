@@ -1,13 +1,16 @@
 import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 
-type HighlightedButtonProps = React.PropsWithChildren<React.ButtonHTMLAttributes<HTMLButtonElement>> & {
+type HighlightedButtonProps = React.PropsWithChildren<
+  React.ButtonHTMLAttributes<HTMLButtonElement>
+> & {
   isSubmitting?: boolean;
-}
+};
 
-export function HighlightedButton(
-  { isSubmitting = false, ...props }: HighlightedButtonProps,
-) {
+export function HighlightedButton({
+  isSubmitting = false,
+  ...props
+}: HighlightedButtonProps) {
   return (
     <button
       disabled={isSubmitting}
@@ -21,7 +24,9 @@ export function HighlightedButton(
       )}
     >
       {props.children}
-      {isSubmitting && <ArrowPathIcon className='w-4 h-4 animate-spin'></ArrowPathIcon>}
+      {isSubmitting && (
+        <ArrowPathIcon className="w-4 h-4 animate-spin"></ArrowPathIcon>
+      )}
     </button>
   );
 }

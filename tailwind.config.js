@@ -43,7 +43,6 @@ module.exports = {
 
         discogray: '#2E3047',
       },
-
     },
   },
 };
