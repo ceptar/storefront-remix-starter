@@ -2974,10 +2974,6 @@ button:disabled {
     height: 1.5rem;
   }
 
-  #app :is(.sm\:w-1\/2) {
-    width: 50%;
-  }
-
   #app :is(.sm\:w-1\/4) {
     width: 25%;
   }
