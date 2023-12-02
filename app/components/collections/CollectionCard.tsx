@@ -11,7 +11,7 @@ export function CollectionCard({
       to={'/collections/' + collection.slug}
       prefetch="intent"
       key={collection.id}
-      className="mx-2 justify-center items-center shadow-md bg-discoteal-200 flex flex-col mr-auto relative overflow-hidden hover:opacity-75"
+      className="mx-2 justify-center items-center shadow-md bg-discoteal-200 flex flex-col relative overflow-hidden hover:opacity-75"
     >
       <div className="flex flex-col max-h-[200px] ">
         <div className="flex flex-col h-fit w-full max-w-[5/6] md:max-w-[1/2] lg:max-w-[1/3] xl:max-[w-1/4] aspect-[7/10] pt-4 mb-12 overflow-hidden ">
@@ -23,7 +23,7 @@ export function CollectionCard({
 
         <span
           aria-hidden="true"
-          className="text-center bg-discoteal-200 absolute px-4 w-full bottom-0 h-12 font-light text-discogray flex items-center justify-center"
+          className="text-start bg-discoteal-200 absolute px-4 w-full bottom-0 h-12 font-light text-discogray flex items-center justify-start"
         >
           {collection.name}
         </span>

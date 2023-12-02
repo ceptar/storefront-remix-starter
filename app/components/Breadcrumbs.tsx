@@ -7,11 +7,11 @@ export function Breadcrumbs({
   items: { name: string; slug: string; id: string }[];
 }) {
   return (
-    <nav className="flex" aria-label="Breadcrumb">
+    <nav className="flex " aria-label="Breadcrumb">
       <ol role="list" className="flex items-center space-x-1 md:space-x-4">
         <li>
           <div>
-            <Link to="/" className=" text-gray-400 hover:text-gray-500">
+            <Link to="/" className=" text-discogray-400 hover:text-discogray">
               <HomeIcon className="flex-shrink-0 h-5 w-5" aria-hidden="true" />
               <span className="sr-only">Home</span>
             </Link>
@@ -33,7 +33,7 @@ export function Breadcrumbs({
                 </svg>
                 <Link
                   to={'/collections/' + item.slug}
-                  className="bg-discoteal-100 ml-2 md:ml-4 text-sm md:text-base text-discogray hover:text-gray-700 bg-left-bottom bg-gradient-to-r from-discoteal to-discopink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-300 ease-out "
+                  className=" ml-2 md:ml-4 text-sm md:text-base text-discogray hover:text-gray-700 bg-left-bottom bg-gradient-to-r from-discoteal to-discopink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-300 ease-out "
                 >
                   {item.name}
                 </Link>

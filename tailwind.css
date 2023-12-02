@@ -101,15 +101,19 @@
   .parent {
     font-size: 24px;
     line-height: 140%;
-    font-family: Metropolitano-Regular, sans;
+    font-family: Metropolitano-Light, sans;
     color: #ffffff;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
 
   .child {
     font-size: 18px;
     line-height: 100%;
-    font-family: Metropolitano-Light, sans;
+    font-family: Metropolitano-Regular, sans;
     color: #ffffff;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
 
   /* Popover Menu */

@@ -40,7 +40,7 @@ export default function Index() {
                   <span className="text-white"> of them!</span>
                 </div>
                 <div className="px-16 my-[15vh]"></div>
-                <div className="sm:w-1/2 leading-[140%] font-sans bg-white text-md text-discogray p-4">
+                <div className="leading-[140%] font-sans bg-white text-md text-discogray p-4">
                   <span className="my-4">
                     Get your piece of unique and handmade {' '}
                   </span>
@@ -77,18 +77,18 @@ export default function Index() {
       </div>
 
       <div
-        className="h-[10vh] z-20 flex justify-center items-center mr-auto ml-auto w-full"
+        className="h-[10vh] z-20 flex justify-start items-center mr-auto ml-auto w-full"
         style={{ marginTop: '70vh' }}
       >
         <h2
           id="category-heading"
-          className="px-10 items-center justify-start flex text-discogray  text-2xl font-header1 leading-10"
+          className="px-8 items-start justify-start flex text-discogray  text-xl font-header1 leading-10"
         >
           <span className="">Categories</span>
         </h2>
       </div>
 
-      <div className="relative flex flex-row justify-center items-center">
+      <div className="px-6 relative flex flex-row justify-center items-center">
         <div className="h-full flex flex-row items-center justify-center overflow-hidden">
           <MultiCarousel CollectionsData={{ collections }} />
         </div>

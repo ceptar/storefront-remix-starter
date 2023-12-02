@@ -79,10 +79,10 @@ export default function Sliderex() {
             isSlideoverVisible ? '' : 'translate-x-full'
           }`}
         >
-          <div className="px-8 flex absolute top-0 pt-4 ml-4 text-white text-lg font-sans justify-center">
+          <div className="px-8 mx-4 flex absolute top-0 pt-2 text-white text-lg font-metrobold1 justify-center">
             Main Menu
           </div>
-          <div className="absolute cursor-pointer text-white top-0 w-8 h-8 flex items-center justify-center right-0 mt-4 mr-5">
+          <div className="absolute cursor-pointer text-white top-0 w-8 h-8 flex items-center justify-center right-0 mt-2 mr-5">
             <svg
               className="w-6 h-6"
               fill="none"
@@ -93,8 +93,8 @@ export default function Sliderex() {
               <path d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </div>
-          <div className="mx-4 mt-8 absolute transform w-full">
-            <div className="border-t border-gray-200 w-full">
+          <div className="px-8 mt-12 absolute transform w-full">
+            <div className="border-t border-gray-200 w-full py-2">
               <CollectionsTreemenu collectionsData={{ collections }} />
             </div>
           </div>
