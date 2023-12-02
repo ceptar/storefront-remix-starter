@@ -60,7 +60,7 @@ export function Header({
               )}
             </button>
           </div>
-          <div className="tronfilter z-40 h-auto min-w-[100px] max-w-[350px] flex flex-col w-full ">
+          <div className="tronfilter z-40 h-auto min-w-[100px] max-w-[300px] flex flex-col w-full ">
             <Link to="/">
               <Logo />
             </Link>
