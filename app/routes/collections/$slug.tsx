@@ -12,8 +12,6 @@ import { ValidatedForm } from 'remix-validated-form';
 import { withZod } from '@remix-validated-form/with-zod';
 import { FilterableProductGrid } from '~/components/products/FilterableProductGrid';
 
-import hero21 from '~/../public/hero21.webp';
-
 export const meta: MetaFunction = ({ data }: { data: any }) => {
   return [
     {
@@ -80,21 +78,20 @@ export default function CollectionSlug() {
   const submit = useSubmit();
   return (
     <div className="w-full">
-      <img
-        src={hero21}
-        className="absolut h-[8vh] overflow-hidden top-0 mix-blend-multiply object-cover w-full flex flex-col items-center z-10"
-      />
-      <div className="relative h-[48px] bg-discogray bg-opacity-90 flex items-center justify-center w-full">
+      <div
+        className="absolut h-[8vh] overflow-hidden top-0 w-full flex flex-col items-center z-10"
+      >      </div>
+      <div className="bg-gray-100 relative h-full bg-opacity-90 flex items-center justify-center w-full">
         <div className="flex mr-auto ml-auto px-8 mx-auto w-full justify-between ">
-          <h2 className="text-xl text-white sm:text-2xl font-metrolight1 my-4">
+          <h2 className="text-xl text-discogray font-metrobold1 my-4">
             {collection.name}
           </h2>
         </div>
       </div>
 
-      <div className="mx-auto">
-        <div className="bg-discoteal-200 flex flex-row">
-          <div className="px-8 my-1 w-full flex flex-col justify-between ">
+      <div className="mx-auto ">
+        <div className="px-8 py-1 bg-gray-100 flex flex-row">
+          <div className=" w-full flex flex-col items-start justify-center ">
             <Breadcrumbs items={collection.breadcrumbs}></Breadcrumbs>
           </div>
 

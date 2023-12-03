@@ -25,19 +25,19 @@ export default function Index() {
           <div className="mr-auto z-20 relative flex flex-col justify-center w-full">
             <div className="px-8 sm:px-16 flex flex-col pt-0  pb-0 text-start justify-between">
               <div className="mr-auto ">
-                <div className="text-3xl fon font-sans text-discogray leading-[140%]">
-                  <span className="text-white">The </span>
+                <div className="text-3xl font-sans text-discogray leading-[140%]">
+                  <span className="text-white">Life is about the </span>
                   <span className=" shadow-white bg-discoteal bg-opacity-60 whitespace-nowrap p-1 backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]">
-                    little things
+                    little things!
                   </span>
-                  <span className="text-white"> in life count.</span>
+                  <span className="text-white"></span>
                   <p className="my-7"></p>
 
-                  <span className="text-white">And we have </span>
+                  <span className="text-white"></span>
                   <span className="shadow-white bg-discoteal bg-opacity-60 whitespace-nowrap p-1 backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]">
-                    countless
+                  
                   </span>
-                  <span className="text-white"> of them!</span>
+                  <span className="text-white"></span>
                 </div>
                 <div className="px-16 my-[15vh]"></div>
                 <div className="leading-[140%] font-sans bg-white text-md text-discogray p-4">
@@ -77,23 +77,23 @@ export default function Index() {
       </div>
 
       <div
-        className="h-[10vh] z-20 flex justify-start items-center mr-auto ml-auto w-full"
+        className="h-[10vh] z-20 flex justify-center items-center mr-auto ml-auto w-full"
         style={{ marginTop: '70vh' }}
       >
         <h2
           id="category-heading"
-          className="px-8 items-start justify-start flex text-discogray  text-xl font-header1 leading-10"
+          className="px-8 items-center justify-center flex text-discogray  text-2xl font-header1 leading-10"
         >
           <span className="">Categories</span>
         </h2>
       </div>
 
-      <div className="px-6 relative flex flex-row justify-center items-center">
-        <div className="h-full flex flex-row items-center justify-center overflow-hidden">
+      <div className="relative flex flex-col justify-center items-center">
+        <div className="w-5/6 mx-auto h-full flex flex-row items-center justify-center overflow-hidden">
           <MultiCarousel CollectionsData={{ collections }} />
         </div>
       </div>
-
+<div className="h-[5vh]"></div>
       <div className="  bg-discoyellow">
         <div className="flex items-center justify-center">
           <div className="h-[50vh] justify-center flex flex-row w-full">

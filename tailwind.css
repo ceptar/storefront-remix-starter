@@ -83,6 +83,20 @@
     z-index: 10;
   }
 
+  .carousel-container {
+    width: 80%;
+    overflow-x: auto;
+    overflow:hidden;
+    white-space: nowrap;
+  }
+  
+  .flicking-panel {
+    display: inline-block;
+    white-space: nowrap;
+    width: 200px; /* Adjust the width as per your design */
+    /* Add any other styling for the panel */
+  }
+
   /*COPY PASTE STYLESAMMLUNGEN, @apply NOT COMPLIANT!!!*/
 
   /*Hover, gradient underline*/

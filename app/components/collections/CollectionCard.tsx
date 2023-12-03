@@ -11,23 +11,19 @@ export function CollectionCard({
       to={'/collections/' + collection.slug}
       prefetch="intent"
       key={collection.id}
-      className="mx-2 justify-center items-center shadow-md bg-discoteal-200 flex flex-col relative overflow-hidden hover:opacity-75"
+      className="mx-2 w-fit justify-center items-center shadow-md bg-discoteal-100 flex flex-col relative overflow-hidden hover:opacity-75"
     >
-      <div className="flex flex-col max-h-[200px] ">
-        <div className="flex flex-col h-fit w-full max-w-[5/6] md:max-w-[1/2] lg:max-w-[1/3] xl:max-[w-1/4] aspect-[7/10] pt-4 mb-12 overflow-hidden ">
-          <img
+    <div className="inline-flex flex-col items-start gap-5 p-4 bg-[#ccfff9]">
+      <div className="flex flex-col justify-center items-center w-[7rem] h-[10rem] bg-[#83a9ac]">
+      <img
             src={collection.featuredAsset?.preview + '?w=1200&h=1200'}
-            className=" object-cover object-center justify-center w-full h-full px-4"
+            className="object-cover object-center justify-center w-full h-full"
           />
-        </div>
-
-        <span
-          aria-hidden="true"
-          className="text-start bg-discoteal-200 absolute px-4 w-full bottom-0 h-12 font-light text-discogray flex items-center justify-start"
-        >
-          {collection.name}
-        </span>
       </div>
+      <div className="flex flex-col items-start gap-2 earrings text-discogray font-metrobold1 text-sm leading-[140%]">
+      {collection.name}
+      </div>
+    </div>
     </Link>
   );
 }

@@ -52,7 +52,7 @@ export default function Sliderex() {
   }, []); // empty dependency array to fetch data once on component mount
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center p-4">
       <div
         onClick={toggleSlideover}
         className="flex flex-col bg-opacity-90 cursor-pointer justify-center rounded-full items-center p-2  text-sm text-discogray-500 transition-all duration-300 ease-out hover:opacity-70"

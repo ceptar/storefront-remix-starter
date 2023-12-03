@@ -7,8 +7,8 @@ export function Breadcrumbs({
   items: { name: string; slug: string; id: string }[];
 }) {
   return (
-    <nav className="flex " aria-label="Breadcrumb">
-      <ol role="list" className="flex items-center space-x-1 md:space-x-4">
+    <nav className="flex py-2" aria-label="Breadcrumb">
+      <ol role="list" className="flex items-center space-x-1">
         <li>
           <div>
             <Link to="/" className=" text-discogray-400 hover:text-discogray">
@@ -23,7 +23,7 @@ export function Breadcrumbs({
             <li key={item.name}>
               <div className="flex items-center group transition-all duration-300 ease-in-out">
                 <svg
-                  className="flex-shrink-0 h-5 w-5 text-gray-300"
+                  className="flex-shrink-0 h-5 w-5 text-discogray"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
                   viewBox="0 0 20 20"
@@ -33,7 +33,7 @@ export function Breadcrumbs({
                 </svg>
                 <Link
                   to={'/collections/' + item.slug}
-                  className=" ml-2 md:ml-4 text-sm md:text-base text-discogray hover:text-gray-700 bg-left-bottom bg-gradient-to-r from-discoteal to-discopink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-300 ease-out "
+                  className="text-sm text-discogray hover:text-discogray-400 bg-left-bottom bg-gradient-to-r from-discoteal to-discopink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-300 ease-out "
                 >
                   {item.name}
                 </Link>
