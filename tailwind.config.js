@@ -23,6 +23,7 @@ module.exports = {
         metrobold1: ['Metropolitano-Bold', 'sans'],
         metrolight1: ['Metropolitano-Light', 'sans'],
         metrothin1: ['Metropolitano-Thin', 'sans'],
+        neonlight: ['neon-light', 'sans'],
       },
       colors: {
         primary: '#15FEE2',

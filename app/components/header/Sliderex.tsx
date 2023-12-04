@@ -102,7 +102,7 @@ export default function Sliderex() {
             </svg>
           </div>
           <div className="px-8 mt-12 absolute transform w-full">
-            <div className="border-t border-gray-200 w-full py-2">
+            <div className="border border-gray-200 w-full pb-4">
               <CollectionsTreemenu collectionsData={{ collections }} />
             </div>
           </div>

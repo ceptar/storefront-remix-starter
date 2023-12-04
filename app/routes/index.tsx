@@ -38,13 +38,13 @@ export default function Index() {
                   </span>
                   <span className="text-white"></span> */}
                 </div>
-                <div className="px-16 my-[15vh]"></div>
-                <div className="leading-[140%] font-sans bg-white text-md text-discogray p-4">
-                  <span className="my-4">
-                    Get your piece of unique and handmade {' '}
+                 </div>
+                <div className="leading-[140%] font-sans text-md text-discogray my-4">
+                  <span className="bg-white p-2 ">
+                    Lets find Yours.{' '}
                   </span>
-                  <span className="h-6 bg-left-bottom bg-gradient-to-r from-discoteal to-discopink bg-[length:100%_6px] bg-no-repeat">
-                    Art!{' '}
+                  {/* <span className="h-6 bg-left-bottom bg-gradient-to-r from-discoteal to-discopink bg-[length:100%_6px] bg-no-repeat">
+                    
                   </span>
                   <span className=" "></span>
 
@@ -58,8 +58,8 @@ export default function Index() {
                   <span className="h-6 bg-left-bottom bg-gradient-to-r from-discoteal to-discopink bg-[length:100%_6px] bg-no-repeat">
                     
                   </span>
-                  <span className=""></span>
-                </div>
+                  <span className=""></span> */}
+               
               </div>
             </div>
           </div>
@@ -81,13 +81,13 @@ export default function Index() {
       >
         <h2
           id="category-heading"
-          className="px-8 items-center justify-center flex text-discogray  text-2xl font-header1 leading-10"
+          className="px-8 items-center justify-center flex text-discogray  text-2xl font-header1 leading-10 border-t border-b border-discoteal"
         >
           <span className="">Categories</span>
         </h2>
       </div>
 
-      <div className="relative flex flex-col justify-center items-center">
+      <div className="relative flex flex-col justify-center items-center ">
         <div className="w-5/6 mx-auto h-full flex flex-row items-center justify-center overflow-hidden">
           <MultiCarousel CollectionsData={{ collections }} />
         </div>

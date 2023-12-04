@@ -850,6 +850,11 @@ button:disabled {
   margin-right: auto;
 }
 
+#app :is(.my-1) {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 #app :is(.my-4) {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -863,11 +868,6 @@ button:disabled {
 #app :is(.my-8) {
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-
-#app :is(.my-\[15vh\]) {
-  margin-top: 15vh;
-  margin-bottom: 15vh;
 }
 
 #app :is(.-mb-px) {
@@ -888,6 +888,10 @@ button:disabled {
 
 #app :is(.mb-12) {
   margin-bottom: 3rem;
+}
+
+#app :is(.mb-16) {
+  margin-bottom: 4rem;
 }
 
 #app :is(.mb-2) {
@@ -970,6 +974,10 @@ button:disabled {
   margin-top: 3rem;
 }
 
+#app :is(.mt-16) {
+  margin-top: 4rem;
+}
+
 #app :is(.mt-2) {
   margin-top: 0.5rem;
 }
@@ -980,10 +988,6 @@ button:disabled {
 
 #app :is(.mt-3) {
   margin-top: 0.75rem;
-}
-
-#app :is(.mt-32) {
-  margin-top: 8rem;
 }
 
 #app :is(.mt-4) {
@@ -1004,10 +1008,6 @@ button:disabled {
 
 #app :is(.mt-\[8vh\]) {
   margin-top: 8vh;
-}
-
-#app :is(.mt-16) {
-  margin-top: 4rem;
 }
 
 #app :is(.line-clamp-3) {
@@ -1253,10 +1253,6 @@ button:disabled {
 
 #app :is(.max-w-\[400px\]) {
   max-width: 400px;
-}
-
-#app :is(.max-w-\[800px\]) {
-  max-width: 800px;
 }
 
 #app :is(.max-w-full) {
@@ -1663,6 +1659,16 @@ button:disabled {
   border-top-width: 1px;
 }
 
+#app :is(.border-discogray) {
+  --tw-border-opacity: 1;
+  border-color: rgb(14 14 14 / var(--tw-border-opacity));
+}
+
+#app :is(.border-discoteal) {
+  --tw-border-opacity: 1;
+  border-color: rgb(21 254 226 / var(--tw-border-opacity));
+}
+
 #app :is(.border-gray-200) {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
@@ -1697,19 +1703,9 @@ button:disabled {
   border-color: rgb(250 204 21 / var(--tw-border-opacity));
 }
 
-#app :is(.border-discogray) {
-  --tw-border-opacity: 1;
-  border-color: rgb(14 14 14 / var(--tw-border-opacity));
-}
-
 #app :is(.bg-\[\#83a9ac\]) {
   --tw-bg-opacity: 1;
   background-color: rgb(131 169 172 / var(--tw-bg-opacity));
-}
-
-#app :is(.bg-\[\#ccfff9\]) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(204 255 249 / var(--tw-bg-opacity));
 }
 
 #app :is(.bg-black) {
@@ -1730,6 +1726,11 @@ button:disabled {
 #app :is(.bg-discogray) {
   --tw-bg-opacity: 1;
   background-color: rgb(14 14 14 / var(--tw-bg-opacity));
+}
+
+#app :is(.bg-discopink) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 0 229 / var(--tw-bg-opacity));
 }
 
 #app :is(.bg-discoteal) {
@@ -1760,11 +1761,6 @@ button:disabled {
 #app :is(.bg-gray-500) {
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
-}
-
-#app :is(.bg-gray-700) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
 #app :is(.bg-green-100) {
@@ -1833,18 +1829,6 @@ button:disabled {
   --tw-bg-opacity: 0.9;
 }
 
-#app :is(.bg-opacity-70) {
-  --tw-bg-opacity: 0.7;
-}
-
-#app :is(.bg-opacity-50) {
-  --tw-bg-opacity: 0.5;
-}
-
-#app :is(.bg-opacity-80) {
-  --tw-bg-opacity: 0.8;
-}
-
 #app :is(.bg-gradient-to-r) {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1863,8 +1847,16 @@ button:disabled {
   background-size: 0% 2px;
 }
 
+#app :is(.bg-\[length\:100\%_0px\]) {
+  background-size: 100% 0px;
+}
+
 #app :is(.bg-\[length\:100\%_6px\]) {
   background-size: 100% 6px;
+}
+
+#app :is(.bg-bottom) {
+  background-position: bottom;
 }
 
 #app :is(.bg-left-bottom) {
@@ -1911,11 +1903,6 @@ button:disabled {
 
 #app :is(.p-6) {
   padding: 1.5rem;
-}
-
-#app :is(.px-16) {
-  padding-left: 4rem;
-  padding-right: 4rem;
 }
 
 #app :is(.px-2) {
@@ -2055,10 +2042,6 @@ button:disabled {
   padding-top: 2.5rem;
 }
 
-#app :is(.pt-12) {
-  padding-top: 3rem;
-}
-
 #app :is(.pt-2) {
   padding-top: 0.5rem;
 }
@@ -2117,14 +2100,6 @@ button:disabled {
 
 #app :is(.font-sans) {
   font-family: Metropolitano-Regular, sans;
-}
-
-#app :is(.font-nohemiblack1) {
-  font-family: Nohemi-Black, sans;
-}
-
-#app :is(.font-metroblack1) {
-  font-family: Metropolitano-Black, sans;
 }
 
 #app :is(.\!text-sm) {
@@ -2220,10 +2195,6 @@ button:disabled {
   letter-spacing: 0.05em;
 }
 
-#app :is(.tracking-tighter) {
-  letter-spacing: -0.05em;
-}
-
 #app :is(.text-black) {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -2272,11 +2243,6 @@ button:disabled {
 #app :is(.text-gray-600) {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-
-#app :is(.text-gray-700) {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 #app :is(.text-gray-800) {
@@ -2354,11 +2320,6 @@ button:disabled {
   color: rgb(133 77 14 / var(--tw-text-opacity));
 }
 
-#app :is(.text-discopink) {
-  --tw-text-opacity: 1;
-  color: rgb(255 0 229 / var(--tw-text-opacity));
-}
-
 #app :is(.underline) {
   text-decoration-line: underline;
 }
@@ -2432,13 +2393,18 @@ button:disabled {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-#app :is(.shadow-white) {
-  --tw-shadow-color: #fff;
+#app :is(.shadow-gray-300) {
+  --tw-shadow-color: #d1d5db;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
 #app :is(.shadow-gray-400) {
   --tw-shadow-color: #9ca3af;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+#app :is(.shadow-white) {
+  --tw-shadow-color: #fff;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -2569,18 +2535,6 @@ button:disabled {
   background-color: hsl(173, 99%, 80%);
 }
 
-#app :is(.text-discopink-700) {
-  color: hsl(306, 100%, 30%);
-}
-
-#app :is(.bg-discopink-700) {
-  background-color: hsl(306, 100%, 30%);
-}
-
-#app :is(.text-discopink-600) {
-  color: hsl(306, 100%, 40%);
-}
-
 #app :is(.bg-discopink-500) {
   background-color: hsl(306, 100%, 50%);
 }
@@ -2595,10 +2549,6 @@ button:disabled {
 
 #app :is(.text-discoteal-800) {
   color: hsl(173, 99%, 20%);
-}
-
-#app :is(.bg-discoteal-700) {
-  background-color: hsl(173, 99%, 30%);
 }
 
 #app :is(.bg-discoteal-100) {
@@ -2709,6 +2659,14 @@ button:disabled {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'neon-light';
+
+  src: url(./font/neon-light.woff) format('woff');
+
+  font-display: swap;
+}
+
 #app :is(.bg-hero) {
   background-image: url('~/../public/hero1.webp');
   background-size: cover;
@@ -2725,6 +2683,8 @@ button:disabled {
   overflow-x: auto;
   overflow:hidden;
   white-space: nowrap;
+  padding-bottom: 16px;
+  padding-top: 16px;
 }
 
 #app :is(.flicking-panel) {
@@ -2813,6 +2773,11 @@ button:disabled {
   color: rgb(0 0 0 / 0.5);
 }
 
+#app :is(.hover\:text-discogray:hover) {
+  --tw-text-opacity: 1;
+  color: rgb(14 14 14 / var(--tw-text-opacity));
+}
+
 #app :is(.hover\:text-gray-500:hover) {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -2823,19 +2788,9 @@ button:disabled {
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
-#app :is(.hover\:text-gray-700:hover) {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
 #app :is(.hover\:text-white:hover) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-#app :is(.hover\:text-discogray:hover) {
-  --tw-text-opacity: 1;
-  color: rgb(14 14 14 / var(--tw-text-opacity));
 }
 
 #app :is(.hover\:opacity-50:hover) {
@@ -2872,20 +2827,12 @@ button:disabled {
   color: hsl(173, 99%, 50%);
 }
 
-#app :is(.hover\:bg-discopink-600:hover) {
-  background-color: hsl(306, 100%, 40%);
-}
-
 #app :is(.hover\:bg-discopink-500:hover) {
   background-color: hsl(306, 100%, 50%);
 }
 
 #app :is(.hover\:bg-discopink-400:hover) {
   background-color: hsl(306, 100%, 60%);
-}
-
-#app :is(.hover\:bg-discoteal-500:hover) {
-  background-color: hsl(173, 99%, 50%);
 }
 
 #app :is(.hover\:text-discogray-400:hover) {
@@ -2964,16 +2911,8 @@ button:disabled {
   --tw-ring-offset-color: #1f2937;
 }
 
-#app :is(.active\:bg-discopink-700:active) {
-  background-color: hsl(306, 100%, 30%);
-}
-
 #app :is(.active\:bg-discopink-400:active) {
   background-color: hsl(306, 100%, 60%);
-}
-
-#app :is(.active\:bg-discoteal-700:active) {
-  background-color: hsl(173, 99%, 30%);
 }
 
 #app :is(.disabled\:cursor-not-allowed:disabled) {
@@ -3131,16 +3070,8 @@ button:disabled {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  #app :is(.sm\:flex-row) {
-    flex-direction: row;
-  }
-
   #app :is(.sm\:flex-wrap) {
     flex-wrap: wrap;
-  }
-
-  #app :is(.sm\:items-center) {
-    align-items: center;
   }
 
   #app :is(.sm\:gap-x-4) {

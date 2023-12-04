@@ -22,7 +22,7 @@ export function ProductCard({
         src={productAsset?.preview + '?w=1200&h=1200'}
       />
       <div className="h-2" />
-      <div className="text-sm text-discogray whitespace-nowrap overflow-hidden">
+      <div className="text-sm text-discogray font-metrolight1 whitespace-nowrap overflow-hidden">
         {productName}
       </div>
       <div className="text-sm font-medium text-gray-900">

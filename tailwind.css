@@ -54,6 +54,11 @@
     src: url(./font/Nohemi-Black.woff2) format('woff2');
     font-display: swap;
   }
+  @font-face {
+    font-family: 'neon-light';
+    src: url(./font/neon-light.woff) format('woff');
+    font-display: swap;
+  }
 
   .flex-center {
     display: flex;
@@ -88,6 +93,8 @@
     overflow-x: auto;
     overflow:hidden;
     white-space: nowrap;
+    padding-bottom: 16px;
+    padding-top: 16px;
   }
   
   .flicking-panel {

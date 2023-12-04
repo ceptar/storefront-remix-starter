@@ -91,18 +91,29 @@ export default function ProductSlug() {
 
   return (
     <div>
-      <div className="mt-[8vh] mx-auto py-2 px-4">
+      <div className="mt-[8vh] mx-auto px-8">
       <Breadcrumbs
           items={
             product.collections[product.collections.length - 1]?.breadcrumbs ??
             []
           }
         ></Breadcrumbs>
-        
-       
+                </div>
+
+                <div className="bg-discopink px-8 py-4 text-4xl font-metrolight1 tracking-wide border-b border-t border-discogray">
+
+                <div>
+
+<h2 className="">
+{product.name}
+</h2>
+</div>
+
+                </div>
+                <div className="mx-auto px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start mt-16">
           {/* Image gallery */}
-          <div className="px-4 pt-4 pb-12 mb-12 shadow-md bg-gray-100 w-full mx-auto sm:block ">
+          <div className="px-4 pt-4 pb-12 mb-16 shadow-md bg-gray-100 w-full mx-auto sm:block ">
             <span className="  overflow-hidden">
               <div className="w-full h-full object-center object-cover rounded-lg">
                 <img
@@ -145,12 +156,7 @@ export default function ProductSlug() {
 
           {/* Product info */}
           <div className="mt-10">
-            <div>
-
-            <h2 className="text-2xl font-metromed1 tracking-wide text-discopink mb-4">
-          {product.name}
-        </h2>
-            </div>
+           
             <div className="">
               <h3 className="sr-only">Description</h3>
 
@@ -201,7 +207,7 @@ export default function ProductSlug() {
               )}
 
               <div className="flex flex-col">
-                <p className="text-3xl text-gray-900 mr-4 py-4">
+                <p className="text-3xl text-gray-900 mr-4 py-8">
                   <Price
                     priceWithTax={selectedVariant?.priceWithTax}
                     currencyCode={selectedVariant?.currencyCode}
@@ -258,11 +264,11 @@ export default function ProductSlug() {
               
             </activeOrderFetcher.Form>
           </div>
-        </div>
+          </div>
       </div>
      
-      <div className="px-4 py-2">
-        <section className="mt-4 pt-4 border-t border-discogray text-xs">
+      <div className="mt-16 px-8 py-2  border-t border-discogray">
+        <section className="mt-4 pt-4 text-xs">
                 <h3 className="text-gray-600 font-bold mb-2">
                   Shipping & Returns
                 </h3>
@@ -293,7 +299,7 @@ export default function ProductSlug() {
 
 export function CatchBoundary() {
   return (
-    <div className="max-w-6xl mx-auto px-4">
+    <div className="max-w-6xl mx-auto px-8">
       <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-gray-900 my-8">
         Product not found!
       </h2>
@@ -308,7 +314,7 @@ export function CatchBoundary() {
         </div>
 
         {/* Product info */}
-        <div className="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0">
+        <div className="mt-10 px-8 sm:px-0 sm:mt-16 lg:mt-0">
           <div className="">We couldn't find any product at that address!</div>
           <div className="flex-1 space-y-3 py-1">
             <div className="h-2 bg-slate-200 rounded"></div>
