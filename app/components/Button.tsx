@@ -8,7 +8,7 @@ export function Button(
       {...props}
       className={clsx(
         '  focus:outline-none focus:z-10 focus:ring-1 focus:ring-offset-0 focus:ring-gray-300',
-        'rounded-md py-2 px-4 text-base font-medium text-gray-300',
+        'py-2 px-4 text-md tracking-wide  font-metromed1 text-gray-300',
         'flex items-center justify-around gap-2',
         'disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400',
         props.className,

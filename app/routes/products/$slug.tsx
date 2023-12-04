@@ -17,7 +17,7 @@ import { getSessionStorage } from '~/sessions';
 import { ErrorCode, ErrorResult } from '~/generated/graphql';
 import Alert from '~/components/Alert';
 import { StockLevelLabel } from '~/components/products/StockLevelLabel';
-import TopReviews from '~/components/products/TopReviews';
+// import TopReviews from '~/components/products/TopReviews';
 import { ScrollableContainer } from '~/components/products/ScrollableContainer';
 
 export const meta: MetaFunction = ({ data }) => {
@@ -91,17 +91,16 @@ export default function ProductSlug() {
 
   return (
     <div>
-      <div className="mt-32 mx-auto px-4">
-        <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-gray-900 my-8">
-          {product.name}
-        </h2>
-        <Breadcrumbs
+      <div className="mt-[8vh] mx-auto py-2 px-4">
+      <Breadcrumbs
           items={
             product.collections[product.collections.length - 1]?.breadcrumbs ??
             []
           }
         ></Breadcrumbs>
-        <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start mt-4 md:mt-12">
+        
+       
+        <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start mt-16">
           {/* Image gallery */}
           <div className="px-4 pt-4 pb-12 mb-12 shadow-md bg-gray-100 w-full mx-auto sm:block ">
             <span className="  overflow-hidden">
@@ -121,7 +120,7 @@ export default function ProductSlug() {
               <ScrollableContainer>
                 {product.assets.map((asset) => (
                   <div
-                    className={`basis-1/3 md:basis-1/4 flex-shrink-0 select-none touch-pan-x rounded-lg ${
+                    className={`basis-1/3 md:basis-1/4 flex-shrink-0 select-none touch-pan-x ${
                       featuredAsset?.id == asset.id
                         ? 'outline outline-2 outline-primary outline-offset-[-2px]'
                         : ''
@@ -145,12 +144,18 @@ export default function ProductSlug() {
           </div>
 
           {/* Product info */}
-          <div className="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0">
+          <div className="mt-10">
+            <div>
+
+            <h2 className="text-2xl font-metromed1 tracking-wide text-discopink mb-4">
+          {product.name}
+        </h2>
+            </div>
             <div className="">
               <h3 className="sr-only">Description</h3>
 
               <div
-                className="text-base text-gray-700"
+                className="text-base text-discogray"
                 dangerouslySetInnerHTML={{
                   __html: product.description,
                 }}
@@ -162,12 +167,12 @@ export default function ProductSlug() {
                 <div className="mt-4">
                   <label
                     htmlFor="option"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-metromed1 tracking-tight text-discopink-300"
                   >
                     Select option
                   </label>
                   <select
-                    className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+                    className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-discogray focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
                     id="productVariant"
                     value={selectedVariantId}
                     name="variantId"
@@ -195,26 +200,27 @@ export default function ProductSlug() {
                 ></input>
               )}
 
-              <div className="mt-10 flex flex-col sm:flex-row sm:items-center">
-                <p className="text-3xl text-gray-900 mr-4">
+              <div className="flex flex-col">
+                <p className="text-3xl text-gray-900 mr-4 py-4">
                   <Price
                     priceWithTax={selectedVariant?.priceWithTax}
                     currencyCode={selectedVariant?.currencyCode}
                   ></Price>
                 </p>
-                <div className="flex sm:flex-col1 align-baseline">
+                <div className="flex align-baseline">
                   <button
                     type="submit"
                     className={`max-w-xs flex-1 ${
                       activeOrderFetcher.state !== 'idle'
                         ? 'bg-gray-400'
                         : qtyInCart === 0
-                        ? 'bg-primary-500 hover:bg-primary-600'
-                        : 'bg-discoteal-700 active:bg-discoteal-700 hover:bg-discoteal-500'
+                        ? 'bg-discopink-500 hover:bg-discopink-400'
+                        : 'bg-discopink-400 active:bg-discopink-400 hover:bg-discopink-500'
                     }
-                                     transition-colors border border-transparent rounded-md py-3 px-8 flex items-center
-                                      justify-center text-base font-medium text-white focus:outline-none
-                                      focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-primary-500 sm:w-full`}
+                                     shadow-md shadow-gray-400 border border-discogray flex items-center
+                                      justify-center text-discogray focus:outline-none
+                                      focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-primary-500 sm:w-full
+                                      transition-all duration-300 ease-in-out hover:opacity-70 hover:shadow-none`}
                     disabled={activeOrderFetcher.state !== 'idle'}
                   >
                     {qtyInCart ? (
@@ -249,11 +255,18 @@ export default function ProductSlug() {
                 </div>
               )}
 
-              <section className="mt-12 pt-12 border-t text-xs">
+              
+            </activeOrderFetcher.Form>
+          </div>
+        </div>
+      </div>
+     
+      <div className="px-4 py-2">
+        <section className="mt-4 pt-4 border-t border-discogray text-xs">
                 <h3 className="text-gray-600 font-bold mb-2">
                   Shipping & Returns
                 </h3>
-                <div className="text-gray-500 space-y-1">
+                <div className=" text-discogray-400 space-y-1">
                   <p>
                     Standard shipping: 3 - 5 working days. Express shipping: 1 -
                     3 working days.
@@ -269,13 +282,11 @@ export default function ProductSlug() {
                   </p>
                 </div>
               </section>
-            </activeOrderFetcher.Form>
-          </div>
-        </div>
-      </div>
-      <div className="mt-24">
+              </div>
+
+      {/* <div className="mt-24">
         <TopReviews></TopReviews>
-      </div>
+      </div> */}
     </div>
   );
 }
@@ -289,8 +300,8 @@ export function CatchBoundary() {
       <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start mt-4 md:mt-12">
         {/* Image gallery */}
         <div className="w-full max-w-2xl mx-auto sm:block lg:max-w-none">
-          <span className="rounded-md overflow-hidden">
-            <div className="w-full h-96 bg-slate-200 rounded-lg flex content-center justify-center">
+          <span className="overflow-hidden">
+            <div className="w-full h-96 bg-slate-200 flex content-center justify-center">
               <PhotoIcon className="w-48 text-white"></PhotoIcon>
             </div>
           </span>

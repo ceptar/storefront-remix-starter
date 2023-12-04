@@ -87,7 +87,7 @@ export default function EditAddressCard({
           <div className="flex flex-col">
             <span className="text-left text-base-semi">{address.fullName}</span>
             {address.company && (
-              <span className="text-small-regular text-gray-700">
+              <span className="text-small-regular text-discogray">
                 {address.company}
               </span>
             )}
@@ -130,7 +130,7 @@ export default function EditAddressCard({
             <Link
               role="button"
               preventScrollReset
-              className="text-gray-700 flex items-center gap-x-2"
+              className="text-discogray flex items-center gap-x-2"
               to={`/account/addresses/${address.id}`}
             >
               <PencilIcon className="w-4 h-4"></PencilIcon>
@@ -139,7 +139,7 @@ export default function EditAddressCard({
             <button
               type="button"
               title="Delete this address"
-              className="text-gray-700 flex items-center gap-x-2"
+              className="text-discogray flex items-center gap-x-2"
               disabled={deleteAddress.state !== 'idle'}
               onClick={() => setDeleteModalVisible(true)}
             >
@@ -164,7 +164,7 @@ export default function EditAddressCard({
                       value="setDefaultShipping"
                       type="submit"
                       title="Set as default shipping address"
-                      className="text-gray-700 flex items-center gap-2"
+                      className="text-discogray flex items-center gap-2"
                       disabled={setShipping.state !== 'idle'}
                     >
                       {setShipping.state === 'idle' ? (
@@ -185,7 +185,7 @@ export default function EditAddressCard({
                       value="setDefaultBilling"
                       type="submit"
                       title="Set as default billing address"
-                      className="text-gray-700 flex items-center gap-2"
+                      className="text-discogray flex items-center gap-2"
                       disabled={setBilling.state !== 'idle'}
                     >
                       {setBilling.state === 'idle' ? (

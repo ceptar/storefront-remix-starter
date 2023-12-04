@@ -123,7 +123,7 @@ export default function Footer({
         </div>
         <div className="mt-8 border-t pt-8">
           <a
-            className="flex items-center space-x-4 font-medium text-gray-500 hover:text-gray-700"
+            className="flex items-center space-x-4 font-medium text-gray-500 hover:text-discogray"
             href="https://github.com/vendure-ecommerce/storefront-remix-starter"
           >
             <svg

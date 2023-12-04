@@ -50,7 +50,7 @@ export default function AccountDashboard() {
       <h2 className="text-3xl sm:text-5xl font-light text-gray-900 my-8">
         My Account
       </h2>
-      <p className="text-gray-700 text-lg -mt-4">
+      <p className="text-discogray text-lg -mt-4">
         Welcome back, {firstName} {lastName}
       </p>
       <Form method="post" action="/api/logout">

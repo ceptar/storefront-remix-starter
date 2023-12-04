@@ -1002,6 +1002,14 @@ button:disabled {
   margin-top: 2rem;
 }
 
+#app :is(.mt-\[8vh\]) {
+  margin-top: 8vh;
+}
+
+#app :is(.mt-16) {
+  margin-top: 4rem;
+}
+
 #app :is(.line-clamp-3) {
   overflow: hidden;
   display: -webkit-box;
@@ -1689,6 +1697,11 @@ button:disabled {
   border-color: rgb(250 204 21 / var(--tw-border-opacity));
 }
 
+#app :is(.border-discogray) {
+  --tw-border-opacity: 1;
+  border-color: rgb(14 14 14 / var(--tw-border-opacity));
+}
+
 #app :is(.bg-\[\#83a9ac\]) {
   --tw-bg-opacity: 1;
   background-color: rgb(131 169 172 / var(--tw-bg-opacity));
@@ -1818,6 +1831,18 @@ button:disabled {
 
 #app :is(.bg-opacity-90) {
   --tw-bg-opacity: 0.9;
+}
+
+#app :is(.bg-opacity-70) {
+  --tw-bg-opacity: 0.7;
+}
+
+#app :is(.bg-opacity-50) {
+  --tw-bg-opacity: 0.5;
+}
+
+#app :is(.bg-opacity-80) {
+  --tw-bg-opacity: 0.8;
 }
 
 #app :is(.bg-gradient-to-r) {
@@ -2094,6 +2119,14 @@ button:disabled {
   font-family: Metropolitano-Regular, sans;
 }
 
+#app :is(.font-nohemiblack1) {
+  font-family: Nohemi-Black, sans;
+}
+
+#app :is(.font-metroblack1) {
+  font-family: Metropolitano-Black, sans;
+}
+
 #app :is(.\!text-sm) {
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
@@ -2185,6 +2218,10 @@ button:disabled {
 
 #app :is(.tracking-wider) {
   letter-spacing: 0.05em;
+}
+
+#app :is(.tracking-tighter) {
+  letter-spacing: -0.05em;
 }
 
 #app :is(.text-black) {
@@ -2317,6 +2354,11 @@ button:disabled {
   color: rgb(133 77 14 / var(--tw-text-opacity));
 }
 
+#app :is(.text-discopink) {
+  --tw-text-opacity: 1;
+  color: rgb(255 0 229 / var(--tw-text-opacity));
+}
+
 #app :is(.underline) {
   text-decoration-line: underline;
 }
@@ -2392,6 +2434,11 @@ button:disabled {
 
 #app :is(.shadow-white) {
   --tw-shadow-color: #fff;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+#app :is(.shadow-gray-400) {
+  --tw-shadow-color: #9ca3af;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -2522,6 +2569,34 @@ button:disabled {
   background-color: hsl(173, 99%, 80%);
 }
 
+#app :is(.text-discopink-700) {
+  color: hsl(306, 100%, 30%);
+}
+
+#app :is(.bg-discopink-700) {
+  background-color: hsl(306, 100%, 30%);
+}
+
+#app :is(.text-discopink-600) {
+  color: hsl(306, 100%, 40%);
+}
+
+#app :is(.bg-discopink-500) {
+  background-color: hsl(306, 100%, 50%);
+}
+
+#app :is(.bg-discopink-400) {
+  background-color: hsl(306, 100%, 60%);
+}
+
+#app :is(.text-discopink-300) {
+  color: hsl(306, 100%, 70%);
+}
+
+#app :is(.text-discoteal-800) {
+  color: hsl(173, 99%, 20%);
+}
+
 #app :is(.bg-discoteal-700) {
   background-color: hsl(173, 99%, 30%);
 }
@@ -2530,8 +2605,36 @@ button:disabled {
   background-color: hsl(173, 99%, 90%);
 }
 
+#app :is(.text-discoyellow-800) {
+  color: hsl(48, 96%, 20%);
+}
+
+#app :is(.bg-discoyellow-100) {
+  background-color: hsl(48, 96%, 90%);
+}
+
+#app :is(.text-discored-800) {
+  color: hsl(344, 84%, 20%);
+}
+
+#app :is(.bg-discored-100) {
+  background-color: hsl(344, 84%, 90%);
+}
+
+#app :is(.text-discogray-800) {
+  color: hsl(0, 0%, 20%);
+}
+
 #app :is(.text-discogray-500) {
   color: hsl(0, 0%, 50%);
+}
+
+#app :is(.text-discogray-400) {
+  color: hsl(0, 0%, 60%);
+}
+
+#app :is(.bg-discogray-100) {
+  background-color: hsl(0, 0%, 90%);
 }
 
 @font-face {
@@ -2730,6 +2833,11 @@ button:disabled {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+#app :is(.hover\:text-discogray:hover) {
+  --tw-text-opacity: 1;
+  color: rgb(14 14 14 / var(--tw-text-opacity));
+}
+
 #app :is(.hover\:opacity-50:hover) {
   opacity: 0.5;
 }
@@ -2740,6 +2848,12 @@ button:disabled {
 
 #app :is(.hover\:opacity-75:hover) {
   opacity: 0.75;
+}
+
+#app :is(.hover\:shadow-none:hover) {
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 #app :is(.hover\:text-primary-800:hover) {
@@ -2756,6 +2870,18 @@ button:disabled {
 
 #app :is(.hover\:text-primary-500:hover) {
   color: hsl(173, 99%, 50%);
+}
+
+#app :is(.hover\:bg-discopink-600:hover) {
+  background-color: hsl(306, 100%, 40%);
+}
+
+#app :is(.hover\:bg-discopink-500:hover) {
+  background-color: hsl(306, 100%, 50%);
+}
+
+#app :is(.hover\:bg-discopink-400:hover) {
+  background-color: hsl(306, 100%, 60%);
 }
 
 #app :is(.hover\:bg-discoteal-500:hover) {
@@ -2836,6 +2962,14 @@ button:disabled {
 
 #app :is(.focus\:ring-offset-gray-800:focus) {
   --tw-ring-offset-color: #1f2937;
+}
+
+#app :is(.active\:bg-discopink-700:active) {
+  background-color: hsl(306, 100%, 30%);
+}
+
+#app :is(.active\:bg-discopink-400:active) {
+  background-color: hsl(306, 100%, 60%);
 }
 
 #app :is(.active\:bg-discoteal-700:active) {

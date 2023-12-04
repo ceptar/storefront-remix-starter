@@ -32,7 +32,7 @@ const Modal: React.FC<PropsWithChildren<ModalProps>> & {
           afterEnter={afterOpen}
           afterLeave={afterClose}
         >
-          <div className="fixed inset-0 bg-gray-700 bg-opacity-75 backdrop-blur-sm" />
+          <div className="fixed inset-0 bg-discogray bg-opacity-75 backdrop-blur-sm" />
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
@@ -84,7 +84,7 @@ const Title: React.FC<PropsWithChildren> = ({ children }) => {
 
 const Description: React.FC<PropsWithChildren> = ({ children }) => {
   return (
-    <Dialog.Description className="flex text-small-regular text-gray-700 items-center justify-center pt-2 pb-4 h-full">
+    <Dialog.Description className="flex text-small-regular text-discogray items-center justify-center pt-2 pb-4 h-full">
       {children}
     </Dialog.Description>
   );

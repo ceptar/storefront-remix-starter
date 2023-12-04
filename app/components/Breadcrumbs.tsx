@@ -7,7 +7,7 @@ export function Breadcrumbs({
   items: { name: string; slug: string; id: string }[];
 }) {
   return (
-    <nav className="flex py-2" aria-label="Breadcrumb">
+    <nav className="flex py-2 border-b border-discogray" aria-label="Breadcrumb">
       <ol role="list" className="flex items-center space-x-1">
         <li>
           <div>

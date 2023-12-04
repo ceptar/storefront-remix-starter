@@ -75,7 +75,7 @@ export default function SignUpPage() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-discogray"
                 >
                   Email address
                 </label>
@@ -98,7 +98,7 @@ export default function SignUpPage() {
               <div>
                 <label
                   htmlFor="firstName"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-discogray"
                 >
                   First name
                 </label>
@@ -116,7 +116,7 @@ export default function SignUpPage() {
               <div>
                 <label
                   htmlFor="lastName"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-discogray"
                 >
                   Last name
                 </label>
@@ -134,7 +134,7 @@ export default function SignUpPage() {
               <div>
                 <label
                   htmlFor="password"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-discogray"
                 >
                   Password
                 </label>
@@ -156,7 +156,7 @@ export default function SignUpPage() {
               <div>
                 <label
                   htmlFor="repeatPassword"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-discogray"
                 >
                   Repeat Password
                 </label>

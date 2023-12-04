@@ -78,7 +78,7 @@ export default function CheckoutConfirmation() {
           <XCircleIcon className="text-red-600 w-8 h-8 sm:w-12 sm:h-12"></XCircleIcon>
           <span>An error occured!</span>
         </h2>
-        <p className="text-lg text-gray-700">
+        <p className="text-lg text-discogray">
           Unfortunately your payment could not be processed or this confirmation
           link has expired.
         </p>
@@ -102,7 +102,7 @@ export default function CheckoutConfirmation() {
         <CheckCircleIcon className="text-green-600 w-8 h-8 sm:w-12 sm:h-12"></CheckCircleIcon>
         <span>Order Summary</span>
       </h2>
-      <p className="text-lg text-gray-700">
+      <p className="text-lg text-discogray">
         Your order <span className="font-bold">{order!.code}</span> has been
         received!
       </p>

@@ -169,7 +169,7 @@ export default function CheckoutShipping() {
             <div className="mt-4">
               <label
                 htmlFor="emailAddress"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-discogray"
               >
                 Email address
               </label>
@@ -193,7 +193,7 @@ export default function CheckoutShipping() {
               <div>
                 <label
                   htmlFor="firstName"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-discogray"
                 >
                   First name
                 </label>
@@ -212,7 +212,7 @@ export default function CheckoutShipping() {
               <div>
                 <label
                   htmlFor="lastName"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-discogray"
                 >
                   Last name
                 </label>
