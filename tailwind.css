@@ -84,7 +84,7 @@
   }
 
   .carousel-container {
-    width: 80%;
+    width: 100%;
     overflow-x: auto;
     overflow:hidden;
     white-space: nowrap;
@@ -93,7 +93,7 @@
   .flicking-panel {
     display: inline-block;
     white-space: nowrap;
-    width: 200px; /* Adjust the width as per your design */
+    width: 10rem; /* Adjust the width as per your design */
     /* Add any other styling for the panel */
   }
 
@@ -117,8 +117,6 @@
     line-height: 140%;
     font-family: Metropolitano-Light, sans;
     color: #ffffff;
-    padding-top: 2px;
-    padding-bottom: 2px;
   }
 
   .child {
@@ -126,17 +124,15 @@
     line-height: 100%;
     font-family: Metropolitano-Regular, sans;
     color: #ffffff;
-    padding-top: 2px;
-    padding-bottom: 2px;
   }
 
   /* Popover Menu */
   .Popover {
     z-index: 50;
     background-color: white;
-    border: #2e3047;
+    border: #0e0e0e;
     border-width: 1px;
-    color: #2e3047;
+    color: #0e0e0e;
     margin-top: 8vh;
 
     right: 0; /* Set right to 0 to hug the right side */

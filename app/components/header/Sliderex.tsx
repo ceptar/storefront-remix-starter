@@ -23,6 +23,7 @@ const COLLECTIONS_QUERY = `
 export default function Sliderex() {
   const [collections, setCollections] = useState([]);
   const [isSlideoverVisible, setSlideoverVisible] = useState(false);
+  const [isLoading, setLoading] = useState(true);
 
   const toggleSlideover = () => {
     setSlideoverVisible(!isSlideoverVisible);
@@ -31,7 +32,7 @@ export default function Sliderex() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://nonotheresnolimit.xyz/shop-api', {
+        const response = await fetch('https://130.61.38.231/shop-api', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -43,13 +44,20 @@ export default function Sliderex() {
 
         const result = await response.json();
         setCollections(result.data.collections.items);
+        setLoading(false); // Set loading to false once data is fetched
       } catch (error) {
         console.error('Error fetching data:', error);
+        setLoading(false); // Set loading to false on error as well
       }
     };
 
     fetchData();
   }, []); // empty dependency array to fetch data once on component mount
+
+  if (isLoading) {
+    // Loading state while data is being fetched
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="flex items-center justify-center p-4">

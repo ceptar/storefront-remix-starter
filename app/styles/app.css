@@ -1101,8 +1101,16 @@ button:disabled {
   height: 10vh;
 }
 
+#app :is(.h-\[2rem\]) {
+  height: 2rem;
+}
+
 #app :is(.h-\[50vh\]) {
   height: 50vh;
+}
+
+#app :is(.h-\[5vh\]) {
+  height: 5vh;
 }
 
 #app :is(.h-\[70vh\]) {
@@ -1124,14 +1132,6 @@ button:disabled {
 
 #app :is(.h-full) {
   height: 100%;
-}
-
-#app :is(.h-\[2vh\]) {
-  height: 2vh;
-}
-
-#app :is(.h-\[5vh\]) {
-  height: 5vh;
 }
 
 #app :is(.max-h-\[200px\]) {
@@ -1458,10 +1458,6 @@ button:disabled {
   gap: 1rem;
 }
 
-#app :is(.gap-5) {
-  gap: 1.25rem;
-}
-
 #app :is(.gap-8) {
   gap: 2rem;
 }
@@ -1586,6 +1582,10 @@ button:disabled {
 
 #app :is(.overflow-y-scroll) {
   overflow-y: scroll;
+}
+
+#app :is(.whitespace-normal) {
+  white-space: normal;
 }
 
 #app :is(.whitespace-nowrap) {
@@ -1716,7 +1716,7 @@ button:disabled {
 
 #app :is(.bg-discogray) {
   --tw-bg-opacity: 1;
-  background-color: rgb(24 23 25 / var(--tw-bg-opacity));
+  background-color: rgb(14 14 14 / var(--tw-bg-opacity));
 }
 
 #app :is(.bg-discoteal) {
@@ -1840,10 +1840,6 @@ button:disabled {
 
 #app :is(.bg-\[length\:100\%_6px\]) {
   background-size: 100% 6px;
-}
-
-#app :is(.bg-\[length\:100\%_2px\]) {
-  background-size: 100% 2px;
 }
 
 #app :is(.bg-left-bottom) {
@@ -2086,6 +2082,10 @@ button:disabled {
   font-family: Metropolitano-Bold, sans;
 }
 
+#app :is(.font-metrolight1) {
+  font-family: Metropolitano-Light, sans;
+}
+
 #app :is(.font-metromed1) {
   font-family: Metropolitano-Medium, sans;
 }
@@ -2209,7 +2209,7 @@ button:disabled {
 
 #app :is(.text-discogray) {
   --tw-text-opacity: 1;
-  color: rgb(24 23 25 / var(--tw-text-opacity));
+  color: rgb(14 14 14 / var(--tw-text-opacity));
 }
 
 #app :is(.text-gray-200) {
@@ -2386,7 +2386,7 @@ button:disabled {
 }
 
 #app :is(.shadow-discogray) {
-  --tw-shadow-color: #181719;
+  --tw-shadow-color: #0e0e0e;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -2531,11 +2531,7 @@ button:disabled {
 }
 
 #app :is(.text-discogray-500) {
-  color: hsl(270, 4%, 50%);
-}
-
-#app :is(.text-discogray-400) {
-  color: hsl(270, 4%, 60%);
+  color: hsl(0, 0%, 50%);
 }
 
 @font-face {
@@ -2622,7 +2618,7 @@ button:disabled {
 }
 
 #app :is(.carousel-container) {
-  width: 80%;
+  width: 100%;
   overflow-x: auto;
   overflow:hidden;
   white-space: nowrap;
@@ -2631,7 +2627,7 @@ button:disabled {
 #app :is(.flicking-panel) {
   display: inline-block;
   white-space: nowrap;
-  width: 200px;
+  width: 10rem;
   /* Adjust the width as per your design */
   /* Add any other styling for the panel */
 }
@@ -2661,8 +2657,6 @@ button:disabled {
   line-height: 140%;
   font-family: Metropolitano-Light, sans;
   color: #ffffff;
-  padding-top: 2px;
-  padding-bottom: 2px;
 }
 
 #app :is(.child) {
@@ -2670,8 +2664,6 @@ button:disabled {
   line-height: 100%;
   font-family: Metropolitano-Regular, sans;
   color: #ffffff;
-  padding-top: 2px;
-  padding-bottom: 2px;
 }
 
 /* Popover Menu */
@@ -2716,11 +2708,6 @@ button:disabled {
 
 #app :is(.hover\:text-black\/50:hover) {
   color: rgb(0 0 0 / 0.5);
-}
-
-#app :is(.hover\:text-discogray:hover) {
-  --tw-text-opacity: 1;
-  color: rgb(24 23 25 / var(--tw-text-opacity));
 }
 
 #app :is(.hover\:text-gray-500:hover) {
@@ -2776,7 +2763,7 @@ button:disabled {
 }
 
 #app :is(.hover\:text-discogray-400:hover) {
-  color: hsl(270, 4%, 60%);
+  color: hsl(0, 0%, 60%);
 }
 
 #app :is(.focus\:z-10:focus) {

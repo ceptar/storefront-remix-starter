@@ -24,7 +24,6 @@ import { getActiveCustomer } from '~/providers/customer/customer';
 import Footer from '~/components/footer/Footer';
 import { useActiveOrder } from '~/utils/use-active-order';
 import { setApiUrl } from '~/graphqlWrapper';
-import "@egjs/react-flicking/dist/flicking.css";
 
 
 export const meta: MetaFunction = () => {

@@ -42,7 +42,7 @@ export function Header({
         ))}
       </header>
 
-      <div className="z-40 bg-discogray top-0 items-center fixed justify-between h-[8vh] w-full min-w-full">
+      <div className="z-40 bg-discogray bg-opacity-90 top-0 items-center fixed justify-between h-[8vh] w-full min-w-full">
         <div className="relative px-4 flex flex-row items-center justify-between h-[8vh] w-full ">
           <div className="relative  flex flex-col  items-start justify-start w-1/6">
             <button

@@ -30,14 +30,13 @@ export default function Index() {
                   <span className=" shadow-white bg-discoteal bg-opacity-60 whitespace-nowrap p-1 backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]">
                     little things!
                   </span>
-                  <span className="text-white"></span>
+                  {/* <span className="text-white"></span>
                   <p className="my-7"></p>
 
                   <span className="text-white"></span>
                   <span className="shadow-white bg-discoteal bg-opacity-60 whitespace-nowrap p-1 backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]">
-                  
                   </span>
-                  <span className="text-white"></span>
+                  <span className="text-white"></span> */}
                 </div>
                 <div className="px-16 my-[15vh]"></div>
                 <div className="leading-[140%] font-sans bg-white text-md text-discogray p-4">
