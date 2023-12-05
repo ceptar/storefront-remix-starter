@@ -2393,6 +2393,12 @@ button:disabled {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+#app :is(.shadow-2xl) {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 #app :is(.shadow-discogray) {
   --tw-shadow-color: #0e0e0e;
   --tw-shadow: var(--tw-shadow-colored);
@@ -2679,10 +2685,10 @@ button:disabled {
 #app :is(.bg-hero) {
   background-image: url('~/../public/hero1.webp');
   background-size: cover;
-  background-position: left top;
+  background-position: left center;
   height: 50vh;
   position: absolute;
-  top: 0;
+  top: 8vh;
   width: 100%;
   z-index: 10;
 }

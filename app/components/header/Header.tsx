@@ -30,7 +30,7 @@ export function Header({
 
   return (
     <>
-      <header className="hidden">
+      {/* <header className="hidden">
         {collections.map((collection) => (
           <Link
             className="text-sm md:text-base text-gray-200 hover:text-white"
@@ -41,7 +41,7 @@ export function Header({
             {collection.name}
           </Link>
         ))}
-      </header>
+      </header> */}
 
       <div className="z-40 bg-discogray bg-opacity-90 top-0 items-center fixed justify-between h-[8vh] w-full min-w-full">
         <div className="relative px-4 flex flex-row items-center justify-between h-[8vh] w-full ">

@@ -21,7 +21,7 @@ export default function Index() {
       <div className="bg-hero">
         {/* Decorative image and overlay */}
 
-        <div className="flex h-[50vh] justify-items-end items-start mr-auto ml-auto w-full">
+        <div className="flex h-[50vh] justify-items-end items-start mr-auto ml-auto w-full shadow-md shadow-discogray">
           <div className="mt-[12vh] mr-auto z-20 relative flex flex-col justify-center w-full">
             <div className="px-8 sm:px-16 flex flex-col text-start justify-between">
               <div className="ml-auto ">
@@ -78,7 +78,7 @@ export default function Index() {
 
       <div
         className="h-[10vh] z-20 flex justify-center items-center mr-auto ml-auto w-full"
-        style={{ marginTop: '50vh' }}
+        style={{ marginTop: '58vh' }}
       >
         <h2
           id="category-heading"
