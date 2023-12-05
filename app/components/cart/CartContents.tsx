@@ -1,6 +1,6 @@
 import { Form, Link, useFetcher, useOutletContext } from '@remix-run/react';
 import { Price } from '~/components/products/Price';
-import { ActiveOrderQuery, CurrencyCode } from '~/generated/graphql';
+import type { ActiveOrderQuery, CurrencyCode } from '~/generated/graphql';
 
 export function CartContents({
   orderLines,

@@ -1,4 +1,4 @@
-import { RegisterCustomerAccountMutationVariables } from '~/generated/graphql';
+import type { RegisterCustomerAccountMutationVariables } from '~/generated/graphql';
 
 const EMAIL_REGEX = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
 

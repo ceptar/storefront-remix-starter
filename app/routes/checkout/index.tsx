@@ -1,4 +1,5 @@
-import { FormEvent, useState } from 'react';
+import type { FormEvent} from 'react';
+import { useState } from 'react';
 import { LockClosedIcon } from '@heroicons/react/24/solid';
 import {
   Form,
@@ -6,8 +7,9 @@ import {
   useNavigate,
   useOutletContext,
 } from '@remix-run/react';
-import { OutletContext } from '~/types';
-import { DataFunctionArgs, json, redirect } from '@remix-run/server-runtime';
+import type { OutletContext } from '~/types';
+import type { DataFunctionArgs} from '@remix-run/server-runtime';
+import { json, redirect } from '@remix-run/server-runtime';
 import {
   getAvailableCountries,
   getEligibleShippingMethods,

@@ -1,5 +1,6 @@
-import { ReactNode } from 'react';
-import { Tab, TabProps } from './Tab';
+import type { ReactNode } from 'react';
+import type { TabProps } from './Tab';
+import { Tab } from './Tab';
 
 export function TabsContainer({
   tabs,

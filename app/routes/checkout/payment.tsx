@@ -1,4 +1,5 @@
-import { DataFunctionArgs, json, redirect } from '@remix-run/server-runtime';
+import type { DataFunctionArgs} from '@remix-run/server-runtime';
+import { json, redirect } from '@remix-run/server-runtime';
 import {
   addPaymentToOrder,
   createStripePaymentIntent,
@@ -8,8 +9,9 @@ import {
   transitionOrderToState,
 } from '~/providers/checkout/checkout';
 import { useLoaderData, useOutletContext } from '@remix-run/react';
-import { OutletContext } from '~/types';
-import { CurrencyCode, ErrorCode, ErrorResult } from '~/generated/graphql';
+import type { OutletContext } from '~/types';
+import type { CurrencyCode, ErrorResult } from '~/generated/graphql';
+import { ErrorCode } from '~/generated/graphql';
 import { StripePayments } from '~/components/checkout/stripe/StripePayments';
 import { DummyPayments } from '~/components/checkout/DummyPayments';
 import { BraintreeDropIn } from '~/components/checkout/braintree/BraintreePayments';

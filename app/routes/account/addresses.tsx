@@ -1,8 +1,10 @@
 import { Outlet, useLoaderData } from '@remix-run/react';
-import { DataFunctionArgs, json } from '@remix-run/server-runtime';
+import type { DataFunctionArgs} from '@remix-run/server-runtime';
+import { json } from '@remix-run/server-runtime';
 import AddAddressCard from '~/components/account/AddAddressCard';
 import EditAddressCard from '~/components/account/EditAddressCard';
-import { Address, ErrorCode, ErrorResult } from '~/generated/graphql';
+import type { Address, ErrorResult } from '~/generated/graphql';
+import { ErrorCode } from '~/generated/graphql';
 import {
   deleteCustomerAddress,
   updateCustomerAddress,

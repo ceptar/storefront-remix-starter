@@ -1,8 +1,8 @@
 import { withZod } from '@remix-validated-form/with-zod';
 import { z } from 'zod';
-import { RefObject } from 'react';
+import type { RefObject } from 'react';
 import { ValidatedForm } from 'remix-validated-form';
-import { Address, AvailableCountriesQuery } from '~/generated/graphql';
+import type { Address, AvailableCountriesQuery } from '~/generated/graphql';
 import { Input } from '~/components/Input';
 import { Select } from '~/components/Select';
 

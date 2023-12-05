@@ -1,4 +1,5 @@
-import React, { SelectHTMLAttributes } from 'react';
+import type { SelectHTMLAttributes } from 'react';
+import React from 'react';
 import { useField } from 'remix-validated-form';
 import FormElement from './FormElement';
 

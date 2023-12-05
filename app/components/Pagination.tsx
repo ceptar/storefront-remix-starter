@@ -1,7 +1,7 @@
 import { ArrowPathIcon } from '@heroicons/react/24/solid';
 import { Select } from '~/components/Select';
 import { Button } from '~/components/Button';
-import { ComponentProps } from 'react';
+import type { ComponentProps } from 'react';
 import { useNavigation } from '@remix-run/react';
 import clsx from 'clsx';
 

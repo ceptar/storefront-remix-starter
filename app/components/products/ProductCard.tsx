@@ -1,4 +1,4 @@
-import { SearchQuery } from '~/generated/graphql';
+import type { SearchQuery } from '~/generated/graphql';
 import { Link } from '@remix-run/react';
 import { Price } from './Price';
 

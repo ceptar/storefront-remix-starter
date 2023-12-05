@@ -8,7 +8,7 @@ import {
 import { Link, useFetcher } from '@remix-run/react';
 import clsx from 'clsx';
 import { useState } from 'react';
-import { Address, ErrorResult } from '~/generated/graphql';
+import type { Address, ErrorResult } from '~/generated/graphql';
 import { Button } from '../Button';
 import { ErrorMessage } from '../ErrorMessage';
 import { HighlightedButton } from '../HighlightedButton';

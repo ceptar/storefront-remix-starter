@@ -1,5 +1,5 @@
 import { Link } from '@remix-run/react';
-import { CollectionsQuery } from '~/generated/graphql';
+import type { CollectionsQuery } from '~/generated/graphql';
 
 export function CollectionCard({
   collection,

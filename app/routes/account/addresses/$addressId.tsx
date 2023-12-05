@@ -5,13 +5,14 @@ import {
   useSubmit,
   useNavigation,
 } from '@remix-run/react';
-import { DataFunctionArgs, json, redirect } from '@remix-run/server-runtime';
+import type { DataFunctionArgs} from '@remix-run/server-runtime';
+import { json, redirect } from '@remix-run/server-runtime';
 import { useRef, useEffect } from 'react';
 import { validationError } from 'remix-validated-form';
 import { Button } from '~/components/Button';
 import Modal from '~/components/modal/Modal';
 import { HighlightedButton } from '~/components/HighlightedButton';
-import { Address } from '~/generated/graphql';
+import type { Address } from '~/generated/graphql';
 import useToggleState from '~/utils/use-toggle-state';
 import CustomerAddressForm, {
   validator,

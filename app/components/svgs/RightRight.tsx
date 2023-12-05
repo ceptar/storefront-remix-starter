@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SVGProps } from 'react';
+import type { SVGProps } from 'react';
 const RightRight = (props: SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 64 64"

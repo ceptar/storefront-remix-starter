@@ -1,5 +1,6 @@
 import React from 'react';
-import { LoaderArgs, Link, useLoaderData, useFetcher } from '@remix-run/react';
+import type { LoaderArgs} from '@remix-run/react';
+import { Link, useLoaderData, useFetcher } from '@remix-run/react';
 import Cart from '~/components/svgs/Cart';
 import { SearchBar } from '~/components/header/SearchBar';
 import { useRootLoader } from '~/utils/use-root-loader';

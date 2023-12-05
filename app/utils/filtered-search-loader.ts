@@ -2,7 +2,7 @@ import { search, searchFacetValues } from '~/providers/products/products';
 import { redirect } from '@remix-run/server-runtime';
 
 import { paginationValidationSchema } from '~/utils/pagination';
-import { LoaderFunctionArgs } from '@remix-run/router';
+import type { LoaderFunctionArgs } from '@remix-run/router';
 
 /**
  * This loader deals with loading product searches, which is used in both the search page and the

@@ -2,7 +2,8 @@ import { Dialog, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import { ModalProvider, useModal } from './modal-context';
 import clsx from 'clsx';
-import React, { Fragment, PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
+import React, { Fragment } from 'react';
 
 type ModalProps = {
   isOpen: boolean;

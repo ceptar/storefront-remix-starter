@@ -1,4 +1,5 @@
-import { DocumentNode, print } from 'graphql';
+import type { DocumentNode} from 'graphql';
+import { print } from 'graphql';
 import { DEMO_API_URL } from './constants';
 import { getSdk } from './generated/graphql';
 import { getSessionStorage } from './sessions';

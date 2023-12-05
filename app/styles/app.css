@@ -855,6 +855,11 @@ button:disabled {
   margin-bottom: 0.25rem;
 }
 
+#app :is(.my-2) {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 #app :is(.my-4) {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -1008,6 +1013,10 @@ button:disabled {
 
 #app :is(.mt-\[8vh\]) {
   margin-top: 8vh;
+}
+
+#app :is(.mt-\[12vh\]) {
+  margin-top: 12vh;
 }
 
 #app :is(.line-clamp-3) {
@@ -2183,6 +2192,10 @@ button:disabled {
   line-height: 140%;
 }
 
+#app :is(.leading-\[160\%\]) {
+  line-height: 160%;
+}
+
 #app :is(.tracking-tight) {
   letter-spacing: -0.025em;
 }
@@ -2583,6 +2596,10 @@ button:disabled {
   color: hsl(0, 0%, 60%);
 }
 
+#app :is(.bg-discogray-200) {
+  background-color: hsl(0, 0%, 80%);
+}
+
 #app :is(.bg-discogray-100) {
   background-color: hsl(0, 0%, 90%);
 }
@@ -2670,8 +2687,8 @@ button:disabled {
 #app :is(.bg-hero) {
   background-image: url('~/../public/hero1.webp');
   background-size: cover;
-  background-position: center center;
-  height: 70vh;
+  background-position: left center;
+  height: 50vh;
   position: absolute;
   top: 0;
   width: 100%;
@@ -2773,11 +2790,6 @@ button:disabled {
   color: rgb(0 0 0 / 0.5);
 }
 
-#app :is(.hover\:text-discogray:hover) {
-  --tw-text-opacity: 1;
-  color: rgb(14 14 14 / var(--tw-text-opacity));
-}
-
 #app :is(.hover\:text-gray-500:hover) {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -2791,6 +2803,10 @@ button:disabled {
 #app :is(.hover\:text-white:hover) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+#app :is(.hover\:underline:hover) {
+  text-decoration-line: underline;
 }
 
 #app :is(.hover\:opacity-50:hover) {
@@ -3016,6 +3032,10 @@ button:disabled {
 
   #app :is(.sm\:flex) {
     display: flex;
+  }
+
+  #app :is(.sm\:grid) {
+    display: grid;
   }
 
   #app :is(.sm\:h-10) {

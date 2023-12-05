@@ -1,4 +1,5 @@
-import { DataFunctionArgs, redirect } from '@remix-run/server-runtime';
+import type { DataFunctionArgs} from '@remix-run/server-runtime';
+import { redirect } from '@remix-run/server-runtime';
 import { logout } from '~/providers/account/account';
 
 export async function action({ request }: DataFunctionArgs) {

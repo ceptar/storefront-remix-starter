@@ -1,5 +1,5 @@
-import { SessionStorage } from '@remix-run/server-runtime/dist/sessions';
-import { ErrorResult } from '~/generated/graphql';
+import type { SessionStorage } from '@remix-run/server-runtime/dist/sessions';
+import type { ErrorResult } from '~/generated/graphql';
 
 function getCookieSessionStorageFactory() {
   let imp = ['@remix-run', 'node'];

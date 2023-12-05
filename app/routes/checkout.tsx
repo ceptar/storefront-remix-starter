@@ -1,7 +1,7 @@
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import { Outlet, useLocation, useOutletContext } from '@remix-run/react';
 import { CartContents } from '~/components/cart/CartContents';
-import { OutletContext } from '~/types';
+import type { OutletContext } from '~/types';
 import { classNames } from '~/utils/class-names';
 import { CartTotals } from '~/components/cart/CartTotals';
 

@@ -1,6 +1,7 @@
 import gql from 'graphql-tag';
-import { QueryOptions, sdk } from '../../graphqlWrapper';
-import { SearchQueryVariables } from '~/generated/graphql';
+import type { QueryOptions} from '../../graphqlWrapper';
+import { sdk } from '../../graphqlWrapper';
+import type { SearchQueryVariables } from '~/generated/graphql';
 
 export function search(variables: SearchQueryVariables, options: QueryOptions) {
   return sdk.search(variables, options);

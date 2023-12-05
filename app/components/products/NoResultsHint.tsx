@@ -1,5 +1,5 @@
-import { FacetFilterTracker } from '~/components/facet-filter/facet-filter-tracker';
-import { ComponentProps } from 'react';
+import type { FacetFilterTracker } from '~/components/facet-filter/facet-filter-tracker';
+import type { ComponentProps } from 'react';
 
 export function NoResultsHint({
   facetFilterTracker,

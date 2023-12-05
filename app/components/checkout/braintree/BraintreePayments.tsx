@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import dropin, { Dropin } from 'braintree-web-drop-in';
+import type { Dropin } from 'braintree-web-drop-in';
+import dropin from 'braintree-web-drop-in';
 import { classNames } from '~/utils/class-names';
 import { useSubmit } from '@remix-run/react';
 import { addPaymentToOrder } from '~/providers/checkout/checkout';
-import { CurrencyCode } from '~/generated/graphql';
+import type { CurrencyCode } from '~/generated/graphql';
 
 export function BraintreeDropIn(props: {
   show: boolean;

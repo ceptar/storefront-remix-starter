@@ -1,20 +1,23 @@
-import { DataFunctionArgs, json } from '@remix-run/server-runtime';
+import type { DataFunctionArgs} from '@remix-run/server-runtime';
+import { json } from '@remix-run/server-runtime';
 import { useState } from 'react';
 import { Price } from '~/components/products/Price';
 import { getProductBySlug } from '~/providers/products/products';
-import {
+import type {
   FetcherWithComponents,
   ShouldRevalidateFunction,
+  MetaFunction} from '@remix-run/react';
+import {
   useLoaderData,
-  useOutletContext,
-  MetaFunction,
+  useOutletContext
 } from '@remix-run/react';
 import { CheckIcon, HeartIcon, PhotoIcon } from '@heroicons/react/24/solid';
 import { Breadcrumbs } from '~/components/Breadcrumbs';
 import { APP_META_TITLE } from '~/constants';
-import { CartLoaderData } from '~/routes/api/active-order';
+import type { CartLoaderData } from '~/routes/api/active-order';
 import { getSessionStorage } from '~/sessions';
-import { ErrorCode, ErrorResult } from '~/generated/graphql';
+import type { ErrorResult } from '~/generated/graphql';
+import { ErrorCode } from '~/generated/graphql';
 import Alert from '~/components/Alert';
 import { StockLevelLabel } from '~/components/products/StockLevelLabel';
 // import TopReviews from '~/components/products/TopReviews';
@@ -100,7 +103,7 @@ export default function ProductSlug() {
         ></Breadcrumbs>
                 </div>
 
-                <div className="bg-discopink px-8 py-4 text-4xl font-metrolight1 tracking-wide border-b border-t border-discogray">
+                <div className=" px-8 py-4 text-4xl font-metrolight1 tracking-wide border-b border-t border-discogray">
 
                 <div>
 

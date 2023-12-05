@@ -1,8 +1,10 @@
 import { useLoaderData, useNavigation, useSubmit } from '@remix-run/react';
-import { DataFunctionArgs, json, redirect } from '@remix-run/server-runtime';
+import type { DataFunctionArgs} from '@remix-run/server-runtime';
+import { json, redirect } from '@remix-run/server-runtime';
 import OrderHistoryItem from '~/components/account/OrderHistoryItem';
 import { getActiveCustomerOrderList } from '~/providers/customer/customer';
-import { OrderListOptions, SortOrder } from '~/generated/graphql';
+import type { OrderListOptions} from '~/generated/graphql';
+import { SortOrder } from '~/generated/graphql';
 import { Pagination } from '~/components/Pagination';
 import { ValidatedForm } from 'remix-validated-form';
 import { withZod } from '@remix-validated-form/with-zod';

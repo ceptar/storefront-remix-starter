@@ -5,7 +5,8 @@ import {
   useNavigation,
   useSubmit,
 } from '@remix-run/react';
-import { DataFunctionArgs, json } from '@remix-run/server-runtime';
+import type { DataFunctionArgs} from '@remix-run/server-runtime';
+import { json } from '@remix-run/server-runtime';
 import { useRef, useEffect } from 'react';
 import { validationError } from 'remix-validated-form';
 import { Button } from '~/components/Button';

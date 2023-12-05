@@ -1,5 +1,6 @@
 import gql from 'graphql-tag';
-import { QueryOptions, sdk } from '~/graphqlWrapper';
+import type { QueryOptions} from '~/graphqlWrapper';
+import { sdk } from '~/graphqlWrapper';
 
 export function activeChannel(options: QueryOptions) {
   return sdk

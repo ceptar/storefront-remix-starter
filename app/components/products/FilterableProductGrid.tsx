@@ -8,7 +8,7 @@ import { Pagination } from '~/components/Pagination';
 import { NoResultsHint } from '~/components/products/NoResultsHint';
 import { useRef } from 'react';
 import { FacetFilterTracker } from '~/components/facet-filter/facet-filter-tracker';
-import { filteredSearchLoaderFromPagination } from '~/utils/filtered-search-loader';
+import type { filteredSearchLoaderFromPagination } from '~/utils/filtered-search-loader';
 
 export function FilterableProductGrid({
   result,

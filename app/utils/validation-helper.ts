@@ -1,5 +1,5 @@
-import { ValidationErrorResponseData } from 'remix-validated-form';
-import { ErrorResult } from '~/generated/graphql';
+import type { ValidationErrorResponseData } from 'remix-validated-form';
+import type { ErrorResult } from '~/generated/graphql';
 
 export function isErrorResult(input: any): input is ErrorResult {
   return (

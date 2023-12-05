@@ -1,4 +1,4 @@
-import { AvailableCountriesQuery, OrderAddress } from '~/generated/graphql';
+import type { AvailableCountriesQuery, OrderAddress } from '~/generated/graphql';
 
 export function AddressForm({
   address,

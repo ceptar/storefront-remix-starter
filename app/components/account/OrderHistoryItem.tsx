@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from '~/components/Button';
 import { Price } from '~/components/products/Price';
-import { ActiveCustomerOrderListQuery } from '~/generated/graphql';
+import type { ActiveCustomerOrderListQuery } from '~/generated/graphql';
 import { OrderStateBadge } from '~/components/account/OrderStateBadge';
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import { EllipsisVerticalIcon } from '@heroicons/react/24/outline';

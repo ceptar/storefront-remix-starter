@@ -1,5 +1,5 @@
 import { Price } from '~/components/products/Price';
-import { OrderDetailFragment } from '~/generated/graphql';
+import type { OrderDetailFragment } from '~/generated/graphql';
 
 export function CartTotals({ order }: { order?: OrderDetailFragment | null }) {
   return (

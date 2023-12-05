@@ -1,6 +1,6 @@
 import { CreditCardIcon, XCircleIcon } from '@heroicons/react/24/solid';
 import { Form } from '@remix-run/react';
-import { EligiblePaymentMethodsQuery } from '~/generated/graphql';
+import type { EligiblePaymentMethodsQuery } from '~/generated/graphql';
 
 export function DummyPayments({
   paymentMethod,

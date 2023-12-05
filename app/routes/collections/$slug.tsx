@@ -1,5 +1,6 @@
-import { DataFunctionArgs } from '@remix-run/server-runtime';
-import { useLoaderData, useSubmit, MetaFunction } from '@remix-run/react';
+import type { DataFunctionArgs } from '@remix-run/server-runtime';
+import type { MetaFunction } from '@remix-run/react';
+import { useLoaderData, useSubmit } from '@remix-run/react';
 import { sdk } from '../../graphqlWrapper';
 import { CollectionCard } from '~/components/collections/CollectionCard';
 import { Breadcrumbs } from '~/components/Breadcrumbs';

@@ -5,8 +5,9 @@ import {
   UserCircleIcon,
 } from '@heroicons/react/24/solid';
 import { Form, Outlet, useLoaderData, useMatches } from '@remix-run/react';
-import { DataFunctionArgs, json, redirect } from '@remix-run/server-runtime';
-import { TabProps } from '~/components/tabs/Tab';
+import type { DataFunctionArgs} from '@remix-run/server-runtime';
+import { json, redirect } from '@remix-run/server-runtime';
+import type { TabProps } from '~/components/tabs/Tab';
 import { TabsContainer } from '~/components/tabs/TabsContainer';
 import { getActiveCustomerDetails } from '~/providers/customer/customer';
 

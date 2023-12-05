@@ -1,6 +1,8 @@
 import gql from 'graphql-tag';
-import { QueryOptions, sdk } from '~/graphqlWrapper';
-import { OrderListOptions, CustomerOrdersArgs } from '~/generated/graphql';
+import type { QueryOptions} from '~/graphqlWrapper';
+import { sdk } from '~/graphqlWrapper';
+import type { OrderListOptions} from '~/generated/graphql';
+import { CustomerOrdersArgs } from '~/generated/graphql';
 
 export function getActiveCustomer(options: QueryOptions) {
   return sdk.activeCustomer(undefined, options);

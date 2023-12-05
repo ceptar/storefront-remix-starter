@@ -1,5 +1,5 @@
-import { CurrencyCode } from '~/generated/graphql';
-import { ProductCardProps } from './ProductCard';
+import type { CurrencyCode } from '~/generated/graphql';
+import type { ProductCardProps } from './ProductCard';
 
 export function Price({
   priceWithTax,

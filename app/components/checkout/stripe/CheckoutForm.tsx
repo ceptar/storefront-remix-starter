@@ -4,7 +4,7 @@ import {
   useElements,
   PaymentElement,
 } from '@stripe/react-stripe-js';
-import { FormEvent } from 'react';
+import type { FormEvent } from 'react';
 
 export const CheckoutForm = ({ orderCode }: { orderCode: string }) => {
   const stripe = useStripe();

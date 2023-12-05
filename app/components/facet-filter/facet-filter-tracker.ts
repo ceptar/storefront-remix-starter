@@ -1,4 +1,4 @@
-import { SearchFacetValuesQuery, SearchQuery } from '~/generated/graphql';
+import type { SearchFacetValuesQuery, SearchQuery } from '~/generated/graphql';
 
 export interface FacetWithValues {
   id: string;

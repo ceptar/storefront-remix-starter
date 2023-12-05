@@ -1,4 +1,5 @@
-import React, { ReactNode, useRef, RefObject, useEffect } from 'react';
+import type { ReactNode, RefObject} from 'react';
+import React, { useRef, useEffect } from 'react';
 
 export function ScrollableContainer({ children }: { children: ReactNode[] }) {
   const spanRef: RefObject<HTMLSpanElement> | undefined = useRef(null);

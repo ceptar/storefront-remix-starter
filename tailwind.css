@@ -80,8 +80,8 @@
   .bg-hero {
     background-image: url('~/../public/hero1.webp');
     background-size: cover;
-    background-position: center center;
-    height: 70vh;
+    background-position: left center;
+    height: 50vh;
     position: absolute;
     top: 0;
     width: 100%;

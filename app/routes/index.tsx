@@ -1,6 +1,6 @@
 import { useLoaderData } from '@remix-run/react';
 import { getCollections } from '~/providers/collections/collections';
-import { LoaderArgs } from '@remix-run/server-runtime';
+import type { LoaderArgs } from '@remix-run/server-runtime';
 import MultiCarousel from '~/utils/MultiCarousel';
 import styles from './styles/app.css';
 
@@ -21,14 +21,14 @@ export default function Index() {
       <div className="bg-hero">
         {/* Decorative image and overlay */}
 
-        <div className="flex h-[70vh] justify-items-end items-center mr-auto ml-auto w-full">
-          <div className="mr-auto z-20 relative flex flex-col justify-center w-full">
-            <div className="px-8 sm:px-16 flex flex-col pt-0  pb-0 text-start justify-between">
-              <div className="mr-auto ">
-                <div className="text-3xl font-sans text-discogray leading-[140%]">
-                  <span className="text-white">Life is about the </span>
-                  <span className=" shadow-white bg-discoteal bg-opacity-60 whitespace-nowrap p-1 backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]">
-                    little things!
+        <div className="flex h-[50vh] justify-items-end items-start mr-auto ml-auto w-full">
+          <div className="mt-[12vh] mr-auto z-20 relative flex flex-col justify-center w-full">
+            <div className="px-8 sm:px-16 flex flex-col text-start justify-between">
+              <div className="ml-auto ">
+                <div className="text-3xl font-sans text-discogray leading-[160%] ">
+                  <span className="text-white"></span>
+                  <span className=" shadow-white bg-discoteal bg-opacity-60 backdrop-blur-sm shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]">
+                  Life is about the little things!
                   </span>
                   {/* <span className="text-white"></span>
                   <p className="my-7"></p>
@@ -38,7 +38,7 @@ export default function Index() {
                   </span>
                   <span className="text-white"></span> */}
                 </div>
-                 </div>
+                 
                 <div className="leading-[140%] font-sans text-md text-discogray my-4">
                   <span className="bg-white p-2 ">
                     Lets find Yours.{' '}
@@ -61,6 +61,7 @@ export default function Index() {
                   <span className=""></span> */}
                
               </div>
+              </div>
             </div>
           </div>
         </div>
@@ -77,11 +78,11 @@ export default function Index() {
 
       <div
         className="h-[10vh] z-20 flex justify-center items-center mr-auto ml-auto w-full"
-        style={{ marginTop: '70vh' }}
+        style={{ marginTop: '50vh' }}
       >
         <h2
           id="category-heading"
-          className="px-8 items-center justify-center flex text-discogray  text-2xl font-header1 leading-10 border-t border-b border-discoteal"
+          className="px-8 mt-4 items-center justify-center flex text-discogray  text-2xl font-header1 leading-10 border-t border-b border-discoteal"
         >
           <span className="">Categories</span>
         </h2>

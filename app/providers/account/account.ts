@@ -1,5 +1,5 @@
 import gql from 'graphql-tag';
-import {
+import type {
   CreateAddressInput,
   LoginMutation,
   LogoutMutation,
@@ -9,7 +9,8 @@ import {
   UpdateCustomerInput,
   VerifyCustomerAccountMutation,
 } from '~/generated/graphql';
-import { QueryOptions, sdk, WithHeaders } from '~/graphqlWrapper';
+import type { QueryOptions, WithHeaders } from '~/graphqlWrapper';
+import { sdk } from '~/graphqlWrapper';
 
 export const login = async (
   email: string,

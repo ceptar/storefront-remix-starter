@@ -7,13 +7,15 @@ import {
   setOrderShippingAddress,
   setOrderShippingMethod,
 } from '~/providers/orders/order';
-import { DataFunctionArgs, json } from '@remix-run/server-runtime';
-import {
+import type { DataFunctionArgs} from '@remix-run/server-runtime';
+import { json } from '@remix-run/server-runtime';
+import type {
   CreateAddressInput,
   CreateCustomerInput,
-  ErrorCode,
   ErrorResult,
-  OrderDetailFragment,
+  OrderDetailFragment} from '~/generated/graphql';
+import {
+  ErrorCode
 } from '~/generated/graphql';
 import { getSessionStorage } from '~/sessions';
 import { shippingFormDataIsValid } from '~/utils/validation';

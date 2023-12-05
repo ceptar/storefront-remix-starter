@@ -3,7 +3,7 @@ import { Dialog, Disclosure, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/solid';
 import { useSearchParams } from '@remix-run/react';
-import { FacetFilterTracker } from '~/components/facet-filter/facet-filter-tracker';
+import type { FacetFilterTracker } from '~/components/facet-filter/facet-filter-tracker';
 
 export default function FacetFilterControls({
   facetFilterTracker,

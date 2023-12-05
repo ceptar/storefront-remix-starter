@@ -1,4 +1,4 @@
-import { ShippingFormData } from '~/types';
+import type { ShippingFormData } from '~/types';
 
 export function shippingFormDataIsValid(
   data: FormData | Record<string, string>,

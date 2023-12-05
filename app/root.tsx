@@ -1,3 +1,6 @@
+import type {
+  ShouldRevalidateFunction,
+  MetaFunction} from '@remix-run/react';
 import {
   isRouteErrorResponse,
   Link,
@@ -7,14 +10,13 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  ShouldRevalidateFunction,
   useLoaderData,
-  useRouteError,
-  MetaFunction,
+  useRouteError
 } from '@remix-run/react';
 import styles from './styles/app.css';
 import { Header } from './components/header/Header';
-import { DataFunctionArgs, json } from '@remix-run/server-runtime';
+import type { DataFunctionArgs} from '@remix-run/server-runtime';
+import { json } from '@remix-run/server-runtime';
 import { getCollections } from '~/providers/collections/collections';
 import { activeChannel } from '~/providers/channel/channel';
 import { APP_META_DESCRIPTION, APP_META_TITLE } from '~/constants';
