@@ -1,63 +1,32 @@
+import { useLoaderData } from '@remix-run/react';
+import { useRootLoader } from '~/utils/use-root-loader';
+import { getallCollections } from '~/providers/collections/collectionsall';
+import type { LoaderArgs } from '@remix-run/server-runtime';
 import React, { useState, useEffect } from 'react';
 import Hamburger from '~/components/svgs/Hamburger';
 import CollectionsTreemenu from '~/components/CollectionsTreemenu';
 import '~/styles/app.css';
 
-const COLLECTIONS_QUERY = `
-  query Collections {
-    collections {
-      items {
-        id
-        name
-        slug
-        parent {
-          id
-          name
-          slug
-        }
-      }
-    }
-  }
-`;
+export async function loader({ request }: LoaderArgs<null>) {
+  const collectionsall = await getallCollections(request, { take: 20 });
+  return {
+    collectionsall,
+  };
+}
+
 
 export default function Sliderex() {
-  const [collections, setCollections] = useState([]);
   const [isSlideoverVisible, setSlideoverVisible] = useState(false);
-  const [isLoading, setLoading] = useState(true);
+
+
+  // Access the collectionsall data from loaderData
+  const { collectionsall } = useLoaderData<typeof loader>();
+
 
   const toggleSlideover = () => {
     setSlideoverVisible(!isSlideoverVisible);
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://130.61.38.231/shop-api', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            query: COLLECTIONS_QUERY,
-          }),
-        });
-
-        const result = await response.json();
-        setCollections(result.data.collections.items);
-        setLoading(false); // Set loading to false once data is fetched
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        setLoading(false); // Set loading to false on error as well
-      }
-    };
-
-    fetchData();
-  }, []); // empty dependency array to fetch data once on component mount
-
-  if (isLoading) {
-    // Loading state while data is being fetched
-    return <div>Loading...</div>;
-  }
 
   return (
     <div className="flex items-center justify-center p-2">
@@ -103,7 +72,8 @@ export default function Sliderex() {
           </div>
           <div className="px-8 mt-12 absolute transform w-full">
             <div className="border border-gray-200 w-full pb-4">
-              <CollectionsTreemenu collectionsData={{ collections }} />
+              {/* Use collectionsall directly */}
+              <CollectionsTreemenu collectionsData={{ collectionsall}} />
             </div>
           </div>
         </div>
@@ -111,3 +81,4 @@ export default function Sliderex() {
     </div>
   );
 }
+

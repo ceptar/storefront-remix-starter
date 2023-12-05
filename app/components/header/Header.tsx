@@ -1,21 +1,13 @@
 import React from 'react';
-import type { LoaderArgs} from '@remix-run/react';
-import { Link, useLoaderData, useFetcher } from '@remix-run/react';
+import { Link } from '@remix-run/react';
 import Cart from '~/components/svgs/Cart';
 import { SearchBar } from '~/components/header/SearchBar';
 import { useRootLoader } from '~/utils/use-root-loader';
 import { UserIcon } from '@heroicons/react/24/solid';
-import { getCollections } from '~/providers/collections/collections';
 import '~/styles/app.css';
 import Logo from '~/components/svgs/Logo';
 import Sliderex from './Sliderex';
 
-export async function loader({ request }: LoaderArgs<null>) {
-  const collections = await getCollections(request, { take: 20 });
-  return {
-    collections,
-  };
-}
 
 export function Header({
   onCartIconClick,
@@ -24,7 +16,7 @@ export function Header({
   onCartIconClick: () => void;
   cartQuantity: number;
 }) {
-  const { collections } = useLoaderData<typeof loader>();
+  // const { collections } = useLoaderData<typeof loader>();
   const data = useRootLoader();
   const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
 
@@ -43,7 +35,7 @@ export function Header({
         ))}
       </header> */}
 
-      <div className="z-40 bg-discogray bg-opacity-90 top-0 items-center fixed justify-between h-[8vh] w-full min-w-full">
+      <header className="z-40 bg-discogray top-0 items-center fixed justify-between h-[8vh] w-full min-w-full">
         <div className="relative px-4 flex flex-row items-center justify-between h-[8vh] w-full ">
           <div className="relative  flex flex-col  items-start justify-start w-1/6">
             <button
@@ -70,7 +62,9 @@ export function Header({
             <Sliderex />
           </div>
         </div>
-      </div>
-    </>
+        </header>
+        </>
+
+
   );
 }

@@ -13,7 +13,7 @@ interface Collection {
 }
 
 interface CollectionsData {
-  collections: Collection[];
+  collectionsall: Collection[];
 }
 
 export default function CollectionsTreemenu({
@@ -22,23 +22,23 @@ export default function CollectionsTreemenu({
   collectionsData: CollectionsData;
 }) {
   // Helper function to normalize the parent information
-  const normalizeParent = (collection: Collection) => {
-    if (collection.parent) {
-      const parentName = collection.parent.name;
-      const parentCollection = collectionsData.collections.find(
+  const normalizeParent = (collectionsall: Collection) => {
+    if (collectionsall.parent) {
+      const parentName = collectionsall.parent.name;
+      const parentCollection = collectionsData.collectionsall.find(
         (c) => c.name === parentName,
       );
       if (parentCollection) {
         // Create a new object with the additional property
-        collection = { ...collection, parentId: parentCollection.id };
+        collectionsall = { ...collectionsall, parentId: parentCollection.id };
       }
     }
-    return collection; // Return the modified or original object
+    return collectionsall; // Return the modified or original object
   };
 
   // Normalize the parent information in the collections
   const normalizedCollections =
-    collectionsData.collections.map(normalizeParent);
+    collectionsData.collectionsall.map(normalizeParent);
 
   // Create a function to recursively build the tree structure
   const buildTree = (collections: Collection[], parentId?: string) => {

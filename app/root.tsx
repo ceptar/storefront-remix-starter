@@ -18,6 +18,7 @@ import { Header } from './components/header/Header';
 import type { DataFunctionArgs} from '@remix-run/server-runtime';
 import { json } from '@remix-run/server-runtime';
 import { getCollections } from '~/providers/collections/collections';
+import { getallCollections } from '~/providers/collections/collectionsall';
 import { activeChannel } from '~/providers/channel/channel';
 import { APP_META_DESCRIPTION, APP_META_TITLE } from '~/constants';
 import { useEffect, useState } from 'react';
@@ -64,6 +65,7 @@ export type RootLoaderData = {
   activeCustomer: Awaited<ReturnType<typeof getActiveCustomer>>;
   activeChannel: Awaited<ReturnType<typeof activeChannel>>;
   collections: Awaited<ReturnType<typeof getCollections>>;
+  collectionsall: Awaited<ReturnType<typeof getallCollections>>;
 };
 
 export async function loader({ request, params, context }: DataFunctionArgs) {
@@ -76,11 +78,14 @@ export async function loader({ request, params, context }: DataFunctionArgs) {
   const topLevelCollections = collections.filter(
     (collection) => collection.parent?.name === '__root_collection__',
   );
+  const collectionsall = await getallCollections(request, { take: 20 });
+
   const activeCustomer = await getActiveCustomer({ request });
   const loaderData: RootLoaderData = {
     activeCustomer,
     activeChannel: await activeChannel({ request }),
     collections: topLevelCollections,
+    collectionsall: collectionsall,
   };
   return json(loaderData, { headers: activeCustomer._headers });
 }
@@ -89,6 +94,7 @@ export default function App() {
   const [open, setOpen] = useState(false);
   const loaderData = useLoaderData<RootLoaderData>();
   const { collections } = loaderData;
+  const { collectionsall } = loaderData;
   const {
     activeOrderFetcher,
     activeOrder,
@@ -114,6 +120,7 @@ export default function App() {
       </head>
       <body>
         <Header
+        collectionsall = {collectionsall}
           onCartIconClick={() => setOpen(!open)}
           cartQuantity={activeOrder?.totalQuantity ?? 0}
         />

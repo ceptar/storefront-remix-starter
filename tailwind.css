@@ -78,15 +78,15 @@
   }
 
   .bg-hero {
-    background-image: url('~/../public/hero1.webp');
-    background-size: cover;
+    background-image: url('~/../public/hero1.webp') ;
+    background-image: alt('hero1');
+     background-size: cover;
     background-position: left center;
     height: 50vh;
-    position: absolute;
     top: 8vh;
     width: 100%;
     z-index: 10;
-
+    
   }
 
   .carousel-container {

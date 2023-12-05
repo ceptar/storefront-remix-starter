@@ -15,7 +15,7 @@
     "start": "remix-serve build",
     "generate": "graphql-codegen --config codegen.yml",
     "lint:styles": "stylelint --fix 'app/styles/**/*.css'",
-    "lint": "eslint .",
+    "lint": "eslint --fix .",
     "prepare": "husky install"
   },
   "dependencies": {

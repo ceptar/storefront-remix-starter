@@ -43,6 +43,8 @@ module.exports = {
         discoblue: '#030082',
 
         discogray: '#0e0e0e',
+
+        discograytwo: '#F5F5F5',
       },
     },
   },

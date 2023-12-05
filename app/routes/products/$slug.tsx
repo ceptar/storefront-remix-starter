@@ -94,7 +94,7 @@ export default function ProductSlug() {
 
   return (
     <div>
-      <div className="mt-[8vh] mx-auto px-8">
+      <div className="mt-[8vh] mx-auto px-8 bg-gray-100">
       <Breadcrumbs
           items={
             product.collections[product.collections.length - 1]?.breadcrumbs ??

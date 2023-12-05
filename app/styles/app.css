@@ -865,11 +865,6 @@ button:disabled {
   margin-bottom: 1rem;
 }
 
-#app :is(.my-7) {
-  margin-top: 1.75rem;
-  margin-bottom: 1.75rem;
-}
-
 #app :is(.my-8) {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -1009,10 +1004,6 @@ button:disabled {
 
 #app :is(.mt-8) {
   margin-top: 2rem;
-}
-
-#app :is(.mt-\[12vh\]) {
-  margin-top: 12vh;
 }
 
 #app :is(.mt-\[8vh\]) {
@@ -1443,10 +1434,6 @@ button:disabled {
   justify-content: space-around;
 }
 
-#app :is(.justify-items-end) {
-  justify-items: end;
-}
-
 #app :is(.gap-0) {
   gap: 0px;
 }
@@ -1733,14 +1720,14 @@ button:disabled {
   background-color: rgb(14 14 14 / var(--tw-bg-opacity));
 }
 
+#app :is(.bg-discograytwo) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
 #app :is(.bg-discopink) {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 229 / var(--tw-bg-opacity));
-}
-
-#app :is(.bg-discoteal) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(21 254 226 / var(--tw-bg-opacity));
 }
 
 #app :is(.bg-discoyellow) {
@@ -1822,16 +1809,24 @@ button:disabled {
   --tw-bg-opacity: 0.25;
 }
 
-#app :is(.bg-opacity-60) {
-  --tw-bg-opacity: 0.6;
-}
-
 #app :is(.bg-opacity-75) {
   --tw-bg-opacity: 0.75;
 }
 
 #app :is(.bg-opacity-90) {
   --tw-bg-opacity: 0.9;
+}
+
+#app :is(.bg-opacity-50) {
+  --tw-bg-opacity: 0.5;
+}
+
+#app :is(.bg-opacity-20) {
+  --tw-bg-opacity: 0.2;
+}
+
+#app :is(.bg-opacity-5) {
+  --tw-bg-opacity: 0.05;
 }
 
 #app :is(.bg-gradient-to-r) {
@@ -1854,10 +1849,6 @@ button:disabled {
 
 #app :is(.bg-\[length\:100\%_0px\]) {
   background-size: 100% 0px;
-}
-
-#app :is(.bg-\[length\:100\%_6px\]) {
-  background-size: 100% 6px;
 }
 
 #app :is(.bg-bottom) {
@@ -1884,10 +1875,6 @@ button:disabled {
 #app :is(.object-center) {
   -o-object-position: center;
      object-position: center;
-}
-
-#app :is(.p-1) {
-  padding: 0.25rem;
 }
 
 #app :is(.p-10) {
@@ -2067,10 +2054,6 @@ button:disabled {
   text-align: center;
 }
 
-#app :is(.text-start) {
-  text-align: start;
-}
-
 #app :is(.text-end) {
   text-align: end;
 }
@@ -2097,10 +2080,6 @@ button:disabled {
 
 #app :is(.font-metromed1) {
   font-family: Metropolitano-Medium, sans;
-}
-
-#app :is(.font-sans) {
-  font-family: Metropolitano-Regular, sans;
 }
 
 #app :is(.\!text-sm) {
@@ -2182,10 +2161,6 @@ button:disabled {
 
 #app :is(.leading-\[140\%\]) {
   line-height: 140%;
-}
-
-#app :is(.leading-\[160\%\]) {
-  line-height: 160%;
 }
 
 #app :is(.tracking-tight) {
@@ -2363,12 +2338,6 @@ button:disabled {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-#app :is(.shadow-\[rgba\(50\2c 50\2c 93\2c 0\.25\)_0px_6px_12px_-2px\2c _rgba\(0\2c 0\2c 0\2c 0\.3\)_0px_3px_7px_-3px\]) {
-  --tw-shadow: rgba(50,50,93,0.25) 0px 6px 12px -2px, rgba(0,0,0,0.3) 0px 3px 7px -3px;
-  --tw-shadow-colored: 0px 6px 12px -2px var(--tw-shadow-color), 0px 3px 7px -3px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 #app :is(.shadow-md) {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -2393,12 +2362,6 @@ button:disabled {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-#app :is(.shadow-2xl) {
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 #app :is(.shadow-discogray) {
   --tw-shadow-color: #0e0e0e;
   --tw-shadow: var(--tw-shadow-colored);
@@ -2411,11 +2374,6 @@ button:disabled {
 
 #app :is(.shadow-gray-400) {
   --tw-shadow-color: #9ca3af;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-#app :is(.shadow-white) {
-  --tw-shadow-color: #fff;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -2558,6 +2516,10 @@ button:disabled {
   color: hsl(306, 100%, 70%);
 }
 
+#app :is(.bg-discopink-100) {
+  background-color: hsl(306, 100%, 90%);
+}
+
 #app :is(.text-discoteal-800) {
   color: hsl(173, 99%, 20%);
 }
@@ -2592,10 +2554,6 @@ button:disabled {
 
 #app :is(.text-discogray-400) {
   color: hsl(0, 0%, 60%);
-}
-
-#app :is(.bg-discogray-200) {
-  background-color: hsl(0, 0%, 80%);
 }
 
 #app :is(.bg-discogray-100) {
@@ -2683,11 +2641,11 @@ button:disabled {
 }
 
 #app :is(.bg-hero) {
-  background-image: url('~/../public/hero1.webp');
+  background-image: url('~/../public/hero1.webp') ;
+  background-image: alt('hero1');
   background-size: cover;
   background-position: left center;
   height: 50vh;
-  position: absolute;
   top: 8vh;
   width: 100%;
   z-index: 10;
@@ -3113,11 +3071,6 @@ button:disabled {
   #app :is(.sm\:px-10) {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-  }
-
-  #app :is(.sm\:px-16) {
-    padding-left: 4rem;
-    padding-right: 4rem;
   }
 
   #app :is(.sm\:px-6) {
