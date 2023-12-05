@@ -1011,12 +1011,12 @@ button:disabled {
   margin-top: 2rem;
 }
 
-#app :is(.mt-\[8vh\]) {
-  margin-top: 8vh;
-}
-
 #app :is(.mt-\[12vh\]) {
   margin-top: 12vh;
+}
+
+#app :is(.mt-\[8vh\]) {
+  margin-top: 8vh;
 }
 
 #app :is(.line-clamp-3) {
@@ -1128,10 +1128,6 @@ button:disabled {
 
 #app :is(.h-\[5vh\]) {
   height: 5vh;
-}
-
-#app :is(.h-\[70vh\]) {
-  height: 70vh;
 }
 
 #app :is(.h-\[8vh\]) {
@@ -1999,10 +1995,6 @@ button:disabled {
   padding-bottom: 2rem;
 }
 
-#app :is(.pb-0) {
-  padding-bottom: 0px;
-}
-
 #app :is(.pb-10) {
   padding-bottom: 2.5rem;
 }
@@ -2687,7 +2679,7 @@ button:disabled {
 #app :is(.bg-hero) {
   background-image: url('~/../public/hero1.webp');
   background-size: cover;
-  background-position: left center;
+  background-position: left top;
   height: 50vh;
   position: absolute;
   top: 0;
