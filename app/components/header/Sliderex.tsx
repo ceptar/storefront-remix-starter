@@ -14,19 +14,15 @@ export async function loader({ request }: LoaderArgs<null>) {
   };
 }
 
-
 export default function Sliderex() {
   const [isSlideoverVisible, setSlideoverVisible] = useState(false);
-
 
   // Access the collectionsall data from loaderData
   const { collectionsall } = useLoaderData<typeof loader>();
 
-
   const toggleSlideover = () => {
     setSlideoverVisible(!isSlideoverVisible);
   };
-
 
   return (
     <div className="flex items-center justify-center p-2">
@@ -35,7 +31,7 @@ export default function Sliderex() {
         className="flex flex-col bg-opacity-90 cursor-pointer justify-center rounded-full items-center p-2  text-sm text-discogray-500 transition-all duration-300 ease-out hover:opacity-70"
       >
         <button>
-          <Hamburger className="tronfilter w-8 h-8 sm:w-10 sm:h-10" />
+          <Hamburger className="tronfilter w-8 h-8 sm:w-10 sm:h-10 pl-1" />
         </button>
       </div>
       <div
@@ -73,7 +69,7 @@ export default function Sliderex() {
           <div className="px-8 mt-12 absolute transform w-full">
             <div className="border border-gray-200 w-full pb-4">
               {/* Use collectionsall directly */}
-              <CollectionsTreemenu collectionsData={{ collectionsall}} />
+              <CollectionsTreemenu collectionsData={{ collectionsall }} />
             </div>
           </div>
         </div>
@@ -81,4 +77,3 @@ export default function Sliderex() {
     </div>
   );
 }
-

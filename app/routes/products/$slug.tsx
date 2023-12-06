@@ -224,12 +224,14 @@ export default function ProductSlug() {
                         ? 'bg-gray-400'
                         : qtyInCart === 0
                         ? 'bg-discopink-500 hover:bg-discopink-400'
-                        : 'bg-discopink-400 active:bg-discopink-400 hover:bg-discopink-500'
+                        : 'bg-discopink-400 active:bg-discopink-400 hover:bg-discopink-500 hover:bg-opacity-70'
                     }
-                                     shadow-md shadow-gray-400 border border-discogray flex items-center
-                                      justify-center text-discogray focus:outline-none
-                                      focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-primary-500 sm:w-full
-                                      transition-all duration-300 ease-in-out hover:opacity-70 hover:shadow-none`}
+                    text-sm uppercase tracking-[0.25em] text-discogray              
+                    bg-opacity-20 border border-opacity-20 
+                    flex items-center justify-center  
+                    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-primary-500 
+                    sm:w-full
+                    transition-all duration-300 ease-in-out`}
                     disabled={activeOrderFetcher.state !== 'idle'}
                   >
                     {qtyInCart ? (
