@@ -1695,6 +1695,10 @@ button:disabled {
   border-color: rgb(250 204 21 / var(--tw-border-opacity));
 }
 
+#app :is(.border-opacity-20) {
+  --tw-border-opacity: 0.2;
+}
+
 #app :is(.bg-\[\#83a9ac\]) {
   --tw-bg-opacity: 1;
   background-color: rgb(131 169 172 / var(--tw-bg-opacity));
@@ -2060,6 +2064,10 @@ button:disabled {
   padding-top: 2rem;
 }
 
+#app :is(.pl-1) {
+  padding-left: 0.25rem;
+}
+
 #app :is(.text-left) {
   text-align: left;
 }
@@ -2187,6 +2195,14 @@ button:disabled {
 
 #app :is(.tracking-wider) {
   letter-spacing: 0.05em;
+}
+
+#app :is(.tracking-\[0\.25em\]) {
+  letter-spacing: 0.25em;
+}
+
+#app :is(.tracking-widest) {
+  letter-spacing: 0.1em;
 }
 
 #app :is(.text-black) {
@@ -2754,6 +2770,10 @@ button:disabled {
 #app :is(.hover\:bg-green-700:hover) {
   --tw-bg-opacity: 1;
   background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+}
+
+#app :is(.hover\:bg-opacity-70:hover) {
+  --tw-bg-opacity: 0.7;
 }
 
 #app :is(.hover\:text-black\/50:hover) {

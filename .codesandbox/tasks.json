@@ -1,0 +1,69 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "Install Dependencies",
+      "command": "yarn install"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "build:cf": {
+      "name": "build:cf",
+      "command": "yarn build:cf"
+    },
+    "build:nf": {
+      "name": "build:nf",
+      "command": "yarn build:nf"
+    },
+    "build": {
+      "name": "build",
+      "command": "yarn build"
+    },
+    "dev:wrangler": {
+      "name": "dev:wrangler",
+      "command": "yarn dev:wrangler"
+    },
+    "dev:css": {
+      "name": "dev:css",
+      "command": "yarn dev:css"
+    },
+    "dev": {
+      "name": "dev",
+      "command": "yarn dev",
+      "runAtStart": true,
+      "preview": {
+        "port": 3000
+      }
+    },
+    "dev:cf": {
+      "name": "dev:cf",
+      "command": "yarn dev:cf"
+    },
+    "start:cf": {
+      "name": "start:cf",
+      "command": "yarn start:cf"
+    },
+    "start": {
+      "name": "start",
+      "command": "yarn start"
+    },
+    "generate": {
+      "name": "generate",
+      "command": "yarn generate"
+    },
+    "lint:styles": {
+      "name": "lint:styles",
+      "command": "yarn lint:styles"
+    },
+    "lint": {
+      "name": "lint",
+      "command": "yarn lint"
+    },
+    "prepare": {
+      "name": "prepare",
+      "command": "yarn prepare"
+    }
+  }
+}

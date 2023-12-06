@@ -8,7 +8,6 @@ import '~/styles/app.css';
 import Logo from '~/components/svgs/Logo';
 import Sliderex from './Sliderex';
 
-
 export function Header({
   onCartIconClick,
   cartQuantity,
@@ -62,9 +61,7 @@ export function Header({
             <Sliderex />
           </div>
         </div>
-        </header>
-        </>
-
-
+      </header>
+    </>
   );
 }

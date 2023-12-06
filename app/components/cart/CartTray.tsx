@@ -57,7 +57,7 @@ export function CartTray({
                 <div className="h-full flex flex-col bg-white shadow-xl overflow-y-scroll">
                   <div className="flex-1 py-6 overflow-y-auto px-4 sm:px-6">
                     <div className="flex items-start justify-between">
-                      <Dialog.Title className="text-lg font-medium text-gray-900">
+                      <Dialog.Title className="text-md uppercase tracking-widest font-metrolight1 text-discogray">
                         Shopping cart
                       </Dialog.Title>
                       <div className="ml-3 h-7 flex items-center">
@@ -109,7 +109,8 @@ export function CartTray({
                         <Link
                           to="/checkout"
                           onClick={() => onClose(false)}
-                          className="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-600 hover:bg-primary-700"
+                          className="flex justify-center items-center px-6 py-3 text-sm uppercase tracking-[0.25em] text-discogray              
+                          border bg-primary-500 hover:bg-primary-700"
                         >
                           Checkout
                         </Link>
