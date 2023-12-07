@@ -1361,10 +1361,6 @@ button:disabled {
           user-select: none;
 }
 
-#app :is(.resize) {
-  resize: both;
-}
-
 #app :is(.appearance-none) {
   -webkit-appearance: none;
      -moz-appearance: none;
