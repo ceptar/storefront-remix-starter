@@ -151,16 +151,16 @@ export function CatchBoundary() {
       </h2>
       <div className="mt-6 grid sm:grid-cols-5 gap-x-4">
         <div className="space-y-6">
-          <div className="h-2 bg-slate-200 rounded col-span-1"></div>
-          <div className="h-2 bg-slate-200 rounded col-span-1"></div>
-          <div className="h-2 bg-slate-200 rounded col-span-1"></div>
+          <div className="h-2 bg-slate-200 col-span-1"></div>
+          <div className="h-2 bg-slate-200 col-span-1"></div>
+          <div className="h-2 bg-slate-200 col-span-1"></div>
         </div>
         <div className="sm:col-span-5 lg:col-span-4">
           <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-            <div className="h-64 bg-slate-200 rounded"></div>
-            <div className="h-64 bg-slate-200 rounded"></div>
-            <div className="h-64 bg-slate-200 rounded"></div>
-            <div className="h-64 bg-slate-200 rounded"></div>
+            <div className="h-64 bg-slate-200 "></div>
+            <div className="h-64 bg-slate-200 "></div>
+            <div className="h-64 bg-slate-200 "></div>
+            <div className="h-64 bg-slate-200 runded"></div>
           </div>
         </div>
       </div>

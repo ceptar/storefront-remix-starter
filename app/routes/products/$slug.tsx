@@ -118,7 +118,7 @@ export default function ProductSlug() {
           {/* Image gallery */}
           <div className="px-4 pt-4 pb-12 shadow-md bg-gray-100 w-full mx-auto sm:block ">
             <span className="  overflow-hidden">
-              <div className="w-full h-full object-center object-cover rounded-lg">
+              <div className="w-full h-full object-center object-cover">
                 <img
                   src={
                     (featuredAsset?.preview || product.featuredAsset?.preview) +
@@ -246,7 +246,7 @@ export default function ProductSlug() {
 
                   <button
                     type="button"
-                    className="ml-4 py-3 px-3 rounded-md flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500"
+                    className="ml-4 py-3 px-3 flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500"
                   >
                     <HeartIcon
                       className="h-6 w-6 flex-shrink-0"
@@ -322,13 +322,13 @@ export function CatchBoundary() {
         <div className="mt-10 px-8 sm:px-0 sm:mt-16 lg:mt-0">
           <div className="">We couldn't find any product at that address!</div>
           <div className="flex-1 space-y-3 py-1">
-            <div className="h-2 bg-slate-200 rounded"></div>
+            <div className="h-2 bg-slate-200"></div>
             <div className="space-y-3">
               <div className="grid grid-cols-3 gap-4">
-                <div className="h-2 bg-slate-200 rounded col-span-2"></div>
-                <div className="h-2 bg-slate-200 rounded col-span-1"></div>
+                <div className="h-2 bg-slate-200 col-span-2"></div>
+                <div className="h-2 bg-slate-200 col-span-1"></div>
               </div>
-              <div className="h-2 bg-slate-200 rounded"></div>
+              <div className="h-2 bg-slate-200"></div>
             </div>
           </div>
         </div>

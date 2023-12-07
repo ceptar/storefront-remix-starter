@@ -182,7 +182,7 @@ export default function CheckoutShipping() {
                   name="emailAddress"
                   autoComplete="email"
                   defaultValue={customer?.emailAddress}
-                  className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+                  className="block w-full border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
                 />
               </div>
               {error?.errorCode === 'EMAIL_ADDRESS_CONFLICT_ERROR' && (
@@ -206,7 +206,7 @@ export default function CheckoutShipping() {
                     name="firstName"
                     autoComplete="given-name"
                     defaultValue={customer?.firstName}
-                    className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+                    className="block w-full border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
                   />
                 </div>
               </div>
@@ -225,7 +225,7 @@ export default function CheckoutShipping() {
                     name="lastName"
                     autoComplete="family-name"
                     defaultValue={customer?.lastName}
-                    className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+                    className="block w-full border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
                   />
                 </div>
               </div>
@@ -282,7 +282,7 @@ export default function CheckoutShipping() {
           canProceedToPayment
             ? 'bg-primary-600 hover:bg-primary-700'
             : 'bg-gray-400',
-          'flex w-full items-center justify-center space-x-2 mt-24 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500',
+          'flex w-full items-center justify-center space-x-2 mt-24 py-3 border border-transparent text-base font-medium shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500',
         )}
       >
         <LockClosedIcon className="w-5 h-5"></LockClosedIcon>

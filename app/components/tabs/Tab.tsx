@@ -21,7 +21,7 @@ export function Tab({ Icon, text, to }: TabProps) {
     <li className={isActive ? `cursor-default` : `cursor-pointer`}>
       <NavLink
         to={to}
-        className={`group w-full gap-x-2 max-w-[12rem] inline-flex items-center justify-around p-4 rounded-t-lg border-b-2 ${
+        className={`group w-full gap-x-2 max-w-[12rem] inline-flex items-center justify-around p-4 border-b-2 ${
           isActive
             ? 'text-primary-500 border-primary-500'
             : 'border-transparent hover:text-gray-600 hover:border-gray-300'

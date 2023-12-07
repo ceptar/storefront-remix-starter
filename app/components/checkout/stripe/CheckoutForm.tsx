@@ -31,7 +31,7 @@ export const CheckoutForm = ({ orderCode }: { orderCode: string }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col items-center rounded-none">
+    <form onSubmit={handleSubmit} className="flex flex-col items-center">
       <div className="mb-4 w-full">
         <PaymentElement
           options={{
@@ -53,7 +53,7 @@ export const CheckoutForm = ({ orderCode }: { orderCode: string }) => {
       <button
         type="submit"
         disabled={!stripe}
-        className="bg-primary-500 hover:bg-primary-700 text-white font-bold py-2 px-4 uppercase tracking-0.15em rounded-none"
+        className="bg-primary-500 hover:bg-primary-700 text-white py-2 px-4 uppercase tracking-0.15em rounded-none"
       >
         Submit
       </button>

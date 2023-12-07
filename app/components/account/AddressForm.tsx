@@ -25,7 +25,7 @@ export function AddressForm({
             name="fullName"
             defaultValue={defaultFullName}
             autoComplete="given-name"
-            className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+            className="block w-full border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
           />
         </div>
       </div>
@@ -43,7 +43,7 @@ export function AddressForm({
             name="company"
             id="company"
             defaultValue={address?.company ?? ''}
-            className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+            className="block w-full border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
           />
         </div>
       </div>
@@ -62,7 +62,7 @@ export function AddressForm({
             id="streetLine1"
             defaultValue={address?.streetLine1 ?? ''}
             autoComplete="street-address"
-            className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+            className="block w-full border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
           />
         </div>
       </div>
@@ -80,7 +80,7 @@ export function AddressForm({
             name="streetLine2"
             id="streetLine2"
             defaultValue={address?.streetLine2 ?? ''}
-            className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+            className="block w-full border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
           />
         </div>
       </div>
@@ -99,7 +99,7 @@ export function AddressForm({
             id="city"
             autoComplete="address-level2"
             defaultValue={address?.city ?? ''}
-            className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+            className="block w-full border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
           />
         </div>
       </div>
@@ -117,7 +117,7 @@ export function AddressForm({
               id="countryCode"
               name="countryCode"
               defaultValue={address?.countryCode ?? 'US'}
-              className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+              className="block w-full border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
             >
               {availableCountries.map((item) => (
                 <option key={item.id} value={item.code}>
@@ -143,7 +143,7 @@ export function AddressForm({
             id="province"
             defaultValue={address?.province ?? ''}
             autoComplete="address-level1"
-            className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+            className="block w-full border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
           />
         </div>
       </div>
@@ -162,7 +162,7 @@ export function AddressForm({
             id="postalCode"
             defaultValue={address?.postalCode ?? ''}
             autoComplete="postal-code"
-            className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+            className="block w-full border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
           />
         </div>
       </div>
@@ -181,7 +181,7 @@ export function AddressForm({
             id="phoneNumber"
             defaultValue={address?.phoneNumber ?? ''}
             autoComplete="tel"
-            className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+            className="block w-full border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
           />
         </div>
       </div>

@@ -110,7 +110,7 @@ export default function Footer({
                 className="appearance-none min-w-0 w-full bg-white border border-gray-300 py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white focus:border-white focus:placeholder-gray-400"
                 placeholder="Enter your email"
               />
-              <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+              <div className="mt-3 sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button
                   type="submit"
                   className="w-full bg-primary-500 border border-transparent py-2 px-4 flex items-center justify-center text-base font-medium text-discogray hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-primary-500"

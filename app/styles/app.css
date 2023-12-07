@@ -1361,10 +1361,6 @@ button:disabled {
           user-select: none;
 }
 
-#app :is(.resize) {
-  resize: both;
-}
-
 #app :is(.appearance-none) {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1623,11 +1619,6 @@ button:disabled {
   border-bottom-right-radius: 0px;
 }
 
-#app :is(.rounded-t-lg) {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-}
-
 #app :is(.border) {
   border-width: 1px;
 }
@@ -1686,9 +1677,9 @@ button:disabled {
   border-color: rgb(22 163 74 / var(--tw-border-opacity));
 }
 
-#app :is(.border-rose-500) {
+#app :is(.border-secondary) {
   --tw-border-opacity: 1;
-  border-color: rgb(244 63 94 / var(--tw-border-opacity));
+  border-color: rgb(128 2 228 / var(--tw-border-opacity));
 }
 
 #app :is(.border-transparent) {
@@ -2695,6 +2686,10 @@ button:disabled {
   letter-spacing: .2em;
 }
 
+#app :is(.parent:hover) {
+  opacity:0.7;
+}
+
 #app :is(.child) {
   font-size: 14px;
   line-height: 100%;
@@ -2702,6 +2697,10 @@ button:disabled {
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: .15em;
+}
+
+#app :is(.child:hover) {
+  opacity:0.7;
 }
 
 #app :is(.tronfilter) {
@@ -2800,9 +2799,9 @@ button:disabled {
   z-index: 10;
 }
 
-#app :is(.focus\:border-rose-500:focus) {
+#app :is(.focus\:border-secondary:focus) {
   --tw-border-opacity: 1;
-  border-color: rgb(244 63 94 / var(--tw-border-opacity));
+  border-color: rgb(128 2 228 / var(--tw-border-opacity));
 }
 
 #app :is(.focus\:border-white:focus) {

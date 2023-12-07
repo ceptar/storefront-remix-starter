@@ -3,18 +3,34 @@ import type { Stripe } from '@stripe/stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import { CheckoutForm } from '~/components/checkout/stripe/CheckoutForm';
 
+
 const appearance = {
   theme: 'stripe',
   variables: {
-    colorPrimary: '#15FEE2',
-    colorBackground: '#E8FFFD',
-    colorText: '#0e0e0e',
-    colorDanger: '#FF4D94',
-    fontFamily: 'Metropolitano-Light, sans',
-    spacingUnit: '0.25em',
-    borderRadius: '0px',
-    // See all possible variables below
+    fontWeightNormal: '500',
+    borderRadius: '2px',
+    colorPrimary: '#f360a6',
+    tabIconSelectedColor: '#fff',
+    gridRowSpacing: '16px'
   },
+  rules: {
+    '.Tab, .Input, .Block, .CheckboxInput, .CodeInput': {
+      boxShadow: '0px 3px 10px rgba(18, 42, 66, 0.08)'
+    },
+    '.Block': {
+      borderColor: 'transparent'
+    },
+    '.BlockDivider': {
+      backgroundColor: '#ebebeb'
+    },
+    '.Tab, .Tab:hover, .Tab:focus': {
+      border: '0'
+    },
+    '.Tab--selected, .Tab--selected:hover': {
+      backgroundColor: '#f360a6',
+      color: '#fff'
+    }
+  }
 };
 
 let _stripe: Promise<Stripe | null>;
@@ -36,7 +52,7 @@ export function StripePayments({
 }) {
   const options = {
     // passing the client secret obtained from the server
-    clientSecret,
+    clientSecret, appearance,
   };
   const stripePromise = getStripe(publishableKey);
 
