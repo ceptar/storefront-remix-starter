@@ -1,18 +1,18 @@
 import { useLoaderData } from '@remix-run/react';
-import { useRootLoader } from '~/utils/use-root-loader';
 import { getallCollections } from '~/providers/collections/collectionsall';
 import type { LoaderArgs } from '@remix-run/server-runtime';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Hamburger from '~/components/svgs/Hamburger';
 import CollectionsTreemenu from '~/components/CollectionsTreemenu';
 import '~/styles/app.css';
 
-export async function loader({ request }: LoaderArgs<null>) {
+export async function loader({ request }: LoaderArgs) {
   const collectionsall = await getallCollections(request, { take: 20 });
   return {
     collectionsall,
   };
 }
+
 
 export default function Sliderex() {
   const [isSlideoverVisible, setSlideoverVisible] = useState(false);

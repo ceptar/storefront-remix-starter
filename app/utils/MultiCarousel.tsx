@@ -8,10 +8,6 @@ import '~/styles/app.css';
 export default function MultiCarousel() {
   const { collections } = useLoaderData<typeof loader>();
 
-  // Conditionally render based on the presence of data
-  if (!collections || collections.length === 0) {
-    return null; // or show loading indicator or fallback content
-  }
 
   return (
     <div className="carousel-container">

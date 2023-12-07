@@ -32,5 +32,6 @@ export function formatPrice(value: number, currency: CurrencyCode) {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency,
+    minimumFractionDigits: 2,
   }).format(value / 100);
 }

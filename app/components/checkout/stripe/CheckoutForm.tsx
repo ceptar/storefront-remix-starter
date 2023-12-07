@@ -1,4 +1,3 @@
-// CheckoutForm.tsx
 import {
   useStripe,
   useElements,
@@ -11,18 +10,13 @@ export const CheckoutForm = ({ orderCode }: { orderCode: string }) => {
   const elements = useElements();
 
   const handleSubmit = async (event: FormEvent) => {
-    // We don't want to let default form submission happen here,
-    // which would refresh the page.
     event.preventDefault();
 
     if (!stripe || !elements) {
-      // Stripe.js has not yet loaded.
-      // Make sure to disable form submission until Stripe.js has loaded.
       return;
     }
 
     const result = await stripe.confirmPayment({
-      //`Elements` instance that was used to create the Payment Element
       elements,
       confirmParams: {
         return_url: location.origin + `/checkout/confirmation/${orderCode}`,
@@ -30,19 +24,39 @@ export const CheckoutForm = ({ orderCode }: { orderCode: string }) => {
     });
 
     if (result.error) {
-      // Show error to your customer (for example, payment details incomplete)
       console.log(result.error.message);
     } else {
-      // Your customer will be redirected to your `return_url`. For some payment
-      // methods like iDEAL, your customer will be redirected to an intermediate
-      // site first to authorize the payment, then redirected to the `return_url`.
+      // Handle success scenario
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <PaymentElement />
-      <button disabled={!stripe}>Submit</button>
+    <form onSubmit={handleSubmit} className="flex flex-col items-center rounded-none">
+      <div className="mb-4 w-full">
+        <PaymentElement
+          options={{
+            style: {
+              base: {
+                fontSize: '16px',
+                color: '#32325d',
+                '::placeholder': {
+                  color: '#aab7c4',
+                },
+              },
+              invalid: {
+                color: '#fa755a',
+              },
+            },
+          }}
+        />
+      </div>
+      <button
+        type="submit"
+        disabled={!stripe}
+        className="bg-primary-500 hover:bg-primary-700 text-white font-bold py-2 px-4 uppercase tracking-0.15em rounded-none"
+      >
+        Submit
+      </button>
     </form>
   );
 };

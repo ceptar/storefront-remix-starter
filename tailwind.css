@@ -1,5 +1,7 @@
 @tailwind base;
+
 /* @tailwind components; */
+
 @tailwind utilities;
 
 @layer base {
@@ -78,15 +80,13 @@
   }
 
   .bg-hero {
-    background-image: url('~/../public/hero1.webp') ;
-    background-image: alt('hero1');
+    background-image: url('~/../public/hero1.webp');
      background-size: cover;
     background-position: left center;
     height: 50vh;
-    top: 8vh;
+    margin-top: 8vh;
     width: 100%;
     z-index: 10;
-    
   }
 
   .carousel-container {
@@ -121,32 +121,21 @@
 
   /* Links TreeMenu */
   .parent {
-    font-size: 24px;
+    font-size: 18px;
     line-height: 140%;
-    font-family: Metropolitano-Light, sans;
+    font-family: Metropolitano-Regular, sans;
     color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: .2em;
   }
 
   .child {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 100%;
-    font-family: Metropolitano-Regular, sans;
+    font-family: Metropolitano-Light, sans;
     color: #ffffff;
-  }
-
-  /* Popover Menu */
-  .Popover {
-    z-index: 50;
-    background-color: white;
-    border: #0e0e0e;
-    border-width: 1px;
-    color: #0e0e0e;
-    margin-top: 8vh;
-
-    right: 0; /* Set right to 0 to hug the right side */
-
-    max-width: calc(100vw - 10px);
-    box-shadow: -5px 1px 20px 0px rgba(0, 0, 0, 0.333);
+    text-transform: uppercase;
+    letter-spacing: .15em;
   }
 
   .tronfilter {
@@ -157,17 +146,4 @@
 
     filter: drop-shadow(-1px -1px 1px #0a0a0ae0);
   }
-
-  /* .tronfilter {
-
-  -webkit-filter: 
-  drop-shadow( 0px 0px 0.2px #000000 )
-  drop-shadow( -.75px 0px 2px #00000098 );
-  filter: 
-  drop-shadow( 0px 0px 0.2px #000000 )
-  drop-shadow( -.75px 0px 2px #00000098 ); 
-  stroke:#ffffff;
-  stroke-width: 0;
-  fill: #fff;
-} */
 }

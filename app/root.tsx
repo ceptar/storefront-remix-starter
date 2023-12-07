@@ -74,11 +74,11 @@ export async function loader({ request, params, context }: DataFunctionArgs) {
     setApiUrl(context.VENDURE_API_URL);
   }
 
-  const collections = await getCollections(request, { take: 20 });
+  const collections = await getCollections(request);
   const topLevelCollections = collections.filter(
     (collection) => collection.parent?.name === '__root_collection__',
   );
-  const collectionsall = await getallCollections(request, { take: 20 });
+  const collectionsall = await getallCollections(request);
 
   const activeCustomer = await getActiveCustomer({ request });
   const loaderData: RootLoaderData = {
@@ -93,8 +93,8 @@ export async function loader({ request, params, context }: DataFunctionArgs) {
 export default function App() {
   const [open, setOpen] = useState(false);
   const loaderData = useLoaderData<RootLoaderData>();
-  const { collections } = loaderData;
-  const { collectionsall } = loaderData;
+  const { collections, collectionsall } = loaderData;
+
   const {
     activeOrderFetcher,
     activeOrder,
@@ -124,7 +124,7 @@ export default function App() {
           onCartIconClick={() => setOpen(!open)}
           cartQuantity={activeOrder?.totalQuantity ?? 0}
         />
-        <main className="">
+        <main>
           <Outlet
             context={{
               activeOrderFetcher,

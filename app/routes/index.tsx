@@ -18,7 +18,7 @@ export default function Index() {
 
   return (
     <>
-      <div className="bg-hero">
+      <div className="bg-hero" aria-label="[hero1]">
 
         
       </div>
@@ -28,9 +28,9 @@ export default function Index() {
         className="h-[10vh] z-20 flex justify-center items-center mr-auto ml-auto w-full"      >
         <h2
           id="category-heading"
-          className="px-8 mt-4 items-center justify-center flex text-discogray  text-2xl font-header1 leading-10 border-t border-b border-discoteal"
+          className="px-8 mt-4 items-center justify-center flex  leading-10 border-t border-b border-discoteal"
         >
-          <span className="">Categories</span>
+          <span className="text-xl uppercase tracking-[0.25em] font-metrolight1 text-discogray p-2">Categories</span>
         </h2>
       </div>
 

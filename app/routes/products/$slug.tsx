@@ -103,7 +103,7 @@ export default function ProductSlug() {
         ></Breadcrumbs>
                 </div>
 
-                <div className=" px-8 py-4 text-4xl font-metrolight1 tracking-wide border-b border-t border-discogray">
+                <div className="uppercase font-metrothin1 tracking-[0.25em] px-8 py-8 text-4xl border-b border-t border-discogray">
 
                 <div>
 
@@ -114,9 +114,9 @@ export default function ProductSlug() {
 
                 </div>
                 <div className="mx-auto px-8">
-        <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start mt-16">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start my-16">
           {/* Image gallery */}
-          <div className="px-4 pt-4 pb-12 mb-16 shadow-md bg-gray-100 w-full mx-auto sm:block ">
+          <div className="px-4 pt-4 pb-12 shadow-md bg-gray-100 w-full mx-auto sm:block ">
             <span className="  overflow-hidden">
               <div className="w-full h-full object-center object-cover rounded-lg">
                 <img

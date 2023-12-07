@@ -1,5 +1,3 @@
-const colors = require('tailwindcss/colors');
-
 module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
@@ -13,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Metropolitano-Regular', 'sans'],
+        sans: ['Metropolitano-Light', 'sans'],
         header1: ['Metropolitano-Bold', 'sans'],
         facet1: ['FacetUltra-Regular', 'sans'],
         nohemiblack1: ['Nohemi-Black', 'sans'],
@@ -23,6 +21,7 @@ module.exports = {
         metrobold1: ['Metropolitano-Bold', 'sans'],
         metrolight1: ['Metropolitano-Light', 'sans'],
         metrothin1: ['Metropolitano-Thin', 'sans'],
+        metroreg1: ['Metropolitano-Regular', 'sans'],
         neonlight: ['neon-light', 'sans'],
       },
       colors: {
