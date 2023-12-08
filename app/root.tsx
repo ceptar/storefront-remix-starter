@@ -93,7 +93,8 @@ export async function loader({ request, params, context }: DataFunctionArgs) {
 export default function App() {
   const [open, setOpen] = useState(false);
   const loaderData = useLoaderData<RootLoaderData>();
-  const { collections, collectionsall } = loaderData;
+  const { collections } = loaderData;
+  const { collectionsall } = loaderData;
 
   const {
     activeOrderFetcher,
