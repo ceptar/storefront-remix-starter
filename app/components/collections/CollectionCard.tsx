@@ -13,8 +13,8 @@ export function CollectionCard({
       key={collection.id}
       className="mx-2 w-fit justify-center items-center flex flex-col relative overflow-hidden shadow-md shadow-gray-300 hover:opacity-75"
     >
-    <div className="inline-flex flex-col items-start gap-2 p-4 bg-discoteal-100 mx-auto">
-      <div className="flex flex-col justify-center items-center w-[7rem] h-[10rem] bg-[#83a9ac]">
+    <div className="inline-flex flex-col items-start gap-2 p-4 bg-gray-200 mx-auto">
+      <div className="flex flex-col justify-center items-center w-[7rem] h-[10rem] bg-white">
       <img
             src={collection.featuredAsset?.preview + '?w=1200&h=1200'}
             className="object-cover object-center justify-center w-full h-full"

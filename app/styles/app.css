@@ -1800,6 +1800,11 @@ button:disabled {
   background-color: rgb(254 252 232 / var(--tw-bg-opacity));
 }
 
+#app :is(.bg-gray-200) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
 #app :is(.bg-opacity-20) {
   --tw-bg-opacity: 0.2;
 }
