@@ -23,7 +23,7 @@ export default function Footer({
 }) {
   return (
     <footer
-      className="mt-24 border-t bg-discograytwo"
+      className="border-t bg-discograytwo"
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only">

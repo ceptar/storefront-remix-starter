@@ -42,7 +42,7 @@ export default function Index() {
 <div className="h-[5vh]"></div>
       <div className="  bg-discoteal">
         <div className="flex items-center justify-center">
-          <div className="h-[40vh] justify-center flex flex-row w-full">
+          <div className="h-[50vh] justify-center flex flex-row w-full">
             <div className="flex flex-col pt-0 justify-center items-center w-full">
               <img
                 className="max-w-[400px] max-h-full object-cover"
@@ -54,7 +54,6 @@ export default function Index() {
         </div>
       </div>
 
-      <div></div>
     </>
   );
 }
