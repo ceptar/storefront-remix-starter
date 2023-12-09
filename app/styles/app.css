@@ -1682,6 +1682,11 @@ button:disabled {
   border-color: rgb(250 204 21 / var(--tw-border-opacity));
 }
 
+#app :is(.border-white) {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
 #app :is(.border-opacity-20) {
   --tw-border-opacity: 0.2;
 }

@@ -9,14 +9,18 @@ export function SearchBar() {
     initialQuery = new URL(window.location.href).searchParams.get('q') ?? '';
   }
 
+  const handleClick = (event) => {
+    event.stopPropagation();
+  };
+
   return (
-    <Form method="get" action="/search" key={initialQuery}>
+    <Form method="get" action="/search" key={initialQuery} onClick={handleClick}>
       <input
         type="search"
         name="q"
         defaultValue={initialQuery}
         placeholder="Search"
-        className="shadow-sm focus:ring-primary-500 focus:border-primary-500 block w-full sm:text-sm border-gray-300 rounded-md"
+        className="focus:ring-primary-500 focus:border-primary-500 block text-sm border-white text-discogray w-full"
       />
     </Form>
   );

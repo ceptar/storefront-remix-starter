@@ -4,6 +4,7 @@ import type { LoaderArgs } from '@remix-run/server-runtime';
 import React, { useState } from 'react';
 import Hamburger from '~/components/svgs/Hamburger';
 import CollectionsTreemenu from '~/components/CollectionsTreemenu';
+import { SearchBar } from '~/components/header/SearchBar';
 import '~/styles/app.css';
 
 export async function loader({ request }: LoaderArgs) {
@@ -67,9 +68,12 @@ export default function Sliderex() {
             </svg>
           </div>
           <div className="px-8 mt-12 absolute transform w-full">
-            <div className="border border-gray-200 w-full pb-4">
+            <div className="w-full pb-4">
               {/* Use collectionsall directly */}
               <CollectionsTreemenu collectionsData={{ collectionsall }} />
+            </div>
+            <div className="w-full">
+              <SearchBar />
             </div>
           </div>
         </div>
