@@ -53,7 +53,7 @@ export const CheckoutForm = ({ orderCode }: { orderCode: string }) => {
       <button
         type="submit"
         disabled={!stripe}
-        className="bg-primary-500 hover:bg-primary-700 text-white py-2 px-4 uppercase tracking-0.15em rounded-none"
+        className="bg-primary-500 hover:bg-primary-700 text-black py-2 px-8 uppercase tracking-0.25em rounded-none"
       >
         Submit
       </button>

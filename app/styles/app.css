@@ -1126,6 +1126,14 @@ button:disabled {
   height: 100%;
 }
 
+#app :is(.h-\[15vh\]) {
+  height: 15vh;
+}
+
+#app :is(.h-\[40vh\]) {
+  height: 40vh;
+}
+
 #app :is(.max-h-full) {
   max-height: 100%;
 }
@@ -1776,6 +1784,11 @@ button:disabled {
 #app :is(.bg-yellow-50) {
   --tw-bg-opacity: 1;
   background-color: rgb(254 252 232 / var(--tw-bg-opacity));
+}
+
+#app :is(.bg-discoteal) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 254 226 / var(--tw-bg-opacity));
 }
 
 #app :is(.bg-opacity-20) {

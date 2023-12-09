@@ -25,7 +25,7 @@ export default function Index() {
 
 
       <div
-        className="h-[10vh] z-20 flex justify-center items-center mr-auto ml-auto w-full"      >
+        className="h-[15vh] z-20 flex justify-center items-center mr-auto ml-auto w-full"      >
         <h2
           id="category-heading"
           className="px-8 mt-4 items-center justify-center flex  leading-10 border-t border-b border-discoteal"
@@ -40,9 +40,9 @@ export default function Index() {
         </div>
       </div>
 <div className="h-[5vh]"></div>
-      <div className="  bg-discoyellow">
+      <div className="  bg-discoteal">
         <div className="flex items-center justify-center">
-          <div className="h-[50vh] justify-center flex flex-row w-full">
+          <div className="h-[40vh] justify-center flex flex-row w-full">
             <div className="flex flex-col pt-0 justify-center items-center w-full">
               <img
                 className="max-w-[400px] max-h-full object-cover"

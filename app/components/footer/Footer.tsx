@@ -34,7 +34,7 @@ export default function Footer({
           <div className="grid grid-cols-1 sm:grid sm:grid-cols-2 gap-8 xl:col-span-2">
             <div className="grid grid-cols-1 md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-discogray tracking-wider uppercase">
+                <h3 className="text-sm font-semibold text-discogray tracking-[0.25em] uppercase">
                   Shop
                 </h3>
                 <ul className="my-2">
@@ -53,7 +53,7 @@ export default function Footer({
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-discogray tracking-wider uppercase">
+                <h3 className="text-sm font-semibold text-discogray tracking-[0.25em] uppercase">
                   Support
                 </h3>
                 <ul className="my-2">
@@ -72,7 +72,7 @@ export default function Footer({
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-discogray tracking-wider uppercase">
+                <h3 className="text-sm font-semibold text-discogray tracking-[0.25em] uppercase">
                   Company
                 </h3>
                 <ul className="my-2">
@@ -91,7 +91,7 @@ export default function Footer({
             </div>
           </div>
           <div className="mt-8 xl:mt-0">
-            <h3 className="text-sm font-semibold text-discogray tracking-wider uppercase">
+            <h3 className="text-sm font-semibold text-discogray tracking-[0.25em] uppercase">
               Subscribe to our newsletter
             </h3>
             <p className="mt-4 text-md font-metrolight1 text-discogray">
@@ -113,7 +113,7 @@ export default function Footer({
               <div className="mt-3 sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button
                   type="submit"
-                  className="w-full bg-primary-500 border border-transparent py-2 px-4 flex items-center justify-center text-base font-medium text-discogray hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-primary-500"
+                  className="w-full bg-primary-500 border border-transparent py-2 px-4 flex items-center justify-center text-base tracking-[0.15em] text-discogray hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-primary-500"
                 >
                   Subscribe
                 </button>
