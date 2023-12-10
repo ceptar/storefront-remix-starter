@@ -2068,6 +2068,14 @@ button:disabled {
   font-family: Metropolitano-Thin, sans;
 }
 
+#app :is(.font-sans) {
+  font-family: Metropolitano-Light, sans;
+}
+
+#app :is(.font-metroreg1) {
+  font-family: Metropolitano-Regular, sans;
+}
+
 #app :is(.\!text-sm) {
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
@@ -2298,6 +2306,11 @@ button:disabled {
   color: rgb(133 77 14 / var(--tw-text-opacity));
 }
 
+#app :is(.text-discopink) {
+  --tw-text-opacity: 1;
+  color: rgb(255 0 229 / var(--tw-text-opacity));
+}
+
 #app :is(.underline) {
   text-decoration-line: underline;
 }
@@ -2475,6 +2488,10 @@ button:disabled {
 
 #app :is(.text-primary-800) {
   color: hsl(173, 99%, 20%);
+}
+
+#app :is(.text-primary-700) {
+  color: hsl(173, 99%, 30%);
 }
 
 #app :is(.text-primary-600) {
@@ -2749,6 +2766,11 @@ button:disabled {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+#app :is(.hover\:text-primary:hover) {
+  --tw-text-opacity: 1;
+  color: rgb(21 254 226 / var(--tw-text-opacity));
+}
+
 #app :is(.hover\:underline:hover) {
   text-decoration-line: underline;
 }
@@ -2781,12 +2803,20 @@ button:disabled {
   color: hsl(173, 99%, 50%);
 }
 
+#app :is(.hover\:text-primary-400:hover) {
+  color: hsl(173, 99%, 60%);
+}
+
 #app :is(.hover\:bg-discopink-500:hover) {
   background-color: hsl(306, 100%, 50%);
 }
 
 #app :is(.hover\:bg-discopink-400:hover) {
   background-color: hsl(306, 100%, 60%);
+}
+
+#app :is(.hover\:text-discopink-300:hover) {
+  color: hsl(306, 100%, 70%);
 }
 
 #app :is(.hover\:text-discogray-400:hover) {
