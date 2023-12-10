@@ -1,10 +1,14 @@
-import { useLoaderData } from '@remix-run/react';
+import { Link, useLoaderData } from '@remix-run/react';
+import { useRootLoader } from '~/utils/use-root-loader';
 import { getallCollections } from '~/providers/collections/collectionsall';
 import type { LoaderArgs } from '@remix-run/server-runtime';
 import React, { useState } from 'react';
 import Hamburger from '~/components/svgs/Hamburger';
 import CollectionsTreemenu from '~/components/CollectionsTreemenu';
 import { SearchBar } from '~/components/header/SearchBar';
+import SignUp from '~/components/svgs/SignUp';
+import SignIn from '~/components/svgs/SignIn';
+import { UserIcon } from '@heroicons/react/24/solid';
 import '~/styles/app.css';
 
 export async function loader({ request }: LoaderArgs) {
@@ -12,10 +16,13 @@ export async function loader({ request }: LoaderArgs) {
   return {
     collectionsall,
   };
+  
 }
 
 
 export default function Sliderex() {
+  const data = useRootLoader();
+const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
   const [isSlideoverVisible, setSlideoverVisible] = useState(false);
 
   // Access the collectionsall data from loaderData
@@ -23,6 +30,7 @@ export default function Sliderex() {
 
   const toggleSlideover = () => {
     setSlideoverVisible(!isSlideoverVisible);
+
   };
 
   return (
@@ -72,9 +80,17 @@ export default function Sliderex() {
               {/* Use collectionsall directly */}
               <CollectionsTreemenu collectionsData={{ collectionsall }} />
             </div>
-            <div className="w-full">
+            <div className="w-full pb-16">
               <SearchBar />
             </div>
+            <div className="flex justify-end w-full">
+  <Link
+    to={isSignedIn ? '/account' : '/sign-in'}
+    className="flex space-x-1"
+  >
+    <span>{isSignedIn ? <SignUp/> : <SignIn/>}</span>
+  </Link>
+</div>
           </div>
         </div>
       </div>

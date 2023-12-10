@@ -16,8 +16,8 @@ export function Header({
   cartQuantity: number;
 }) {
   // const { collections } = useLoaderData<typeof loader>();
-  const data = useRootLoader();
-  const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
+  // const data = useRootLoader();
+  // const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
 
   return (
     <>

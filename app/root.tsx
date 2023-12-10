@@ -119,13 +119,13 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className='flex flex-col min-h-screen'>
         <Header
         collectionsall = {collectionsall}
           onCartIconClick={() => setOpen(!open)}
           cartQuantity={activeOrder?.totalQuantity ?? 0}
         />
-        <main>
+        <main className='flex-grow mt-[8vh]'>
           <Outlet
             context={{
               activeOrderFetcher,
@@ -144,7 +144,7 @@ export default function App() {
         />
         <ScrollRestoration />
         <Scripts />
-        <Footer collections={collections}></Footer>
+        <Footer className='mt-auto' collections={collections}></Footer>
 
         {devMode && <LiveReload />}
       </body>
@@ -180,6 +180,7 @@ function DefaultSparseErrorPage({
       </head>
       <body>
         <main className="flex flex-col items-center px-4 py-16 sm:py-32 text-center">
+
           <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
             {tagline}
           </span>

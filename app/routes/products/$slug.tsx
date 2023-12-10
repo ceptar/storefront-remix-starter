@@ -92,7 +92,7 @@ export default function ProductSlug() {
 
   return (
     <div>
-      <div className="mt-[8vh] mx-auto px-8 bg-gray-100">
+      <div className="mx-auto px-8 bg-gray-100">
         <Breadcrumbs
           items={
             product.collections[product.collections.length - 1]?.breadcrumbs ??
@@ -212,7 +212,7 @@ export default function ProductSlug() {
                 <div className="flex align-baseline">
                   <button
                     type="submit"
-                    className={`max-w-xs flex-1 ${
+                    className={`max-w-xs py-3 flex-1 ${
                       activeOrderFetcher.state !== 'idle'
                         ? 'bg-gray-400'
                         : qtyInCart === 0
@@ -237,7 +237,7 @@ export default function ProductSlug() {
                     )}
                   </button>
 
-                  <button
+                  {/* <button
                     type="button"
                     className="ml-4 py-3 px-3 flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500"
                   >
@@ -246,7 +246,7 @@ export default function ProductSlug() {
                       aria-hidden="true"
                     />
                     <span className="sr-only">Add to favorites</span>
-                  </button>
+                  </button> */}
                 </div>
               </div>
               <div className="mt-2 flex items-center space-x-2">

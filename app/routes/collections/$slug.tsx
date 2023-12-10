@@ -80,7 +80,7 @@ export default function CollectionSlug() {
   return (
     <div className="w-full">
       <div
-        className="absolut h-[8vh] overflow-hidden top-0 w-full flex flex-col items-center z-10"
+        className="absolut overflow-hidden top-0 w-full flex flex-col items-center z-10"
       >      </div>
       <div className="px-8 bg-gray-100 flex flex-row">
           <div className=" w-full flex flex-col items-start justify-center ">
