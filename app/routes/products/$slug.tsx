@@ -1,4 +1,4 @@
-import type { DataFunctionArgs} from '@remix-run/server-runtime';
+import type { DataFunctionArgs } from '@remix-run/server-runtime';
 import { json } from '@remix-run/server-runtime';
 import { useState } from 'react';
 import { Price } from '~/components/products/Price';
@@ -6,11 +6,9 @@ import { getProductBySlug } from '~/providers/products/products';
 import type {
   FetcherWithComponents,
   ShouldRevalidateFunction,
-  MetaFunction} from '@remix-run/react';
-import {
-  useLoaderData,
-  useOutletContext
+  MetaFunction,
 } from '@remix-run/react';
+import { useLoaderData, useOutletContext } from '@remix-run/react';
 import { CheckIcon, HeartIcon, PhotoIcon } from '@heroicons/react/24/solid';
 import { Breadcrumbs } from '~/components/Breadcrumbs';
 import { APP_META_TITLE } from '~/constants';
@@ -95,25 +93,20 @@ export default function ProductSlug() {
   return (
     <div>
       <div className="mt-[8vh] mx-auto px-8 bg-gray-100">
-      <Breadcrumbs
+        <Breadcrumbs
           items={
             product.collections[product.collections.length - 1]?.breadcrumbs ??
             []
           }
         ></Breadcrumbs>
-                </div>
+      </div>
 
-                <div className="uppercase font-metrothin1 tracking-[0.25em] px-8 py-8 text-4xl border-b border-t border-discogray">
-
-                <div>
-
-<h2 className="">
-{product.name}
-</h2>
-</div>
-
-                </div>
-                <div className="mx-auto px-8">
+      <div className="uppercase font-metrothin1 tracking-[0.25em] px-8 py-8 text-4xl border-b border-t border-discogray">
+        <div>
+          <h2 className="">{product.name}</h2>
+        </div>
+      </div>
+      <div className="mx-auto px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start my-16">
           {/* Image gallery */}
           <div className="px-4 pt-4 pb-12 shadow-md bg-gray-100 w-full mx-auto sm:block ">
@@ -155,11 +148,11 @@ export default function ProductSlug() {
                 ))}
               </ScrollableContainer>
             )}
+          
           </div>
 
           {/* Product info */}
           <div className="mt-10">
-           
             <div className="">
               <h3 className="sr-only">Description</h3>
 
@@ -265,39 +258,36 @@ export default function ProductSlug() {
                   <Alert message={addItemToOrderError} />
                 </div>
               )}
-
-              
             </activeOrderFetcher.Form>
           </div>
-          </div>
+        </div>
       </div>
-     
+
       <div className="mt-16 px-8 py-2  border-t border-discogray">
         <section className="mt-4 pt-4 text-xs">
-                <h3 className="text-gray-600 font-bold mb-2">
-                  Shipping & Returns
-                </h3>
-                <div className=" text-discogray-400 space-y-1">
-                  <p>
-                    Standard shipping: 3 - 5 working days. Express shipping: 1 -
-                    3 working days.
-                  </p>
-                  <p>
-                    Shipping costs depend on delivery address and will be
-                    calculated during checkout.
-                  </p>
-                  <p>
-                    Returns are subject to terms. Please see the{' '}
-                    <span className="underline">returns page</span> for further
-                    information.
-                  </p>
-                </div>
-              </section>
-              </div>
+          <h3 className="text-gray-600 font-bold mb-2">Shipping & Returns</h3>
+          <div className=" text-discogray-400 space-y-1">
+            <p>
+              Standard shipping: 3 - 5 working days. Express shipping: 1 - 3
+              working days.
+            </p>
+            <p>
+              Shipping costs depend on delivery address and will be calculated
+              during checkout.
+            </p>
+            <p>
+              Returns are subject to terms. Please see the{' '}
+              <span className="underline">returns page</span> for further
+              information.
+            </p>
+          </div>
+        </section>
+      </div>
 
       {/* <div className="mt-24">
         <TopReviews></TopReviews>
       </div> */}
+          <div className="h-8"></div>
     </div>
   );
 }

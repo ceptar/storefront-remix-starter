@@ -139,7 +139,9 @@ export default function CollectionSlug() {
           />
         </ValidatedForm>
       </div>
+      <div className="h-8"></div>
     </div>
+
   );
 }
 

@@ -1134,6 +1134,14 @@ button:disabled {
   height: 40vh;
 }
 
+#app :is(.h-16) {
+  height: 4rem;
+}
+
+#app :is(.h-12) {
+  height: 3rem;
+}
+
 #app :is(.max-h-full) {
   max-height: 100%;
 }
