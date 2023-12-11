@@ -2310,6 +2310,11 @@ button:disabled {
   color: rgb(133 77 14 / var(--tw-text-opacity));
 }
 
+#app :is(.text-gray-700) {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
 #app :is(.underline) {
   text-decoration-line: underline;
 }
