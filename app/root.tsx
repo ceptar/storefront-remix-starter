@@ -119,13 +119,13 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className='flex flex-col min-h-screen'>
+      <body className="flex flex-col min-h-screen">
         <Header
         collectionsall = {collectionsall}
           onCartIconClick={() => setOpen(!open)}
           cartQuantity={activeOrder?.totalQuantity ?? 0}
         />
-        <main className='flex-grow mt-[8vh]'>
+        <main className="flex-grow mt-[8vh]">
           <Outlet
             context={{
               activeOrderFetcher,
@@ -144,7 +144,7 @@ export default function App() {
         />
         <ScrollRestoration />
         <Scripts />
-        <Footer className='mt-auto' collections={collections}></Footer>
+        <Footer collections={collections}></Footer>
 
         {devMode && <LiveReload />}
       </body>

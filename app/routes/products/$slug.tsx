@@ -249,7 +249,7 @@ export default function ProductSlug() {
                   </button> */}
                 </div>
               </div>
-              <div className="mt-2 flex items-center space-x-2">
+              <div className="mt-2 flex items-center">
                 <span className="text-gray-500">{selectedVariant?.sku}</span>
                 <StockLevelLabel stockLevel={selectedVariant?.stockLevel} />
               </div>

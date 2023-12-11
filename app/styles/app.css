@@ -1094,6 +1094,10 @@ button:disabled {
   height: 2rem;
 }
 
+#app :is(.h-9) {
+  height: 2.25rem;
+}
+
 #app :is(.h-96) {
   height: 24rem;
 }
@@ -1128,10 +1132,6 @@ button:disabled {
 
 #app :is(.h-full) {
   height: 100%;
-}
-
-#app :is(.h-screen) {
-  height: 100vh;
 }
 
 #app :is(.max-h-full) {
@@ -1188,6 +1188,10 @@ button:disabled {
 
 #app :is(.w-8) {
   width: 2rem;
+}
+
+#app :is(.w-9) {
+  width: 2.25rem;
 }
 
 #app :is(.w-\[7rem\]) {
@@ -1663,9 +1667,9 @@ button:disabled {
   border-color: rgb(17 24 39 / var(--tw-border-opacity));
 }
 
-#app :is(.border-green-600) {
+#app :is(.border-primary) {
   --tw-border-opacity: 1;
-  border-color: rgb(22 163 74 / var(--tw-border-opacity));
+  border-color: rgb(21 254 226 / var(--tw-border-opacity));
 }
 
 #app :is(.border-secondary) {
@@ -1749,11 +1753,6 @@ button:disabled {
 #app :is(.bg-green-50) {
   --tw-bg-opacity: 1;
   background-color: rgb(240 253 244 / var(--tw-bg-opacity));
-}
-
-#app :is(.bg-green-600) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
 #app :is(.bg-primary) {
@@ -2072,10 +2071,6 @@ button:disabled {
   font-family: Metropolitano-Light, sans;
 }
 
-#app :is(.font-metroreg1) {
-  font-family: Metropolitano-Regular, sans;
-}
-
 #app :is(.\!text-sm) {
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
@@ -2155,6 +2150,10 @@ button:disabled {
 
 #app :is(.leading-\[140\%\]) {
   line-height: 140%;
+}
+
+#app :is(.tracking-\[0\.15\]) {
+  letter-spacing: 0.15;
 }
 
 #app :is(.tracking-\[0\.15em\]) {
@@ -2266,6 +2265,11 @@ button:disabled {
   color: rgb(224 231 255 / var(--tw-text-opacity));
 }
 
+#app :is(.text-primary) {
+  --tw-text-opacity: 1;
+  color: rgb(21 254 226 / var(--tw-text-opacity));
+}
+
 #app :is(.text-red-400) {
   --tw-text-opacity: 1;
   color: rgb(248 113 113 / var(--tw-text-opacity));
@@ -2304,11 +2308,6 @@ button:disabled {
 #app :is(.text-yellow-800) {
   --tw-text-opacity: 1;
   color: rgb(133 77 14 / var(--tw-text-opacity));
-}
-
-#app :is(.text-discopink) {
-  --tw-text-opacity: 1;
-  color: rgb(255 0 229 / var(--tw-text-opacity));
 }
 
 #app :is(.underline) {
@@ -2738,11 +2737,6 @@ button:disabled {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-#app :is(.hover\:bg-green-700:hover) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
-}
-
 #app :is(.hover\:bg-opacity-70:hover) {
   --tw-bg-opacity: 0.7;
 }
@@ -2761,14 +2755,14 @@ button:disabled {
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
-#app :is(.hover\:text-white:hover) {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 #app :is(.hover\:text-primary:hover) {
   --tw-text-opacity: 1;
   color: rgb(21 254 226 / var(--tw-text-opacity));
+}
+
+#app :is(.hover\:text-white:hover) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 #app :is(.hover\:underline:hover) {
@@ -2803,20 +2797,12 @@ button:disabled {
   color: hsl(173, 99%, 50%);
 }
 
-#app :is(.hover\:text-primary-400:hover) {
-  color: hsl(173, 99%, 60%);
-}
-
 #app :is(.hover\:bg-discopink-500:hover) {
   background-color: hsl(306, 100%, 50%);
 }
 
 #app :is(.hover\:bg-discopink-400:hover) {
   background-color: hsl(306, 100%, 60%);
-}
-
-#app :is(.hover\:text-discopink-300:hover) {
-  color: hsl(306, 100%, 70%);
 }
 
 #app :is(.hover\:text-discogray-400:hover) {
@@ -3329,11 +3315,6 @@ button:disabled {
   #app :is(.lg\:px-8) {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  #app :is(.lg\:py-16) {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
   }
 
   #app :is(.lg\:py-3) {

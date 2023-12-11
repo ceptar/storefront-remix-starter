@@ -12,10 +12,14 @@ import {
 import { DEMO_API_URL } from '~/constants';
 
 export async function action({ params, request }: DataFunctionArgs) {
+  // Log the value of apiUrl
   const apiUrl = process.env.VENDURE_API_URL || DEMO_API_URL;
+  console.log('apiUrl:', apiUrl);
+
+  // Check if apiUrl is equal to DEMO_API_URL
   if (apiUrl === DEMO_API_URL) {
     return {
-      form: "Registration can't be used with Vendure demo shop! Please connect your own instance.",
+      form: `Registration can't be used with Vendure demo shop! Please connect your own instance. apiUrl: ${apiUrl}`,
     };
   }
 
@@ -45,14 +49,14 @@ export default function SignUpPage() {
     <>
       <div className="flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
-          <h2 className="mt-6 text-center text-3xl text-gray-900">
+          <h2 className="mt-6 text-center text-xl uppercase tracking-[0.15em] text-discogray">
             Create a new account
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
             Or{' '}
             <Link
               to="/sign-in"
-              className="font-medium text-primary-600 hover:text-primary-500"
+              className="font-medium text-primary-700 hover:text-primary-500"
             >
               login to your existing account
             </Link>
@@ -60,14 +64,14 @@ export default function SignUpPage() {
         </div>
 
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-          <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-            <div className="bg-yellow-50 border border-yellow-400 text-yellow-800 rounded p-4 text-center text-sm">
+          <div className="bg-white py-8 px-4 shadow sm:px-10">
+            {/* <div className="bg-yellow-50 border border-yellow-400 text-yellow-800 p-4 text-center text-sm">
               <p>
                 Account registration is not supported by the demo Vendure
                 instance. In order to use it, please connect the Remix
                 storefront to your own local / production instance.
               </p>
-            </div>
+            </div> */}
             <Form className="space-y-6" method="post">
               <input
                 type="hidden"
@@ -87,7 +91,7 @@ export default function SignUpPage() {
                     name="email"
                     type="email"
                     autoComplete="email"
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+                    className="appearance-none block w-full px-3 py-2 border border-gray-300 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
                   />
                   {formErrors?.email && (
                     <div className="text-xs text-red-700">
@@ -110,7 +114,7 @@ export default function SignUpPage() {
                     name="firstName"
                     type="text"
                     autoComplete="given-name"
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+                    className="appearance-none block w-full px-3 py-2 border border-gray-300 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
                   />
                 </div>
               </div>
@@ -128,7 +132,7 @@ export default function SignUpPage() {
                     name="lastName"
                     type="text"
                     autoComplete="family-name"
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+                    className="appearance-none block w-full px-3 py-2 border border-gray-300 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
                   />
                 </div>
               </div>
@@ -146,7 +150,7 @@ export default function SignUpPage() {
                     name="password"
                     type="password"
                     autoComplete="current-password"
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+                    className="appearance-none block w-full px-3 py-2 border border-gray-300 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
                   />
                   {formErrors?.password && (
                     <div className="text-xs text-red-700">
@@ -168,7 +172,7 @@ export default function SignUpPage() {
                     name="repeatPassword"
                     type="password"
                     autoComplete="current-password"
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+                    className="appearance-none block w-full px-3 py-2 border border-gray-300 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
                   />
                   {formErrors?.repeatPassword && (
                     <div className="text-xs text-red-700">
@@ -178,7 +182,7 @@ export default function SignUpPage() {
                 </div>
               </div>
               {formErrors?.form && (
-                <div className="rounded-md bg-red-50 p-4">
+                <div className=" bg-red-50 p-4">
                   <div className="flex">
                     <div className="flex-shrink-0">
                       <XCircleIcon
@@ -201,7 +205,7 @@ export default function SignUpPage() {
               <div>
                 <button
                   type="submit"
-                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+                  className="w-full flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm uppercase tracking-[0.15em] text-discogray bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
                 >
                   Sign up
                 </button>

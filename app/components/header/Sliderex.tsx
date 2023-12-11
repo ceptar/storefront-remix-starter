@@ -6,8 +6,8 @@ import React, { useState } from 'react';
 import Hamburger from '~/components/svgs/Hamburger';
 import CollectionsTreemenu from '~/components/CollectionsTreemenu';
 import { SearchBar } from '~/components/header/SearchBar';
-import SignUp from '~/components/svgs/SignUp';
-import SignIn from '~/components/svgs/SignIn';
+// import SignUp from '~/components/svgs/SignUp';
+// import SignIn from '~/components/svgs/SignIn';
 import { UserIcon } from '@heroicons/react/24/solid';
 import '~/styles/app.css';
 
@@ -61,7 +61,7 @@ const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
             isSlideoverVisible ? '' : 'translate-x-full'
           }`}
         >
-          <div className="px-8 mx-4 flex absolute top-0 pt-2 text-white text-lg font-metrobold1 justify-center">
+          <div className="px-8 mx-4 flex absolute top-0 pt-1 text-white text-lg font-metrobold1 justify-center ">
             Main Menu
           </div>
           <div className="absolute cursor-pointer text-white top-0 w-8 h-8 flex items-center justify-center right-0 mt-2 mr-5">
@@ -83,14 +83,17 @@ const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
             <div className="w-full pb-16">
               <SearchBar />
             </div>
-            <div className="flex justify-end w-full">
-  <Link
-    to={isSignedIn ? '/account' : '/sign-in'}
-    className="flex space-x-1"
-  >
-    <span>{isSignedIn ? <SignUp/> : <SignIn/>}</span>
-  </Link>
-</div>
+ 
+            <div className="mx-2">
+            <Link
+              to={isSignedIn ? '/account' : '/sign-in'}
+              className="flex space-x-1"
+            >
+              <UserIcon className="w-9 h-9 text-white"></UserIcon>
+              <span className="text-white text-sm uppercase tracking-[0.15]">{isSignedIn ? 'My Account' : 'Sign In'}</span>
+
+            </Link>
+          </div>
           </div>
         </div>
       </div>
