@@ -13,15 +13,15 @@ import { DEMO_API_URL } from '~/constants';
 
 export async function action({ params, request }: DataFunctionArgs) {
   // Log the value of apiUrl
-  const apiUrl = process.env.VENDURE_API_URL || DEMO_API_URL;
-  console.log('apiUrl:', apiUrl);
+  // const apiUrl = process.env.VENDURE_API_URL || DEMO_API_URL;
+  // console.log('apiUrl:', apiUrl);
 
   // Check if apiUrl is equal to DEMO_API_URL
-  if (apiUrl === DEMO_API_URL) {
-    return {
-      form: `Registration can't be used with Vendure demo shop! Please connect your own instance. apiUrl: ${apiUrl}`,
-    };
-  }
+  // if (apiUrl === DEMO_API_URL) {
+  //   return {
+  //     form: `Registration can't be used with Vendure demo shop! Please connect your own instance. apiUrl: ${apiUrl}`,
+  //   };
+  // }
 
   const body = await request.formData();
   const fieldErrors = validateRegistrationForm(body);

@@ -6,8 +6,7 @@ import React, { useState } from 'react';
 import Hamburger from '~/components/svgs/Hamburger';
 import CollectionsTreemenu from '~/components/CollectionsTreemenu';
 import { SearchBar } from '~/components/header/SearchBar';
-// import SignUp from '~/components/svgs/SignUp';
-// import SignIn from '~/components/svgs/SignIn';
+import SignIn from '~/components/svgs/SignIn';
 import { UserIcon } from '@heroicons/react/24/solid';
 import '~/styles/app.css';
 
@@ -57,16 +56,16 @@ const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
         <div
           onClick={toggleSlideover}
           id="slideover"
-          className={`shadow-xl shadow-discogray bg-discogray top-[8vh] w-full sm:w-80  h-full absolute right-0 duration-300 ease-out transition-all ${
+          className={`shadow-xl shadow-discogray bg-discogray top-[8vh] w-full sm:w-80 h-full absolute right-0 duration-300 ease-out transition-all ${
             isSlideoverVisible ? '' : 'translate-x-full'
           }`}
         >
-          <div className="px-8 mx-4 flex absolute top-0 pt-1 text-white text-lg font-metrobold1 justify-center ">
-            Main Menu
+          <div className="mx-4 px-4 flex absolute top-0 pt-2 text-white text-xl font-metrobold1">
+          
           </div>
-          <div className="absolute cursor-pointer text-white top-0 w-8 h-8 flex items-center justify-center right-0 mt-2 mr-5">
+          <div className="absolute cursor-pointer text-white top-0 w-12 flex items-center justify-center right-0 mt-[6px] pr-6">
             <svg
-              className="w-6 h-6"
+              className="w-8 h-8"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -76,24 +75,25 @@ const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
             </svg>
           </div>
           <div className="px-8 mt-12 absolute transform w-full">
-            <div className="w-full pb-4">
+            <div className="w-full pb-8">
               {/* Use collectionsall directly */}
               <CollectionsTreemenu collectionsData={{ collectionsall }} />
             </div>
-            <div className="w-full pb-16">
+            
+            <div className="w-full pb-8">
               <SearchBar />
             </div>
- 
-            <div className="mx-2">
+            <div className="py-3 pb-8">
             <Link
               to={isSignedIn ? '/account' : '/sign-in'}
               className="flex space-x-1"
             >
-              <UserIcon className="w-9 h-9 text-white"></UserIcon>
-              <span className="text-white text-sm uppercase tracking-[0.15]">{isSignedIn ? 'My Account' : 'Sign In'}</span>
+              <SignIn className="w-8 h-8 text-white" />
+              {/* <span className="text-white text-sm uppercase tracking-[0.15]">{isSignedIn ? 'My Account' : 'Sign In'}</span> */}
 
             </Link>
           </div>
+            
           </div>
         </div>
       </div>

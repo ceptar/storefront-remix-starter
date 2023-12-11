@@ -81,8 +81,7 @@
 
   .bg-hero {
     background-image: url('~/../public/hero1.webp');
-
-     background-size: cover;
+    background-size: cover;
     background-position: left center;
     height: 50vh;
     width: 100%;
@@ -92,12 +91,12 @@
   .carousel-container {
     width: 100%;
     overflow-x: auto;
-    overflow:hidden;
+    overflow: hidden;
     white-space: nowrap;
     padding-bottom: 16px;
     padding-top: 16px;
   }
-  
+
   .flicking-panel {
     display: inline-block;
     white-space: nowrap;
@@ -126,30 +125,30 @@
     font-family: Metropolitano-Regular, sans;
     color: #ffffff;
     text-transform: uppercase;
-    letter-spacing: .2em;
+    letter-spacing: 0.15em;
   }
   .parent:hover {
-    opacity:0.7;
+    color:#ffffffc0;
   }
 
   .child {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 100%;
     font-family: Metropolitano-Light, sans;
     color: #ffffff;
     text-transform: uppercase;
-    letter-spacing: .15em;
+    letter-spacing: 0.15em;
   }
   .child:hover {
-    opacity:0.7;
+    color:#ffffffc0;
   }
 
   .tronfilter {
-    stroke: #0a0a0ae0;
+    stroke: #0e0e0e;
     stroke-width: 0.5px;
 
-    -webkit-filter: drop-shadow(1px 0px 0.7px #0a0a0ae0);
+    -webkit-filter: drop-shadow(1px 0px 0.7px #0e0e0e);
 
-    filter: drop-shadow(-1px -1px 1px #0a0a0ae0);
+    filter: drop-shadow(-1px -1px 1px #0e0e0e);
   }
 }
