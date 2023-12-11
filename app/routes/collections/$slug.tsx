@@ -95,7 +95,7 @@ export default function CollectionSlug() {
           </div>
         </div>
       <div className="relative w-full">
-        <div className="uppercase font-metrothin1 tracking-[0.25em] px-8 py-8 text-4xl border-b border-t border-discogray">
+        <div className="uppercase font-metrothin1 tracking-[0.25em] px-8 py-8 text-3xl border-b border-t border-discogray">
           <h2 className="">
             {collection.name}
           </h2>

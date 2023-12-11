@@ -10,7 +10,7 @@ export function FiltersButton({
   return (
     <button
       type="button"
-      className="flex space-x-2 items-center p-2 ml-4 sm:ml-6 text-discogray hover:text-discogray-400 lg:hidden"
+      className="flex space-x-2 items-center py-2 ml-4 sm:ml-6 text-discogray hover:text-discogray-400 lg:hidden"
       onClick={onClick}
     >
       {filterCount ? (

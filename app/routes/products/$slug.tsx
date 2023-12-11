@@ -101,7 +101,7 @@ export default function ProductSlug() {
         ></Breadcrumbs>
       </div>
 
-      <div className="uppercase font-metrothin1 tracking-[0.25em] px-8 py-8 text-4xl border-b border-t border-discogray">
+      <div className="uppercase font-metrothin1 tracking-[0.25em] px-8 py-8 text-3xl border-b border-t border-discogray">
         <div>
           <h2 className="">{product.name}</h2>
         </div>
