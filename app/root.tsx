@@ -125,7 +125,7 @@ export default function App() {
           onCartIconClick={() => setOpen(!open)}
           cartQuantity={activeOrder?.totalQuantity ?? 0}
         />
-        <main className="flex-grow mt-[8vh]">
+        <main className="flex-grow mt-[70px]">
           <Outlet
             context={{
               activeOrderFetcher,

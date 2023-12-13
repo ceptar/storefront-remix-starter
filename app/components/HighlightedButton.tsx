@@ -16,7 +16,7 @@ export function HighlightedButton({
       disabled={isSubmitting}
       {...props}
       className={clsx(
-        'bg-primary-500 border border-transparent py-2 px-4 text-sm uppercase tracking-[0.25em] text-white',
+        'bg-primary-500 border border-transparent py-2 px-4 text-sm uppercase tracking-[0.25em] text-discogray',
         'focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-gray-800 hover:bg-primary-600',
         'disabled:opacity-50 disabled:hover:opacity-30',
         'flex items-center justify-around gap-2',

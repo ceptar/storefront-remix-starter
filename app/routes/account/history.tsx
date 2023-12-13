@@ -83,7 +83,7 @@ export default function AccountHistory() {
       )}
 
       {orderList.items.length === 0 && (
-        <div className="py-16 text-3xl text-center italic text-gray-300 select-none flex justify-center items-center">
+        <div className="py-16 text-xl text-center uppercase text-discogray-600 tracking-[0.25em] select-none flex justify-center items-center">
           {orderList.totalItems === 0
             ? 'Your future orders will appear here'
             : 'No more orders, end reached'}

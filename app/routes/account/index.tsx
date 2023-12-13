@@ -249,7 +249,7 @@ export default function AccountDetails() {
         </ValidatedForm>
       </Modal>
 
-      <div className="space-y-10 p-4 mt-5">
+      <div className="space-y-10 py-4 mt-5">
         <div className="grid grid-cols-2 gap-4">
           <div className="col-span-2">
             <h3 className="text-sm text-gray-500">E-Mail</h3>

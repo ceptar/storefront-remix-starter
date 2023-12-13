@@ -56,7 +56,7 @@ const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
         <div
           onClick={toggleSlideover}
           id="slideover"
-          className={`shadow-xl shadow-discogray bg-discogray top-[8vh] w-full sm:w-80 h-full absolute right-0 duration-300 ease-out transition-all ${
+          className={`shadow-xl shadow-discogray bg-discogray top-[70px] w-full sm:w-80 h-full absolute right-0 duration-300 ease-out transition-all ${
             isSlideoverVisible ? '' : 'translate-x-full'
           }`}
         >

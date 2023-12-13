@@ -780,6 +780,10 @@ button:disabled {
   top: 8vh;
 }
 
+#app :is(.top-\[70px\]) {
+  top: 70px;
+}
+
 #app :is(.z-10) {
   z-index: 10;
 }
@@ -1011,6 +1015,10 @@ button:disabled {
   margin-top: auto;
 }
 
+#app :is(.mt-\[70px\]) {
+  margin-top: 70px;
+}
+
 #app :is(.line-clamp-3) {
   overflow: hidden;
   display: -webkit-box;
@@ -1110,6 +1118,10 @@ button:disabled {
   height: 2rem;
 }
 
+#app :is(.h-\[30px\]) {
+  height: 30px;
+}
+
 #app :is(.h-\[50vh\]) {
   height: 50vh;
 }
@@ -1128,6 +1140,18 @@ button:disabled {
 
 #app :is(.h-full) {
   height: 100%;
+}
+
+#app :is(.h-\[80px\]) {
+  height: 80px;
+}
+
+#app :is(.h-\[150px\]) {
+  height: 150px;
+}
+
+#app :is(.h-\[70px\]) {
+  height: 70px;
 }
 
 #app :is(.max-h-full) {
@@ -1479,6 +1503,11 @@ button:disabled {
 
 #app :is(.gap-y-6) {
   row-gap: 1.5rem;
+}
+
+#app :is(.gap-x-0) {
+  -moz-column-gap: 0px;
+       column-gap: 0px;
 }
 
 #app :is(.space-x-1 > :not([hidden]) ~ :not([hidden])) {
