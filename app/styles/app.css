@@ -2541,12 +2541,12 @@ button:disabled {
   color: hsl(0, 0%, 20%);
 }
 
-#app :is(.text-discogray-500) {
-  color: hsl(0, 0%, 50%);
+#app :is(.text-discogray-600) {
+  color: hsl(0, 0%, 40%);
 }
 
-#app :is(.text-discogray-400) {
-  color: hsl(0, 0%, 60%);
+#app :is(.text-discogray-500) {
+  color: hsl(0, 0%, 50%);
 }
 
 #app :is(.bg-discogray-100) {
@@ -2801,6 +2801,11 @@ button:disabled {
   z-index: 10;
 }
 
+#app :is(.focus\:border-discopink:focus) {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 0 229 / var(--tw-border-opacity));
+}
+
 #app :is(.focus\:border-secondary:focus) {
   --tw-border-opacity: 1;
   border-color: rgb(128 2 228 / var(--tw-border-opacity));
@@ -2809,11 +2814,6 @@ button:disabled {
 #app :is(.focus\:border-white:focus) {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-#app :is(.focus\:border-discopink:focus) {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 0 229 / var(--tw-border-opacity));
 }
 
 #app :is(.focus\:placeholder-gray-400:focus)::-moz-placeholder {
@@ -2843,6 +2843,11 @@ button:disabled {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
+#app :is(.focus\:ring-discopink:focus) {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(255 0 229 / var(--tw-ring-opacity));
+}
+
 #app :is(.focus\:ring-gray-300:focus) {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(209 213 219 / var(--tw-ring-opacity));
@@ -2856,11 +2861,6 @@ button:disabled {
 #app :is(.focus\:ring-white:focus) {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
-}
-
-#app :is(.focus\:ring-discopink:focus) {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(255 0 229 / var(--tw-ring-opacity));
 }
 
 #app :is(.focus\:ring-offset-0:focus) {

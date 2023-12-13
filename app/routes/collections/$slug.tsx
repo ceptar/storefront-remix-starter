@@ -82,7 +82,7 @@ export default function CollectionSlug() {
       <div
         className="absolut overflow-hidden top-0 w-full flex flex-col items-center z-10"
       >      </div>
-      <div className="px-8 bg-gray-100 flex flex-row">
+      <div className="px-4 bg-gray-100 flex flex-row">
           <div className=" w-full flex flex-col items-start justify-center ">
             <Breadcrumbs items={collection.breadcrumbs}></Breadcrumbs>
           </div>
@@ -95,7 +95,7 @@ export default function CollectionSlug() {
           </div>
         </div>
       <div className="relative w-full">
-        <div className="uppercase font-metrothin1 tracking-[0.25em] px-8 py-8 text-3xl border-b border-t border-discogray">
+        <div className="uppercase font-metrothin1 tracking-[0.25em] px-4 py-8 text-3xl border-b border-t border-discogray">
           <h2 className="">
             {collection.name}
           </h2>
@@ -108,10 +108,10 @@ export default function CollectionSlug() {
 
         {collection.children?.length ? (
           <div className="pt-4 pb-8 flex flex-col border-b mb-8">
-            <h2 className="px-8 flex flex-row w-full text-md uppercase tracking-[0.25em] font-metrolight1 text-discogray">
+            <h2 className="px-4 flex flex-row w-full text-md uppercase tracking-[0.25em] font-metrolight1 text-discogray">
               Categories
             </h2>
-            <div className="px-6 max-w-full mt-6 flex flex-row mr-auto gap-x-6 gap-y-4">
+            <div className="px-4 max-w-full mt-6 flex flex-row mr-auto gap-x-6 gap-y-4">
               {collection.children.map((child) => (
                 <CollectionCard
                   key={child.id}

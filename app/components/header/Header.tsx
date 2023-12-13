@@ -35,7 +35,7 @@ export function Header({
       </header> */}
 
       <header className="z-40 bg-discogray top-0 items-center fixed justify-between h-[8vh] w-full min-w-full">
-        <div className="relative px-8 flex flex-row items-center justify-between h-[8vh] w-full ">
+        <div className="relative px-4 flex flex-row items-center justify-between h-[8vh] w-full ">
           <div className="relative  flex flex-col  items-start justify-start w-1/6">
             <button
               className="flex flex-col  bg-opacity-90 shadow-none cursor-pointer justify-center rounded-full items-center py-2 text-sm text-discogray transition-all duration-300 ease-out hover:opacity-70"

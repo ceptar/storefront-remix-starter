@@ -38,7 +38,7 @@ export function FilterableProductGrid({
   );
 
   return (
-    <div className="px-8 mt-6 grid sm:grid-cols-5 gap-x-4">
+    <div className="px-4 mt-6 grid sm:grid-cols-5 gap-x-4">
       <FacetFilterControls
         facetFilterTracker={facetValuesTracker.current}
         mobileFiltersOpen={mobileFiltersOpen}

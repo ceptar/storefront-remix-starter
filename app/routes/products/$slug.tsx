@@ -92,7 +92,7 @@ export default function ProductSlug() {
 
   return (
     <div>
-      <div className="mx-auto px-8 bg-gray-100">
+      <div className="mx-auto px-4 bg-gray-100">
         <Breadcrumbs
           items={
             product.collections[product.collections.length - 1]?.breadcrumbs ??
@@ -101,12 +101,12 @@ export default function ProductSlug() {
         ></Breadcrumbs>
       </div>
 
-      <div className="uppercase font-metrothin1 tracking-[0.25em] px-8 py-8 text-3xl border-b border-t border-discogray">
+      <div className="uppercase font-metrothin1 tracking-[0.25em] px-4 py-8 text-3xl border-b border-t border-discogray">
         <div>
           <h2 className="">{product.name}</h2>
         </div>
       </div>
-      <div className="mx-auto px-8">
+      <div className="mx-auto px-4">
         <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start my-16">
           {/* Image gallery */}
           <div className="px-4 pt-4 pb-12 shadow-md bg-gray-100 w-full mx-auto sm:block ">
@@ -263,10 +263,10 @@ export default function ProductSlug() {
         </div>
       </div>
 
-      <div className="mt-16 px-8 py-2  border-t border-discogray">
+      <div className="mt-16 px-4 py-2  border-t border-discogray">
         <section className="mt-4 pt-4 text-xs">
           <h3 className="text-gray-600 font-bold mb-2">Shipping & Returns</h3>
-          <div className=" text-discogray-400 space-y-1">
+          <div className=" text-discogray-600 space-y-1">
             <p>
               Standard shipping: 3 - 5 working days. Express shipping: 1 - 3
               working days.
@@ -294,7 +294,7 @@ export default function ProductSlug() {
 
 export function CatchBoundary() {
   return (
-    <div className="max-w-6xl mx-auto px-8">
+    <div className="max-w-6xl mx-auto px-4">
       <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-gray-900 my-8">
         Product not found!
       </h2>
@@ -309,7 +309,7 @@ export function CatchBoundary() {
         </div>
 
         {/* Product info */}
-        <div className="mt-10 px-8 sm:px-0 sm:mt-16 lg:mt-0">
+        <div className="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0">
           <div className="">We couldn't find any product at that address!</div>
           <div className="flex-1 space-y-3 py-1">
             <div className="h-2 bg-slate-200"></div>
