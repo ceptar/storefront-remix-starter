@@ -44,7 +44,7 @@ export function Header({
             >
               <Cart className="tronfilter w-8 h-8 sm:w-10 sm:h-10 z-40" />
               {cartQuantity ? (
-                <div className="top-[1.5px] left-[17px] sm:top-[4px] sm:left-[20px] w-5 h-5 sm:w-6 sm:h-6 z-20 absolute items-center justify-center rounded-full text-md font-metrobold1 bg-primary  ">
+                <div className="top-[1.5px] left-[9px] sm:top-[4px] sm:left-[12px] w-5 h-5 sm:w-6 sm:h-6 z-20 absolute items-center justify-center rounded-full text-md font-metrobold1 bg-primary  ">
                   {cartQuantity}
                 </div>
               ) : (

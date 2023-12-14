@@ -29,7 +29,7 @@ export default function OrderHistoryItem({
   const [isLineCalcExpanded, setIsLineCalcExpanded] = useState<boolean>(false);
 
   return (
-    <div className={`border rounded-lg overflow-hidden ${className}`}>
+    <div className={`border overflow-hidden ${className}`}>
       {/* Upper Summary */}
       <div
         className="p-4 lg:p-6
@@ -114,7 +114,7 @@ export default function OrderHistoryItem({
                 >
                   <img
                     src={line.featuredAsset?.source}
-                    className="w-24 h-24 object-cover rounded-md"
+                    className="w-24 h-24 object-cover"
                   />
                 </Link>
                 <span className="flex flex-1 flex-col gap-0">

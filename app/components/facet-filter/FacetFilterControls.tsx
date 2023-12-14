@@ -53,7 +53,7 @@ export default function FacetFilterControls({
                   <h2 className="text-lg font-medium text-gray-900">Filters</h2>
                   <button
                     type="button"
-                    className="-mr-2 w-10 h-10 bg-white p-2 rounded-md flex items-start justify-start text-gray-400"
+                    className="-mr-2 w-10 h-10 bg-white p-2 -md flex items-start justify-start text-gray-400"
                     onClick={() => setMobileFiltersOpen(false)}
                   >
                     <span className="sr-only">Close menu</span>
@@ -111,7 +111,7 @@ export default function FacetFilterControls({
                                         ) as HTMLInputElement
                                       ).checked = ev.target.checked;
                                     }}
-                                    className="h-4 w-4 border-gray-300 rounded text-primary-600 focus:ring-primary-500"
+                                    className="h-4 w-4 border-gray-300 text-primary-600 focus:ring-primary-500"
                                   />
                                   <label
                                     htmlFor={`filter-mobile-${facet.id}-${optionIdx}`}
@@ -173,7 +173,7 @@ export default function FacetFilterControls({
                           type="checkbox"
                           checked={value.selected}
                           onChange={() => {}}
-                          className="h-4 w-4 border-gray-300 rounded text-primary-600 focus:ring-primary-500"
+                          className="h-4 w-4 border-gray-300  text-primary-600 focus:ring-primary-500"
                         />
                         <label
                           htmlFor={`filter-${facet.id}-${optionIdx}`}
