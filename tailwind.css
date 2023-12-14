@@ -104,6 +104,20 @@
     /* Add any other styling for the panel */
   }
 
+  .cookie-container {
+    background-color:#0e0e0e94;
+  }
+  .cookie-consent-button {
+    color: #0e0e0e !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.15em !important;
+    background: #FF00E5 !important;
+    border: 1px solid #0e0e0e !important; /* Add a border style */
+  }
+  .cookie-consent-button:hover {
+opacity: 0.7 !important;
+  }
+
   /*COPY PASTE STYLESAMMLUNGEN, @apply NOT COMPLIANT!!!*/
 
   /*Hover, gradient underline*/

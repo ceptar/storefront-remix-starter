@@ -760,8 +760,8 @@ button:disabled {
   left: 0px;
 }
 
-#app :is(.left-\[17px\]) {
-  left: 17px;
+#app :is(.left-\[9px\]) {
+  left: 9px;
 }
 
 #app :is(.right-0) {
@@ -778,14 +778,6 @@ button:disabled {
 
 #app :is(.top-\[70px\]) {
   top: 70px;
-}
-
-#app :is(.left-\[9px\]) {
-  left: 9px;
-}
-
-#app :is(.left-\[5px\]) {
-  left: 5px;
 }
 
 #app :is(.z-10) {
@@ -826,6 +818,11 @@ button:disabled {
 
 #app :is(.m-auto) {
   margin: auto;
+}
+
+#app :is(.-mx-2) {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
 }
 
 #app :is(.-my-3) {
@@ -878,13 +875,12 @@ button:disabled {
   margin-bottom: 2rem;
 }
 
-#app :is(.-mx-2) {
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
-}
-
 #app :is(.-mb-px) {
   margin-bottom: -1px;
+}
+
+#app :is(.-mr-2) {
+  margin-right: -0.5rem;
 }
 
 #app :is(.-mt-4) {
@@ -1015,10 +1011,6 @@ button:disabled {
   margin-top: auto;
 }
 
-#app :is(.-mr-2) {
-  margin-right: -0.5rem;
-}
-
 #app :is(.line-clamp-3) {
   overflow: hidden;
   display: -webkit-box;
@@ -1056,6 +1048,10 @@ button:disabled {
 
 #app :is(.aspect-\[7\/8\]) {
   aspect-ratio: 7/8;
+}
+
+#app :is(.h-10) {
+  height: 2.5rem;
 }
 
 #app :is(.h-2) {
@@ -1134,10 +1130,6 @@ button:disabled {
   height: 100%;
 }
 
-#app :is(.h-10) {
-  height: 2.5rem;
-}
-
 #app :is(.max-h-full) {
   max-height: 100%;
 }
@@ -1156,6 +1148,10 @@ button:disabled {
 
 #app :is(.w-1\/6) {
   width: 16.666667%;
+}
+
+#app :is(.w-10) {
+  width: 2.5rem;
 }
 
 #app :is(.w-12) {
@@ -1209,10 +1205,6 @@ button:disabled {
 
 #app :is(.w-screen) {
   width: 100vw;
-}
-
-#app :is(.w-10) {
-  width: 2.5rem;
 }
 
 #app :is(.min-w-0) {
@@ -1295,6 +1287,11 @@ button:disabled {
   flex-basis: 33.333333%;
 }
 
+#app :is(.-translate-x-full) {
+  --tw-translate-x: -100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 #app :is(.translate-x-0) {
   --tw-translate-x: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1302,11 +1299,6 @@ button:disabled {
 
 #app :is(.translate-x-full) {
   --tw-translate-x: 100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-#app :is(.-translate-x-full) {
-  --tw-translate-x: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1695,13 +1687,13 @@ button:disabled {
   border-color: rgb(250 204 21 / var(--tw-border-opacity));
 }
 
-#app :is(.border-red-300) {
-  --tw-border-opacity: 1;
-  border-color: rgb(252 165 165 / var(--tw-border-opacity));
-}
-
 #app :is(.border-opacity-20) {
   --tw-border-opacity: 0.2;
+}
+
+#app :is(.bg-black) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 #app :is(.bg-blue-100) {
@@ -1794,13 +1786,12 @@ button:disabled {
   background-color: rgb(254 252 232 / var(--tw-bg-opacity));
 }
 
-#app :is(.bg-black) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 #app :is(.bg-opacity-20) {
   --tw-bg-opacity: 0.2;
+}
+
+#app :is(.bg-opacity-25) {
+  --tw-bg-opacity: 0.25;
 }
 
 #app :is(.bg-opacity-75) {
@@ -1809,10 +1800,6 @@ button:disabled {
 
 #app :is(.bg-opacity-90) {
   --tw-bg-opacity: 0.9;
-}
-
-#app :is(.bg-opacity-25) {
-  --tw-bg-opacity: 0.25;
 }
 
 #app :is(.bg-gradient-to-r) {
@@ -2475,12 +2462,12 @@ button:disabled {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#app :is(.ease-out) {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
 #app :is(.ease-linear) {
   transition-timing-function: linear;
+}
+
+#app :is(.ease-out) {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 #app :is(.line-clamp-3) {
@@ -2674,6 +2661,23 @@ button:disabled {
   width: 10rem;
   /* Adjust the width as per your design */
   /* Add any other styling for the panel */
+}
+
+#app :is(.cookie-container) {
+  background-color:#0e0e0e94;
+}
+
+#app :is(.cookie-consent-button) {
+  color: #0e0e0e !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
+  background: #FF00E5 !important;
+  border: 1px solid #0e0e0e !important;
+  /* Add a border style */
+}
+
+#app :is(.cookie-consent-button:hover) {
+  opacity: 0.7 !important;
 }
 
 /*COPY PASTE STYLESAMMLUNGEN, @apply NOT COMPLIANT!!!*/
@@ -2954,16 +2958,12 @@ button:disabled {
 }
 
 @media (min-width: 640px) {
-  #app :is(.sm\:left-\[20px\]) {
-    left: 20px;
+  #app :is(.sm\:left-\[12px\]) {
+    left: 12px;
   }
 
   #app :is(.sm\:top-\[4px\]) {
     top: 4px;
-  }
-
-  #app :is(.sm\:left-\[12px\]) {
-    left: 12px;
   }
 
   #app :is(.sm\:col-span-2) {

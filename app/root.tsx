@@ -27,6 +27,7 @@ import { getActiveCustomer } from '~/providers/customer/customer';
 import Footer from '~/components/footer/Footer';
 import { useActiveOrder } from '~/utils/use-active-order';
 import { setApiUrl } from '~/graphqlWrapper';
+import CookieConsent, { Cookies } from 'react-cookie-consent';
 
 
 export const meta: MetaFunction = () => {
@@ -147,6 +148,17 @@ export default function App() {
         <Footer collections={collections}></Footer>
 
         {devMode && <LiveReload />}
+        <CookieConsent
+            containerClasses="cookie-container"
+            buttonText="Accept"
+            cookieName="myCookieConsent"
+            buttonWrapperClasses="flex justify-center"  // Added a wrapper class to center the button
+            buttonClasses="cookie-consent-button"
+            
+            expires={150}
+          >
+            This website uses cookies to enhance the user experience.
+          </CookieConsent>
       </body>
     </html>
   );
