@@ -1224,10 +1224,6 @@ button:disabled {
   min-width: 100%;
 }
 
-#app :is(.min-w-\[150px\]) {
-  min-width: 150px;
-}
-
 #app :is(.max-w-2xl) {
   max-width: 42rem;
 }
