@@ -20,6 +20,26 @@ export default function Index() {
     <>
       <div className="bg-hero" aria-label="[hero1]">
 
+<div className="flex text-6xl flex-col w-full h-[50vh]">
+
+<div className="flex flex-row w-full h-full">
+<div className="flex flex-col min-w-[150px] lg:w-1/2 lg:min-w-[600px]"></div>
+
+<div className="flex flex-col lg:w-1/2 h-full justify-end">
+
+<div className="flex flex-grow h-full"></div>
+
+<div className="bg-discogray text-white lg:bg-opacity-0 lg:text-discogray p-4 mb-4 lg:mb-16">
+
+<div className="flex flex-grow h-fit font-metroreg1 text-base lg:text-lg">life's too short</div>
+
+<div className="flex flex-grow h-fit text-2xl lg:text-4xl tracking-[0.2em] font-metroblack1">to wear boring</div>
+
+<div className="flex flex-grow h-fit text-2xl lg:text-4xl tracking-[0.2em] font-metroblack1">jewelry.</div>
+</div>
+</div>
+</div>
+</div>
         
       </div>
 

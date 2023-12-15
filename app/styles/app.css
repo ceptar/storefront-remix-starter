@@ -1126,6 +1126,11 @@ button:disabled {
   height: auto;
 }
 
+#app :is(.h-fit) {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 #app :is(.h-full) {
   height: 100%;
 }
@@ -1217,6 +1222,10 @@ button:disabled {
 
 #app :is(.min-w-full) {
   min-width: 100%;
+}
+
+#app :is(.min-w-\[150px\]) {
+  min-width: 150px;
 }
 
 #app :is(.max-w-2xl) {
@@ -2039,6 +2048,10 @@ button:disabled {
   vertical-align: middle;
 }
 
+#app :is(.font-metroblack1) {
+  font-family: Metropolitano-Black, sans;
+}
+
 #app :is(.font-metrobold1) {
   font-family: Metropolitano-Bold, sans;
 }
@@ -2049,6 +2062,10 @@ button:disabled {
 
 #app :is(.font-metromed1) {
   font-family: Metropolitano-Medium, sans;
+}
+
+#app :is(.font-metroreg1) {
+  font-family: Metropolitano-Regular, sans;
 }
 
 #app :is(.font-metrothin1) {
@@ -2077,6 +2094,11 @@ button:disabled {
 #app :is(.text-4xl) {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+#app :is(.text-6xl) {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 #app :is(.text-base) {
@@ -2154,6 +2176,10 @@ button:disabled {
 
 #app :is(.tracking-\[0\.25em\]) {
   letter-spacing: 0.25em;
+}
+
+#app :is(.tracking-\[0\.2em\]) {
+  letter-spacing: 0.2em;
 }
 
 #app :is(.tracking-tight) {
@@ -3224,6 +3250,10 @@ button:disabled {
     grid-row-start: 1;
   }
 
+  #app :is(.lg\:mb-16) {
+    margin-bottom: 4rem;
+  }
+
   #app :is(.lg\:ml-0) {
     margin-left: 0px;
   }
@@ -3254,6 +3284,14 @@ button:disabled {
 
   #app :is(.lg\:hidden) {
     display: none;
+  }
+
+  #app :is(.lg\:w-1\/2) {
+    width: 50%;
+  }
+
+  #app :is(.lg\:min-w-\[600px\]) {
+    min-width: 600px;
   }
 
   #app :is(.lg\:max-w-3xl) {
@@ -3318,6 +3356,10 @@ button:disabled {
     border-width: 0px;
   }
 
+  #app :is(.lg\:bg-opacity-0) {
+    --tw-bg-opacity: 0;
+  }
+
   #app :is(.lg\:p-3) {
     padding: 0.75rem;
   }
@@ -3343,6 +3385,21 @@ button:disabled {
 
   #app :is(.lg\:pl-0) {
     padding-left: 0px;
+  }
+
+  #app :is(.lg\:text-4xl) {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  #app :is(.lg\:text-lg) {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  #app :is(.lg\:text-discogray) {
+    --tw-text-opacity: 1;
+    color: rgb(14 14 14 / var(--tw-text-opacity));
   }
 }
 
