@@ -1122,6 +1122,10 @@ button:disabled {
   height: 70px;
 }
 
+#app :is(.h-\[calc\(theme\(fontSize\.xl\)\*theme\(lineHeight\.tight\)\)\]) {
+  height: calc(1.25rem * 1.25);
+}
+
 #app :is(.h-auto) {
   height: auto;
 }
@@ -1336,6 +1340,24 @@ button:disabled {
 
 #app :is(.animate-spin) {
   animation: spin 1s linear infinite;
+}
+
+@keyframes text-slide {
+  0%, 16% {
+    transform: translateY(0%);
+  }
+
+  40%, 56% {
+    transform: translateY(-33.33%);
+  }
+
+  80%, 96% {
+    transform: translateY(-66.66%);
+  }
+}
+
+#app :is(.animate-text-slide) {
+  animation: text-slide 12.5s cubic-bezier(0.83, 0, 0.17, 1) infinite;
 }
 
 #app :is(.cursor-default) {
@@ -1825,6 +1847,11 @@ button:disabled {
   background-size: 0% 2px;
 }
 
+#app :is(.bg-clip-text) {
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
 #app :is(.bg-left-bottom) {
   background-position: left bottom;
 }
@@ -1968,6 +1995,10 @@ button:disabled {
   padding-bottom: 1rem;
 }
 
+#app :is(.pb-6) {
+  padding-bottom: 1.5rem;
+}
+
 #app :is(.pb-8) {
   padding-bottom: 2rem;
 }
@@ -2058,10 +2089,6 @@ button:disabled {
 
 #app :is(.font-metromed1) {
   font-family: Metropolitano-Medium, sans;
-}
-
-#app :is(.font-metroreg1) {
-  font-family: Metropolitano-Regular, sans;
 }
 
 #app :is(.font-metrothin1) {
@@ -2162,6 +2189,10 @@ button:disabled {
   line-height: 140%;
 }
 
+#app :is(.leading-tight) {
+  line-height: 1.25;
+}
+
 #app :is(.tracking-\[0\.15\]) {
   letter-spacing: 0.15;
 }
@@ -2217,6 +2248,11 @@ button:disabled {
 #app :is(.text-discogray) {
   --tw-text-opacity: 1;
   color: rgb(14 14 14 / var(--tw-text-opacity));
+}
+
+#app :is(.text-discoteal) {
+  --tw-text-opacity: 1;
+  color: rgb(21 254 226 / var(--tw-text-opacity));
 }
 
 #app :is(.text-gray-200) {
@@ -2754,6 +2790,10 @@ button:disabled {
   filter: drop-shadow(-1px -1px 1px #0e0e0e);
 }
 
+.\[text-wrap\:balance\] {
+  text-wrap: balance;
+}
+
 #app :is(.first\:mt-2:first-child) {
   margin-top: 0.5rem;
 }
@@ -3282,6 +3322,10 @@ button:disabled {
     display: none;
   }
 
+  #app :is(.lg\:h-\[calc\(theme\(fontSize\.4xl\)\*theme\(lineHeight\.tight\)\)\]) {
+    height: calc(2.25rem * 1.25);
+  }
+
   #app :is(.lg\:w-1\/2) {
     width: 50%;
   }
@@ -3460,4 +3504,8 @@ button:disabled {
   #app :is(.\32xl\:grid-cols-4) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+}
+
+#app :is(.\[\&_li\]\:block li) {
+  display: block;
 }

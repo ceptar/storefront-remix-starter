@@ -29,13 +29,21 @@ export default function Index() {
 
 <div className="flex flex-grow h-full"></div>
 
-<div className="bg-discogray text-white lg:bg-opacity-0 lg:text-discogray p-4 mb-4 lg:mb-16">
+<div className=" bg-discogray text-white lg:bg-opacity-0 lg:text-discogray px-4 pb-6 mb-4 lg:mb-16">
+<div className=" [text-wrap:balance] bg-clip-text ">
+<span className="text-discoteal lg:text-discogray uppercase text-xl lg:text-4xl tracking-[0.2em] font-metroblack1 inline-flex flex-col h-[calc(theme(fontSize.xl)*theme(lineHeight.tight))] lg:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
+  <ul className="block animate-text-slide text-left leading-tight [&_li]:block">
+                        <li>life's too short</li>
+                        <li>to wear</li>
+                        <li>boring jewelry</li>
+                    
+                    </ul></span></div>
 
-<div className="flex flex-grow h-fit font-metroreg1 text-base lg:text-lg">life's too short</div>
+{/* <div className="flex flex-grow h-fit font-sans text-sm lg:text-lg">life's too short</div>
 
-<div className="flex flex-grow h-fit text-2xl lg:text-4xl tracking-[0.2em] font-metroblack1">to wear boring</div>
+<div className="flex flex-grow h-fit text-xl lg:text-4xl tracking-[0.2em] font-metroblack1">to wear boring</div>
 
-<div className="flex flex-grow h-fit text-2xl lg:text-4xl tracking-[0.2em] font-metroblack1">jewelry.</div>
+<div className="flex flex-grow h-fit text-xl lg:text-4xl tracking-[0.2em] font-metroblack1">jewelry.</div> */}
 </div>
 </div>
 </div>
