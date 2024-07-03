@@ -13,25 +13,21 @@ module.exports = {
       fontFamily: {
         sans: ['Metropolitano-Light', 'sans'],
         header1: ['Metropolitano-Bold', 'sans'],
-        facet1: ['FacetUltra-Regular', 'sans'],
-        nohemiblack1: ['Nohemi-Black', 'sans'],
-        rgstandardbold1: ['RG-StandardBold', 'sans'],
         metromed1: ['Metropolitano-Medium', 'sans'],
         metroblack1: ['Metropolitano-Black', 'sans'],
         metrobold1: ['Metropolitano-Bold', 'sans'],
         metrolight1: ['Metropolitano-Light', 'sans'],
         metrothin1: ['Metropolitano-Thin', 'sans'],
         metroreg1: ['Metropolitano-Regular', 'sans'],
-        neonlight: ['neon-light', 'sans'],
       },
       colors: {
-        primary: '#15FEE2',
+        primary: '#0ea288',
 
-        secondary: '#8002E4',
+        secondary: '#c83671',
 
-        discopink: '#FF00E5',
+        discopink: '#c83671',
 
-        discoteal: '#15FEE2',
+        discoteal: '#0ea288',
 
         discopurple: '#8002E4',
 
@@ -41,7 +37,7 @@ module.exports = {
 
         discoblue: '#030082',
 
-        discogray: '#0e0e0e',
+        discogray: '#000000',
 
         discograytwo: '#F5F5F5',
       },

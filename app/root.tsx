@@ -82,6 +82,8 @@ export async function loader({ request, params, context }: DataFunctionArgs) {
   const collectionsall = await getallCollections(request);
 
   const activeCustomer = await getActiveCustomer({ request });
+  
+
   const loaderData: RootLoaderData = {
     activeCustomer,
     activeChannel: await activeChannel({ request }),
@@ -96,7 +98,6 @@ export default function App() {
   const loaderData = useLoaderData<RootLoaderData>();
   const { collections } = loaderData;
   const { collectionsall } = loaderData;
-
   const {
     activeOrderFetcher,
     activeOrder,
@@ -126,7 +127,7 @@ export default function App() {
           onCartIconClick={() => setOpen(!open)}
           cartQuantity={activeOrder?.totalQuantity ?? 0}
         />
-        <main className="flex-grow mt-[70px]">
+        <main className="flex-grow mt-[8vh]">
           <Outlet
             context={{
               activeOrderFetcher,

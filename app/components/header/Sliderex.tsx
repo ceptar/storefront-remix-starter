@@ -17,9 +17,11 @@ export async function loader({ request }: LoaderArgs) {
   };
   
 }
+type SliderexProps = {
+  headerOpacity: number; // Add this line if using TypeScript, adjust the type as necessary
+};
 
-
-export default function Sliderex() {
+const Sliderex: React.FC<SliderexProps> = ({ headerOpacity }) => {
   const data = useRootLoader();
 const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
   const [isSlideoverVisible, setSlideoverVisible] = useState(false);
@@ -39,7 +41,7 @@ const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
         className="flex flex-col bg-opacity-90 cursor-pointer justify-center items-center py-2 text-sm text-discogray-500 transition-all duration-300 ease-out hover:opacity-70"
       >
         <button>
-          <Hamburger className="tronfilter w-8 h-8 sm:w-10 sm:h-10 pl-1" />
+          <Hamburger className="w-8 h-8 pl-1" fill={headerOpacity > 0.5 ? '#000' : '#FFF'} />
         </button>
       </div>
       <div
@@ -56,7 +58,7 @@ const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
         <div
           onClick={toggleSlideover}
           id="slideover"
-          className={`shadow-xl shadow-discogray bg-discogray top-[70px] w-full sm:w-80 h-full absolute right-0 duration-300 ease-out transition-all ${
+          className={`shadow-xl shadow-discogray bg-discogray top-[70px] w-full sm:w-[50vw] h-full absolute right-0 duration-300 ease-out transition-all ${
             isSlideoverVisible ? '' : 'translate-x-full'
           }`}
         >
@@ -99,4 +101,6 @@ const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
       </div>
     </div>
   );
-}
+};
+
+export default Sliderex;

@@ -41,26 +41,6 @@
     src: url(./font/Metropolitano-Thin.woff2) format('woff2');
     font-display: swap;
   }
-  @font-face {
-    font-family: 'FacetUltra-Regular';
-    src: url(./font/FacetUltra-Regular.woff2) format('woff2');
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'RG-StandardBold';
-    src: url(./font/RG-StandardBold.woff2) format('woff2');
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Nohemi-Black';
-    src: url(./font/Nohemi-Black.woff2) format('woff2');
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'neon-light';
-    src: url(./font/neon-light.woff) format('woff');
-    font-display: swap;
-  }
 
   .flex-center {
     display: flex;
@@ -80,12 +60,14 @@
   }
 
   .bg-hero {
-    background-image: url('~/../public/hero1.webp');
+    background-image: url('~/../public/banner.webp');
     background-size: cover;
-    background-position: left center;
-    height: 50vh;
-    width: 100%;
+    background-position: right center;
+    height: 100vh;
+    width: 100vw;
     z-index: 10;
+    position: absolute;
+    top: 0;
   }
 
   .carousel-container {
@@ -105,17 +87,19 @@
   }
 
   .cookie-container {
-    background-color:#0e0e0e94;
+    backdrop-filter: blur(8px) !important;
+    background-color: rgb(0 0 0 / 0.75) !important;
   }
   .cookie-consent-button {
-    color: #0e0e0e !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.15em !important;
-    background: #FF00E5 !important;
-    border: 1px solid #0e0e0e !important; /* Add a border style */
+    color: #fff !important;
+    letter-spacing: 0.1em !important;
+    background-color: rgba(255, 255, 255, 0) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important; /* Add a border style */
+
   }
   .cookie-consent-button:hover {
-opacity: 0.7 !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important; /* Add a border style */
   }
 
   /*COPY PASTE STYLESAMMLUNGEN, @apply NOT COMPLIANT!!!*/
@@ -134,12 +118,12 @@ opacity: 0.7 !important;
 
   /* Links TreeMenu */
   .parent {
-    font-size: 18px;
+    font-size: 32px;
     line-height: 140%;
-    font-family: Metropolitano-Regular, sans;
+    font-family: Metropolitano-Bold, sans;
     color: #ffffff;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
   }
   .parent:hover {
     color:#ffffffc0;

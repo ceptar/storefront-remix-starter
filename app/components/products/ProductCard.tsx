@@ -3,6 +3,7 @@ import { Link } from '@remix-run/react';
 import { Price } from './Price';
 
 export type ProductCardProps = SearchQuery['search']['items'][number];
+
 export function ProductCard({
   productAsset,
   productName,
