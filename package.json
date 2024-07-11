@@ -42,6 +42,7 @@
     "braintree-web-drop-in": "^1.33.7",
     "clsx": "^2.0.0",
     "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
     "framer-motion": "^10.15.0",
     "graphql": "^16.8.1",
     "graphql-tag": "^2.12.6",
