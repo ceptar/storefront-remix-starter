@@ -191,7 +191,7 @@ export default function Carousel({ featuredProducts }) {
         {featuredProducts.map((product, index) => (
           <div
             key={index} // Prefer using a unique product identifier here
-            className="relative flex-shrink-0 flex flex-col items-center justify-center b-radius-0 w-[calc(100vw-66px)] sm:w-[calc(50vw-66px)] lg:w-[calc(25vw-66px)]"
+            className="relative flex-shrink-0 flex flex-col items-center justify-center b-radius-0 w-[calc(100vw-60px)] sm:w-[calc(50vw-45px)] lg:w-[calc(33vw-35px)]"
             
             // style={{
             //   position: "relative",

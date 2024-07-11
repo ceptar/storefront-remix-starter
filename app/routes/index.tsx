@@ -7,7 +7,7 @@ import SuggestedCarousel from '../components/Carousel'
 import '~/styles/app.css';
 import special from '~/../public/special.webp';
 import { fetchCollectionProducts } from "~/providers/products/collectionProducts";
-
+import DiscoLightningAni from "~/components/animated/DiscoLightningAni";
 
 export async function loader({ request }) {
     const options = {
@@ -52,6 +52,7 @@ export default function Index() {
                     <p>to wear</p>
                     <p>boring jewelry</p>
                   </span>
+                  <DiscoLightningAni className="pl-2 ml-auto"/>
                 </div>
 
               </div>

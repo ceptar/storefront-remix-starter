@@ -1,6 +1,7 @@
 import type { RootLoaderData } from '~/root';
 import { Link } from '@remix-run/react';
 
+
 const navigation = {
   support: [
     { name: 'Help', href: '#' },
@@ -88,6 +89,10 @@ export default function Footer({
                   ))}
                 </ul>
               </div>
+              <div>
+
+
+                </div>
             </div>
           </div>
           <div className="mt-8 xl:mt-0">

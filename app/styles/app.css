@@ -1168,6 +1168,10 @@ button:disabled {
   height: 100%;
 }
 
+#app :is(.h-16) {
+  height: 4rem;
+}
+
 #app :is(.max-h-12) {
   max-height: 3rem;
 }
@@ -1232,8 +1236,8 @@ button:disabled {
   width: 50%;
 }
 
-#app :is(.w-\[calc\(100vw-66px\)\]) {
-  width: calc(100vw - 66px);
+#app :is(.w-\[calc\(100vw-60px\)\]) {
+  width: calc(100vw - 60px);
 }
 
 #app :is(.w-\[calc\(50vw-0\.8rem\)\]) {
@@ -2113,6 +2117,10 @@ button:disabled {
   padding-top: 5rem;
 }
 
+#app :is(.pl-2) {
+  padding-left: 0.5rem;
+}
+
 #app :is(.text-left) {
   text-align: left;
 }
@@ -2775,7 +2783,7 @@ button:disabled {
 }
 
 #app :is(.bg-hero) {
-  background-image: url('~/../public/banner2.webp');
+  background-image: url('~/../public/banner3.webp');
   background-size: cover;
   background-position: right center;
   height: 100vh;
@@ -3096,8 +3104,8 @@ button:disabled {
     width: 50vw;
   }
 
-  #app :is(.sm\:w-\[calc\(50vw-66px\)\]) {
-    width: calc(50vw - 66px);
+  #app :is(.sm\:w-\[calc\(50vw-45px\)\]) {
+    width: calc(50vw - 45px);
   }
 
   #app :is(.sm\:w-full) {
@@ -3313,8 +3321,8 @@ button:disabled {
     display: grid;
   }
 
-  #app :is(.lg\:w-\[calc\(25vw-66px\)\]) {
-    width: calc(25vw - 66px);
+  #app :is(.lg\:w-\[calc\(33vw-35px\)\]) {
+    width: calc(33vw - 35px);
   }
 
   #app :is(.lg\:w-\[calc\(50vw-0\.8rem\)\]) {
