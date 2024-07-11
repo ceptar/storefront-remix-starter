@@ -1232,12 +1232,12 @@ button:disabled {
   width: 50%;
 }
 
-#app :is(.w-\[50vw\]) {
-  width: 50vw;
-}
-
 #app :is(.w-\[calc\(100vw-66px\)\]) {
   width: calc(100vw - 66px);
+}
+
+#app :is(.w-\[calc\(50vw-0\.8rem\)\]) {
+  width: calc(50vw - 0.8rem);
 }
 
 #app :is(.w-\[full\]) {
@@ -1966,11 +1966,6 @@ button:disabled {
   padding-right: 2rem;
 }
 
-#app :is(.px-\[\.8rem\]) {
-  padding-left: .8rem;
-  padding-right: .8rem;
-}
-
 #app :is(.py-0) {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -2080,10 +2075,6 @@ button:disabled {
 
 #app :is(.pr-8) {
   padding-right: 2rem;
-}
-
-#app :is(.pr-\[\.8rem\]) {
-  padding-right: .8rem;
 }
 
 #app :is(.pt-0) {
@@ -3322,12 +3313,12 @@ button:disabled {
     display: grid;
   }
 
-  #app :is(.lg\:w-\[50vw\]) {
-    width: 50vw;
-  }
-
   #app :is(.lg\:w-\[calc\(25vw-66px\)\]) {
     width: calc(25vw - 66px);
+  }
+
+  #app :is(.lg\:w-\[calc\(50vw-0\.8rem\)\]) {
+    width: calc(50vw - 0.8rem);
   }
 
   #app :is(.lg\:max-w-3xl) {

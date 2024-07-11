@@ -39,8 +39,7 @@ export function links() {
   return [{ rel: 'stylesheet', href: styles }];
 }
 
-const devMode =
-  typeof process !== 'undefined' && process.env.NODE_ENV === 'development';
+const devMode = 'development';
 
 // The root data does not change once loaded.
 export const shouldRevalidate: ShouldRevalidateFunction = ({

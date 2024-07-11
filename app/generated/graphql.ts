@@ -3034,6 +3034,7 @@ export type SearchInput = {
   collectionSlug?: InputMaybe<Scalars['String']>;
   facetValueFilters?: InputMaybe<Array<FacetValueFilterInput>>;
   groupByProduct?: InputMaybe<Scalars['Boolean']>;
+  inStock?: InputMaybe<Scalars['Boolean']>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SearchResultSortParameter>;
   take?: InputMaybe<Scalars['Int']>;
@@ -3047,22 +3048,10 @@ export type SearchReindexResponse = {
 
 export type SearchResponse = {
   __typename?: 'SearchResponse';
-  cacheIdentifier?: Maybe<SearchResponseCacheIdentifier>;
   collections: Array<CollectionResult>;
   facetValues: Array<FacetValueResult>;
   items: Array<SearchResult>;
   totalItems: Scalars['Int'];
-};
-
-/**
- * This type is here to allow us to easily purge the Stellate cache
- * of any search results where the collectionSlug is used. We cannot rely on
- * simply purging the SearchResult type, because in the case of an empty 'items'
- * array, Stellate cannot know that that particular query now needs to be purged.
- */
-export type SearchResponseCacheIdentifier = {
-  __typename?: 'SearchResponseCacheIdentifier';
-  collectionSlug?: Maybe<Scalars['String']>;
 };
 
 export type SearchResult = {
@@ -3073,6 +3062,7 @@ export type SearchResult = {
   description: Scalars['String'];
   facetIds: Array<Scalars['ID']>;
   facetValueIds: Array<Scalars['ID']>;
+  inStock: Scalars['Boolean'];
   price: SearchResultPrice;
   priceWithTax: SearchResultPrice;
   productAsset?: Maybe<SearchResultAsset>;

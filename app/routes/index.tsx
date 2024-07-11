@@ -41,18 +41,22 @@ export default function Index() {
     <>
       <div className="bg-hero" aria-label="[hero1]">
         <div className="relative h-[100vh] flex justify-end sm:justify-start items-end ">
-          <div className="mb-32 ml-auto sm:ml-[] sm:w-full pr-[.8rem]">
-            <div className="px-[.8rem] w-[50vw] sm:w-full lg:w-[50vw]">
+          <div className="mb-32 ml-auto sm:ml-[] sm:w-full ">
+
+            <div className="p-[1.6rem] w-[calc(50vw-0.8rem)] sm:w-full lg:w-[calc(50vw-0.8rem)]">
+
               <div className="filter p-[.8rem] bg-opacity-75 mix-blend-lighten border-[1px] border-white backdrop-blur-[4px]">
                 <div className="filter p-[1.6rem] bg-white bg-opacity-100 mix-blend-lighten border-[1px] border-black backdrop-blur-[4px]">
-                  <span className="font-bold tracking-wider uppercase text-2xl sm:text-4xl lg:text-5xl xl:text-7xl">
+                  <span className="font-fw300 tracking-wider uppercase text-2xl sm:text-4xl lg:text-5xl xl:text-7xl">
                     <p>life's too short</p>
                     <p>to wear</p>
                     <p>boring jewelry</p>
                   </span>
                 </div>
+
               </div>
             </div>
+
           </div>
         </div>
       </div>

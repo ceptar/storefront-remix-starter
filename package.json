@@ -9,7 +9,7 @@
     "build": "tailwindcss -m -i ./tailwind.css -o app/styles/app.css && remix build",
     "dev:wrangler": "wrangler pages dev ./public",
     "dev:css": "tailwindcss -w -i ./tailwind.css -o app/styles/app.css",
-    "dev": "PORT=8000 concurrently \"yarn run dev:css\" \"remix dev\"",
+    "dev": "PORT=8000 concurrently \"npm run dev:css\" \"remix dev\"",
     "dev:cf": "yarn run build:cf && concurrently \"yarn run dev:css\" \"remix watch\" \"yarn run dev:wrangler\"",
     "start:cf": "cross-env NODE_ENV=production yarn run dev:wrangler",
     "start": "PORT=8000 remix-serve build",

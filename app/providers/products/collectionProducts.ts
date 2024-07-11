@@ -1,7 +1,7 @@
 import { LoaderArgs } from "@remix-run/server-runtime";
 import { gql } from "@apollo/client";
 
-const VENDURE_API_URL = process.env.VENDURE_API_URL; // Replace with your Vendure API URL
+const VENDURE_API_URL = "https://nonotheresnolimit.xyz/shop-api"; // Replace with your Vendure API URL
 
 const GET_COLLECTION_PRODUCTS = /*GraphQL*/ `
 query GetCollectionProducts($slug: String!, $skip: Int!, $take: Int!) {

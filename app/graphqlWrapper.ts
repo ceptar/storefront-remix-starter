@@ -4,10 +4,7 @@ import { DEMO_API_URL } from './constants';
 import { getSdk } from './generated/graphql';
 import { getSessionStorage } from './sessions';
 
-let API_URL =
-  typeof process !== 'undefined'
-    ? process.env.VENDURE_API_URL ?? DEMO_API_URL
-    : DEMO_API_URL;
+let API_URL = "https://nonotheresnolimit.xyz/shop-api";
 
 export interface QueryOptions {
   request: Request;

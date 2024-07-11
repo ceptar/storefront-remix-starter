@@ -48,7 +48,7 @@ export async function loader({ params, request }: DataFunctionArgs) {
       });
       stripePaymentIntent =
         stripePaymentIntentResult.createStripePaymentIntent ?? undefined;
-      stripePublishableKey = process.env.STRIPE_PUBLISHABLE_KEY;
+      stripePublishableKey = 'pk_live_51PHY56IqbXyMSGmjfiHNgFGqrsy8kOM5RkNvKY62adXSjIVv5zSlP7QHE0xWVdacGRZ32bnvCnmaKqPo17ojDHdN00drHeJ6Ac';
     } catch (e: any) {
       stripeError = e.message;
     }
