@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from "react-router-dom";
-import { Link } from '@remix-run/react';
+import { useLocation, Link } from '@remix-run/react';
 import Cart from '~/components/svgs/Cart';
 import { SearchBar } from '~/components/header/SearchBar';
 import { useRootLoader } from '~/utils/use-root-loader';
