@@ -48,7 +48,7 @@ export default function AccountDashboard() {
 
   return (
     <div className="max-w-6xl xl:mx-auto px-4">
-      <h2 className="text-xl uppercase tracking-[0.25em] font-metrolight1 text-discogray my-8">
+      <h2 className="text-xl uppercase tracking-[0.25em] font-fw300 text-discogray my-8">
         My Account
       </h2>
       <p className="text-discogray text-lg -mt-4">

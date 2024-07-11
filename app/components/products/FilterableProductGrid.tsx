@@ -38,21 +38,23 @@ export function FilterableProductGrid({
   );
 
   return (
-    <div className="px-4 mt-6 grid sm:grid-cols-5 gap-x-4">
-      <FacetFilterControls
-        facetFilterTracker={facetValuesTracker.current}
-        mobileFiltersOpen={mobileFiltersOpen}
-        setMobileFiltersOpen={setMobileFiltersOpen}
-      />
+    <div className="">
+      {mobileFiltersOpen && (
+        <FacetFilterControls
+          facetFilterTracker={facetValuesTracker.current}
+          mobileFiltersOpen={mobileFiltersOpen}
+          setMobileFiltersOpen={setMobileFiltersOpen}
+        />
+      )}
       {result.items.length > 0 ? (
-        <div className="sm:col-span-5 lg:col-span-4 space-y-6">
-          <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 xl:gap-x-8">
+        <div className="col-span-5 lg:col-span-4 space-y-4">
+          <div className="grid grid-cols-1 gap-y-4 gap-x-4 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-6 ">
             {result.items.map((item) => (
               <ProductCard key={item.productId} {...item} />
             ))}
           </div>
 
-          <div className="flex flex-row justify-between items-center gap-4">
+          <div className="px-4 pt-[5rem] flex flex-row justify-between items-center gap-4">
             <span className="self-start text-gray-500 text-sm mt-2">
               Showing products{' '}
               {translatePaginationFrom(
@@ -77,7 +79,7 @@ export function FilterableProductGrid({
       ) : (
         <NoResultsHint
           facetFilterTracker={facetValuesTracker.current}
-          className={'sm:col-span-4 sm:p-4'}
+          className={'col-span-4 p-4'}
         />
       )}
     </div>

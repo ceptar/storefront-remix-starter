@@ -8,40 +8,73 @@
   button:disabled {
     cursor: not-allowed;
   }
+
 }
 
 @layer utilities {
-  @font-face {
-    font-family: 'Metropolitano-Regular';
-    src: url(./font/Metropolitano-Regular.woff) format('woff');
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Metropolitano-Medium';
-    src: url(./font/Metropolitano-Medium.woff2) format('woff2');
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Metropolitano-Black';
-    src: url(./font/Metropolitano-Black.woff2) format('woff2');
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Metropolitano-Bold';
-    src: url(./font/Metropolitano-Bold.woff2) format('woff2');
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Metropolitano-Light';
-    src: url(./font/Metropolitano-Light.woff2) format('woff2');
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Metropolitano-Thin';
-    src: url(./font/Metropolitano-Thin.woff2) format('woff2');
-    font-display: swap;
-  }
 
+
+  @font-face {
+    font-family: 'fw100';
+    src: url("./font/100.woff2");
+    format: ("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'fw200';
+    src: url("./font/200.woff2");
+    format: ("woff2");
+    font-display: swap;
+  }
+    @font-face {
+      font-family: 'fw300';
+      src: url("./font/300.woff2");
+      format: ("woff2");
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'fw400';
+      src: url("./font/400.woff2");
+      format: ("woff2");
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'fw500';
+      src: url("./font/500.woff2");
+      format: ("woff2");
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'fw600';
+      src: url("./font/600.woff2");
+      format: ("woff2");
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'fw700';
+      src: url("./font/700.woff2");
+      format: ("woff2");
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'fw800';
+      src: url("./font/800.woff2");
+      format: ("woff2");
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'fw900';
+      src: url("./font/900.woff2");
+      format: ("woff2");
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'specialTitleOne';
+      src: url("./font/specialTitleOne.woff2");
+      format: ("woff2");
+      font-display: swap;
+    }
+    
   .flex-center {
     display: flex;
     justify-content: center;
@@ -60,7 +93,7 @@
   }
 
   .bg-hero {
-    background-image: url('~/../public/banner.webp');
+    background-image: url('~/../public/banner2.webp');
     background-size: cover;
     background-position: right center;
     height: 100vh;
@@ -68,22 +101,6 @@
     z-index: 10;
     position: absolute;
     top: 0;
-  }
-
-  .carousel-container {
-    width: 100%;
-    overflow-x: auto;
-    overflow: hidden;
-    white-space: nowrap;
-    padding-bottom: 16px;
-    padding-top: 16px;
-  }
-
-  .flicking-panel {
-    display: inline-block;
-    white-space: nowrap;
-    width: 10rem; /* Adjust the width as per your design */
-    /* Add any other styling for the panel */
   }
 
   .cookie-container {
@@ -102,25 +119,16 @@
     border: 1px solid rgba(255, 255, 255, 0.5) !important; /* Add a border style */
   }
 
-  /*COPY PASTE STYLESAMMLUNGEN, @apply NOT COMPLIANT!!!*/
+  /* CAROUSEL */
+ 
+    /* CAROUSEL */
 
-  /*Hover, gradient underline*/
-  /* .linkeins {
-  @apply transition-all duration-300 ease-in-out
-  } */
-  /* .linkeinszwo {
-  @apply bg-left-bottom bg-gradient-to-r from-discoteal to-discopink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-300 ease-out
-  }  */
-
-  /* ROUND BUTTONS Hover, Zusatzstyle zu Svgs, die bereits gradient haben */
-  /* CASING - div, button etc. bei Inhalt selbst dann noch "w-full h-full"*/
-  /* className="w-12 h-12 items-center justify-center flex flex-col p-2 mx-4 rounded-full bg-white shadow-md hover:shadow-none transition-all duration-300 ease-in-out" */
 
   /* Links TreeMenu */
   .parent {
     font-size: 32px;
     line-height: 140%;
-    font-family: Metropolitano-Bold, sans;
+    font-weight: 600;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -132,7 +140,7 @@
   .child {
     font-size: 18px;
     line-height: 100%;
-    font-family: Metropolitano-Light, sans;
+
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -141,12 +149,4 @@
     color:#ffffffc0;
   }
 
-  .tronfilter {
-    stroke: #0e0e0e;
-    stroke-width: 0.5px;
-
-    -webkit-filter: drop-shadow(1px 0px 0.7px #0e0e0e);
-
-    filter: drop-shadow(-1px -1px 1px #0e0e0e);
-  }
 }

@@ -11,17 +11,24 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Metropolitano-Light', 'sans'],
-        header1: ['Metropolitano-Bold', 'sans'],
-        metromed1: ['Metropolitano-Medium', 'sans'],
-        metroblack1: ['Metropolitano-Black', 'sans'],
-        metrobold1: ['Metropolitano-Bold', 'sans'],
-        metrolight1: ['Metropolitano-Light', 'sans'],
-        metrothin1: ['Metropolitano-Thin', 'sans'],
-        metroreg1: ['Metropolitano-Regular', 'sans'],
+        sans: ['fw300', 'sans-serif'],  // Replace 'MyFont' with your actual font name
+        normal: ['fw300','sans-serif'],
+        header1: ['fw700','sans-serif'],
+        inherit: ['fw300','sans-serif'],
+        mono:['fw300','sans-serif'],
+        fw100:['fw100','sans-serif'],
+        fw200:['fw200','sans-serif'],
+        fw300:['fw300','sans-serif'],
+        fw400:['fw400','sans-serif'],
+        fw500:['fw500','sans-serif'],
+        fw600:['fw600','sans-serif'],
+        fw700:['fw700','sans-serif'],
+        fw800:['fw800','sans-serif'],
+        fw900:['fw900','sans-serif'],
+        specialTitleOne:['specialTitleOne','sans-serif'],
       },
       colors: {
-        primary: '#0ea288',
+        primary: '#163e63',
 
         secondary: '#c83671',
 
@@ -35,7 +42,7 @@ module.exports = {
 
         discored: '#b6103d',
 
-        discoblue: '#030082',
+        discoblue: '#163e63',
 
         discogray: '#000000',
 

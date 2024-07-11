@@ -23,7 +23,7 @@ export default function Footer({
 }) {
   return (
     <footer
-      className="border-t bg-discograytwo py-12 mt-auto"
+      className="border-t border-discogray bg-discograytwo py-12 mt-auto"
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only">
@@ -41,7 +41,7 @@ export default function Footer({
                   {collections.map((collection) => (
                     <li key={collection.id}>
                       <Link
-                        className="text-md font-metrolight1 text-discogray hover:underline"
+                        className="text-md font-fw300 text-discogray hover:underline"
                         to={'/collections/' + collection.slug}
                         prefetch="intent"
                         key={collection.id}
@@ -61,7 +61,7 @@ export default function Footer({
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-md font-metrolight1 text-discogray hover:underline"
+                        className="text-md font-fw300 text-discogray hover:underline"
                       >
                         {item.name}
                       </a>
@@ -80,7 +80,7 @@ export default function Footer({
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-md font-metrolight1 text-discogray hover:underline"
+                        className="text-md font-fw300 text-discogray hover:underline"
                       >
                         {item.name}
                       </a>
@@ -94,7 +94,7 @@ export default function Footer({
             <h3 className="text-sm font-semibold text-discogray tracking-[0.25em] uppercase">
               Subscribe to our newsletter
             </h3>
-            <p className="mt-4 text-md font-metrolight1 text-discogray">
+            <p className="mt-4 text-md font-fw300 text-discogray">
               Be the first to know about exclusive offers & deals.
             </p>
             <form className="mt-4 sm:flex sm:max-w-md">
@@ -113,7 +113,7 @@ export default function Footer({
               <div className="mt-3 sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button
                   type="submit"
-                  className="w-full bg-primary-500 border border-transparent py-2 px-4 flex items-center justify-center text-base uppercase tracking-[0.15em] text-discogray hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-primary-500"
+                  className="w-full bg-discogray-900 border border-transparent py-2 px-4 flex items-center justify-center text-base uppercase tracking-[0.15em] text-white hover:bg-discogray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-primary-500"
                 >
                   Subscribe
                 </button>

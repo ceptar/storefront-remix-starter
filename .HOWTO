@@ -1,3 +1,10 @@
+PORT=127.0.0.1:8000 npm run dev
+
+
+
+
+
+
 server {
     listen 443 ssl;
     server_name nonotheresnolimit.xyz;

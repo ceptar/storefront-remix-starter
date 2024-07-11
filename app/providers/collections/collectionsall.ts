@@ -4,14 +4,13 @@ import { listedProductFragment } from '../products/products';
 import type { CollectionListOptions } from '~/generated/graphql';
 
 export function getallCollections(request: Request) {
-    return sdk
-      .collections({  }, { request })
-      .then((result) => result.collections?.items);
-  }
-  
+  return sdk
+    .collections({}, { request })
+    .then((result) => result.collections?.items);
+}
 
 gql`
-query Collections {
+  query getAllCollections {
     collections {
       items {
         id

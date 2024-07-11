@@ -23,7 +23,7 @@ export default function FacetFilterControls({
       <Transition.Root show={mobileFiltersOpen} as={Fragment}>
         <Dialog
           as="div"
-          className="relative z-40 lg:hidden"
+          className="relative z-40 "
           onClose={setMobileFiltersOpen}
         >
           <Transition.Child
@@ -48,7 +48,7 @@ export default function FacetFilterControls({
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full"
             >
-              <Dialog.Panel className="mr-auto relative max-w-xs w-full h-full bg-white shadow-xl shadow-discogray py-4 pb-12 flex flex-col overflow-y-auto">
+              <Dialog.Panel className="mt-[5rem] mr-auto relative max-w-xs w-full h-full bg-white shadow-md shadow-discogray py-4 pb-12 flex flex-col overflow-y-auto">
                 <div className="px-4 flex items-center justify-between">
                   <h2 className="text-lg font-medium text-gray-900">Filters</h2>
                   <button
@@ -134,7 +134,7 @@ export default function FacetFilterControls({
         </Dialog>
       </Transition.Root>
 
-      <div className="hidden lg:block">
+      <div className="hidden ">
         <input type="hidden" name="q" value={q} />
         {facetFilterTracker.facetsWithValues.map((facet) => (
           <Disclosure

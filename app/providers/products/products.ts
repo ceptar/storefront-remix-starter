@@ -118,3 +118,23 @@ gql`
   }
   ${listedProductFragment}
 `;
+
+gql`
+  query searchFacetValues($input: SearchInput!) {
+    search(input: $input) {
+      totalItems
+      facetValues {
+        count
+        facetValue {
+          id
+          name
+          facet {
+            id
+            name
+          }
+        }
+      }
+    }
+  }
+  ${listedProductFragment}
+`;

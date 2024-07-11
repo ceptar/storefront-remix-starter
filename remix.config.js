@@ -20,12 +20,15 @@ const netlifyConfig = {
  * @type {import('@remix-run/dev').AppConfig}
  */
 const devConfig = {
+  serverBuildTarget: "node-cjs",
+  ignoredRouteFiles: ["**/.*"],
+  liveReload: false,
   appDirectory: 'app',
   serverModuleFormat: 'cjs',
   devServerPort: 8002,
   ignoredRouteFiles: ['.*'],
-  future: {
-    v2_dev: true,
+   future: {
+     v2_dev: true,
   },
   routes(defineRoutes) {
     // uses the v1 convention, works in v1.15+ and v2

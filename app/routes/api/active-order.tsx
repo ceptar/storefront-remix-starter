@@ -7,25 +7,23 @@ import {
   setOrderShippingAddress,
   setOrderShippingMethod,
 } from '~/providers/orders/order';
-import type { DataFunctionArgs} from '@remix-run/server-runtime';
+import type { DataFunctionArgs } from '@remix-run/server-runtime';
 import { json } from '@remix-run/server-runtime';
 import type {
   CreateAddressInput,
   CreateCustomerInput,
   ErrorResult,
-  OrderDetailFragment} from '~/generated/graphql';
-import {
-  ErrorCode
+  OrderDetailFragment
 } from '~/generated/graphql';
+import { ErrorCode } from '~/generated/graphql';
 import { getSessionStorage } from '~/sessions';
 import { shippingFormDataIsValid } from '~/utils/validation';
 
 export type CartLoaderData = Awaited<ReturnType<typeof loader>>;
 
 export async function loader({ request }: DataFunctionArgs) {
-  return {
-    activeOrder: await getActiveOrder({ request }),
-  };
+  const activeOrder = await getActiveOrder({ request });
+  return { activeOrder };
 }
 
 export async function action({ request, params }: DataFunctionArgs) {
@@ -36,129 +34,100 @@ export async function action({ request, params }: DataFunctionArgs) {
     errorCode: ErrorCode.NoActiveOrderError,
     message: '',
   };
-  switch (formAction) {
-    case 'setCheckoutShipping':
-      if (shippingFormDataIsValid(body)) {
-        const shippingFormData = Object.fromEntries<any>(
-          body.entries(),
-        ) as CreateAddressInput;
-        const result = await setOrderShippingAddress(
-          {
-            city: shippingFormData.city,
-            company: shippingFormData.company,
-            countryCode: shippingFormData.countryCode,
-            customFields: shippingFormData.customFields,
-            fullName: shippingFormData.fullName,
-            phoneNumber: shippingFormData.phoneNumber,
-            postalCode: shippingFormData.postalCode,
-            province: shippingFormData.province,
-            streetLine1: shippingFormData.streetLine1,
-            streetLine2: shippingFormData.streetLine2,
-          },
-          { request },
-        );
-        if (result.setOrderShippingAddress.__typename === 'Order') {
-          activeOrder = result.setOrderShippingAddress;
-        } else {
-          error = result.setOrderShippingAddress;
+
+  try {
+    switch (formAction) {
+      case 'setCheckoutShipping':
+        if (shippingFormDataIsValid(body)) {
+          const shippingFormData = Object.fromEntries<any>(
+            body.entries(),
+          ) as CreateAddressInput;
+          const result = await setOrderShippingAddress(shippingFormData, { request });
+          if (result.setOrderShippingAddress.__typename === 'Order') {
+            activeOrder = result.setOrderShippingAddress;
+          } else {
+            error = result.setOrderShippingAddress;
+          }
         }
-      }
-      break;
-    case 'setOrderCustomer': {
-      const customerData = Object.fromEntries<any>(
-        body.entries(),
-      ) as CreateCustomerInput;
-      const result = await setCustomerForOrder(
-        {
-          emailAddress: customerData.emailAddress,
-          firstName: customerData.firstName,
-          lastName: customerData.lastName,
-        },
-        { request },
-      );
-      if (result.setCustomerForOrder.__typename === 'Order') {
-        activeOrder = result.setCustomerForOrder;
-      } else {
-        error = result.setCustomerForOrder;
-      }
-      break;
-    }
-    case 'setShippingMethod': {
-      const shippingMethodId = body.get('shippingMethodId');
-      if (typeof shippingMethodId === 'string') {
-        const result = await setOrderShippingMethod(shippingMethodId, {
-          request,
-        });
-        if (result.setOrderShippingMethod.__typename === 'Order') {
-          activeOrder = result.setOrderShippingMethod;
+        break;
+      case 'setOrderCustomer':
+        const customerData = Object.fromEntries<any>(body.entries()) as CreateCustomerInput;
+        const resultCustomer = await setCustomerForOrder(customerData, { request });
+        if (resultCustomer.setCustomerForOrder.__typename === 'Order') {
+          activeOrder = resultCustomer.setCustomerForOrder;
         } else {
-          error = result.setOrderShippingMethod;
+          error = resultCustomer.setCustomerForOrder;
         }
-      }
-      break;
-    }
-    case 'removeItem': {
-      const lineId = body.get('lineId');
-      const result = await removeOrderLine(lineId?.toString() ?? '', {
-        request,
-      });
-      if (result.removeOrderLine.__typename === 'Order') {
-        activeOrder = result.removeOrderLine;
-      } else {
-        error = result.removeOrderLine;
-      }
-      break;
-    }
-    case 'adjustItem': {
-      const lineId = body.get('lineId');
-      const quantity = body.get('quantity');
-      if (lineId && quantity != null) {
-        const result = await adjustOrderLine(lineId?.toString(), +quantity, {
-          request,
-        });
-        if (result.adjustOrderLine.__typename === 'Order') {
-          activeOrder = result.adjustOrderLine;
+        break;
+      case 'setShippingMethod':
+        const shippingMethodId = body.get('shippingMethodId');
+        if (typeof shippingMethodId === 'string') {
+          const resultShippingMethod = await setOrderShippingMethod(shippingMethodId, { request });
+          if (resultShippingMethod.setOrderShippingMethod.__typename === 'Order') {
+            activeOrder = resultShippingMethod.setOrderShippingMethod;
+          } else {
+            error = resultShippingMethod.setOrderShippingMethod;
+          }
+        }
+        break;
+      case 'removeItem':
+        const lineIdToRemove = body.get('lineId');
+        if (lineIdToRemove) {
+          const resultRemove = await removeOrderLine(lineIdToRemove.toString(), { request });
+          if (resultRemove.removeOrderLine.__typename === 'Order') {
+            activeOrder = resultRemove.removeOrderLine;
+          } else {
+            error = resultRemove.removeOrderLine;
+          }
+        }
+        break;
+      case 'adjustItem':
+        const lineIdToAdjust = body.get('lineId');
+        const quantity = body.get('quantity');
+        if (lineIdToAdjust && quantity != null) {
+          const resultAdjust = await adjustOrderLine(lineIdToAdjust.toString(), +quantity, { request });
+          if (resultAdjust.adjustOrderLine.__typename === 'Order') {
+            activeOrder = resultAdjust.adjustOrderLine;
+          } else {
+            error = resultAdjust.adjustOrderLine;
+          }
+        }
+        break;
+      case 'addItemToOrder':
+        const variantId = body.get('variantId')?.toString();
+        const qty = Number(body.get('quantity')?.toString() ?? 1);
+        if (!variantId || !(qty > 0)) {
+          throw new Error(`Invalid input: variantId ${variantId}, quantity ${qty}`);
+        }
+        const resultAdd = await addItemToOrder(variantId, qty, { request });
+        if (resultAdd.addItemToOrder.__typename === 'Order') {
+          activeOrder = resultAdd.addItemToOrder;
         } else {
-          error = result.adjustOrderLine;
+          error = resultAdd.addItemToOrder;
         }
-      }
-      break;
+        break;
+      default:
+        // No action
+        break;
     }
-    case 'addItemToOrder': {
-      const variantId = body.get('variantId')?.toString();
-      const quantity = Number(body.get('quantity')?.toString() ?? 1);
-      if (!variantId || !(quantity > 0)) {
-        throw new Error(
-          `Invalid input: variantId ${variantId}, quantity ${quantity}`,
-        );
-      }
-      const result = await addItemToOrder(variantId, quantity, {
-        request,
-      });
-      if (result.addItemToOrder.__typename === 'Order') {
-        activeOrder = result.addItemToOrder;
-      } else {
-        error = result.addItemToOrder;
-      }
-      break;
-    }
-    case 'addPaymentToOrder': {
-    }
-    default:
-    // Don't do anything
+  } catch (e) {
+    console.error('Error processing action:', e);
+    error = {
+      errorCode: ErrorCode.InternalServerError,
+      message: e.message,
+    };
   }
+
   let headers: ResponseInit['headers'] = {};
-  const session = await getSessionStorage().getSession(
-    request?.headers.get('Cookie'),
-  );
+  const session = await getSessionStorage().getSession(request.headers.get('Cookie'));
   session.flash('activeOrderError', error);
   headers = {
     'Set-Cookie': await getSessionStorage().commitSession(session),
   };
-  return json(
-    { activeOrder: activeOrder || (await getActiveOrder({ request })) },
-    {
-      headers,
-    },
-  );
+
+  if (!activeOrder) {
+    activeOrder = await getActiveOrder({ request });
+  }
+
+  return json({ activeOrder }, { headers });
 }

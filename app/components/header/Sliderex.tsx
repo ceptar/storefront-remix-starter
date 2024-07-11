@@ -18,10 +18,10 @@ export async function loader({ request }: LoaderArgs) {
   
 }
 type SliderexProps = {
-  headerOpacity: number; // Add this line if using TypeScript, adjust the type as necessary
+  finalOpacity: number; // Add this line if using TypeScript, adjust the type as necessary
 };
 
-const Sliderex: React.FC<SliderexProps> = ({ headerOpacity }) => {
+const Sliderex: React.FC<SliderexProps> = ({ finalOpacity }) => {
   const data = useRootLoader();
 const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
   const [isSlideoverVisible, setSlideoverVisible] = useState(false);
@@ -41,7 +41,7 @@ const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
         className="flex flex-col bg-opacity-90 cursor-pointer justify-center items-center py-2 text-sm text-discogray-500 transition-all duration-300 ease-out hover:opacity-70"
       >
         <button>
-          <Hamburger className="w-8 h-8 pl-1" fill={headerOpacity > 0.5 ? '#000' : '#FFF'} />
+          <Hamburger className="w-8 h-8 pl-1" fill={finalOpacity} />
         </button>
       </div>
       <div
@@ -58,14 +58,14 @@ const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
         <div
           onClick={toggleSlideover}
           id="slideover"
-          className={`shadow-xl shadow-discogray bg-discogray top-[70px] w-full sm:w-[50vw] h-full absolute right-0 duration-300 ease-out transition-all ${
+          className={`shadow-xl shadow-discogray bg-discogray bg-opacity-90 backdrop-blur-md top-[5rem] w-full sm:w-[50vw] h-full absolute right-0 duration-300 ease-out transition-all ${
             isSlideoverVisible ? '' : 'translate-x-full'
           }`}
         >
-          <div className="mx-4 px-4 flex absolute top-0 pt-2 text-white text-xl font-metrobold1">
+          <div className="mx-4 px-4 flex absolute top-0 pt-2 text-white text-xl font-fw700">
           
           </div>
-          <div className="absolute cursor-pointer text-white top-0 w-12 flex items-center justify-center right-0 mt-[6px] pr-6">
+          <div className="absolute cursor-pointer text-white top-0 w-12 flex items-center justify-center right-0 mt-4 mr-1">
             <svg
               className="w-8 h-8"
               fill="none"

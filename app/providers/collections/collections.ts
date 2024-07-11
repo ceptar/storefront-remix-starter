@@ -3,14 +3,12 @@ import { sdk } from '../../graphqlWrapper';
 import { listedProductFragment } from '../products/products';
 import type { CollectionListOptions } from '~/generated/graphql';
 
-export function getCollections(
-  request: Request,
-  options?: CollectionListOptions,
-) {
-  return sdk
-    .collections({ options }, { request })
-    .then((result) => result.collections?.items);
+export async function getCollections(request, options = {}) {
+  return sdk.collections({ options }, { request }).then(result => result.collections?.items);
 }
+// Updated to accept options parameter, making it optional to ensure backward compatibility.
+
+
 
 gql`
   query collections($options: CollectionListOptions) {
@@ -20,11 +18,13 @@ gql`
         name
         slug
         parent {
+          id
           name
         }
         featuredAsset {
           id
           preview
+          source
         }
       }
     }
@@ -46,10 +46,6 @@ gql`
         id
         name
         slug
-        featuredAsset {
-          id
-          preview
-        }
       }
     }
   }

@@ -13,6 +13,7 @@ import {
   useLoaderData,
   useRouteError
 } from '@remix-run/react';
+
 import styles from './styles/app.css';
 import { Header } from './components/header/Header';
 import type { DataFunctionArgs} from '@remix-run/server-runtime';
@@ -127,7 +128,7 @@ export default function App() {
           onCartIconClick={() => setOpen(!open)}
           cartQuantity={activeOrder?.totalQuantity ?? 0}
         />
-        <main className="flex-grow mt-[8vh]">
+        <main className="flex-grow mt-[5rem]">
           <Outlet
             context={{
               activeOrderFetcher,

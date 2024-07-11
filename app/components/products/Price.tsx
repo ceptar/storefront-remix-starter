@@ -29,9 +29,12 @@ export function Price({
 }
 
 export function formatPrice(value: number, currency: CurrencyCode) {
-  return new Intl.NumberFormat('en-US', {
+  const formatted = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency,
     minimumFractionDigits: 2,
   }).format(value / 100);
+
+  // Ensure one space between currency symbol and number
+  return formatted.replace(/(\D+)(\d)/, '$1 $2');
 }
