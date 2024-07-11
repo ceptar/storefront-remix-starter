@@ -17,8 +17,8 @@ export function Header({
   cartQuantity: number;
 }) {
 
-  const [rootRouteOpacity, setRootRouteOpacity] = React.useState(1);
-  const [headerOpacity, setHeaderOpacity] = React.useState(0);
+  const [rootRouteOpacity, setRootRouteOpacity] = useState(1);
+  const [headerOpacity, setHeaderOpacity] = useState(0);
   const location = useLocation();
 
   React.useEffect(() => {
@@ -30,7 +30,7 @@ export function Header({
     checkRootRoute();
   }, [location]);
 
-  React.useEffect(() => {
+ useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const newOpacity = Math.min(scrollPosition / 70, 1); // Ensures opacity doesn't exceed 1
