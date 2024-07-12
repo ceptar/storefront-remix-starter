@@ -1168,10 +1168,6 @@ button:disabled {
   height: 100%;
 }
 
-#app :is(.h-16) {
-  height: 4rem;
-}
-
 #app :is(.max-h-12) {
   max-height: 3rem;
 }
@@ -2057,6 +2053,10 @@ button:disabled {
   padding-left: 2.5rem;
 }
 
+#app :is(.pl-2) {
+  padding-left: 0.5rem;
+}
+
 #app :is(.pl-3) {
   padding-left: 0.75rem;
 }
@@ -2115,10 +2115,6 @@ button:disabled {
 
 #app :is(.pt-\[5rem\]) {
   padding-top: 5rem;
-}
-
-#app :is(.pl-2) {
-  padding-left: 0.5rem;
 }
 
 #app :is(.text-left) {
