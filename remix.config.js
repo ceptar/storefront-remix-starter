@@ -1,3 +1,4 @@
+import 'dotenv/config';
 const { createRoutesFromFolders } = require('@remix-run/v1-route-convention');
 
 /**
