@@ -1,9 +1,9 @@
-/* {
+{
   // These tasks will run in order when initializing your CodeSandbox project.
   "setupTasks": [
     {
       "name": "Install Dependencies",
-      "command": "yarn install"
+      "command": "npm install"
     }
   ],
 
@@ -11,60 +11,56 @@
   "tasks": {
     "build:cf": {
       "name": "build:cf",
-      "command": "yarn build:cf"
+      "command": "npm run build:cf"
     },
     "build:nf": {
       "name": "build:nf",
-      "command": "yarn build:nf"
+      "command": "npm run build:nf"
     },
     "build": {
       "name": "build",
-      "command": "yarn build"
+      "command": "npm run build"
     },
     "dev:wrangler": {
       "name": "dev:wrangler",
-      "command": "yarn dev:wrangler"
+      "command": "npm run dev:wrangler"
     },
     "dev:css": {
       "name": "dev:css",
-      "command": "yarn dev:css"
+      "command": "npm run dev:css"
     },
     "dev": {
       "name": "dev",
-      "command": "yarn dev",
-      "runAtStart": true,
-      "preview": {
-        "port": 3000
-      }
+      "command": "npm run dev",
+      "runAtStart": true
     },
     "dev:cf": {
       "name": "dev:cf",
-      "command": "yarn dev:cf"
+      "command": "npm run dev:cf"
     },
     "start:cf": {
       "name": "start:cf",
-      "command": "yarn start:cf"
+      "command": "npm run start:cf"
     },
     "start": {
       "name": "start",
-      "command": "yarn start"
+      "command": "npm run start"
     },
     "generate": {
       "name": "generate",
-      "command": "yarn generate"
+      "command": "npm run generate"
     },
     "lint:styles": {
       "name": "lint:styles",
-      "command": "yarn lint:styles"
+      "command": "npm run lint:styles"
     },
     "lint": {
       "name": "lint",
-      "command": "yarn lint"
+      "command": "npm run lint"
     },
     "prepare": {
       "name": "prepare",
-      "command": "yarn prepare"
+      "command": "npm run prepare"
     }
   }
 }
- */
