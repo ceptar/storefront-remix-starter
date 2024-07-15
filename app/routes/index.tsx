@@ -1,87 +1,96 @@
 import { useLoaderData } from '@remix-run/react';
+import { sdk } from '../graphqlWrapper';
 import { getCollections } from '~/providers/collections/collections';
 import type { LoaderArgs } from '@remix-run/server-runtime';
-import MultiCarousel from '~/utils/MultiCarousel';
-import '~/styles/app.css';
-import heropic1 from '~/../public/heropic1.jpg';
 
-export async function loader({ request }: LoaderArgs<null>) {
-  const collections = await getCollections(request, { take: 20 });
+import SuggestedCarousel from '../components/Carousel';
+import '~/styles/app.css';
+import special from '~/../public/special.webp';
+import { fetchCollectionProducts } from '~/providers/products/collectionProducts';
+import DiscoLightningAni from '~/components/animated/DiscoLightningAni';
+
+export async function loader({ request }) {
+  const options = {
+    filter: {
+      parentId: {
+        eq: '18', // Assuming "18" is the ID of the parent you want to filter by
+      },
+    },
+    take: 20, // Limits the number of results
+  };
+
+  const collections = await getCollections(request, options); // Now passing filter options
+
+  const { products, totalItems } = await fetchCollectionProducts(
+    'featured-items',
+    0,
+    20,
+  );
+
   return {
     collections,
+    featuredProducts: products,
+    totalItems,
   };
 }
 
 export default function Index() {
-  const { collections } = useLoaderData<typeof loader>();
-
+  const { collections, featuredProducts, totalItems } =
+    useLoaderData<typeof loader>();
 
   return (
     <>
       <div className="bg-hero" aria-label="[hero1]">
-
-<div className="flex text-6xl flex-col w-full h-[50vh]">
-
-<div className="flex flex-row w-full h-full">
-<div className="flex flex-col lg:w-1/2 lg:min-w-[600px]"></div>
-
-<div className="flex flex-col lg:w-1/2 h-full justify-end">
-
-<div className="flex flex-grow h-full"></div>
-
-<div className=" bg-discogray text-white lg:bg-opacity-0 lg:text-discogray px-4 pb-6 mb-4 lg:mb-16">
-<div className=" [text-wrap:balance] bg-clip-text ">
-<span className="text-discoteal lg:text-discogray uppercase text-xl lg:text-4xl tracking-[0.2em] font-metroblack1 inline-flex flex-col h-[calc(theme(fontSize.xl)*theme(lineHeight.tight))] lg:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
-  <ul className="block animate-text-slide text-left leading-tight [&_li]:block">
-                        <li>life's too short</li>
-                        <li>to wear</li>
-                        <li>boring jewelry</li>
-                    
-                    </ul></span></div>
-
-{/* <div className="flex flex-grow h-fit font-sans text-sm lg:text-lg">life's too short</div>
-
-<div className="flex flex-grow h-fit text-xl lg:text-4xl tracking-[0.2em] font-metroblack1">to wear boring</div>
-
-<div className="flex flex-grow h-fit text-xl lg:text-4xl tracking-[0.2em] font-metroblack1">jewelry.</div> */}
-</div>
-</div>
-</div>
-</div>
-        
-      </div>
-
-
-      <div
-        className="h-[15vh] z-20 flex justify-center items-center mr-auto ml-auto w-full"      >
-        <h2
-          id="category-heading"
-          className="px-8 mt-4 items-center justify-center flex  leading-10 border-t border-b border-discoteal"
-        >
-          <span className="text-xl uppercase tracking-[0.25em] font-metrolight1 text-discogray p-2">Categories</span>
-        </h2>
-      </div>
-
-      <div className=" flex flex-col justify-center items-center ">
-        <div className="w-5/6 mx-auto h-full flex flex-row items-center justify-center overflow-hidden">
-          <MultiCarousel collections={{ collections }} />
-        </div>
-      </div>
-<div className="h-[5vh]"></div>
-      <div className="  bg-discoteal">
-        <div className="flex items-center justify-center">
-          <div className="h-[50vh] justify-center flex flex-row w-full">
-            <div className="flex flex-col pt-0 justify-center items-center w-full">
-              <img
-                className="max-w-[400px] max-h-full object-cover"
-                src={heropic1}
-                alt="heropic1"
-              />
+        <div className="relative h-[100vh] flex justify-end sm:justify-start items-end ">
+          <div className="mb-32 ml-auto sm:ml-[] sm:w-full ">
+            <div className="p-[1.6rem] w-[calc(50vw-0.8rem)] sm:w-full lg:w-[calc(50vw-0.8rem)]">
+              <div className="filter p-[.8rem] bg-opacity-75 mix-blend-lighten border-[1px] border-white backdrop-blur-[4px]">
+                <div className="filter p-[0.8rem] bg-white bg-opacity-100 mix-blend-lighten border-[1px] border-black backdrop-blur-[4px]">
+                  <span className="font-fw300 tracking-wider uppercase text-2xl sm:text-4xl lg:text-5xl xl:text-7xl">
+                    <p>life's too short</p>
+                    <p>to wear</p>
+                    <p>boring jewelry</p>
+                  </span>
+                  <div className="flex flex-row-reverse font-fw300 tracking-wider uppercase text-2xl sm:text-4xl lg:text-5xl xl:text-7xl">
+                    <DiscoLightningAni className="text-right pl-2 ml-auto" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div className="w-[100vw] h-[calc(100vh-5rem)] relative"></div>
+      <div className="h-[2rem] border-t border-discogray"></div>
+      <div className="relative h-[5rem] z-20 flex justify-center items-center mr-auto ml-auto w-full">
+        <h2
+          id="category-heading"
+          className="px-8 items-center justify-center flex leading-10 border-t border-b border-discogray"
+        >
+          <span className="text-xl uppercase tracking-[0.25em] font-fw300 text-discogray p-2">
+            Featured Items
+          </span>
+        </h2>
+      </div>
+      <div className="h-[calc(2rem-41px)] "></div>
+      {/* <div className="uppercase font-fw200 tracking-[0.25em] px-4 py-8 text-3xl border-b border-t border-discogray">
+        <div>
+          <h2 className="text-center ">Featured Items</h2>
+        </div>
+      </div> */}
 
+      <div className="w-[100vw] mx-auto">
+        <SuggestedCarousel featuredProducts={featuredProducts} />
+      </div>
+
+      <div className="flex relative h-[5rem]"></div>
+      <div className="bg-discogray overflow-clip">
+        <div className="flex items-center justify-center">
+          <div className="justify-center flex flex-row w-full">
+            <div className="flex flex-col pt-0 justify-center items-center w-[50%]"></div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

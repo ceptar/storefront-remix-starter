@@ -54,7 +54,7 @@ export default function CollectionsTreemenu({
                 collection.parentId ? 'child' : 'parent'
               } group transition-all duration-300 ease-in-out`}
             >
-              <div className="py-3 my-1 bg-left-bottom bg-gradient-to-r from-discoteal to-discopink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-300 ease-out">
+              <div className="py-3 my-1 bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-300 ease-out">
                 {collection.name}
               </div>
             </Link>

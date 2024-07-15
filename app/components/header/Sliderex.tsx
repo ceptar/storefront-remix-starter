@@ -15,13 +15,14 @@ export async function loader({ request }: LoaderArgs) {
   return {
     collectionsall,
   };
-  
 }
+type SliderexProps = {
+  finalOpacity: number; // Add this line if using TypeScript, adjust the type as necessary
+};
 
-
-export default function Sliderex() {
+const Sliderex: React.FC<SliderexProps> = ({ finalOpacity }) => {
   const data = useRootLoader();
-const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
+  const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
   const [isSlideoverVisible, setSlideoverVisible] = useState(false);
 
   // Access the collectionsall data from loaderData
@@ -29,7 +30,6 @@ const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
 
   const toggleSlideover = () => {
     setSlideoverVisible(!isSlideoverVisible);
-
   };
 
   return (
@@ -39,7 +39,7 @@ const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
         className="flex flex-col bg-opacity-90 cursor-pointer justify-center items-center py-2 text-sm text-discogray-500 transition-all duration-300 ease-out hover:opacity-70"
       >
         <button>
-          <Hamburger className="tronfilter w-8 h-8 sm:w-10 sm:h-10 pl-1" />
+          <Hamburger className="w-8 h-8 pl-1" fill={finalOpacity} />
         </button>
       </div>
       <div
@@ -56,14 +56,12 @@ const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
         <div
           onClick={toggleSlideover}
           id="slideover"
-          className={`shadow-xl shadow-discogray bg-discogray top-[70px] w-full sm:w-80 h-full absolute right-0 duration-300 ease-out transition-all ${
+          className={`shadow-xl shadow-discogray bg-discogray bg-opacity-90 backdrop-blur-md top-[5rem] w-full sm:w-[50vw] h-full absolute right-0 duration-300 ease-out transition-all ${
             isSlideoverVisible ? '' : 'translate-x-full'
           }`}
         >
-          <div className="mx-4 px-4 flex absolute top-0 pt-2 text-white text-xl font-metrobold1">
-          
-          </div>
-          <div className="absolute cursor-pointer text-white top-0 w-12 flex items-center justify-center right-0 mt-[6px] pr-6">
+          <div className="mx-4 px-4 flex absolute top-0 pt-2 text-white text-xl font-fw700"></div>
+          <div className="absolute cursor-pointer text-white top-0 w-12 flex items-center justify-center right-0 mt-4 mr-1">
             <svg
               className="w-8 h-8"
               fill="none"
@@ -79,24 +77,24 @@ const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
               {/* Use collectionsall directly */}
               <CollectionsTreemenu collectionsData={{ collectionsall }} />
             </div>
-            
+
             <div className="w-full pb-8">
               <SearchBar />
             </div>
             <div className="py-3 pb-8">
-            <Link
-              to={isSignedIn ? '/account' : '/sign-in'}
-              className="flex space-x-1"
-            >
-              <SignIn className="w-8 h-8 text-white" />
-              {/* <span className="text-white text-sm uppercase tracking-[0.15]">{isSignedIn ? 'My Account' : 'Sign In'}</span> */}
-
-            </Link>
-          </div>
-            
+              <Link
+                to={isSignedIn ? '/account' : '/sign-in'}
+                className="flex space-x-1"
+              >
+                <SignIn className="w-8 h-8 text-white" />
+                {/* <span className="text-white text-sm uppercase tracking-[0.15]">{isSignedIn ? 'My Account' : 'Sign In'}</span> */}
+              </Link>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Sliderex;

@@ -82,7 +82,7 @@ export default function CollectionSlug() {
       <div
         className="absolut overflow-hidden top-0 w-full flex flex-col items-center z-10"
       >      </div>
-      <div className="px-4 bg-gray-100 flex flex-row">
+      <div className="px-4 bg-gray-100 flex flex-row border-b border-discogray">
           <div className=" w-full flex flex-col items-start justify-center ">
             <Breadcrumbs items={collection.breadcrumbs}></Breadcrumbs>
           </div>
@@ -94,24 +94,34 @@ export default function CollectionSlug() {
             />
           </div>
         </div>
-      <div className="relative w-full">
-        <div className="uppercase font-metrothin1 tracking-[0.25em] px-4 py-8 text-3xl border-b border-t border-discogray">
-          <h2 className="">
+      {/* <div className="relative w-full">
+        <div className="uppercase font-fw200 tracking-[0.25em] px-4 py-8 text-3xl border-b border-t border-discogray">
+          <h2 className="text-center">
             {collection.name}
           </h2>
         </div>
-      </div>
+      </div> */}
+
+<div className="flex h-[2rem] relative"></div>
+        <div className="relative h-[5rem] z-20 flex justify-center items-center mr-auto ml-auto w-full">
+          <h2
+            id="category-heading"
+            className="px-8 items-center justify-center flex leading-10 border-t border-b border-discogray"
+          >
+            <span className="text-xl uppercase tracking-[0.25em] font-fw300 text-discogray p-2">
+            {collection.name}
+            </span>
+          </h2>
+        </div>
+        <div className="flex h-[2rem] relative"></div>
 
 
       <div className="mx-auto ">
 
 
         {collection.children?.length ? (
-          <div className="pt-4 pb-8 flex flex-col border-b mb-8">
-            <h2 className="px-4 flex flex-row w-full text-md uppercase tracking-[0.25em] font-metrolight1 text-discogray">
-              Categories
-            </h2>
-            <div className="px-4 max-w-full mt-6 flex flex-row mr-auto gap-x-6 gap-y-4">
+          <div className="">
+            <div className="">
               {collection.children.map((child) => (
                 <CollectionCard
                   key={child.id}

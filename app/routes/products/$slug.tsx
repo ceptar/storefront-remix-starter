@@ -92,7 +92,7 @@ export default function ProductSlug() {
 
   return (
     <div>
-      <div className="mx-auto px-4 bg-gray-100">
+      <div className="mx-auto px-4 bg-gray-100 border-b border-discogray">
         <Breadcrumbs
           items={
             product.collections[product.collections.length - 1]?.breadcrumbs ??
@@ -101,33 +101,42 @@ export default function ProductSlug() {
         ></Breadcrumbs>
       </div>
 
-      <div className="uppercase font-metrothin1 tracking-[0.25em] px-4 py-8 text-3xl border-b border-t border-discogray">
+      {/* <div className="uppercase font-metrothin1 tracking-[0.25em] px-4 py-8 text-3xl border-b border-t border-discogray">
         <div>
-          <h2 className="">{product.name}</h2>
+          <h2 className="text-center">{product.name}</h2>
         </div>
-      </div>
-      <div className="mx-auto px-4">
-        <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start my-16">
+      </div> */}
+      <div className="mx-auto px-4 mt-16 ">
+        <div className="md:grid md:grid-cols-2 md:gap-x-8 md:items-start my-4">
           {/* Image gallery */}
-          <div className="px-4 pt-4 pb-12 shadow-md bg-gray-100 w-full mx-auto sm:block ">
+          <div className="px-4 pt-4 pb-4 shadow-md bg-gray-100 w-full mx-auto sm:block ">
             <span className="  overflow-hidden">
-              <div className="w-full h-full object-center object-cover">
+              <div className="w-full h-full object-center object-cover md:max-h-[80vh]">
                 <img
                   src={
                     (featuredAsset?.preview || product.featuredAsset?.preview) +
-                    '?w=1000'
+                    '?preset=full'
                   }
                   alt={product.name}
-                  className="w-full h-full object-center object-cover"
+                  className="w-full h-full object-center object-cover md:max-h-[80vh]"
                 />
               </div>
             </span>
 
+          </div>
+
+          {/* Product info */}
+          <div className="p-4">
+          <div>
+          <h2 className="uppercase font-metrothin1 tracking-[0.25em] text-2xl">{product.name}</h2>
+          </div>
+          <div className="flex flex-col justify-center items-center">
             {product.assets.length > 1 && (
-              <ScrollableContainer>
+              <ScrollableContainer className="">
                 {product.assets.map((asset) => (
                   <div
-                    className={`basis-1/3 md:basis-1/4 flex-shrink-0 select-none touch-pan-x ${
+                  key={asset.id}
+                    className={`basis-1/5 md:basis-1/4 flex-shrink-0 select-none touch-pan-x ${
                       featuredAsset?.id == asset.id
                         ? 'outline outline-2 outline-primary outline-offset-[-2px]'
                         : ''
@@ -138,7 +147,7 @@ export default function ProductSlug() {
                   >
                     <img
                       draggable="false"
-                      className="select-none h-24 w-full object-cover"
+                      className="select-none w-full h-[calc(w-full*1.6)] object-cover"
                       src={
                         asset.preview +
                         '?preset=full' /* not ideal, but technically prevents loading 2 seperate images */
@@ -148,11 +157,7 @@ export default function ProductSlug() {
                 ))}
               </ScrollableContainer>
             )}
-          
           </div>
-
-          {/* Product info */}
-          <div className="mt-10">
             <div className="">
               <h3 className="sr-only">Description</h3>
 
@@ -219,7 +224,7 @@ export default function ProductSlug() {
                         ? 'bg-discopink-500 hover:bg-discopink-400'
                         : 'bg-discopink-400 active:bg-discopink-400 hover:bg-discopink-500 hover:bg-opacity-70'
                     }
-                    text-sm uppercase tracking-[0.25em] text-discogray              
+                    text-sm uppercase tracking-[0.25em] text-white              
                     bg-opacity-20 border border-opacity-20 
                     flex items-center justify-center  
                     focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-primary-500 
@@ -237,20 +242,10 @@ export default function ProductSlug() {
                     )}
                   </button>
 
-                  {/* <button
-                    type="button"
-                    className="ml-4 py-3 px-3 flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500"
-                  >
-                    <HeartIcon
-                      className="h-6 w-6 flex-shrink-0"
-                      aria-hidden="true"
-                    />
-                    <span className="sr-only">Add to favorites</span>
-                  </button> */}
                 </div>
               </div>
               <div className="mt-2 flex items-center">
-                <span className="text-gray-500">{selectedVariant?.sku}</span>
+                <span className="text-gray-500 pr-2">{selectedVariant?.sku}</span>
                 <StockLevelLabel stockLevel={selectedVariant?.stockLevel} />
               </div>
               {addItemToOrderError && (
@@ -263,7 +258,7 @@ export default function ProductSlug() {
         </div>
       </div>
 
-      <div className="mt-16 px-4 py-2  border-t border-discogray">
+      <div className=" px-4 py-2 mt-16 border-t border-discogray">
         <section className="mt-4 pt-4 text-xs">
           <h3 className="text-gray-600 font-bold mb-2">Shipping & Returns</h3>
           <div className=" text-discogray-600 space-y-1">

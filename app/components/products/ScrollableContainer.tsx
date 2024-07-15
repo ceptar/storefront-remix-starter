@@ -1,4 +1,4 @@
-import type { ReactNode, RefObject} from 'react';
+import type { ReactNode, RefObject } from 'react';
 import React, { useRef, useEffect } from 'react';
 
 export function ScrollableContainer({ children }: { children: ReactNode[] }) {
@@ -31,11 +31,7 @@ export function ScrollableContainer({ children }: { children: ReactNode[] }) {
 
   const mouseMoveHandler = (e: MouseEvent) => {
     const span = spanRef.current!;
-
     const dx = e.clientX - pos.x;
-    const dy = e.clientY - pos.y;
-
-    span.scrollTop = pos.top - dy;
     span.scrollLeft = pos.left - dx;
   };
 
@@ -49,22 +45,9 @@ export function ScrollableContainer({ children }: { children: ReactNode[] }) {
     span.style.removeProperty('user-select');
   };
 
-  const wheelHandler = (e: WheelEvent) => {
-    const diff = e.deltaY || e.deltaX;
-
-    spanRef.current!.scrollLeft += diff * 0.5;
-    e.preventDefault();
-  };
-
-  useEffect(() => {
-    spanRef.current!.addEventListener('wheel', wheelHandler, {
-      passive: false,
-    });
-  });
-
   return (
     <span
-      className="py-2 mt-2 flex flex-row flex-nowrap space-x-4 md:overflow-x-hidden overflow-x-auto cursor-grab touch-pan-x"
+      className="py-2 mt-2 flex flex-row flex-nowrap space-x-4 md:overflow-x-hidden overflow-x-auto overflow-y-visible cursor-grab touch-pan-x"
       ref={spanRef}
       onMouseDown={mouseDownHandler}
       onClickCapture={(e) => {

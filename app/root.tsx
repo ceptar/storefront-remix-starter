@@ -1,6 +1,4 @@
-import type {
-  ShouldRevalidateFunction,
-  MetaFunction} from '@remix-run/react';
+import type { ShouldRevalidateFunction, MetaFunction } from '@remix-run/react';
 import {
   isRouteErrorResponse,
   Link,
@@ -11,11 +9,12 @@ import {
   Scripts,
   ScrollRestoration,
   useLoaderData,
-  useRouteError
+  useRouteError,
 } from '@remix-run/react';
+
 import styles from './styles/app.css';
 import { Header } from './components/header/Header';
-import type { DataFunctionArgs} from '@remix-run/server-runtime';
+import type { DataFunctionArgs } from '@remix-run/server-runtime';
 import { json } from '@remix-run/server-runtime';
 import { getCollections } from '~/providers/collections/collections';
 import { getallCollections } from '~/providers/collections/collectionsall';
@@ -29,7 +28,6 @@ import { useActiveOrder } from '~/utils/use-active-order';
 import { setApiUrl } from '~/graphqlWrapper';
 import CookieConsent, { Cookies } from 'react-cookie-consent';
 
-
 export const meta: MetaFunction = () => {
   return [{ title: APP_META_TITLE }, { description: APP_META_DESCRIPTION }];
 };
@@ -38,8 +36,7 @@ export function links() {
   return [{ rel: 'stylesheet', href: styles }];
 }
 
-const devMode =
-  typeof process !== 'undefined' && process.env.NODE_ENV === 'development';
+const devMode = 'development';
 
 // The root data does not change once loaded.
 export const shouldRevalidate: ShouldRevalidateFunction = ({
@@ -82,6 +79,7 @@ export async function loader({ request, params, context }: DataFunctionArgs) {
   const collectionsall = await getallCollections(request);
 
   const activeCustomer = await getActiveCustomer({ request });
+
   const loaderData: RootLoaderData = {
     activeCustomer,
     activeChannel: await activeChannel({ request }),
@@ -96,7 +94,6 @@ export default function App() {
   const loaderData = useLoaderData<RootLoaderData>();
   const { collections } = loaderData;
   const { collectionsall } = loaderData;
-
   const {
     activeOrderFetcher,
     activeOrder,
@@ -122,11 +119,11 @@ export default function App() {
       </head>
       <body className="flex flex-col min-h-screen">
         <Header
-        collectionsall = {collectionsall}
+          collectionsall={collectionsall}
           onCartIconClick={() => setOpen(!open)}
           cartQuantity={activeOrder?.totalQuantity ?? 0}
         />
-        <main className="flex-grow mt-[70px]">
+        <main className="flex-grow mt-[5rem]">
           <Outlet
             context={{
               activeOrderFetcher,
@@ -149,16 +146,15 @@ export default function App() {
 
         {devMode && <LiveReload />}
         <CookieConsent
-            containerClasses="cookie-container"
-            buttonText="Accept"
-            cookieName="myCookieConsent"
-            buttonWrapperClasses="flex justify-center"  // Added a wrapper class to center the button
-            buttonClasses="cookie-consent-button"
-            
-            expires={150}
-          >
-            This website uses cookies to enhance the user experience.
-          </CookieConsent>
+          containerClasses="cookie-container"
+          buttonText="Accept"
+          cookieName="myCookieConsent"
+          buttonWrapperClasses="flex justify-center" // Added a wrapper class to center the button
+          buttonClasses="cookie-consent-button"
+          expires={150}
+        >
+          This website uses cookies to enhance the user experience.
+        </CookieConsent>
       </body>
     </html>
   );
@@ -192,7 +188,6 @@ function DefaultSparseErrorPage({
       </head>
       <body>
         <main className="flex flex-col items-center px-4 py-16 sm:py-32 text-center">
-
           <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
             {tagline}
           </span>
