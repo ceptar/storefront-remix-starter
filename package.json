@@ -9,14 +9,13 @@
     "build": "tailwindcss -m -i ./tailwind.css -o app/styles/app.css && remix build",
     "dev:wrangler": "wrangler pages dev ./public",
     "dev:css": "tailwindcss -w -i ./tailwind.css -o app/styles/app.css",
-    "dev": "concurrently \"yarn run dev:css\" \"remix dev\"",
+    "dev": "PORT=8000 concurrently \"pnpm dev:css\" \"remix dev\"",
     "dev:cf": "yarn run build:cf && concurrently \"yarn run dev:css\" \"remix watch\" \"yarn run dev:wrangler\"",
     "start:cf": "cross-env NODE_ENV=production yarn run dev:wrangler",
     "start": "remix-serve build",
     "generate": "graphql-codegen --config codegen.yml",
     "lint:styles": "stylelint --fix 'app/styles/**/*.css'",
-    "lint": "eslint --fix .",
-    "prepare": "husky install"
+    "lint": "eslint --fix ."
   },
   "dependencies": {
     "@apollo/client": "^3.8.7",
@@ -74,14 +73,13 @@
     "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.33.2",
-    "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
     "postcss": "^8.4.19",
     "prettier": "^2.6.2",
     "remix-development-tools": "^3.4.0",
     "tailwindcss": "^3.2.4",
     "ts-node": "^10.9.1",
-    "typescript": "^5.1.0",
+    "typescript": "^5.1.6",
     "wrangler": "^3.64.0"
   },
   "engines": {
@@ -90,7 +88,7 @@
   "sideEffects": false,
   "lint-staged": {
     "**/*.{ts,tsx}": [
-      "npx prettier --write"
+      "pnpm dlx prettier --write"
     ]
   }
 }
